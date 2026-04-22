@@ -1,0 +1,1459 @@
+{
+  "guest-c354fb58-f84f-4e53-9b28-572b964235ca": {
+    "sessions": {
+      "ff9ada1d-96c3-438b-b64b-dc1343f26ccc": {
+        "title": "Hi",
+        "updated_at": "2026-03-28T16:39:59Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-03-28T16:39:59Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-03-28T16:39:59Z"
+          }
+        ]
+      },
+      "0da8c70a-9780-4ba7-aa2d-6f8931748b5c": {
+        "title": "Hey whats time now in india",
+        "updated_at": "2026-03-28T16:40:17Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hey whats time now in india",
+            "created_at": "2026-03-28T16:40:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area.\n\n2. Hornbill Haven Eco Resort\nLocation: Kulgi forest zone, Dandeli Wildlife Sanctuary\nPrice: 4300 INR per day per person\nRating: 4.5\nAbout: Eco resort known for birdwatching and peaceful forest atmosphere.\n\n3. Kali Jungle Haven\nLocation: Kulgi Forest Road, Dandeli Wildlife Sanctuary\nPrice: 3200 INR per day per person\nRating: 4.2\nAbout: Forest retreat located near wildlife trails known for birdwatching and peaceful nature stays.\n\n4. Forest Breeze Eco Stay\nLocation: Barchi Forest Road, 12 km from Dandeli\nPrice: 3100 INR per day per person\nRating: 4.0\nAbout: Eco stay known for its treehouse accommodation and cool forest breezes.\n\n5. Hornbill Ridge Nature Resort\nLocation: Kulgi Wildlife Belt\nPrice: 4500 INR per day per person\nRating: 4.5\nAbout: Wildlife resort known for frequent hornbill sightings and forest trails.",
+            "created_at": "2026-03-28T16:40:17Z"
+          }
+        ]
+      },
+      "b27ca2da-e0eb-48c8-a72d-c3c5f8258c9e": {
+        "title": "Hi",
+        "updated_at": "2026-03-28T17:02:03Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-03-28T17:01:44Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-03-28T17:01:44Z"
+          },
+          {
+            "role": "user",
+            "content": "Hey whats time now in india",
+            "created_at": "2026-03-28T17:02:03Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area.\n\n2. Hornbill Haven Eco Resort\nLocation: Kulgi forest zone, Dandeli Wildlife Sanctuary\nPrice: 4300 INR per day per person\nRating: 4.5\nAbout: Eco resort known for birdwatching and peaceful forest atmosphere.\n\n3. Kali Jungle Haven\nLocation: Kulgi Forest Road, Dandeli Wildlife Sanctuary\nPrice: 3200 INR per day per person\nRating: 4.2\nAbout: Forest retreat located near wildlife trails known for birdwatching and peaceful nature stays.\n\n4. Forest Breeze Eco Stay\nLocation: Barchi Forest Road, 12 km from Dandeli\nPrice: 3100 INR per day per person\nRating: 4.0\nAbout: Eco stay known for its treehouse accommodation and cool forest breezes.\n\n5. Hornbill Ridge Nature Resort\nLocation: Kulgi Wildlife Belt\nPrice: 4500 INR per day per person\nRating: 4.5\nAbout: Wildlife resort known for frequent hornbill sightings and forest trails.",
+            "created_at": "2026-03-28T17:02:03Z"
+          }
+        ]
+      },
+      "1433323c-637b-46dd-88ca-03fd7ab20ede": {
+        "title": "Hey whats time now in india",
+        "updated_at": "2026-03-28T17:13:36Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hey whats time now in india",
+            "created_at": "2026-03-28T17:08:40Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-03-28T17:08:40Z"
+          },
+          {
+            "role": "user",
+            "content": "We\u2019re 4 people coming this weekend, budget is 8000 total for one night, want rafting nearby and a peaceful stay. Which resort should we choose and why?",
+            "created_at": "2026-03-28T17:13:08Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nEstimated total: 1800 INR per night for 4 guests\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays.",
+            "created_at": "2026-03-28T17:13:09Z"
+          },
+          {
+            "role": "user",
+            "content": "List resorts below 2000, then tell me more about the best one, and give me its website, contact number, and unique features.",
+            "created_at": "2026-03-28T17:13:20Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Website for Tiger and Lion Safari Resort: https://www.tigerandlionsafariresort.com",
+            "created_at": "2026-03-28T17:13:20Z"
+          },
+          {
+            "role": "user",
+            "content": "I want to book Tiger and Lion Safari Resort for March 30, 2026 to March 31, 2026 for 2 people. My contact is 9876543210. Show me the final booking confirmation first.",
+            "created_at": "2026-03-28T17:13:36Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Tiger and Lion Safari Resort\nDates: March 30, 2026 to March 31, 2026\nGuests: 2 guests\nContact: 9876543210\n\nReply `confirm` to send it.",
+            "created_at": "2026-03-28T17:13:36Z"
+          }
+        ]
+      },
+      "f8784b57-dc32-49bc-8728-5c37a357929c": {
+        "title": "List resorts below 2000, then tell me more about...",
+        "updated_at": "2026-03-28T17:24:53Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "List resorts below 2000, then tell me more about the best one, and give me its website, contact number, and unique features.",
+            "created_at": "2026-03-28T17:24:36Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nTiger and Lion Safari Resort\nWhy it fits: rating 4.8.\nTradeoff: lower price may mean a simpler stay experience.\n\nMatching resorts:\n\n1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays.\n\nRequested details for Tiger and Lion Safari Resort:\nTiger and Lion Safari Resort\nCategory: Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nDescription: jungle resort located near zone offering peaceful nature stays\nUnique Features: Large garden surrounded by jungle\n\nWebsite for Tiger and Lion Safari Resort: https://www.tigerandlionsafariresort.com\nPhone for Tiger and Lion Safari Resort: +91 9793457832\nDescription for Tiger and Lion Safari Resort: jungle resort located near zone offering peaceful nature stays\nUnique Features for Tiger and Lion Safari Resort: Large garden surrounded by jungle",
+            "created_at": "2026-03-28T17:24:36Z"
+          },
+          {
+            "role": "user",
+            "content": "We\u2019re 4 people coming this weekend, budget is 8000 total for one night, want rafting nearby and a peaceful stay. Which resort should we choose and why?",
+            "created_at": "2026-03-28T17:24:53Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nTiger and Lion Safari Resort\nWhy it fits: rafting access nearby, peaceful nature setting, estimated total 1800 INR per night for 4 guests, rating 4.8.\nTradeoff: lower price may mean a simpler stay experience.\n\nOne more option:\nRiverstone Eco Retreat\nWhy it fits: rafting access nearby, peaceful nature setting, estimated total 15200 INR per night for 4 guests, rating 4.3.\nTradeoff: total nightly cost may feel high for a group budget.\n\nClosest alternatives if you want more options:\n\n1. Riverstone Eco Retreat\nWhy it fits: rafting access nearby, peaceful nature setting, estimated total 15200 INR per night for 4 guests, rating 4.3.\nTradeoff: total nightly cost may feel high for a group budget.\n\n2. Bison River Resort\nWhy it fits: rafting access nearby, estimated total 15400 INR per night for 4 guests, rating 4.4.\nTradeoff: total nightly cost may feel high for a group budget.\n\nQuick details:\n\nTiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nEstimated total: 1800 INR per night for 4 guests\nRating: 4.8\n\nRiverstone Eco Retreat\nLocation: Ganeshgudi Riverside Road, 7 km from Dandeli\nPrice: 3800 INR per day per person\nEstimated total: 15200 INR per night for 4 guests\nRating: 4.3\n\nBison River Resort\nLocation: Ganeshgudi Road, 6 km from Dandeli Bus Stand\nPrice: 3850 INR per day per person\nEstimated total: 15400 INR per night for 4 guests\nRating: 4.4",
+            "created_at": "2026-03-28T17:24:53Z"
+          }
+        ]
+      },
+      "5b2417b9-4eea-442a-9c37-c1042c597985": {
+        "title": "List resorts below 2000, then tell me more about...",
+        "updated_at": "2026-04-03T03:55:23Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "List resorts below 2000, then tell me more about the best one, and give me its website, contact number, and unique features.",
+            "created_at": "2026-04-03T03:46:41Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nTiger and Lion Safari Resort\nWhy it fits: rating 4.8.\nTradeoff: lower price may mean a simpler stay experience.\n\nMatching resorts:\n\n1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays\n\nRequested details for Tiger and Lion Safari Resort:\nTiger and Lion Safari Resort\nCategory: Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nDescription: jungle resort located near zone offering peaceful nature stays\nUnique Features: Large garden surrounded by jungle\n\nWebsite for Tiger and Lion Safari Resort: https://www.tigerandlionsafariresort.com\nPhone for Tiger and Lion Safari Resort: +91 9793457832\nDescription for Tiger and Lion Safari Resort: jungle resort located near zone offering peaceful nature stays\nUnique Features for Tiger and Lion Safari Resort: Large garden surrounded by jungle",
+            "created_at": "2026-04-03T03:46:41Z"
+          },
+          {
+            "role": "user",
+            "content": "We\u2019re 4 people coming this weekend, budget is 8000 total for one night, want rafting nearby and a peaceful stay. Which resort should we choose and why?",
+            "created_at": "2026-04-03T03:55:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nTiger and Lion Safari Resort\nWhy it fits: rafting access nearby, peaceful nature setting, rating 4.8.\nTradeoff: lower price may mean a simpler stay experience.\n\nQuick details:\n\nTiger and Lion Safari Resort\nCategory: Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nDescription: jungle resort located near zone offering peaceful nature stays\nUnique Features: Large garden surrounded by jungle\n\nBackup option:\nRiverstone Eco Retreat",
+            "created_at": "2026-04-03T03:55:23Z"
+          }
+        ]
+      },
+      "3fcbfd25-ef77-48d0-929d-e263ae7b27f5": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:54:29Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:54:26Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:54:26Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:54:29Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:54:29Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-02271909-167b-44e2-8f1f-a8b1b4418d21": {
+    "sessions": {
+      "f1170a71-2a5f-4aae-a695-5553bcac9171": {
+        "title": "Find quiet riverside resorts under 4000 per pers...",
+        "updated_at": "2026-04-18T05:03:27Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Find quiet riverside resorts under 4000 per person",
+            "created_at": "2026-04-18T05:03:16Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Riverstone Eco Retreat\nLocation: Ganeshgudi Riverside Road, 7 km from Dandeli\nPrice: 3800 INR per day per person\nRating: 4.3\nAbout: Eco retreat located near the Kali River offering peaceful stays surrounded by forest landscapes\n\n2. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area\n\n3. Star Valley River Resort\nLocation: Supa Dam Road, 12 km from Dandeli\nPrice: 3950 INR per day per person\nRating: 4.3\nAbout: Riverside resort with scenic valley views and access to rafting activities\n\n4. Kali Rapids Riverside Camp\nLocation: Ganeshgudi Rapids Area, Kali River bank\nPrice: 3250 INR per day per person\nRating: 4.1\nAbout: Adventure camp popular among rafting groups visiting the Kali River\n\n5. Bison River Resort\nLocation: Ganeshgudi Road, 6 km from Dandeli Bus Stand\nPrice: 3850 INR per day per person\nRating: 4.4\nAbout: Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages\n\n6. Riverstone Jungle Stay\nLocation: Kulgi Wildlife Area, Dandeli\nPrice: 3900 INR per day per person\nRating: 4.4\nAbout: Comfortable forest stay offering nature experiences and wildlife sightings\n\n7. Emerald Forest Retreat\nLocation: Kulgi Road, 11 km from Dandeli Bus Stand\nPrice: 3550 INR per day per person\nRating: 4.3\nAbout: Eco-friendly forest retreat surrounded by evergreen vegetation and wildlife trails\n\n8. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays",
+            "created_at": "2026-04-18T05:03:16Z"
+          },
+          {
+            "role": "user",
+            "content": "Book",
+            "created_at": "2026-04-18T05:03:27Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-04-18T05:03:27Z"
+          }
+        ]
+      },
+      "fc9ca11a-9f3b-4889-818d-ac3a3720fe97": {
+        "title": "Hi",
+        "updated_at": "2026-04-18T05:25:11Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-18T05:25:11Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-18T05:25:11Z"
+          }
+        ]
+      },
+      "306cffbe-3edd-4b59-bb70-5a99cfabee0a": {
+        "title": "HI",
+        "updated_at": "2026-04-18T05:25:17Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "HI",
+            "created_at": "2026-04-18T05:25:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-18T05:25:17Z"
+          }
+        ]
+      },
+      "6df1fd42-1e36-4deb-a563-7ee17e2c8f00": {
+        "title": "Hi",
+        "updated_at": "2026-04-18T05:25:23Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-18T05:25:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-18T05:25:23Z"
+          }
+        ]
+      },
+      "4a61e251-b117-4001-a4c6-671df743a25e": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T06:04:40Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-18T05:25:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-18T05:25:30Z"
+          },
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T06:04:10Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T06:04:10Z"
+          },
+          {
+            "role": "user",
+            "content": "list all reosrts which are less than 1000 in price",
+            "created_at": "2026-04-22T06:04:21Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-04-22T06:04:21Z"
+          },
+          {
+            "role": "user",
+            "content": "list all resorts whose price is less than 1000",
+            "created_at": "2026-04-22T06:04:40Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T06:04:40Z"
+          }
+        ]
+      },
+      "1de76051-65b5-4607-9a5b-7e6f389bf311": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T06:06:25Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T06:05:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T06:05:51Z"
+          },
+          {
+            "role": "user",
+            "content": "list all resorts whose price is less than 1000",
+            "created_at": "2026-04-22T06:06:02Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T06:06:02Z"
+          },
+          {
+            "role": "user",
+            "content": "list all resorts whose price is less than 1000",
+            "created_at": "2026-04-22T06:06:25Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T06:06:25Z"
+          }
+        ]
+      },
+      "020df24a-5352-48f7-af0e-636d3e878933": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T06:07:16Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T06:07:16Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T06:07:16Z"
+          }
+        ]
+      },
+      "b8877575-83e7-44db-b827-e75e34f95dcd": {
+        "title": "New conversation",
+        "updated_at": "2026-04-22T06:46:58Z",
+        "messages": []
+      }
+    }
+  },
+  "guest-e989b273-d91e-4d85-854d-e4cbdc117da6": {
+    "user_id": "guest-e989b273-d91e-4d85-854d-e4cbdc117da6",
+    "created_at": "2026-04-18T06:17:17Z",
+    "updated_at": "2026-04-18T06:18:03Z",
+    "profile": {},
+    "sessions": {}
+  },
+  "guest": {
+    "sessions": {
+      "48a6e3e5-989c-4785-8f1c-c9a971c5aca0": {
+        "title": "hi",
+        "updated_at": "2026-04-22T06:01:26Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "hi",
+            "created_at": "2026-04-22T06:01:26Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T06:01:26Z"
+          }
+        ]
+      }
+    }
+  },
+  "user_3ChYhltCQQKZwbEz0AhImm98mXq": {
+    "sessions": {
+      "8d438c7f-b223-4a20-acd3-c8866b6ffa3b": {
+        "title": "New conversation",
+        "updated_at": "2026-04-22T07:01:54Z",
+        "messages": []
+      },
+      "95bfc624-a410-43f1-b5f4-1fc42e103d36": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:01:58Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:01:58Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:01:58Z"
+          }
+        ]
+      }
+    }
+  },
+  "user_3ChcklFQExlo8qbyC5rQae80HW5": {
+    "sessions": {
+      "f1e0c14b-665d-4e5c-a061-e8aa56c829b6": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:30:14Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:18:29Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:18:29Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:18:43Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:18:43Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:30:14Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:30:14Z"
+          }
+        ]
+      },
+      "5675d1cc-1aeb-4418-97b6-2e2f9d45717c": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:30:53Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:30:50Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:30:50Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:30:53Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:30:53Z"
+          }
+        ]
+      },
+      "a0020a6c-3b08-4831-9fe8-07e0938e08bf": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:40:39Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:40:39Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:40:39Z"
+          }
+        ]
+      },
+      "82c77627-9b8a-40d2-bae6-582c2b07355c": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:43:37Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:41:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:41:51Z"
+          },
+          {
+            "role": "user",
+            "content": "list all resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:43:37Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:43:37Z"
+          }
+        ]
+      },
+      "4258d400-0e23-4699-8301-351dfe17bd17": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T08:00:15Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:50:05Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:50:05Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:50:22Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:50:22Z"
+          },
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:54:00Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:54:00Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:54:07Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:54:07Z"
+          },
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:56:15Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:56:15Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:56:19Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays",
+            "created_at": "2026-04-22T07:56:19Z"
+          },
+          {
+            "role": "user",
+            "content": "book it",
+            "created_at": "2026-04-22T07:56:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "created_at": "2026-04-22T07:56:23Z"
+          },
+          {
+            "role": "user",
+            "content": "check in March 26, 2026 at 12 pm and  check out March 28, 2026 1 am",
+            "created_at": "2026-04-22T07:56:44Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-04-22T07:56:44Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 3000",
+            "created_at": "2026-04-22T07:57:42Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Kali Forest Eco Camp\nLocation: Anshi Tiger Reserve edge, 14 km from Dandeli Bus Stand\nPrice: 2800 INR per day per person\nRating: 4.3\nAbout: Nature-oriented eco camp located near the wildlife reserve\n\n2. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays\n\n3. Jungle Nest Eco Resort\nLocation: Barchi Road, 10 km from Dandeli town\nPrice: 2900 INR per day per person\nRating: 4.0\nAbout: Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors\n\n4. Starling River Camp\nLocation: Near Supa Dam Road, Dandeli\nPrice: 2600 INR per day per person\nRating: 3.9\nAbout: Budget adventure camp offering rafting packages near Supa Dam",
+            "created_at": "2026-04-22T07:57:42Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have rating greater than 4.5",
+            "created_at": "2026-04-22T07:57:58Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays\n\n2. Hornbill Nature Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nRating: 4.6\nAbout: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts",
+            "created_at": "2026-04-22T07:57:58Z"
+          },
+          {
+            "role": "user",
+            "content": "book it",
+            "created_at": "2026-04-22T07:58:33Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "created_at": "2026-04-22T07:58:33Z"
+          },
+          {
+            "role": "user",
+            "content": "March 26, 2026 to March 28, 2026",
+            "created_at": "2026-04-22T07:58:39Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-04-22T07:58:39Z"
+          },
+          {
+            "role": "user",
+            "content": "check in March 26, 2026 and check out March 28, 2026",
+            "created_at": "2026-04-22T07:59:14Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "created_at": "2026-04-22T07:59:14Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 3000",
+            "created_at": "2026-04-22T07:59:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Kali Forest Eco Camp\nLocation: Anshi Tiger Reserve edge, 14 km from Dandeli Bus Stand\nPrice: 2800 INR per day per person\nRating: 4.3\nAbout: Nature-oriented eco camp located near the wildlife reserve\n\n2. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays\n\n3. Jungle Nest Eco Resort\nLocation: Barchi Road, 10 km from Dandeli town\nPrice: 2900 INR per day per person\nRating: 4.0\nAbout: Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors\n\n4. Starling River Camp\nLocation: Near Supa Dam Road, Dandeli\nPrice: 2600 INR per day per person\nRating: 3.9\nAbout: Budget adventure camp offering rafting packages near Supa Dam",
+            "created_at": "2026-04-22T07:59:52Z"
+          },
+          {
+            "role": "user",
+            "content": "book this resort Starling River Camp\ncheck in in 26/04/ 2026 and c heckout is 28/04/2026",
+            "created_at": "2026-04-22T08:00:15Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "created_at": "2026-04-22T08:00:15Z"
+          }
+        ]
+      },
+      "735c56c5-a196-4a0e-8684-4a00747a86b2": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:59:21Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:59:21Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:59:21Z"
+          }
+        ]
+      },
+      "507e9716-fba7-4daa-8047-e70f5c3f71d7": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T08:08:59Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T08:05:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T08:05:17Z"
+          },
+          {
+            "role": "user",
+            "content": "list all resorts which have price less than 2000",
+            "name": "",
+            "created_at": "2026-04-22T08:05:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:05:30Z"
+          },
+          {
+            "role": "user",
+            "content": "Tiger and Lion Safari Resort  book it",
+            "name": "",
+            "created_at": "2026-04-22T08:05:37Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:05:37Z"
+          },
+          {
+            "role": "user",
+            "content": "check in is March 26, 2026 and check out is March 28, 2026",
+            "name": "",
+            "created_at": "2026-04-22T08:05:48Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:05:48Z"
+          },
+          {
+            "role": "user",
+            "content": "7204113614",
+            "name": "",
+            "created_at": "2026-04-22T08:05:55Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Tiger and Lion Safari Resort\nDates: March 26, 2026 to March 28, 2026\nGuests: Guest details shared in chat\nContact: 7204113614\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:05:55Z"
+          },
+          {
+            "role": "user",
+            "content": "confirm",
+            "name": "",
+            "created_at": "2026-04-22T08:05:59Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Booking request created, but WhatsApp delivery did not complete.\nBooking ID: BK-0013\nResort: Tiger and Lion Safari Resort\nDates: March 26, 2026 To March 28, 2026\nGuests: Guest details shared in chat\nTwilio Status: failed\nTwilio SID: SMaf503c4644da5baa73d99da04258a774\nTwilio Error: 63015",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:06:03Z"
+          },
+          {
+            "role": "user",
+            "content": "now you send booking request",
+            "name": "",
+            "created_at": "2026-04-22T08:06:58Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:06:58Z"
+          },
+          {
+            "role": "user",
+            "content": "check in is March 26, 2026 and check out is March 28, 2026",
+            "name": "",
+            "created_at": "2026-04-22T08:07:04Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Tell me which resort you want to book, and I will place the request.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:07:04Z"
+          },
+          {
+            "role": "user",
+            "content": "Tiger and Lion Safari Resort",
+            "name": "",
+            "created_at": "2026-04-22T08:07:10Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:07:10Z"
+          },
+          {
+            "role": "user",
+            "content": "7204113614",
+            "name": "",
+            "created_at": "2026-04-22T08:07:14Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Tiger and Lion Safari Resort\nDates: March 26, 2026 to March 28, 2026\nGuests: Guest details shared in chat\nContact: 7204113614\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:07:14Z"
+          },
+          {
+            "role": "user",
+            "content": "confirm",
+            "name": "",
+            "created_at": "2026-04-22T08:07:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Your booking request has been sent.\nBooking ID: BK-0014\nResort: Tiger and Lion Safari Resort\nDates: March 26, 2026 To March 28, 2026\nGuests: Guest details shared in chat\n\nTwilio Status: delivered\nThe resort owner has been notified on WhatsApp and should respond soon.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:07:20Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have rating 4+",
+            "name": "",
+            "created_at": "2026-04-22T08:08:03Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Star Valley River Resort\nLocation: Supa Dam Road, 12 km from Dandeli\nPrice: 3950 INR per day per person\nRating: 4.3\nAbout: Riverside resort with scenic valley views and access to rafting activities\n\n2. Kali Valley Adventure Resort\nLocation: Ganeshgudi Valley Area\nPrice: 4150 INR per day per person\nRating: 4.3\nAbout: Adventure-focused resort providing rafting and zipline activities\n\n3. Green Valley Jungle Resort\nLocation: Dandeli\u00e2\u20ac\u201cAnshi Road, forest belt\nPrice: 3300 INR per day per person\nRating: 4.1\nAbout: Forest resort ideal for trekking and peaceful nature stays\n\n4. Hornbill Haven Eco Resort\nLocation: Kulgi forest zone, Dandeli Wildlife Sanctuary\nPrice: 4300 INR per day per person\nRating: 4.5\nAbout: Eco resort known for birdwatching and peaceful forest atmosphere\n\n5. Kali Jungle Haven\nLocation: Kulgi Forest Road, Dandeli Wildlife Sanctuary\nPrice: 3200 INR per day per person\nRating: 4.2\nAbout: Forest retreat located near wildlife trails known for birdwatching and peaceful nature stays\n\n6. Bison River Resort\nLocation: Ganeshgudi Road, 6 km from Dandeli Bus Stand\nPrice: 3850 INR per day per person\nRating: 4.4\nAbout: Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages\n\n7. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area\n\n8. Panther Stay Dandeli\nLocation: Ganeshgudi village, 8 km from Dandeli town\nPrice: 3500 INR per day per person\nRating: 4.1\nAbout: Family-friendly resort offering comfortable cottages and adventure packages",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:08:03Z"
+          },
+          {
+            "role": "user",
+            "content": "3+?",
+            "name": "",
+            "created_at": "2026-04-22T08:08:09Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "name": "OutOfScope",
+            "created_at": "2026-04-22T08:08:09Z"
+          },
+          {
+            "role": "user",
+            "content": "3+ rating",
+            "name": "",
+            "created_at": "2026-04-22T08:08:13Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Bison River Resort\nLocation: Ganeshgudi Road, 6 km from Dandeli Bus Stand\nPrice: 3850 INR per day per person\nRating: 4.4\nAbout: Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages\n\n2. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area\n\n3. Panther Stay Dandeli\nLocation: Ganeshgudi village, 8 km from Dandeli town\nPrice: 3500 INR per day per person\nRating: 4.1\nAbout: Family-friendly resort offering comfortable cottages and adventure packages\n\n4. Hornbill Nature Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nRating: 4.6\nAbout: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts\n\n5. River Edge Adventure Resort\nLocation: Kali River bank, Ganeshgudi area\nPrice: 4100 INR per day per person\nRating: 4.3\nAbout: Adventure resort providing rafting and zipline experiences near Kali River\n\n6. Jungle Nest Eco Resort\nLocation: Barchi Road, 10 km from Dandeli town\nPrice: 2900 INR per day per person\nRating: 4.0\nAbout: Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors\n\n7. Kali River Retreat\nLocation: Ganeshgudi Bridge Road, riverside\nPrice: 4450 INR per day per person\nRating: 4.5\nAbout: Luxury riverside property offering scenic views and water activities\n\n8. Green Valley Jungle Resort\nLocation: Dandeli\u00e2\u20ac\u201cAnshi Road, forest belt\nPrice: 3300 INR per day per person\nRating: 4.1\nAbout: Forest resort ideal for trekking and peaceful nature stays",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:08:14Z"
+          },
+          {
+            "role": "user",
+            "content": "4.5+",
+            "name": "",
+            "created_at": "2026-04-22T08:08:20Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "name": "OutOfScope",
+            "created_at": "2026-04-22T08:08:20Z"
+          },
+          {
+            "role": "user",
+            "content": "4.5+ rating",
+            "name": "",
+            "created_at": "2026-04-22T08:08:25Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Bison River Resort\nLocation: Ganeshgudi Road, 6 km from Dandeli Bus Stand\nPrice: 3850 INR per day per person\nRating: 4.4\nAbout: Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages\n\n2. Whispering Woods Jungle Resort\nLocation: Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary\nPrice: 3000 INR per day per person\nRating: 4.2\nAbout: Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area\n\n3. Panther Stay Dandeli\nLocation: Ganeshgudi village, 8 km from Dandeli town\nPrice: 3500 INR per day per person\nRating: 4.1\nAbout: Family-friendly resort offering comfortable cottages and adventure packages\n\n4. Hornbill Nature Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nRating: 4.6\nAbout: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts\n\n5. River Edge Adventure Resort\nLocation: Kali River bank, Ganeshgudi area\nPrice: 4100 INR per day per person\nRating: 4.3\nAbout: Adventure resort providing rafting and zipline experiences near Kali River\n\n6. Jungle Nest Eco Resort\nLocation: Barchi Road, 10 km from Dandeli town\nPrice: 2900 INR per day per person\nRating: 4.0\nAbout: Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors\n\n7. Kali River Retreat\nLocation: Ganeshgudi Bridge Road, riverside\nPrice: 4450 INR per day per person\nRating: 4.5\nAbout: Luxury riverside property offering scenic views and water activities\n\n8. Green Valley Jungle Resort\nLocation: Dandeli\u00e2\u20ac\u201cAnshi Road, forest belt\nPrice: 3300 INR per day per person\nRating: 4.1\nAbout: Forest resort ideal for trekking and peaceful nature stays",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:08:25Z"
+          },
+          {
+            "role": "user",
+            "content": "list all the resorts which have rating more than 4.5",
+            "name": "",
+            "created_at": "2026-04-22T08:08:41Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays\n\n2. Hornbill Nature Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nRating: 4.6\nAbout: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:08:41Z"
+          },
+          {
+            "role": "user",
+            "content": "tell me most expensive resort in dandeli",
+            "name": "",
+            "created_at": "2026-04-22T08:08:59Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nHornbill Nature Camp\nWhy it fits: rating 4.6.\nTradeoff: availability and exact activity arrangements should still be confirmed before booking.\n\nQuick details:\n\nHornbill Nature Camp\nCategory: Wildlife Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nRating: 4.6\nDescription: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts\nUnique Features: Frequent hornbill and kingfisher sightings\n\nBackup option:\nHornbill Ridge Nature Resort",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:08:59Z"
+          }
+        ]
+      },
+      "4c58482b-58fb-4fcb-a6cb-25496451af07": {
+        "title": "hi we are 4 people coming this weekend, looking ...",
+        "updated_at": "2026-04-22T08:11:56Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "hi we are 4 people coming this weekend, looking for cheap stay near water doing rafting but nothing expensive what u suggest",
+            "name": "",
+            "created_at": "2026-04-22T08:10:54Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nHornbill Nature Camp\nWhy it fits: estimated total 19000 INR per night for 4 guests, rating 4.6.\nTradeoff: availability and exact activity arrangements should still be confirmed before booking.\n\nQuick details:\n\nHornbill Nature Camp\nCategory: Wildlife Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nEstimated total: 19000 INR per night for 4 guests\nRating: 4.6\nDescription: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts\nUnique Features: Frequent hornbill and kingfisher sightings\n\nBackup option:\nHornbill Ridge Nature Resort",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:10:54Z"
+          },
+          {
+            "role": "user",
+            "content": "i like this one book it for us from 26/ 04 /2026 till 28th my email is \nsatish@test.com",
+            "name": "",
+            "created_at": "2026-04-22T08:11:45Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:11:45Z"
+          },
+          {
+            "role": "user",
+            "content": "wait does it have wifi? actually nevermind cancel the booking find me a luxury one with pool instead",
+            "name": "",
+            "created_at": "2026-04-22T08:11:56Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Okay, I cancelled this booking request draft. If you want to start a new one, tell me the resort and dates.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:11:56Z"
+          }
+        ]
+      },
+      "10751fcd-cf00-47c3-8230-ef25c7be2fdd": {
+        "title": "hi we are 4 people coming this weekend, looking ...",
+        "updated_at": "2026-04-22T08:49:12Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "hi we are 4 people coming this weekend, looking for cheap stay near water doing rafting but nothing expensive what u suggest]",
+            "name": "",
+            "created_at": "2026-04-22T08:48:05Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Best match for your request:\nHornbill Nature Camp\nWhy it fits: estimated total 19000 INR per night for 4 guests, rating 4.6.\nTradeoff: availability and exact activity arrangements should still be confirmed before booking.\n\nQuick details:\n\nHornbill Nature Camp\nCategory: Wildlife Camp\nLocation: Kulgi Forest Range, Dandeli Wildlife Sanctuary\nPrice: 4750 INR per day per person\nEstimated total: 19000 INR per night for 4 guests\nRating: 4.6\nDescription: Eco-tourism property within forest surroundings ideal for wildlife enthusiasts\nUnique Features: Frequent hornbill and kingfisher sightings\n\nBackup option:\nHornbill Ridge Nature Resort",
+            "name": "Researcher",
+            "created_at": "2026-04-22T08:48:05Z"
+          },
+          {
+            "role": "user",
+            "content": "i like this one book it for us from 26/ 04 /2026 till 28th my email is \nsatish@test.com",
+            "name": "",
+            "created_at": "2026-04-22T08:48:27Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Tell me which resort you want to book, and I will place the request.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:48:34Z"
+          },
+          {
+            "role": "user",
+            "content": "Hornbill Nature Camp",
+            "name": "",
+            "created_at": "2026-04-22T08:48:46Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:48:48Z"
+          },
+          {
+            "role": "user",
+            "content": "i like this one book it for us from 26/ 04 /2026 till 28th my email is \nsatish@test.com",
+            "name": "",
+            "created_at": "2026-04-22T08:48:52Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Tell me which resort you want to book, and I will place the request.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:48:57Z"
+          },
+          {
+            "role": "user",
+            "content": "Hornbill Nature Camp",
+            "name": "",
+            "created_at": "2026-04-22T08:49:02Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:49:04Z"
+          },
+          {
+            "role": "user",
+            "content": "from 26/ 04 /2026 till 28th my email is \nsatish@test.com",
+            "name": "",
+            "created_at": "2026-04-22T08:49:10Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T08:49:12Z"
+          }
+        ]
+      },
+      "3144937a-9791-4035-989f-fc6cf42fe188": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T09:12:57Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T09:04:35Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T09:04:35Z"
+          },
+          {
+            "role": "user",
+            "content": "list al the resorts which have price less than 1000",
+            "name": "",
+            "created_at": "2026-04-22T09:04:44Z"
+          },
+          {
+            "role": "assistant",
+            "content": "1. Tiger and Lion Safari Resort\nLocation: From Dandeli Edge, 3 km from Dandeli\nPrice: 450 INR per day per person\nRating: 4.8\nAbout: jungle resort located near zone offering peaceful nature stays",
+            "name": "Researcher",
+            "created_at": "2026-04-22T09:04:44Z"
+          },
+          {
+            "role": "user",
+            "content": "book it",
+            "name": "",
+            "created_at": "2026-04-22T09:04:46Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:04:46Z"
+          },
+          {
+            "role": "user",
+            "content": "check in 26/04/2026 to 28/04/2026",
+            "name": "",
+            "created_at": "2026-04-22T09:04:58Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Tell me which resort you want to book, and I will place the request.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:04:58Z"
+          },
+          {
+            "role": "user",
+            "content": "Tiger and Lion Safari Resort",
+            "name": "",
+            "created_at": "2026-04-22T09:05:04Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:05:04Z"
+          },
+          {
+            "role": "user",
+            "content": "7204113614",
+            "name": "",
+            "created_at": "2026-04-22T09:05:09Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Tiger and Lion Safari Resort\nDates: 26/04/2026 to 28/04/2026\nGuests: Guest details shared in chat\nContact: 7204113614\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:05:09Z"
+          },
+          {
+            "role": "user",
+            "content": "wait does it have wifi? actually nevermind cancel the booking find me a luxury one with pool instead",
+            "name": "",
+            "created_at": "2026-04-22T09:05:26Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Okay, I cancelled this booking request draft.\\n\\nBest match for your request:\nHornbill Ridge Nature Resort\nWhy it fits: rating 4.5.\nTradeoff: availability and exact activity arrangements should still be confirmed before booking.\n\nQuick details:\n\nHornbill Ridge Nature Resort\nCategory: Wildlife Resort\nLocation: Kulgi Wildlife Belt\nPrice: 4500 INR per day per person\nRating: 4.5\nDescription: Wildlife resort known for frequent hornbill sightings and forest trails\nUnique Features: Watchtower for wildlife observation\n\nBackup option:\nKali River Retreat",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:05:27Z"
+          },
+          {
+            "role": "user",
+            "content": "book this with same check in and contact number i provided earlier",
+            "name": "",
+            "created_at": "2026-04-22T09:05:55Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:05:55Z"
+          },
+          {
+            "role": "user",
+            "content": "check in 26/04/2026 to 28/04/2026",
+            "name": "",
+            "created_at": "2026-04-22T09:06:04Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Tell me which resort you want to book, and I will place the request.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:06:04Z"
+          },
+          {
+            "role": "user",
+            "content": "Hornbill Ridge Nature Resort",
+            "name": "",
+            "created_at": "2026-04-22T09:06:13Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:06:13Z"
+          },
+          {
+            "role": "user",
+            "content": "7204113614",
+            "name": "",
+            "created_at": "2026-04-22T09:06:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Hornbill Ridge Nature Resort\nDates: 26/04/2026 to 28/04/2026\nGuests: Guest details shared in chat\nContact: 7204113614\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:06:17Z"
+          },
+          {
+            "role": "user",
+            "content": "confirm",
+            "name": "",
+            "created_at": "2026-04-22T09:06:19Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Your booking request has been sent.\nBooking ID: BK-0015\nResort: Hornbill Ridge Nature Resort\nDates: 26/04/2026 To 28/04/2026\nGuests: Guest details shared in chat\n\nTwilio Status: delivered\nThe resort owner has been notified on WhatsApp and should respond soon.",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:06:24Z"
+          },
+          {
+            "role": "user",
+            "content": "hey i need a place tomorrow morning at 10am till day after tomorrow 5pm that allows pets but nothing too far from bus stand",
+            "name": "",
+            "created_at": "2026-04-22T09:08:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "name": "OutOfScope",
+            "created_at": "2026-04-22T09:08:23Z"
+          },
+          {
+            "role": "user",
+            "content": "hey i need a place in Dandeli tomorrow morning at 10am till day after tomorrow 5pm that allows pets but nothing too far from bus stand",
+            "name": "",
+            "created_at": "2026-04-22T09:08:31Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.",
+            "name": "OutOfScope",
+            "created_at": "2026-04-22T09:08:31Z"
+          },
+          {
+            "role": "user",
+            "content": "can u check what happened to BK-0015 also if that doesn't work out suggest me some places for 2 families near the river\"",
+            "name": "",
+            "created_at": "2026-04-22T09:08:41Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Booking ID: BK-0015\nResort: Hornbill Ridge Nature Resort\nDates: 26/04/2026 To 28/04/2026\nGuests: Guest details shared in chat\nStatus: requested\nCreated: 2026-04-22T14:36:24\nTwilio Status: delivered\nTwilio SID: SM28d0ff942d5e63c1b77a899068fa28e4\nTwilio Error: None",
+            "name": "Booker",
+            "created_at": "2026-04-22T09:08:41Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-04-22T09:09:10Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-04-22T09:10:22Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-04-22T09:11:21Z"
+          },
+          {
+            "role": "user",
+            "content": "i have 3 days block for coming month. i want morning safari, afternoon water sports and night campfire. generate a full plan and tell me which resort fits this exactly",
+            "name": "",
+            "created_at": "2026-04-22T09:12:36Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Oh, that sounds like a fantastic plan for a Dandeli adventure! You're looking for the perfect blend of wildlife, thrill, and cozy evenings. I've got just the place and a plan that fits your vision perfectly!\n\nThe resort that truly stands out for your requirements is **Bison River Resort**. It's a \"Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages,\" making it ideal for water sports. Being a resort, campfires are a common and delightful offering. Safari can be easily arranged from here as well!\n\nHere's a possible 3-day plan for your upcoming trip:\n\n---\n\n### Your 3-Day Dandeli Adventure Plan!\n\n**Recommended Resort:** **Bison River Resort** (Ganeshgudi Road, 6 km from Dandeli Bus Stand)\n\n**Day 1: Arrival & River Thrills!**\n\n*   **Morning (10:00 AM onwards):** Arrive in Dandeli and head straight to the **Bison River Resort**. Check in, settle into your comfortable cottage, and soak in the riverside atmosphere.\n*   **Afternoon:** Get ready for some exhilarating **water sports**! Since Bison River Resort offers \"rafting packages,\" you can dive into the Kali River for some thrilling white-water rafting. Other activities like kayaking or coracle rides might also be available.\n*   **Evening:** As the sun sets, gather around a crackling **campfire** at the resort. Share stories, enjoy the peaceful jungle sounds, and relax under the stars. Dinner will be served at the resort.\n\n**Day 2: Wildlife Encounters & More Adventure!**\n\n*   **Morning (Early):** Embark on an exciting **morning safari** into the Dandeli Wildlife Sanctuary. Keep your eyes peeled for majestic tigers, leopards, elephants, and a variety of deer and birds in their natural habitat.\n*   **Afternoon:** After your safari, you can choose to indulge in more **water sports** on the Kali River, or perhaps try a jungle trek or birdwatching activity if offered by the resort or nearby guides.\n*   **Evening:** Another wonderful **campfire** awaits you at the resort. It's the perfect way to unwind after a day full of adventure and wildlife spotting. Enjoy a delicious dinner.\n\n**Day 3: Leisure & Departure**\n\n*   **Morning:** Enjoy a leisurely breakfast at the resort. You can take a peaceful walk along the river, enjoy the resort's amenities, or simply relax and soak in the last moments of Dandeli's tranquility.\n*   **Afternoon:** Check out from **Bison River Resort** and head back home, filled with incredible memories of your Dandeli adventure!\n\n---\n\nThis plan ensures you hit all your desired activities \u2013 morning safari, afternoon water sports, and night campfires \u2013 all while staying at a fantastic riverside resort! Enjoy your trip!",
+            "name": "Planner",
+            "created_at": "2026-04-22T09:12:57Z"
+          }
+        ]
+      },
+      "aaaec5e4-0fe0-4f2d-a7f9-23f67f853719": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T09:24:34Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T09:24:34Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T09:24:34Z"
+          }
+        ]
+      },
+      "704cd9bb-0e02-4035-bff0-d24fbaa862d4": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T09:24:39Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T09:24:39Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T09:24:39Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-local": {
+    "sessions": {
+      "39c34d2a-01ab-4a9c-9fad-3b2b79e6b1ac": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T07:40:30Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "created_at": "2026-04-22T07:40:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "created_at": "2026-04-22T07:40:30Z"
+          }
+        ]
+      },
+      "5c21d148-54cc-4368-9aac-29583a94f599": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T08:05:11Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T08:05:11Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T08:05:11Z"
+          }
+        ]
+      },
+      "d833e0a7-0678-499b-9e2e-2064791cd9a0": {
+        "title": "Hi",
+        "updated_at": "2026-04-22T09:04:30Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-04-22T09:04:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-04-22T09:04:30Z"
+          }
+        ]
+      }
+    }
+  },
+  "test_123": {
+    "sessions": {
+      "8c518fd9-8840-4ecc-8dab-7db3b068da3c": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:44:50Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:44:50Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:44:50Z"
+          }
+        ]
+      }
+    }
+  },
+  "test": {
+    "sessions": {
+      "b1c0dfd8-27bd-44bf-b294-b0221b3f1b5d": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:45:21Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:45:21Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:45:21Z"
+          }
+        ]
+      },
+      "43c7a2f6-05f1-4438-a9e5-04f51fa13476": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:46:23Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:46:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:46:23Z"
+          }
+        ]
+      }
+    }
+  },
+  "test2": {
+    "sessions": {
+      "06ba15f9-8c6c-439e-8bf3-952c516a3b4a": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:47:19Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:47:19Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:47:19Z"
+          }
+        ]
+      },
+      "da2a26ad-aca4-4239-ba7d-b4f490916eea": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:48:06Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:48:06Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:48:06Z"
+          }
+        ]
+      },
+      "a7778691-17f5-4f90-80e6-d9ca372f9249": {
+        "title": "list all the resorts which have price less than ...",
+        "updated_at": "2026-04-22T07:51:36Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "list all the resorts which have price less than 1000",
+            "created_at": "2026-04-22T07:51:36Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Resort database unavailable. Please rebuild the index.",
+            "created_at": "2026-04-22T07:51:36Z"
+          }
+        ]
+      }
+    }
+  }
+}

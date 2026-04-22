@@ -1,0 +1,17 @@
+# Python Environments
+__pycache__/
+*.pyc
+.env
+chroma_db_v2/
+chroma_db/
+faiss_index/
+
+# Node Environments
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+# IDE
+.vscode/
+.idea/
+.gemini/
