@@ -3,7 +3,8 @@ from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
-CHAT_STORE_PATH = Path(r"d:\RAG\CollegeProject\data\json_files\chat_sessions.json")
+BASE_DIR = Path(__file__).resolve().parent.parent
+CHAT_STORE_PATH = BASE_DIR / "data" / "json_files" / "chat_sessions.json"
 DEFAULT_USER_ID = "guest-local"
 
 

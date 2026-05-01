@@ -2,11 +2,14 @@ langchain
 langchain-community
 langchain-groq
 langchain-google-genai
+langchain-huggingface
 langgraph
 fastapi
 chromadb
 langchain-chroma
 pydantic
 python-dotenv
+sentence-transformers
 twilio
 uvicorn
+lark

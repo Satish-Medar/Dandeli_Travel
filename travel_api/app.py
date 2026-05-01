@@ -1,6 +1,4 @@
-import asyncio
-import json
-import re
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
@@ -13,21 +11,31 @@ from .models import AppConfig, AssistantReplyRequest, AssistantReplyResponse, Ch
 from .services import app_config_payload, invoke_assistant, invoke_assistant_from_turns, list_user_sessions, record_message
 from .store import DEFAULT_USER_ID, clear_session, get_or_create_session, get_session as load_session, normalize_user_id, persist_session, sync_user_profile, utc_now
 
-BASE_DIR = Path(r"d:\RAG\CollegeProject")
+BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_OUT_DIR = BASE_DIR / "frontend" / "out"
 FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
 NEXT_ASSET_DIR = FRONTEND_OUT_DIR / "_next"
 VITE_ASSET_DIR = FRONTEND_DIST_DIR / "assets"
 
 app = FastAPI(title="Dandeli Travel Assistant API", version="0.2.0")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
+
+# CORS configuration - supports both local and production origins
+def get_cors_origins():
+    # Allow configurable CORS origins via environment variable
+    cors_env = os.getenv("CORS_ORIGINS", "")
+    if cors_env:
+        return [origin.strip() for origin in cors_env.split(",") if origin.strip()]
+    # Default local origins
+    return [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-    ],
+    ]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=get_cors_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

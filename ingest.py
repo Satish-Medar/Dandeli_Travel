@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from pathlib import Path
 
 # Load environment variables
 load_dotenv()
@@ -12,8 +13,9 @@ load_dotenv()
 # Note: Using HuggingFace for embeddings, Groq/Gemini for LLMs
 
 # Path to the data
-DATA_PATH = r"d:\RAG\CollegeProject\data\json_files\resorts.json"
-CHROMA_DB_PATH = r"d:\RAG\CollegeProject\chroma_db_v2"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = str(BASE_DIR / "data" / "json_files" / "resorts.json")
+CHROMA_DB_PATH = str(BASE_DIR / "chroma_db_v2")
 
 def load_data():
     if not os.path.exists(DATA_PATH):

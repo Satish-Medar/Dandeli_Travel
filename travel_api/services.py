@@ -8,7 +8,7 @@ from travel_agents import graph
 from .models import AppConfig, AssistantTurn, SessionSummary
 from .store import list_sessions_for_user, utc_now
 
-BASE_DIR = Path(r"d:\RAG\CollegeProject")
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 def record_message(session: dict, role: str, content: str, name: str = "") -> None:
