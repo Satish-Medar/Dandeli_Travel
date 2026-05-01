@@ -3,13 +3,13 @@ from langchain_chroma import Chroma
 from langchain_classic.chains.query_constructor.base import AttributeInfo
 from langchain_classic.retrievers import SelfQueryRetriever
 from langchain_groq import ChatGroq
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 from .config import CHROMA_DB_PATH
 
 load_dotenv()
 
-embedding_func = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
+embedding_func = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 vectorstore = None
 retriever = None
 

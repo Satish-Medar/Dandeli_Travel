@@ -3,14 +3,14 @@ import json
 import shutil
 from dotenv import load_dotenv
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
 from pathlib import Path
 
 # Load environment variables
 load_dotenv()
 
-# Note: Using HuggingFace for embeddings, Groq/Gemini for LLMs
+# Note: Using Google for embeddings, Groq/Gemini for LLMs
 
 # Path to the data
 BASE_DIR = Path(__file__).resolve().parent
@@ -82,8 +82,8 @@ def create_chroma_store(docs, embeddings):
 if __name__ == "__main__":
     docs = load_data()
     if docs:
-        print("Initializing HuggingFace Embeddings (all-mpnet-base-v2)...")
-        embeddings = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
+        print("Initializing Google Generative AI Embeddings...")
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
         create_chroma_store(docs, embeddings)
     else:
