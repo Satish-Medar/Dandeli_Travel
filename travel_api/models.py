@@ -19,6 +19,7 @@ class ChatResponse(BaseModel):
 class AssistantTurn(BaseModel):
     role: str
     content: str
+    name: str | None = None
 
 
 class AssistantReplyRequest(BaseModel):
@@ -28,6 +29,7 @@ class AssistantReplyRequest(BaseModel):
 
 class AssistantReplyResponse(BaseModel):
     reply: str
+    node_name: str | None = None
 
 
 class SessionCreateRequest(BaseModel):

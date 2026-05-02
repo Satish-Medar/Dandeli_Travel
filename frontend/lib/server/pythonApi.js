@@ -17,5 +17,5 @@ export async function requestAssistantReply({ messages, message }) {
   }
 
   const payload = await response.json();
-  return payload.reply || "I could not produce a response right now.";
+  return { reply: payload.reply || "I could not produce a response right now.", nodeName: payload.node_name || "" };
 }

@@ -29,17 +29,19 @@ export async function POST(request) {
 
   const withUserMessage = recordMessage(session, "user", `${payload.message || ""}`.trim());
 
-  let reply;
+  let reply, nodeName = "";
   try {
-    reply = await requestAssistantReply({
-      messages: withUserMessage.messages.slice(0, -1).map(({ role, content }) => ({ role, content })),
+    const response = await requestAssistantReply({
+      messages: withUserMessage.messages.slice(0, -1).map(({ role, content, name }) => ({ role, content, name: name || "" })),
       message: payload.message
     });
+    reply = response.reply;
+    nodeName = response.nodeName;
   } catch {
     reply = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.";
   }
 
-  const finalSession = recordMessage(withUserMessage, "assistant", reply);
+  const finalSession = recordMessage(withUserMessage, "assistant", reply, nodeName);
   await saveSession(userId, sessionId, finalSession, profile);
 
   const encoder = new TextEncoder();

@@ -199,12 +199,12 @@ export async function clearSession(userId, sessionId) {
   return nextSession;
 }
 
-export function recordMessage(session, role, content) {
+export function recordMessage(session, role, content, name) {
   const nextSession = {
     ...session,
     title: session.title || "New conversation",
     updated_at: utcNow(),
-    messages: [...(session.messages || []), { role, content, created_at: utcNow() }]
+    messages: [...(session.messages || []), { role, content, name: name || "", created_at: utcNow() }]
   };
 
   if (role === "user" && (!session.title || session.title === "New conversation")) {

@@ -1,5 +1,4 @@
 import json
-from travel_api.store import get_db
 from .config import BOOKINGS_PATH
 
 # Fallback local store if Mongo is missing
@@ -12,6 +11,7 @@ def ensure_bookings_store() -> None:
         BOOKINGS_PATH.write_text("[]", encoding="utf-8")
 
 def load_bookings() -> list[dict]:
+    from travel_api.store import get_db
     db = get_db()
     if db is not None:
         return list(db.booking_requests.find({}, {"_id": 0}))
@@ -25,6 +25,7 @@ def load_bookings() -> list[dict]:
         return _local_bookings
 
 def save_bookings(bookings: list[dict]) -> None:
+    from travel_api.store import get_db
     db = get_db()
     if db is not None:
         collection = db.booking_requests
@@ -38,6 +39,7 @@ def save_bookings(bookings: list[dict]) -> None:
             json.dump(bookings, file, indent=2)
 
 def next_booking_id(bookings: list[dict]) -> str:
+    from travel_api.store import get_db
     db = get_db()
     if db is not None:
         count = db.booking_requests.count_documents({})

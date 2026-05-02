@@ -44,11 +44,11 @@ def invoke_assistant_from_turns(messages: list[AssistantTurn], user_message: str
     prior_messages = []
     for item in messages:
         if item.role == "user":
-            prior_messages.append(HumanMessage(content=item.content))
+            prior_messages.append(HumanMessage(content=item.content, name=item.name or ""))
         elif item.role == "assistant":
-            prior_messages.append(AIMessage(content=item.content))
+            prior_messages.append(AIMessage(content=item.content, name=item.name or ""))
         else:
-            prior_messages.append(SystemMessage(content=item.content))
+            prior_messages.append(SystemMessage(content=item.content, name=item.name or ""))
     return invoke_assistant_from_messages(prior_messages, user_message)
 
 

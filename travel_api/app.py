@@ -138,7 +138,8 @@ def assistant_reply(request: AssistantReplyRequest):
         reply, node_name = invoke_assistant_from_turns(request.messages, request.message.strip())
     except Exception:
         reply = "I'm having trouble reaching one of the AI services right now. Please try again in a moment."
-    return AssistantReplyResponse(reply=reply)
+        node_name = "System"
+    return AssistantReplyResponse(reply=reply, node_name=node_name)
 
 
 @app.post("/chat/stream")
