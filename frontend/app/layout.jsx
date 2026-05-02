@@ -7,8 +7,9 @@ const inter = Inter({
   variable: '--font-inter',
 });
 export const metadata = {
-  title: "Dandeli Travel Workspace",
-  description: "A refined travel planning workspace for resort research, itinerary design, and booking follow-up.",
+  title: "Dandeli Travel | AI Resort & Booking Assistant",
+  description: "Find the best resorts, plan trips, and book your stay in Dandeli with our smart AI assistant.",
+  keywords: "Dandeli resorts, book Dandeli trips, Dandeli tourism, Dandeli AI, Dandeli travel agent, best resorts in Dandeli",
   icons: {
     icon: "/assets/logo.png",
   },
