@@ -4,7 +4,7 @@ from typing import Sequence
 from langchain_core.messages import AIMessage, HumanMessage
 
 from .content import extract_content
-from travel_tools import get_known_resort_names
+from travel_tools.search_tool import get_known_resort_names
 
 
 def find_selected_resort(messages: Sequence) -> str | None:

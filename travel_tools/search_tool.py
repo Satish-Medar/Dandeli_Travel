@@ -17,6 +17,7 @@ from .search_engine import (
     is_single_resort_followup_query,
     load_all_documents,
     matches_filters,
+    normalize_text,
     sort_documents_by_best_to_worst,
     sort_documents_for_query,
     wants_best_first_sort,
