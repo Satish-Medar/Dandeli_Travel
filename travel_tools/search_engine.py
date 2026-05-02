@@ -57,16 +57,33 @@ def safe_retriever_invoke(query: str):
     try: return retriever.invoke(query)
     except Exception: return []
 
+_cached_all_docs = None
+
 def load_all_documents() -> list[dict]:
+    global _cached_all_docs
+    if _cached_all_docs is not None:
+        return _cached_all_docs
+    
     if not vectorstore: return []
-    payload = vectorstore.get()
-    rows = []
-    for page_content, metadata in zip(payload.get("documents", []), payload.get("metadatas", [])):
-        rows.append({
-            "page_content": clean_text(page_content),
-            "metadata": {k: clean_text(v) if isinstance(v, str) else v for k, v in (metadata or {}).items()},
-        })
-    return rows
+    
+    try:
+        # Pinecone does not support .get(), so we fetch all via a broad similarity search
+        docs = vectorstore.similarity_search("resort", k=100)
+        rows = []
+        seen = set()
+        for doc in docs:
+            name = doc.metadata.get("name")
+            if name and name not in seen:
+                seen.add(name)
+                rows.append({
+                    "page_content": clean_text(doc.page_content),
+                    "metadata": {k: clean_text(v) if isinstance(v, str) else v for k, v in doc.metadata.items()},
+                })
+        _cached_all_docs = rows
+        return rows
+    except Exception as e:
+        print(f"Failed to load documents from Pinecone: {e}")
+        return []
 
 # ==========================================
 # 3. QUERY PARSING & INTENT
