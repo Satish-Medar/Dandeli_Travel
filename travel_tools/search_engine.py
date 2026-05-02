@@ -185,8 +185,16 @@ def score_document_for_query(doc: dict, query: str) -> int:
         score += 10
     return score
 
-def sort_documents_for_query(docs: list[dict], query: str) -> list[dict]:
-    return sorted(docs, key=lambda d: (score_document_for_query(d, query), d["metadata"].get("rating", 0), -(d["metadata"].get("price", 10**9) or 10**9)), reverse=True)
+def sort_documents_for_query(docs: list[dict], query: str, filters: dict = None) -> list[dict]:
+    filters = filters or {}
+    def sort_key(d):
+        score = score_document_for_query(d, query)
+        rating = d["metadata"].get("rating", 0) or 0
+        price = d["metadata"].get("price", 10**9) or 10**9
+        if "price" in filters:
+            return (score, rating, price)
+        return (score, rating, -price)
+    return sorted(docs, key=sort_key, reverse=True)
 
 def sort_documents_by_best_to_worst(docs: list[dict]) -> list[dict]:
     return sorted(docs, key=lambda d: (-(d["metadata"].get("rating", 0) or 0), d["metadata"].get("price", 10**9) or 10**9, d["metadata"].get("name", "")))
@@ -276,6 +284,19 @@ def find_named_resort(query: str, docs: list[dict]) -> dict | None:
             best_doc, best_score = doc, len(resort_name.split())
     return best_doc
 
+def find_all_named_resorts(query: str, docs: list[dict]) -> list[dict]:
+    normalized_query = normalize_text(query)
+    found, seen = [], set()
+    for doc in docs:
+        resort_name = normalize_text(str(doc["metadata"].get("name", "")))
+        if resort_name and len(resort_name) > 3 and resort_name in normalized_query and resort_name not in seen:
+            found.append(doc)
+            seen.add(resort_name)
+    return sorted(found, key=lambda d: -len(str(d["metadata"].get("name", ""))))
+
+def is_comparison_query(normalized_query: str) -> bool:
+    return any(marker in normalized_query for marker in ["compare", "difference between", "vs", "versus", "torn between", "which one", "better choice"])
+
 def is_single_resort_followup_query(normalized_query: str) -> bool:
     return any(marker in normalized_query for marker in ["tell me more", "more about", "details about", "about this", "about "])
 
@@ -340,3 +361,20 @@ def format_compound_best_detail_response(docs: list[dict], query: str, guest_cou
     field_block = format_requested_fields(best, extract_requested_fields(normalize_text(query)))
     if field_block: response.extend(["", field_block])
     return "\n".join(response)
+
+def format_comparison_response(docs: list[dict], query: str) -> str | None:
+    if len(docs) < 2: return None
+    a_name = clean_text(str(docs[0]["metadata"].get("name", "Resort A")))
+    b_name = clean_text(str(docs[1]["metadata"].get("name", "Resort B")))
+    lines = [f"Comparing {a_name} vs {b_name}:", ""]
+    lines.append(f"Price: {a_name} is {docs[0]['metadata'].get('price')} INR/day. {b_name} is {docs[1]['metadata'].get('price')} INR/day.")
+    lines.append(f"Rating: {a_name} is rated {docs[0]['metadata'].get('rating')}. {b_name} is rated {docs[1]['metadata'].get('rating')}.")
+    lines.append("")
+    lines.append(f"**{a_name} Highlights:**\n{extract_about_text(docs[0]['page_content'])}")
+    lines.append(f"\n**{b_name} Highlights:**\n{extract_about_text(docs[1]['page_content'])}")
+    lines.append("\nConclusion:")
+    a_score, b_score = score_document_for_query(docs[0], query), score_document_for_query(docs[1], query)
+    if a_score > b_score + 5: lines.append(f"Based on your specific needs, **{a_name}** seems like a better fit.")
+    elif b_score > a_score + 5: lines.append(f"Based on your specific needs, **{b_name}** seems like a better fit.")
+    else: lines.append(f"Both are excellent choices. Choose **{a_name}** if you prefer {docs[0]['metadata'].get('category')}, or **{b_name}** for {docs[1]['metadata'].get('category')}.")
+    return "\n".join(lines)

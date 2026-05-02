@@ -4,13 +4,16 @@ from .search_engine import (
     clean_text,
     dedupe_documents,
     extract_filters,
+    find_all_named_resorts,
     find_named_resort,
+    format_comparison_response,
     format_compound_best_detail_response,
     format_recommendation_summary,
     format_results,
     format_single_resort_detail,
     format_single_resort_field_response,
     hybrid_retrieve_documents,
+    is_comparison_query,
     is_compound_best_detail_query,
     is_recommendation_query,
     is_single_resort_field_query,
@@ -48,7 +51,7 @@ def search_resorts(query: str) -> str:
     if named_resort and is_single_resort_followup_query(normalized_query):
         return format_single_resort_detail(named_resort, guest_count=guest_count)
     docs = [doc for doc in all_docs if matches_filters(doc, filters)] if filters else hybrid_retrieve_documents(query, all_docs)
-    docs = sort_documents_for_query(docs, semantic_query or query) if (docs and filters) else (docs or sort_documents_for_query(all_docs, query))
+    docs = sort_documents_for_query(docs, semantic_query or query, filters) if (docs and filters) else (docs or sort_documents_for_query(all_docs, query))
     if any(marker in normalized_query for marker in ["expensive", "luxury", "premium", "high-end", "rich"]):
         docs = sorted(docs, key=lambda d: (-(d["metadata"].get("price", 0) or 0), -(d["metadata"].get("rating", 0) or 0), d["metadata"].get("name", "")))
     if wants_best_first_sort(normalized_query):
@@ -59,6 +62,13 @@ def search_resorts(query: str) -> str:
             prefix = f"No exact resorts found within a total budget of {total_budget} INR per night for {guest_count} guests. That works out to about {filters['price'][1]} INR per person.\n\n" if total_budget and guest_count else "No exact resorts found within the stated budget.\n\n"
             return prefix + "Closest alternatives:\n\n" + format_results(relaxed_docs[:3], guest_count=guest_count) if relaxed_docs else "No matching resorts found."
         return "No matching resorts found."
+        
+    if is_comparison_query(normalized_query):
+        named_resorts = find_all_named_resorts(query, docs)
+        if len(named_resorts) >= 2:
+            comp_response = format_comparison_response(named_resorts, query)
+            if comp_response: return comp_response
+
     if is_compound_best_detail_query(normalized_query):
         return format_compound_best_detail_response(docs, query, guest_count=guest_count, total_budget=total_budget)
     if named_resort:

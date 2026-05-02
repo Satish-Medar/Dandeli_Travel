@@ -9,14 +9,40 @@ from travel_tools.search_tool import get_known_resort_names
 
 def find_selected_resort(messages: Sequence) -> str | None:
     lowered_map = {name.lower(): name for name in get_known_resort_names()}
+    
+    def get_dist_words(name: str) -> set[str]:
+        words = set(name.lower().split())
+        return words - {"resort", "camp", "stay", "retreat", "jungle", "homestay", "hotel", "eco", "nature", "and", "the", "in", "of"}
+        
     for msg in reversed(messages):
         if isinstance(msg, HumanMessage):
             lowered_content = extract_content(msg.content).strip().lower()
+            
             if lowered_content in lowered_map:
                 return lowered_map[lowered_content]
+                
             for lowered_name, original_name in lowered_map.items():
                 if lowered_name in lowered_content:
                     return original_name
+                    
+            best_fuzzy_match = None
+            best_fuzzy_score = 0
+            content_words = set(lowered_content.split())
+            
+            for lowered_name, original_name in lowered_map.items():
+                dist_words = get_dist_words(lowered_name)
+                if not dist_words:
+                    continue
+                overlap = dist_words.intersection(content_words)
+                if len(overlap) >= max(1, len(dist_words) // 2):
+                    if any(len(w) >= 4 for w in overlap) or len(overlap) == len(dist_words):
+                        score = len(overlap)
+                        if score > best_fuzzy_score:
+                            best_fuzzy_score = score
+                            best_fuzzy_match = original_name
+                            
+            if best_fuzzy_match:
+                return best_fuzzy_match
     return None
 
 

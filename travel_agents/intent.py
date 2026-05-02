@@ -22,4 +22,12 @@ def classify_user_intent(messages: str | Sequence[BaseMessage]) -> str:
         return "Planner"
     if any(marker in normalized for marker in ["stay", "trip", "resort", "budget", "rating", "rafting", "bird watching", "nature", "family", "solo"]):
         return "Researcher"
+        
+    if len(msg_list) >= 2:
+        last_ai_msg = msg_list[-2]
+        if getattr(last_ai_msg, "name", "") == "Researcher":
+            followup_markers = ["price", "cost", "how much", "contact", "phone", "email", "website", "link", "where", "location", "details", "more info", "tell me more", "that one", "the one"]
+            if any(marker in normalized for marker in followup_markers):
+                return "Researcher"
+                
     return "OutOfScope"
