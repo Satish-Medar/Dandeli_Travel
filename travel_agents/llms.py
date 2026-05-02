@@ -17,7 +17,7 @@ def prefer_groq_invoke(groq_runnable, gemini_runnable):
 
 
 groq_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=0)
-gemini_llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2)
+gemini_llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1, max_retries=2)
 
 planner_prompt = (
     "You are an enthusiastic, local Dandeli Planner. "
