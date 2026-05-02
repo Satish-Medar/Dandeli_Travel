@@ -1,21 +1,20 @@
 import os
 import json
-import shutil
+import time
 from dotenv import load_dotenv
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+from pinecone import Pinecone
 from pathlib import Path
 
 # Load environment variables
 load_dotenv()
 
-# Note: Using HuggingFace for embeddings, Groq/Gemini for LLMs
-
 # Path to the data
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = str(BASE_DIR / "data" / "json_files" / "resorts.json")
-CHROMA_DB_PATH = str(BASE_DIR / "chroma_db_v2")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "dandeli-travel")
 
 def load_data():
     if not os.path.exists(DATA_PATH):
@@ -64,27 +63,31 @@ def load_data():
             "location": clean_val(resort.get("location")) or "Not Available"
         }
 
+        # Filter out None values from metadata
+        metadata = {k: v for k, v in metadata.items() if v is not None}
+
         docs.append(Document(page_content=content, metadata=metadata))
 
     return docs
 
-def create_chroma_store(docs, embeddings):
-    print("Creating ChromaDB index...")
-    # Bypassing rmtree because Windows locks open Uvicorn sqlite instances
+def create_pinecone_store(docs, embeddings):
+    print("Connecting to Pinecone...")
+    pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
     
-    vectorstore = Chroma.from_documents(
-        documents=docs, 
-        embedding=embeddings, 
-        persist_directory=CHROMA_DB_PATH
+    print(f"Creating/updating Pinecone index: {PINECONE_INDEX_NAME}...")
+    vectorstore = PineconeVectorStore.from_documents(
+        documents=docs,
+        embedding=embeddings,
+        index_name=PINECONE_INDEX_NAME
     )
-    print(f"Success! ChromaDB index created at {CHROMA_DB_PATH}")
+    print(f"Success! Pinecone index updated.")
 
 if __name__ == "__main__":
     docs = load_data()
     if docs:
-        print("Initializing HuggingFace Embeddings (all-MiniLM-L6-v2)...")
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        print("Initializing Google Generative AI Embeddings...")
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2")
 
-        create_chroma_store(docs, embeddings)
+        create_pinecone_store(docs, embeddings)
     else:
         print("No documents loaded out of JSON. Aborting.")

@@ -11,6 +11,20 @@ from .models import AppConfig, AssistantReplyRequest, AssistantReplyResponse, Ch
 from .services import app_config_payload, invoke_assistant, invoke_assistant_from_turns, list_user_sessions, record_message
 from .store import DEFAULT_USER_ID, clear_session, get_or_create_session, get_session as load_session, normalize_user_id, persist_session, sync_user_profile, utc_now
 
+import jwt
+from fastapi import Depends, Header
+
+def verify_clerk_user(authorization: str = Header(None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+    token = authorization.split(" ")[1]
+    try:
+        # In a strict production setup, verify the signature using Clerk's JWKS
+        decoded = jwt.decode(token, options={"verify_signature": False})
+        return decoded.get("sub")
+    except Exception:
+        raise HTTPException(status_code=401, detail="Invalid auth token")
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_OUT_DIR = BASE_DIR / "frontend" / "out"
 FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
@@ -69,39 +83,42 @@ def serve_frontend():
 
 
 @app.get("/sessions", response_model=list[SessionSummary])
-def list_sessions(user_id: str = Query(default=DEFAULT_USER_ID)):
-    return list_user_sessions(normalize_user_id(user_id))
+def list_sessions(user_id: str = Query(default=DEFAULT_USER_ID), auth_user_id: str = Depends(verify_clerk_user)):
+    final_user_id = auth_user_id or normalize_user_id(user_id)
+    return list_user_sessions(final_user_id)
 
 
 @app.get("/sessions/{session_id}", response_model=SessionDetail)
-def get_session_detail(session_id: str, user_id: str = Query(default=DEFAULT_USER_ID)):
-    session = load_session(normalize_user_id(user_id), session_id)
+def get_session_detail(session_id: str, user_id: str = Query(default=DEFAULT_USER_ID), auth_user_id: str = Depends(verify_clerk_user)):
+    final_user_id = auth_user_id or normalize_user_id(user_id)
+    session = load_session(final_user_id, session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found.")
     return SessionDetail(session_id=session_id, title=session.get("title", "New conversation"), updated_at=session.get("updated_at", utc_now()), messages=[MessageRecord(**item) for item in session.get("messages", [])])
 
 
 @app.post("/sessions", response_model=SessionResponse)
-def create_session(payload: SessionCreateRequest):
-    user_id = normalize_user_id(payload.user_id)
-    sync_user_profile(user_id, payload.user_name, payload.user_email)
-    session_id, session = get_or_create_session(user_id, None, payload.title)
+def create_session(payload: SessionCreateRequest, auth_user_id: str = Depends(verify_clerk_user)):
+    final_user_id = auth_user_id or normalize_user_id(payload.user_id)
+    sync_user_profile(final_user_id, payload.user_name, payload.user_email)
+    session_id, session = get_or_create_session(final_user_id, None, payload.title)
     return SessionResponse(session_id=session_id, message="Session created.", title=session.get("title", "New conversation"))
 
 
 @app.delete("/sessions/{session_id}", response_model=SessionResponse)
-def reset_session(session_id: str, user_id: str = Query(default=DEFAULT_USER_ID)):
-    session = clear_session(normalize_user_id(user_id), session_id)
+def reset_session(session_id: str, user_id: str = Query(default=DEFAULT_USER_ID), auth_user_id: str = Depends(verify_clerk_user)):
+    final_user_id = auth_user_id or normalize_user_id(user_id)
+    session = clear_session(final_user_id, session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found.")
     return SessionResponse(session_id=session_id, message="Session cleared.", title=session["title"])
 
 
 @app.post("/chat", response_model=ChatResponse)
-def chat(request: ChatRequest):
-    user_id = normalize_user_id(request.user_id)
-    sync_user_profile(user_id, request.user_name, request.user_email)
-    session_id, session = get_or_create_session(user_id, request.session_id)
+def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_user)):
+    final_user_id = auth_user_id or normalize_user_id(request.user_id)
+    sync_user_profile(final_user_id, request.user_name, request.user_email)
+    session_id, session = get_or_create_session(final_user_id, request.session_id)
     user_message = request.message.strip()
     record_message(session, "user", user_message)
     try:
@@ -110,7 +127,7 @@ def chat(request: ChatRequest):
         session["messages"].pop()
         reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"
     record_message(session, "assistant", reply, node_name)
-    persist_session(user_id, session_id, session)
+    persist_session(final_user_id, session_id, session)
     return ChatResponse(session_id=session_id, reply=reply)
 
 
@@ -124,10 +141,13 @@ def assistant_reply(request: AssistantReplyRequest):
 
 
 @app.post("/chat/stream")
-async def chat_stream(request: ChatRequest):
-    user_id = normalize_user_id(request.user_id)
-    sync_user_profile(user_id, request.user_name, request.user_email)
-    session_id, session = get_or_create_session(user_id, request.session_id)
+async def chat_stream(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_user)):
+    import asyncio
+    import json
+    import re
+    final_user_id = auth_user_id or normalize_user_id(request.user_id)
+    sync_user_profile(final_user_id, request.user_name, request.user_email)
+    session_id, session = get_or_create_session(final_user_id, request.session_id)
     user_message = request.message.strip()
     record_message(session, "user", user_message)
     try:
@@ -136,7 +156,7 @@ async def chat_stream(request: ChatRequest):
         session["messages"].pop()
         reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"
     record_message(session, "assistant", reply, node_name)
-    persist_session(user_id, session_id, session)
+    persist_session(final_user_id, session_id, session)
 
     async def event_generator():
         yield f"event: session\ndata: {session_id}\n\n"

@@ -1,4 +1,7 @@
 import re
+from typing import Optional
+from pydantic import BaseModel, Field
+from langchain_groq import ChatGroq
 from .vectorstore_provider import retriever, vectorstore
 
 # ==========================================
@@ -72,51 +75,38 @@ def extract_query_terms(text: str) -> list[str]:
     stopwords = {"the", "a", "an", "i", "am", "is", "are", "for", "to", "of", "in", "on", "at", "me", "my", "we", "our", "and", "or", "with", "want", "need", "show", "suggest", "suggestion", "suggestions", "what", "which", "would", "could", "please", "trip", "stay", "resort", "resorts", "dandeli"}
     return [term for term in re.findall(r"\b[a-z0-9]+\b", normalize_text(text)) if len(term) > 2 and term not in stopwords]
 
+class SearchFilters(BaseModel):
+    min_rating: Optional[float] = Field(description="Minimum rating required by the user")
+    max_budget: Optional[int] = Field(description="Maximum total budget in INR")
+    guest_count: Optional[int] = Field(description="Number of guests traveling")
+    family_friendly: Optional[bool] = Field(description="Whether the user explicitly wants family friendly options")
+
 def extract_filters(query: str) -> tuple[dict, str]:
     normalized = normalize_text(query)
-    filters: dict[str, object] = {}
-    patterns = [
-        ("rating", r"rating\s+(?:more than|greater than|above|over)\s+(\d+(?:\.\d+)?)", "gt", float),
-        ("rating", r"rating\s+(?:at least|minimum|min)\s+(\d+(?:\.\d+)?)", "gte", float),
-        ("rating", r"rating\s+(?:less than|below|under)\s+(\d+(?:\.\d+)?)", "lt", float),
-        ("rating", r"rating\s+(?:at most|maximum|max)\s+(\d+(?:\.\d+)?)", "lte", float),
-        ("price", r"(?:price|budget)(?:\s+is)?\s+(?:more than|greater than|above|over)\s+(\d+)", "gt", int),
-        ("price", r"(?:price|budget)(?:\s+is)?\s+(?:at least|minimum|min)\s+(\d+)", "gte", int),
-        ("price", r"(?:price|budget)(?:\s+is)?\s+(?:less than|below|under)\s+(\d+)", "lt", int),
-        ("price", r"(?:price|budget)(?:\s+is)?\s+(?:at most|maximum|max)\s+(\d+)", "lte", int),
-    ]
-    for key, pattern, operator, caster in patterns:
-        match = re.search(pattern, normalized)
-        if match:
-            filters[key] = (operator, caster(match.group(1)))
-            normalized = re.sub(pattern, " ", normalized)
-    for pattern in [r"\bmy budget is (\d+)\b", r"\bbudget is (\d+)\b", r"\bwithin (\d+)\b", r"\baround (\d+)\b", r"\babout (\d+)\b"]:
-        match = re.search(pattern, normalized)
-        if match and "price" not in filters:
-            filters["price"] = ("lte", int(match.group(1)))
-            normalized = re.sub(pattern, " ", normalized)
-            break
-    if "price" not in filters and "rating" not in filters:
-        for pattern, operator in [(r"\b(?:less than|below|under)\s+(\d+)\b", "lt"), (r"\b(?:at most|max(?:imum)?)\s+(\d+)\b", "lte"), (r"\b(?:more than|greater than|above|over)\s+(\d+)\b", "gt"), (r"\b(?:at least|min(?:imum)?)\s+(\d+)\b", "gte")]:
-            match = re.search(pattern, normalized)
-            if match:
-                filters["price"] = (operator, int(match.group(1)))
-                normalized = re.sub(pattern, " ", normalized)
-                break
-    for pattern in [r"\bwe(?:'|â€™)?re (\d+) people\b", r"\bwe are (\d+) people\b", r"\bfamily of (\d+)\b", r"\bgroup of (\d+)\b", r"\bfor (\d+) people\b", r"\bfor (\d+) persons\b", r"\bfor (\d+) guests\b", r"\btraveling with (\d+)\b"]:
-        match = re.search(pattern, normalized)
-        if match:
-            filters["guest_count"] = max(1, int(match.group(1)))
-            break
-    if "price" in filters and filters.get("guest_count") and any(marker in normalized for marker in ["for the night", "per night", "for one night", "for a night", "for tonight"]):
-        operator, total_budget = filters["price"]
-        guest_count = filters["guest_count"]
-        filters["total_budget"] = total_budget
-        filters["price"] = (operator, max(1, total_budget // guest_count))
-    if re.search(r"\bfamily friendly\b|\bfamily-friendly\b|\bfor family\b", normalized):
-        filters["family_friendly"] = True
-        normalized = re.sub(r"\bfamily friendly\b|\bfamily-friendly\b|\bfor family\b", " ", normalized)
-    return filters, " ".join(normalized.split())
+    filters = {}
+    try:
+        llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.0).with_structured_output(SearchFilters)
+        parsed = llm.invoke(f"Extract search filters from the following query:\n\n{query}")
+        
+        if parsed.min_rating is not None:
+            filters["rating"] = ("gte", parsed.min_rating)
+        
+        if parsed.max_budget is not None and parsed.guest_count is not None and parsed.guest_count > 0:
+            filters["price"] = ("lte", max(1, parsed.max_budget // parsed.guest_count))
+            filters["total_budget"] = parsed.max_budget
+            filters["guest_count"] = parsed.guest_count
+        elif parsed.max_budget is not None:
+            filters["price"] = ("lte", parsed.max_budget)
+        elif parsed.guest_count is not None and parsed.guest_count > 0:
+            filters["guest_count"] = parsed.guest_count
+            
+        if parsed.family_friendly:
+            filters["family_friendly"] = True
+            
+        return filters, normalized
+    except Exception as e:
+        print(f"LLM Structured Extraction Failed: {e}")
+        return filters, normalized
 
 def is_decision_query(normalized_query: str) -> bool:
     return any(marker in normalized_query for marker in ["which one should i choose", "which resort should", "which should we choose", "what should we choose", "best one", "best resort", "recommend one", "which one is best", "second-best", "backup"])
