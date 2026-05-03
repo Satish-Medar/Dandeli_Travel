@@ -58,7 +58,7 @@ export default function ClerkAuthPanel({ mode }) {
     <div className="auth-page-shell">
       <div className="auth-page-card">
         <div className="auth-page-copy">
-          <p className="kicker">Dandeli Travel</p>
+          <p className="kicker">Vana AI</p>
           <h1>{mode === "signup" ? "Create your account" : "Welcome back"}</h1>
           <p className="subtitle">
             {mode === "signup"

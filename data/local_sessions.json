@@ -3,7 +3,7 @@
     "sessions": {
       "a38fccb5-c13a-43cb-89ba-f7361b917ba3": {
         "title": "Hi",
-        "updated_at": "2026-05-03T14:15:15Z",
+        "updated_at": "2026-05-03T18:02:13Z",
         "messages": [
           {
             "role": "user",
@@ -76,6 +76,133 @@
             "content": "Based on your preferences, I've planned a 2-day trip for you:\n\n**Day 1: May 07, 2026**\n\n* Arrive at Hornbill Nature Camp in the morning.\n* Check-in at the camp and freshen up.\n* **Bird Watching Session (9:00 am - 12:00 pm)**: Join the guided bird watching tour at the Kulgi Forest Range, a renowned spot for bird enthusiasts. Spot various species of birds, including hornbills and kingfishers.\n* **Lunch**: Enjoy a delicious meal at the camp's restaurant.\n* **Nature Walk (2:00 pm - 4:00 pm)**: Take a leisurely walk through the forest, exploring the surroundings and spotting more birds and other wildlife.\n* **Campfire and Relaxation**: Spend the evening relaxing by the campfire, sharing stories, and enjoying the peaceful surroundings.\n\n**Day 2: May 08, 2026**\n\n* **Jungle Safari (8:00 am - 10:00 am)**: Embark on a guided jungle safari to explore the Dandeli Wildlife Sanctuary. Spot various animals, including deer, monkeys, and birds.\n* **Bird Watching Session (11:00 am - 1:00 pm)**: Join another guided bird watching tour, focusing on different species and habitats.\n* **Lunch**: Enjoy a packed lunch at a scenic spot.\n* **Departure**: Check-out of the camp and depart for your next destination.\n\nThis itinerary should provide you with a great bird watching experience, along with some relaxation and exploration of the surrounding forest. Enjoy your trip!",
             "name": "Planner",
             "created_at": "2026-05-03T14:15:15Z"
+          },
+          {
+            "role": "user",
+            "content": "Tell me about Emerald Valley Lodge",
+            "name": "",
+            "created_at": "2026-05-03T17:56:24Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've searched for information about Emerald Valley Lodge, but unfortunately, I couldn't find any matching resorts in our database. It's possible that the lodge doesn't exist or doesn't meet your current search criteria. Would you like to adjust your budget or requirements to explore other options? I'd be happy to help you find a suitable alternative.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T17:56:34Z"
+          },
+          {
+            "role": "user",
+            "content": "Tell me about Emerald Valley Lodge",
+            "name": "",
+            "created_at": "2026-05-03T18:02:06Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I apologize again, but I couldn't find any information about Emerald Valley Lodge in our database. It seems that no exact matching resorts were found. If you could provide more details or adjust your search criteria, I'd be happy to try and assist you in finding a suitable resort that meets your needs.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:02:13Z"
+          }
+        ]
+      },
+      "7a34f092-69a8-4363-83b2-a1454944ae75": {
+        "title": "Tell me about Emerald Valley Lodge",
+        "updated_at": "2026-05-03T18:08:24Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Tell me about Emerald Valley Lodge",
+            "name": "",
+            "created_at": "2026-05-03T18:02:31Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm so sorry, but it seems that our search didn't yield any results for Emerald Valley Lodge. We couldn't find an exact match for this resort in our database. If you'd like, you can try adjusting your search criteria or providing more details about what you're looking for, and I'd be happy to help you find a suitable alternative.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:02:33Z"
+          },
+          {
+            "role": "user",
+            "content": "Tell me about Emerald Valley Lodge",
+            "name": "",
+            "created_at": "2026-05-03T18:06:48Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I apologize again, but our search results still show that no exact matching resorts were found for Emerald Valley Lodge. I don't have any information about this resort in our database. If you could provide more details or adjust your search, I'd be happy to try and assist you in finding a suitable option.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:06:49Z"
+          },
+          {
+            "role": "user",
+            "content": "Find me a Nature Resort in Zone 5",
+            "name": "",
+            "created_at": "2026-05-03T18:07:09Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I apologize, but our search results don't specify any resorts in a particular \"Zone 5\". However, I can suggest a Nature Resort from our search results. \n\nWe found the Wildwood Nature Resort, which is a Nature Resort located in Dandeli\u2013Anshi Forest Road. It has a rating of 4.4 and offers a peaceful forest stay ideal for wildlife lovers and photographers. The price per person is 3750 INR per day. \n\nIf you're looking for something specific in Zone 5, could you please provide more details or clarify what you mean by Zone 5? I'd be happy to try and assist you further.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:07:10Z"
+          },
+          {
+            "role": "user",
+            "content": "Tell me about River Valley Kali",
+            "name": "",
+            "created_at": "2026-05-03T18:07:24Z"
+          },
+          {
+            "role": "assistant",
+            "content": "River Valley Kali is a beautiful Nature Resort located in Zone 5, Dandeli Forest Reserve. It's a luxury resort that offers an authentic jungle experience, perfect for nature lovers. The resort has a rating of 5.0 based on 377 reviews, which is excellent.\n\nThe price per person is 2703 INR per day. They have a Standard Tent room option and offer amenities like WiFi, Restaurant, Parking, Campfire, and Pool. You can enjoy on-site activities like Campfire, Nature Walk, and Bird Watching. They also offer nearby activities like River Rafting, and water activities like Rafting and Kayaking.\n\nPlease note that River Valley Kali is not family-friendly, but it's a great option for romantic couples. If you're interested in booking or need more information, you can contact them at +91 9612964801 or email them at booking@rivervalleykali.com. You can also visit their website at https://www.rivervalleykali.com.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:07:26Z"
+          },
+          {
+            "role": "user",
+            "content": "tell me about River Valley",
+            "name": "",
+            "created_at": "2026-05-03T18:08:22Z"
+          },
+          {
+            "role": "assistant",
+            "content": "River Valley is a wonderful Nature Resort located in Zone 2, Dandeli Forest Reserve. It has a rating of 4.5 based on 61 reviews, which is very good.\n\nThe price per person is 6701 INR per day. They offer room options like Standard Tent and Deluxe Cottage. The resort provides amenities such as WiFi, Restaurant, and Parking. You can enjoy on-site activities like Campfire, Nature Walk, Bird Watching, and Yoga. They also offer nearby activities like River Rafting, and water activities like Rafting and Kayaking.\n\nRiver Valley is a family-friendly resort, making it a great option for those traveling with family. They offer food options for both vegetarians and non-vegetarians.\n\nIf you're interested in booking or need more information, you can contact them at +91 9959489786 or email them at booking@rivervalley.com. You can also visit their website at https://www.rivervalley.com.\n\nOne of the unique features of River Valley is its exclusive river access and guided nature trails, which makes it an ideal choice for nature lovers looking for an authentic jungle experience.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T18:08:24Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-9d2d2d67-fd5f-43b3-9931-53f3343bb72c": {
+    "sessions": {}
+  },
+  "test_user": {
+    "sessions": {
+      "c0104fe4-1d7e-43bb-a106-a60387d57f9d": {
+        "title": "Hi, I am looking for a resort in Dandeli with ra...",
+        "updated_at": "2026-05-03T17:25:51Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi, I am looking for a resort in Dandeli with rafting.",
+            "name": "",
+            "created_at": "2026-05-03T17:22:34Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Dandeli is a fantastic destination for rafting enthusiasts. I've got some great options for you. Based on our search results, here are a few resorts that offer rafting:\n\n1. **Bison River Resort**: This adventure resort is located on Ganeshgudi Road, 6 km from Dandeli Bus Stand, and offers rafting packages. The price per person is 3850 INR per day, and it has a rating of 4.4.\n2. **River Edge Adventure Resort**: As the name suggests, this resort is perfect for adventure-seekers. It's located on the Kali River bank in the Ganeshgudi area and offers rafting, ziplining, and other activities. The price per person is 4100 INR per day, and it has a rating of 4.3.\n3. **Panther Stay Dandeli**: This nature resort is located in Ganeshgudi village, 8 km from Dandeli town, and offers rafting and trekking packages. The price per person is 3500 INR per day, and it has a rating of 4.1.\n4. **Starling River Camp**: This adventure camp is located near Supa Dam Road, Dandeli, and offers budget-friendly rafting packages. The price per person is 2600 INR per day, and it has a rating of 3.9.\n\nAll of these resorts offer a great experience, but if you're looking for a more luxurious stay, you might want to consider **Kali River Retreat**, which also offers rafting and has a rating of 4.5. However, the price per person is 4450 INR per day.\n\nWhich one of these options sounds most appealing to you?",
+            "name": "Researcher",
+            "created_at": "2026-05-03T17:22:49Z"
+          },
+          {
+            "role": "user",
+            "content": "That sounds good, can you book the first one for me next weekend?",
+            "name": "",
+            "created_at": "2026-05-03T17:25:50Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-05-03T17:25:51Z"
           }
         ]
       }

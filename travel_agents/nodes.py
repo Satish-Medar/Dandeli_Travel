@@ -51,7 +51,7 @@ async def researcher_node(state):
     synthesizer = prefer_groq_invoke(groq_70b, prefer_groq_invoke(groq_llm, gemini_llm))
     
     system_prompt = (
-        "You are a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
+        "You are Vana, a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
         "Your job is to read the JSON data and answer the user's latest question in a beautiful, natural, conversational format. "
         "If the user asks for a comparison, logically compare the best options from the JSON. "
         "If the user asks for a specific number of resorts (e.g. 'top 1' or 'just 2'), provide EXACTLY that many. "

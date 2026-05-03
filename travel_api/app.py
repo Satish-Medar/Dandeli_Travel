@@ -31,7 +31,7 @@ FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
 NEXT_ASSET_DIR = FRONTEND_OUT_DIR / "_next"
 VITE_ASSET_DIR = FRONTEND_DIST_DIR / "assets"
 
-app = FastAPI(title="Dandeli Travel Assistant API", version="0.2.0")
+app = FastAPI(title="Vana AI API", version="0.2.0")
 
 # CORS configuration - supports both local and production origins
 def get_cors_origins():

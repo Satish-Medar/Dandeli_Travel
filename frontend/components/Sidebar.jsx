@@ -84,7 +84,7 @@ export default function Sidebar({
         <div className="sidebar-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '4px 0 12px 0' }}>
           {/* Logo element representing ChatGPT flower logo */}
           <button style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '6px', color: 'var(--text-main)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#efefef'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-            <Image src="/assets/logo.png" alt="Dandeli Travel Logo" width={44} height={56} style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <Image src="/assets/vana-logo.svg" alt="Vana AI Logo" width={40} height={40} />
           </button>
           
           <button 

@@ -3,11 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
-import Composer from "../components/Composer";
-import MessageThread from "../components/MessageThread";
-import Sidebar from "../components/Sidebar";
-import { fetchJson, streamChat } from "../lib/api";
-import { ensureGuestUserId } from "../lib/auth";
+import Composer from "../../components/Composer";
+import MessageThread from "../../components/MessageThread";
+import Sidebar from "../../components/Sidebar";
+import { fetchJson, streamChat } from "../../lib/api";
+import { ensureGuestUserId } from "../../lib/auth";
 
 function createMetaMessage(content) {
   return {
@@ -363,7 +363,7 @@ export default function Page() {
                border: 'none', cursor: 'pointer', padding: '6px 10px', borderRadius: '8px',
                color: 'var(--text-main)', fontSize: '1.125rem', fontWeight: 600
              }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#efefef'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-               Dandeli Travel
+               Vana AI
                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-muted)' }}>
                  <polyline points="6 9 12 15 18 9"></polyline>
                </svg>

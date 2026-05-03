@@ -46,7 +46,7 @@ export default function Composer({
             rows="1"
             value={value}
             onChange={(event) => onChange(event.target.value)}
-            placeholder="Message Dandeli Travel"
+            placeholder="Message Vana..."
             onKeyDown={handleKeyDown}
           />
           <div className="composer-actions">
@@ -67,7 +67,7 @@ export default function Composer({
         {/* We can hide title and use the hint since the overall layout changed */}
         <div className="composer-footer">
           <p className="composer-hint">
-            Dandeli Travel Assistant • Developed by Human.
+            Vana AI • Developed by Human.
           </p>
         </div>
       </div>

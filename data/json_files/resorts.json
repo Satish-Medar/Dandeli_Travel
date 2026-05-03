@@ -1,1462 +1,3983 @@
-﻿[
+[
     {
-        "id":  1,
-        "name":  "Bison River Resort",
-        "category":  "Adventure Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Road, 6 km from Dandeli Bus Stand",
-        "latitude":  15.2412,
-        "longitude":  74.6194,
-        "phone":  "+91 9845237126",
-        "email":  "info@bisonriverresort.com",
-        "website":  "https://www.bisonriverresort.com",
-        "rating":  4.4,
-        "review_count":  312,
-        "rooms":  [
-                      "River Cottage",
-                      "Deluxe Cottage",
-                      "Adventure Tent"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Parking",
-                          "Adventure Desk",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Indoor games",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "River rafting",
-                                  "Bird watching",
-                                  "Jungle safari"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking",
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages.",
-        "unique_features":  "Direct access to Kali River rafting starting point.",
-        "price":  3850
+        "id": 1,
+        "name": "Bison River Resort",
+        "category": "Adventure Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Road, 6 km from Dandeli Bus Stand",
+        "latitude": 15.2412,
+        "longitude": 74.6194,
+        "phone": "+91 9845237126",
+        "email": "info@bisonriverresort.com",
+        "website": "https://www.bisonriverresort.com",
+        "rating": 4.4,
+        "review_count": 312,
+        "rooms": [
+            "River Cottage",
+            "Deluxe Cottage",
+            "Adventure Tent"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Parking",
+            "Adventure Desk",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Indoor games",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "River rafting",
+            "Bird watching",
+            "Jungle safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "10:30 AM",
+        "description": "Riverside adventure resort located near Ganeshgudi bridge offering rafting packages and comfortable cottages.",
+        "unique_features": "Direct access to Kali River rafting starting point.",
+        "price": 3850
     },
     {
-        "id":  2,
-        "name":  "Whispering Woods Jungle Resort",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary",
-        "latitude":  15.2287,
-        "longitude":  74.6341,
-        "phone":  "+91 8792411845",
-        "email":  "booking@whisperingwoodsresort.com",
-        "website":  "https://www.whisperingwoodsresort.com",
-        "rating":  4.2,
-        "review_count":  198,
-        "rooms":  [
-                      "Wooden Cottage",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Garden",
-                          "Restaurant",
-                          "Parking",
-                          "Nature Trail"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Bird watching"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Wildlife photography"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area.",
-        "unique_features":  "Known for hornbill sightings and birdwatching trails.",
-        "price":  3000
+        "id": 2,
+        "name": "Whispering Woods Jungle Resort",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Kulgi Nature Camp Road, Dandeli Wildlife Sanctuary",
+        "latitude": 15.2287,
+        "longitude": 74.6341,
+        "phone": "+91 8792411845",
+        "email": "booking@whisperingwoodsresort.com",
+        "website": "https://www.whisperingwoodsresort.com",
+        "rating": 4.2,
+        "review_count": 198,
+        "rooms": [
+            "Wooden Cottage",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Garden",
+            "Restaurant",
+            "Parking",
+            "Nature Trail"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Bird watching"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Wildlife photography"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Quiet eco-stay surrounded by dense forest and wildlife habitats within the Dandeli sanctuary area.",
+        "unique_features": "Known for hornbill sightings and birdwatching trails.",
+        "price": 3000
     },
     {
-        "id":  3,
-        "name":  "Panther Stay Dandeli",
-        "category":  "Nature Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi village, 8 km from Dandeli town",
-        "latitude":  15.2491,
-        "longitude":  74.6103,
-        "phone":  "+91 9342855271",
-        "email":  "contact@pantherstay.com",
-        "website":  "https://www.pantherstay.com",
-        "rating":  4.1,
-        "review_count":  167,
-        "rooms":  [
-                      "Family Room",
-                      "Deluxe Cottage"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Bonfire area",
-                          "Kids play area",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Indoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Trekking",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Family-friendly resort offering comfortable cottages and adventure packages.",
-        "unique_features":  "Popular among college groups visiting for rafting.",
-        "price":  3500
+        "id": 3,
+        "name": "Panther Stay Dandeli",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi village, 8 km from Dandeli town",
+        "latitude": 15.2491,
+        "longitude": 74.6103,
+        "phone": "+91 9342855271",
+        "email": "contact@pantherstay.com",
+        "website": "https://www.pantherstay.com",
+        "rating": 4.1,
+        "review_count": 167,
+        "rooms": [
+            "Family Room",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Bonfire area",
+            "Kids play area",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Indoor games"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Trekking",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Family-friendly resort offering comfortable cottages and adventure packages.",
+        "unique_features": "Popular among college groups visiting for rafting.",
+        "price": 3500
     },
     {
-        "id":  4,
-        "name":  "Hornbill Nature Camp",
-        "category":  "Wildlife Camp",
-        "city":  "Dandeli",
-        "location":  "Kulgi Forest Range, Dandeli Wildlife Sanctuary",
-        "latitude":  15.2205,
-        "longitude":  74.6409,
-        "phone":  "+91 9480177452",
-        "email":  "stay@hornbillnaturecamp.com",
-        "website":  "https://www.hornbillnaturecamp.com",
-        "rating":  4.6,
-        "review_count":  402,
-        "rooms":  [
-                      "Eco Cottage",
-                      "Forest Tent"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Nature Trail",
-                          "Parking",
-                          "Guided Tours"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Photography tours"
-                              ],
-        "water_activities":  [
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Eco-tourism property within forest surroundings ideal for wildlife enthusiasts.",
-        "unique_features":  "Frequent hornbill and kingfisher sightings.",
-        "price":  4750
+        "id": 4,
+        "name": "Hornbill Nature Camp",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Kulgi Forest Range, Dandeli Wildlife Sanctuary",
+        "latitude": 15.2205,
+        "longitude": 74.6409,
+        "phone": "+91 9480177452",
+        "email": "stay@hornbillnaturecamp.com",
+        "website": "https://www.hornbillnaturecamp.com",
+        "rating": 4.6,
+        "review_count": 402,
+        "rooms": [
+            "Eco Cottage",
+            "Forest Tent"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Nature Trail",
+            "Parking",
+            "Guided Tours"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Photography tours"
+        ],
+        "water_activities": [
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Eco-tourism property within forest surroundings ideal for wildlife enthusiasts.",
+        "unique_features": "Frequent hornbill and kingfisher sightings.",
+        "price": 4750
     },
     {
-        "id":  5,
-        "name":  "River Edge Adventure Resort",
-        "category":  "Adventure Resort",
-        "city":  "Dandeli",
-        "location":  "Kali River bank, Ganeshgudi area",
-        "latitude":  15.2440,
-        "longitude":  74.6188,
-        "phone":  "+91 9108622143",
-        "email":  "adventure@riveredge.com",
-        "website":  "https://www.riveredgeadventure.com",
-        "rating":  4.3,
-        "review_count":  289,
-        "rooms":  [
-                      "River View Cottage",
-                      "Adventure Tent"
-                  ],
-        "amenities":  [
-                          "Adventure Desk",
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Zipline",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Kayaking"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Adventure resort providing rafting and zipline experiences near Kali River.",
-        "unique_features":  "Zipline across the river.",
-        "price":  4100
+        "id": 5,
+        "name": "River Edge Adventure Resort",
+        "category": "Adventure Resort",
+        "city": "Dandeli",
+        "location": "Kali River bank, Ganeshgudi area",
+        "latitude": 15.244,
+        "longitude": 74.6188,
+        "phone": "+91 9108622143",
+        "email": "adventure@riveredge.com",
+        "website": "https://www.riveredgeadventure.com",
+        "rating": 4.3,
+        "review_count": 289,
+        "rooms": [
+            "River View Cottage",
+            "Adventure Tent"
+        ],
+        "amenities": [
+            "Adventure Desk",
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Zipline",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "10:00 AM",
+        "description": "Adventure resort providing rafting and zipline experiences near Kali River.",
+        "unique_features": "Zipline across the river.",
+        "price": 4100
     },
     {
-        "id":  6,
-        "name":  "Jungle Nest Eco Resort",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Barchi Road, 10 km from Dandeli town",
-        "latitude":  15.2567,
-        "longitude":  74.6421,
-        "phone":  "+91 9874516320",
-        "email":  "info@junglenestresort.com",
-        "website":  "https://www.junglenestresort.com",
-        "rating":  4.0,
-        "review_count":  144,
-        "rooms":  [
-                      "Treehouse",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Garden",
-                          "Restaurant",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Trekking",
-                                  "Jungle safari"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors.",
-        "unique_features":  "Treehouse accommodation.",
-        "price":  2900
+        "id": 6,
+        "name": "Jungle Nest Eco Resort",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Barchi Road, 10 km from Dandeli town",
+        "latitude": 15.2567,
+        "longitude": 74.6421,
+        "phone": "+91 9874516320",
+        "email": "info@junglenestresort.com",
+        "website": "https://www.junglenestresort.com",
+        "rating": 4.0,
+        "review_count": 144,
+        "rooms": [
+            "Treehouse",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Garden",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Trekking",
+            "Jungle safari"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Eco-friendly jungle retreat surrounded by bamboo groves and wildlife corridors.",
+        "unique_features": "Treehouse accommodation.",
+        "price": 2900
     },
     {
-        "id":  7,
-        "name":  "Kali River Retreat",
-        "category":  "Luxury Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Bridge Road, riverside",
-        "latitude":  15.2433,
-        "longitude":  74.6167,
-        "phone":  "+91 9632587412",
-        "email":  "reservations@kaliriverretreat.com",
-        "website":  "https://www.kaliriverretreat.com",
-        "rating":  4.5,
-        "review_count":  355,
-        "rooms":  [
-                      "River Cottage",
-                      "Deluxe Room"
-                  ],
-        "amenities":  [
-                          "Swimming Pool",
-                          "Restaurant",
-                          "WiFi",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Swimming"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Luxury riverside property offering scenic views and water activities.",
-        "unique_features":  "Infinity pool overlooking Kali River.",
-        "price":  4450
+        "id": 7,
+        "name": "Kali River Retreat",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Bridge Road, riverside",
+        "latitude": 15.2433,
+        "longitude": 74.6167,
+        "phone": "+91 9632587412",
+        "email": "reservations@kaliriverretreat.com",
+        "website": "https://www.kaliriverretreat.com",
+        "rating": 4.5,
+        "review_count": 355,
+        "rooms": [
+            "River Cottage",
+            "Deluxe Room"
+        ],
+        "amenities": [
+            "Swimming Pool",
+            "Restaurant",
+            "WiFi",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Swimming"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Luxury riverside property offering scenic views and water activities.",
+        "unique_features": "Infinity pool overlooking Kali River.",
+        "price": 4450
     },
     {
-        "id":  8,
-        "name":  "Green Valley Jungle Resort",
-        "category":  "Nature Resort",
-        "city":  "Dandeli",
-        "location":  "Dandeliâ€“Anshi Road, forest belt",
-        "latitude":  15.2381,
-        "longitude":  74.6454,
-        "phone":  "+91 9845012374",
-        "email":  "stay@greenvalleyresort.com",
-        "website":  "https://www.greenvalleyresort.com",
-        "rating":  4.1,
-        "review_count":  176,
-        "rooms":  [
-                      "Wooden Cottage",
-                      "Family Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Indoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Trekking",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Forest resort ideal for trekking and peaceful nature stays.",
-        "unique_features":  "Located near several trekking trails.",
-        "price":  3300
+        "id": 8,
+        "name": "Green Valley Jungle Resort",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Dandeli\u00e2\u20ac\u201cAnshi Road, forest belt",
+        "latitude": 15.2381,
+        "longitude": 74.6454,
+        "phone": "+91 9845012374",
+        "email": "stay@greenvalleyresort.com",
+        "website": "https://www.greenvalleyresort.com",
+        "rating": 4.1,
+        "review_count": 176,
+        "rooms": [
+            "Wooden Cottage",
+            "Family Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Indoor games"
+        ],
+        "activities_nearby": [
+            "Trekking",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Forest resort ideal for trekking and peaceful nature stays.",
+        "unique_features": "Located near several trekking trails.",
+        "price": 3300
     },
     {
-        "id":  9,
-        "name":  "Starling River Camp",
-        "category":  "Adventure Camp",
-        "city":  "Dandeli",
-        "location":  "Near Supa Dam Road, Dandeli",
-        "latitude":  15.2598,
-        "longitude":  74.6527,
-        "phone":  "+91 8792365481",
-        "email":  "camp@starlingrivercamp.com",
-        "website":  "https://www.starlingrivercamp.com",
-        "rating":  3.9,
-        "review_count":  121,
-        "rooms":  [
-                      "Safari Tent",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Outdoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Kayaking"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Budget adventure camp offering rafting packages near Supa Dam.",
-        "unique_features":  "Affordable group adventure packages.",
-        "price":  2600
+        "id": 9,
+        "name": "Starling River Camp",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Near Supa Dam Road, Dandeli",
+        "latitude": 15.2598,
+        "longitude": 74.6527,
+        "phone": "+91 8792365481",
+        "email": "camp@starlingrivercamp.com",
+        "website": "https://www.starlingrivercamp.com",
+        "rating": 3.9,
+        "review_count": 121,
+        "rooms": [
+            "Safari Tent",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Outdoor games"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "10:00 AM",
+        "description": "Budget adventure camp offering rafting packages near Supa Dam.",
+        "unique_features": "Affordable group adventure packages.",
+        "price": 2600
     },
     {
-        "id":  10,
-        "name":  "Timber Trails Dandeli",
-        "category":  "Forest Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi forest belt, 9 km from Dandeli",
-        "latitude":  15.2467,
-        "longitude":  74.6212,
-        "phone":  "+91 9012456738",
-        "email":  "booking@timbertrailsdandeli.com",
-        "website":  "https://www.timbertrailsdandeli.com",
-        "rating":  4.2,
-        "review_count":  203,
-        "rooms":  [
-                      "Luxury Cottage",
-                      "Deluxe Room"
-                  ],
-        "amenities":  [
-                          "Swimming Pool",
-                          "Restaurant",
-                          "Parking",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Swimming",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Comfortable forest resort surrounded by teak plantations and wildlife habitats.",
-        "unique_features":  "Large swimming pool inside forest setting.",
-        "price":  3700
+        "id": 10,
+        "name": "Timber Trails Dandeli",
+        "category": "Forest Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi forest belt, 9 km from Dandeli",
+        "latitude": 15.2467,
+        "longitude": 74.6212,
+        "phone": "+91 9012456738",
+        "email": "booking@timbertrailsdandeli.com",
+        "website": "https://www.timbertrailsdandeli.com",
+        "rating": 4.2,
+        "review_count": 203,
+        "rooms": [
+            "Luxury Cottage",
+            "Deluxe Room"
+        ],
+        "amenities": [
+            "Swimming Pool",
+            "Restaurant",
+            "Parking",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Swimming",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Comfortable forest resort surrounded by teak plantations and wildlife habitats.",
+        "unique_features": "Large swimming pool inside forest setting.",
+        "price": 3700
     },
     {
-        "id":  11,
-        "name":  "Emerald Forest Retreat",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi Road, 11 km from Dandeli Bus Stand",
-        "latitude":  15.2324,
-        "longitude":  74.6482,
-        "phone":  "+91 9876123458",
-        "email":  "stay@emeraldforestretreat.com",
-        "website":  "https://www.emeraldforestretreat.com",
-        "rating":  4.3,
-        "review_count":  187,
-        "rooms":  [
-                      "Forest Cottage",
-                      "Family Room",
-                      "Eco Hut"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Parking",
-                          "Campfire Area",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Campfire",
-                                  "Indoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Bird watching",
-                                  "Jungle safari",
-                                  "Trekking"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Eco-friendly forest retreat surrounded by evergreen vegetation and wildlife trails.",
-        "unique_features":  "Large bamboo forest surrounding the property.",
-        "price":  3550
+        "id": 11,
+        "name": "Emerald Forest Retreat",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Kulgi Road, 11 km from Dandeli Bus Stand",
+        "latitude": 15.2324,
+        "longitude": 74.6482,
+        "phone": "+91 9876123458",
+        "email": "stay@emeraldforestretreat.com",
+        "website": "https://www.emeraldforestretreat.com",
+        "rating": 4.3,
+        "review_count": 187,
+        "rooms": [
+            "Forest Cottage",
+            "Family Room",
+            "Eco Hut"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Parking",
+            "Campfire Area",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Campfire",
+            "Indoor games"
+        ],
+        "activities_nearby": [
+            "Bird watching",
+            "Jungle safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Eco-friendly forest retreat surrounded by evergreen vegetation and wildlife trails.",
+        "unique_features": "Large bamboo forest surrounding the property.",
+        "price": 3550
     },
     {
-        "id":  12,
-        "name":  "Kali Rapids Adventure Camp",
-        "category":  "Adventure Camp",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi rafting zone, 7 km from Dandeli",
-        "latitude":  15.2451,
-        "longitude":  74.6179,
-        "phone":  "+91 9834512786",
-        "email":  "info@kalirapidscamp.com",
-        "website":  "https://www.kalirapidscamp.com",
-        "rating":  4.2,
-        "review_count":  221,
-        "rooms":  [
-                      "Adventure Tent",
-                      "Wooden Hut"
-                  ],
-        "amenities":  [
-                          "Adventure Desk",
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Zipline",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Kayaking",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Adventure camp popular for rafting packages and outdoor activities.",
-        "unique_features":  "Located close to Kali River rapid rafting stretch.",
-        "price":  3150
+        "id": 12,
+        "name": "Kali Rapids Adventure Camp",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Ganeshgudi rafting zone, 7 km from Dandeli",
+        "latitude": 15.2451,
+        "longitude": 74.6179,
+        "phone": "+91 9834512786",
+        "email": "info@kalirapidscamp.com",
+        "website": "https://www.kalirapidscamp.com",
+        "rating": 4.2,
+        "review_count": 221,
+        "rooms": [
+            "Adventure Tent",
+            "Wooden Hut"
+        ],
+        "amenities": [
+            "Adventure Desk",
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Zipline",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Kayaking",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "10:00 AM",
+        "description": "Adventure camp popular for rafting packages and outdoor activities.",
+        "unique_features": "Located close to Kali River rapid rafting stretch.",
+        "price": 3150
     },
     {
-        "id":  13,
-        "name":  "Wildwood Nature Resort",
-        "category":  "Nature Resort",
-        "city":  "Dandeli",
-        "location":  "Dandeliâ€“Anshi Forest Road",
-        "latitude":  15.2392,
-        "longitude":  74.6423,
-        "phone":  "+91 9648123574",
-        "email":  "contact@wildwoodnature.com",
-        "website":  "https://www.wildwoodnature.com",
-        "rating":  4.4,
-        "review_count":  254,
-        "rooms":  [
-                      "Deluxe Cottage",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Parking",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Trekking",
-                                  "Wildlife safari"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Peaceful forest stay ideal for wildlife lovers and photographers.",
-        "unique_features":  "Frequent deer and hornbill sightings nearby.",
-        "price":  3750
+        "id": 13,
+        "name": "Wildwood Nature Resort",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Dandeli\u00e2\u20ac\u201cAnshi Forest Road",
+        "latitude": 15.2392,
+        "longitude": 74.6423,
+        "phone": "+91 9648123574",
+        "email": "contact@wildwoodnature.com",
+        "website": "https://www.wildwoodnature.com",
+        "rating": 4.4,
+        "review_count": 254,
+        "rooms": [
+            "Deluxe Cottage",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Parking",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Trekking",
+            "Wildlife safari"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Peaceful forest stay ideal for wildlife lovers and photographers.",
+        "unique_features": "Frequent deer and hornbill sightings nearby.",
+        "price": 3750
     },
     {
-        "id":  14,
-        "name":  "Kali River Breeze Resort",
-        "category":  "Riverside Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Riverside area",
-        "latitude":  15.2439,
-        "longitude":  74.6201,
-        "phone":  "+91 9812745632",
-        "email":  "booking@kaliriverbreeze.com",
-        "website":  "https://www.kaliriverbreeze.com",
-        "rating":  4.3,
-        "review_count":  278,
-        "rooms":  [
-                      "River Cottage",
-                      "Luxury Tent"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Parking",
-                          "Adventure Desk"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Outdoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Scenic riverside property offering rafting and outdoor activities.",
-        "unique_features":  "Private riverside seating area.",
-        "price":  4050
+        "id": 14,
+        "name": "Kali River Breeze Resort",
+        "category": "Riverside Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Riverside area",
+        "latitude": 15.2439,
+        "longitude": 74.6201,
+        "phone": "+91 9812745632",
+        "email": "booking@kaliriverbreeze.com",
+        "website": "https://www.kaliriverbreeze.com",
+        "rating": 4.3,
+        "review_count": 278,
+        "rooms": [
+            "River Cottage",
+            "Luxury Tent"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Parking",
+            "Adventure Desk"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Outdoor games"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Scenic riverside property offering rafting and outdoor activities.",
+        "unique_features": "Private riverside seating area.",
+        "price": 4050
     },
     {
-        "id":  15,
-        "name":  "Hornbill Haven Eco Resort",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi forest zone, Dandeli Wildlife Sanctuary",
-        "latitude":  15.2245,
-        "longitude":  74.6395,
-        "phone":  "+91 9785643210",
-        "email":  "stay@hornbillhaven.com",
-        "website":  "https://www.hornbillhaven.com",
-        "rating":  4.5,
-        "review_count":  301,
-        "rooms":  [
-                      "Eco Hut",
-                      "Forest Cottage"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Nature Trail",
-                          "Parking",
-                          "Garden"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Wildlife safari",
-                                  "Photography tours"
-                              ],
-        "water_activities":  [
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Eco resort known for birdwatching and peaceful forest atmosphere.",
-        "unique_features":  "Observation deck for birdwatchers.",
-        "price":  4300
+        "id": 15,
+        "name": "Hornbill Haven Eco Resort",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Kulgi forest zone, Dandeli Wildlife Sanctuary",
+        "latitude": 15.2245,
+        "longitude": 74.6395,
+        "phone": "+91 9785643210",
+        "email": "stay@hornbillhaven.com",
+        "website": "https://www.hornbillhaven.com",
+        "rating": 4.5,
+        "review_count": 301,
+        "rooms": [
+            "Eco Hut",
+            "Forest Cottage"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Nature Trail",
+            "Parking",
+            "Garden"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Wildlife safari",
+            "Photography tours"
+        ],
+        "water_activities": [
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Eco resort known for birdwatching and peaceful forest atmosphere.",
+        "unique_features": "Observation deck for birdwatchers.",
+        "price": 4300
     },
     {
-        "id":  16,
-        "name":  "Riverbank Adventure Stay",
-        "category":  "Adventure Resort",
-        "city":  "Dandeli",
-        "location":  "Near Kali River rafting point",
-        "latitude":  15.2476,
-        "longitude":  74.6163,
-        "phone":  "+91 9658741230",
-        "email":  "info@riverbankadventure.com",
-        "website":  "https://www.riverbankadventure.com",
-        "rating":  4.2,
-        "review_count":  194,
-        "rooms":  [
-                      "Adventure Tent",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Adventure Desk",
-                          "Campfire"
-                      ],
-        "activities_onsite":  [
-                                  "Zipline",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Kayaking"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Adventure-focused resort popular among rafting enthusiasts.",
-        "unique_features":  "Zipline crossing over forest canopy.",
-        "price":  3350
+        "id": 16,
+        "name": "Riverbank Adventure Stay",
+        "category": "Adventure Resort",
+        "city": "Dandeli",
+        "location": "Near Kali River rafting point",
+        "latitude": 15.2476,
+        "longitude": 74.6163,
+        "phone": "+91 9658741230",
+        "email": "info@riverbankadventure.com",
+        "website": "https://www.riverbankadventure.com",
+        "rating": 4.2,
+        "review_count": 194,
+        "rooms": [
+            "Adventure Tent",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Adventure Desk",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Zipline",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "10:00 AM",
+        "description": "Adventure-focused resort popular among rafting enthusiasts.",
+        "unique_features": "Zipline crossing over forest canopy.",
+        "price": 3350
     },
     {
-        "id":  17,
-        "name":  "Wild Trails Jungle Resort",
-        "category":  "Nature Resort",
-        "city":  "Dandeli",
-        "location":  "Dandeliâ€“Haliyal Road forest belt",
-        "latitude":  15.2551,
-        "longitude":  74.6532,
-        "phone":  "+91 9874012365",
-        "email":  "booking@wildtrailsresort.com",
-        "website":  "https://www.wildtrailsresort.com",
-        "rating":  4.1,
-        "review_count":  173,
-        "rooms":  [
-                      "Cottage",
-                      "Family Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Outdoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Trekking",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Forest resort offering guided jungle treks and nature activities.",
-        "unique_features":  "Access to nearby trekking routes.",
-        "price":  3700
+        "id": 17,
+        "name": "Wild Trails Jungle Resort",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Dandeli\u00e2\u20ac\u201cHaliyal Road forest belt",
+        "latitude": 15.2551,
+        "longitude": 74.6532,
+        "phone": "+91 9874012365",
+        "email": "booking@wildtrailsresort.com",
+        "website": "https://www.wildtrailsresort.com",
+        "rating": 4.1,
+        "review_count": 173,
+        "rooms": [
+            "Cottage",
+            "Family Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Outdoor games"
+        ],
+        "activities_nearby": [
+            "Trekking",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Forest resort offering guided jungle treks and nature activities.",
+        "unique_features": "Access to nearby trekking routes.",
+        "price": 3700
     },
     {
-        "id":  18,
-        "name":  "Kali Forest Eco Camp",
-        "category":  "Eco Camp",
-        "city":  "Dandeli",
-        "location":  "Anshi Tiger Reserve edge, 14 km from Dandeli Bus Stand",
-        "latitude":  15.2361,
-        "longitude":  74.6215,
-        "phone":  "+91 9812456783",
-        "email":  "booking@kaliforestecocamp.com",
-        "website":  "https://www.kaliforestecocamp.com",
-        "rating":  4.3,
-        "review_count":  214,
-        "rooms":  [
-                      "Safari Tent",
-                      "Eco Hut",
-                      "Standard Cottage"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Parking",
-                          "Campfire Area"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Nature walk",
-                                  "Indoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Bird watching",
-                                  "Jungle safari"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Nature-oriented eco camp located near the wildlife reserve.",
-        "unique_features":  "Frequent hornbill and langur sightings.",
-        "price":  2800
+        "id": 18,
+        "name": "Kali Forest Eco Camp",
+        "category": "Eco Camp",
+        "city": "Dandeli",
+        "location": "Anshi Tiger Reserve edge, 14 km from Dandeli Bus Stand",
+        "latitude": 15.2361,
+        "longitude": 74.6215,
+        "phone": "+91 9812456783",
+        "email": "booking@kaliforestecocamp.com",
+        "website": "https://www.kaliforestecocamp.com",
+        "rating": 4.3,
+        "review_count": 214,
+        "rooms": [
+            "Safari Tent",
+            "Eco Hut",
+            "Standard Cottage"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Parking",
+            "Campfire Area"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature walk",
+            "Indoor games"
+        ],
+        "activities_nearby": [
+            "Bird watching",
+            "Jungle safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Nature-oriented eco camp located near the wildlife reserve.",
+        "unique_features": "Frequent hornbill and langur sightings.",
+        "price": 2800
     },
     {
-        "id":  19,
-        "name":  "Riverstone Jungle Stay",
-        "category":  "Forest Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi Wildlife Area, Dandeli",
-        "latitude":  15.2309,
-        "longitude":  74.6372,
-        "phone":  "+91 9741123458",
-        "email":  "stay@riverstonejunglestay.com",
-        "website":  "https://www.riverstonejunglestay.com",
-        "rating":  4.4,
-        "review_count":  239,
-        "rooms":  [
-                      "Forest Cottage",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Parking",
-                          "Garden"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Bird watching"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Trekking"
-                              ],
-        "water_activities":  [
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Comfortable forest stay offering nature experiences and wildlife sightings.",
-        "unique_features":  "Stone cottages blending with forest environment.",
-        "price":  3900
+        "id": 19,
+        "name": "Riverstone Jungle Stay",
+        "category": "Forest Resort",
+        "city": "Dandeli",
+        "location": "Kulgi Wildlife Area, Dandeli",
+        "latitude": 15.2309,
+        "longitude": 74.6372,
+        "phone": "+91 9741123458",
+        "email": "stay@riverstonejunglestay.com",
+        "website": "https://www.riverstonejunglestay.com",
+        "rating": 4.4,
+        "review_count": 239,
+        "rooms": [
+            "Forest Cottage",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Parking",
+            "Garden"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Bird watching"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Comfortable forest stay offering nature experiences and wildlife sightings.",
+        "unique_features": "Stone cottages blending with forest environment.",
+        "price": 3900
     },
     {
-        "id":  20,
-        "name":  "Star Valley River Resort",
-        "category":  "Riverside Resort",
-        "city":  "Dandeli",
-        "location":  "Supa Dam Road, 12 km from Dandeli",
-        "latitude":  15.2582,
-        "longitude":  74.6553,
-        "phone":  "+91 9724512368",
-        "email":  "info@starvalleyresort.com",
-        "website":  "https://www.starvalleyresort.com",
-        "rating":  4.3,
-        "review_count":  211,
-        "rooms":  [
-                      "River Cottage",
-                      "Luxury Room"
-                  ],
-        "amenities":  [
-                          "Swimming Pool",
-                          "Restaurant",
-                          "WiFi",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Swimming",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Riverside resort with scenic valley views and access to rafting activities.",
-        "unique_features":  "Large swimming pool overlooking the valley.",
-        "price":  3950
+        "id": 20,
+        "name": "Star Valley River Resort",
+        "category": "Riverside Resort",
+        "city": "Dandeli",
+        "location": "Supa Dam Road, 12 km from Dandeli",
+        "latitude": 15.2582,
+        "longitude": 74.6553,
+        "phone": "+91 9724512368",
+        "email": "info@starvalleyresort.com",
+        "website": "https://www.starvalleyresort.com",
+        "rating": 4.3,
+        "review_count": 211,
+        "rooms": [
+            "River Cottage",
+            "Luxury Room"
+        ],
+        "amenities": [
+            "Swimming Pool",
+            "Restaurant",
+            "WiFi",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Swimming",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Riverside resort with scenic valley views and access to rafting activities.",
+        "unique_features": "Large swimming pool overlooking the valley.",
+        "price": 3950
     },
     {
-        "id":  21,
-        "name":  "Riverstone Eco Retreat",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Riverside Road, 7 km from Dandeli",
-        "latitude":  15.2459,
-        "longitude":  74.6189,
-        "phone":  "+91 9821345678",
-        "email":  "stay@riverstoneecoretreat.com",
-        "website":  "https://www.riverstoneecoretreat.com",
-        "rating":  4.3,
-        "review_count":  238,
-        "rooms":  [
-                      "River Cottage",
-                      "Eco Hut",
-                      "Deluxe Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Garden",
-                          "Parking",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Campfire",
-                                  "Outdoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Bird watching",
-                                  "Jungle safari"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Eco retreat located near the Kali River offering peaceful stays surrounded by forest landscapes.",
-        "unique_features":  "Private riverside seating area.",
-        "price":  3800
+        "id": 21,
+        "name": "Riverstone Eco Retreat",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Riverside Road, 7 km from Dandeli",
+        "latitude": 15.2459,
+        "longitude": 74.6189,
+        "phone": "+91 9821345678",
+        "email": "stay@riverstoneecoretreat.com",
+        "website": "https://www.riverstoneecoretreat.com",
+        "rating": 4.3,
+        "review_count": 238,
+        "rooms": [
+            "River Cottage",
+            "Eco Hut",
+            "Deluxe Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Garden",
+            "Parking",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Campfire",
+            "Outdoor games"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Bird watching",
+            "Jungle safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Eco retreat located near the Kali River offering peaceful stays surrounded by forest landscapes.",
+        "unique_features": "Private riverside seating area.",
+        "price": 3800
     },
     {
-        "id":  22,
-        "name":  "Kali Jungle Haven",
-        "category":  "Nature Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi Forest Road, Dandeli Wildlife Sanctuary",
-        "latitude":  15.2245,
-        "longitude":  74.6378,
-        "phone":  "+91 9732154689",
-        "email":  "info@kalijunglehaven.com",
-        "website":  "https://www.kalijunglehaven.com",
-        "rating":  4.2,
-        "review_count":  179,
-        "rooms":  [
-                      "Forest Cottage",
-                      "Standard Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Nature Trail",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Wildlife safari",
-                                  "Photography tours"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Forest retreat located near wildlife trails known for birdwatching and peaceful nature stays.",
-        "unique_features":  "Observation deck overlooking forest canopy.",
-        "price":  3200
+        "id": 22,
+        "name": "Kali Jungle Haven",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Kulgi Forest Road, Dandeli Wildlife Sanctuary",
+        "latitude": 15.2245,
+        "longitude": 74.6378,
+        "phone": "+91 9732154689",
+        "email": "info@kalijunglehaven.com",
+        "website": "https://www.kalijunglehaven.com",
+        "rating": 4.2,
+        "review_count": 179,
+        "rooms": [
+            "Forest Cottage",
+            "Standard Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Nature Trail",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Wildlife safari",
+            "Photography tours"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Forest retreat located near wildlife trails known for birdwatching and peaceful nature stays.",
+        "unique_features": "Observation deck overlooking forest canopy.",
+        "price": 3200
     },
     {
-        "id":  23,
-        "name":  "Timber Ridge Jungle Resort",
-        "category":  "Forest Resort",
-        "city":  "Dandeli",
-        "location":  "Dandeliâ€“Anshi Road forest belt",
-        "latitude":  15.2378,
-        "longitude":  74.6495,
-        "phone":  "+91 9612348756",
-        "email":  "booking@timberridgejungle.com",
-        "website":  "https://www.timberridgejungle.com",
-        "rating":  4.4,
-        "review_count":  255,
-        "rooms":  [
-                      "Luxury Cottage",
-                      "Family Room"
-                  ],
-        "amenities":  [
-                          "Swimming Pool",
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Swimming",
-                                  "Indoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Trekking",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Comfortable jungle resort surrounded by teak plantations and wildlife corridors.",
-        "unique_features":  "Large swimming pool within forest setting.",
-        "price":  4000
+        "id": 23,
+        "name": "Timber Ridge Jungle Resort",
+        "category": "Forest Resort",
+        "city": "Dandeli",
+        "location": "Dandeli\u00e2\u20ac\u201cAnshi Road forest belt",
+        "latitude": 15.2378,
+        "longitude": 74.6495,
+        "phone": "+91 9612348756",
+        "email": "booking@timberridgejungle.com",
+        "website": "https://www.timberridgejungle.com",
+        "rating": 4.4,
+        "review_count": 255,
+        "rooms": [
+            "Luxury Cottage",
+            "Family Room"
+        ],
+        "amenities": [
+            "Swimming Pool",
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Swimming",
+            "Indoor games"
+        ],
+        "activities_nearby": [
+            "Trekking",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Comfortable jungle resort surrounded by teak plantations and wildlife corridors.",
+        "unique_features": "Large swimming pool within forest setting.",
+        "price": 4000
     },
     {
-        "id":  24,
-        "name":  "Kali Rapids Riverside Camp",
-        "category":  "Adventure Camp",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Rapids Area, Kali River bank",
-        "latitude":  15.2431,
-        "longitude":  74.6164,
-        "phone":  "+91 9823471568",
-        "email":  "contact@kalirapidsriverside.com",
-        "website":  "https://www.kalirapidsriverside.com",
-        "rating":  4.1,
-        "review_count":  190,
-        "rooms":  [
-                      "Adventure Tent",
-                      "Standard Cottage"
-                  ],
-        "amenities":  [
-                          "Adventure Desk",
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Zipline",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "River rafting",
-                                  "Kayaking"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  false,
-        "romantic_couples":  false,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Adventure camp popular among rafting groups visiting the Kali River.",
-        "unique_features":  "Rafting pickup directly from camp.",
-        "price":  3250
+        "id": 24,
+        "name": "Kali Rapids Riverside Camp",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Rapids Area, Kali River bank",
+        "latitude": 15.2431,
+        "longitude": 74.6164,
+        "phone": "+91 9823471568",
+        "email": "contact@kalirapidsriverside.com",
+        "website": "https://www.kalirapidsriverside.com",
+        "rating": 4.1,
+        "review_count": 190,
+        "rooms": [
+            "Adventure Tent",
+            "Standard Cottage"
+        ],
+        "amenities": [
+            "Adventure Desk",
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Zipline",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "River rafting",
+            "Kayaking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "10:00 AM",
+        "description": "Adventure camp popular among rafting groups visiting the Kali River.",
+        "unique_features": "Rafting pickup directly from camp.",
+        "price": 3250
     },
     {
-        "id":  25,
-        "name":  "Wild Fern Forest Lodge",
-        "category":  "Eco Lodge",
-        "city":  "Dandeli",
-        "location":  "Kulgi Nature Trail Area",
-        "latitude":  15.2226,
-        "longitude":  74.6402,
-        "phone":  "+91 9784521367",
-        "email":  "stay@wildfernforestlodge.com",
-        "website":  "https://www.wildfernforestlodge.com",
-        "rating":  4.2,
-        "review_count":  164,
-        "rooms":  [
-                      "Eco Cottage",
-                      "Wooden Hut"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Parking",
-                          "Nature Trail"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Bird watching"
-                              ],
-        "activities_nearby":  [
-                                  "Wildlife safari",
-                                  "Photography"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Eco lodge surrounded by ferns and dense jungle vegetation ideal for nature lovers.",
-        "unique_features":  "Morning guided birdwatching tours.",
-        "price":  3450
+        "id": 25,
+        "name": "Wild Fern Forest Lodge",
+        "category": "Eco Lodge",
+        "city": "Dandeli",
+        "location": "Kulgi Nature Trail Area",
+        "latitude": 15.2226,
+        "longitude": 74.6402,
+        "phone": "+91 9784521367",
+        "email": "stay@wildfernforestlodge.com",
+        "website": "https://www.wildfernforestlodge.com",
+        "rating": 4.2,
+        "review_count": 164,
+        "rooms": [
+            "Eco Cottage",
+            "Wooden Hut"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Parking",
+            "Nature Trail"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Bird watching"
+        ],
+        "activities_nearby": [
+            "Wildlife safari",
+            "Photography"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Eco lodge surrounded by ferns and dense jungle vegetation ideal for nature lovers.",
+        "unique_features": "Morning guided birdwatching tours.",
+        "price": 3450
     },
     {
-        "id":  26,
-        "name":  "Kali Valley Adventure Resort",
-        "category":  "Adventure Resort",
-        "city":  "Dandeli",
-        "location":  "Ganeshgudi Valley Area",
-        "latitude":  15.2449,
-        "longitude":  74.6172,
-        "phone":  "+91 9841267358",
-        "email":  "info@kalivalleyadventure.com",
-        "website":  "https://www.kalivalleyadventure.com",
-        "rating":  4.3,
-        "review_count":  221,
-        "rooms":  [
-                      "River View Cottage",
-                      "Adventure Tent"
-                  ],
-        "amenities":  [
-                          "Adventure Desk",
-                          "Restaurant",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Zipline",
-                                  "Outdoor games"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Kayaking",
-                                  "Trekking"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Adventure-focused resort providing rafting and zipline activities.",
-        "unique_features":  "Multi-activity adventure park inside resort.",
-        "price":  4150
+        "id": 26,
+        "name": "Kali Valley Adventure Resort",
+        "category": "Adventure Resort",
+        "city": "Dandeli",
+        "location": "Ganeshgudi Valley Area",
+        "latitude": 15.2449,
+        "longitude": 74.6172,
+        "phone": "+91 9841267358",
+        "email": "info@kalivalleyadventure.com",
+        "website": "https://www.kalivalleyadventure.com",
+        "rating": 4.3,
+        "review_count": 221,
+        "rooms": [
+            "River View Cottage",
+            "Adventure Tent"
+        ],
+        "amenities": [
+            "Adventure Desk",
+            "Restaurant",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Zipline",
+            "Outdoor games"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Kayaking",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Adventure-focused resort providing rafting and zipline activities.",
+        "unique_features": "Multi-activity adventure park inside resort.",
+        "price": 4150
     },
     {
-        "id":  27,
-        "name":  "Forest Breeze Eco Stay",
-        "category":  "Eco Resort",
-        "city":  "Dandeli",
-        "location":  "Barchi Forest Road, 12 km from Dandeli",
-        "latitude":  15.2578,
-        "longitude":  74.6451,
-        "phone":  "+91 9687345216",
-        "email":  "booking@forestbreezestay.com",
-        "website":  "https://www.forestbreezestay.com",
-        "rating":  4.0,
-        "review_count":  143,
-        "rooms":  [
-                      "Standard Cottage",
-                      "Treehouse"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Nature walk",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Bird watching",
-                                  "Trekking"
-                              ],
-        "water_activities":  [
-                                 "Kayaking"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:00 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Eco stay known for its treehouse accommodation and cool forest breezes.",
-        "unique_features":  "Treehouse rooms overlooking bamboo groves.",
-        "price":  3100
+        "id": 27,
+        "name": "Forest Breeze Eco Stay",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Barchi Forest Road, 12 km from Dandeli",
+        "latitude": 15.2578,
+        "longitude": 74.6451,
+        "phone": "+91 9687345216",
+        "email": "booking@forestbreezestay.com",
+        "website": "https://www.forestbreezestay.com",
+        "rating": 4.0,
+        "review_count": 143,
+        "rooms": [
+            "Standard Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Nature walk",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Bird watching",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "10:30 AM",
+        "description": "Eco stay known for its treehouse accommodation and cool forest breezes.",
+        "unique_features": "Treehouse rooms overlooking bamboo groves.",
+        "price": 3100
     },
     {
-        "id":  28,
-        "name":  "Riverleaf Adventure Lodge",
-        "category":  "Adventure Lodge",
-        "city":  "Dandeli",
-        "location":  "Supa Dam Road area",
-        "latitude":  15.2595,
-        "longitude":  74.6538,
-        "phone":  "+91 9752136842",
-        "email":  "contact@riverleafadventure.com",
-        "website":  "https://www.riverleafadventure.com",
-        "rating":  4.2,
-        "review_count":  187,
-        "rooms":  [
-                      "Adventure Tent",
-                      "Deluxe Cottage"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Adventure Desk",
-                          "Campfire",
-                          "Parking"
-                      ],
-        "activities_onsite":  [
-                                  "Outdoor games",
-                                  "Campfire"
-                              ],
-        "activities_nearby":  [
-                                  "Rafting",
-                                  "Boating"
-                              ],
-        "water_activities":  [
-                                 "Rafting",
-                                 "Coracle ride"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  false,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:00 AM",
-        "description":  "Adventure lodge near Supa Dam popular among groups visiting for rafting.",
-        "unique_features":  "Evening campfire with live music.",
-        "price":  3550
+        "id": 28,
+        "name": "Riverleaf Adventure Lodge",
+        "category": "Adventure Lodge",
+        "city": "Dandeli",
+        "location": "Supa Dam Road area",
+        "latitude": 15.2595,
+        "longitude": 74.6538,
+        "phone": "+91 9752136842",
+        "email": "contact@riverleafadventure.com",
+        "website": "https://www.riverleafadventure.com",
+        "rating": 4.2,
+        "review_count": 187,
+        "rooms": [
+            "Adventure Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Adventure Desk",
+            "Campfire",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Outdoor games",
+            "Campfire"
+        ],
+        "activities_nearby": [
+            "Rafting",
+            "Boating"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Coracle ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:30 PM",
+        "check_out": "10:00 AM",
+        "description": "Adventure lodge near Supa Dam popular among groups visiting for rafting.",
+        "unique_features": "Evening campfire with live music.",
+        "price": 3550
     },
     {
-        "id":  29,
-        "name":  "Hornbill Ridge Nature Resort",
-        "category":  "Wildlife Resort",
-        "city":  "Dandeli",
-        "location":  "Kulgi Wildlife Belt",
-        "latitude":  15.2251,
-        "longitude":  74.6392,
-        "phone":  "+91 9824613754",
-        "email":  "stay@hornbillridge.com",
-        "website":  "https://www.hornbillridge.com",
-        "rating":  4.5,
-        "review_count":  309,
-        "rooms":  [
-                      "Forest Cottage",
-                      "Luxury Tent"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Garden",
-                          "Nature Trail",
-                          "Parking",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Bird watching",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Photography"
-                              ],
-        "water_activities":  [
-                                 "Boating"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:00 PM",
-        "check_out":  "11:00 AM",
-        "description":  "Wildlife resort known for frequent hornbill sightings and forest trails.",
-        "unique_features":  "Watchtower for wildlife observation.",
-        "price":  4500
+        "id": 29,
+        "name": "Hornbill Ridge Nature Resort",
+        "category": "Wildlife Resort",
+        "city": "Dandeli",
+        "location": "Kulgi Wildlife Belt",
+        "latitude": 15.2251,
+        "longitude": 74.6392,
+        "phone": "+91 9824613754",
+        "email": "stay@hornbillridge.com",
+        "website": "https://www.hornbillridge.com",
+        "rating": 4.5,
+        "review_count": 309,
+        "rooms": [
+            "Forest Cottage",
+            "Luxury Tent"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Garden",
+            "Nature Trail",
+            "Parking",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Bird watching",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Photography"
+        ],
+        "water_activities": [
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:00 PM",
+        "check_out": "11:00 AM",
+        "description": "Wildlife resort known for frequent hornbill sightings and forest trails.",
+        "unique_features": "Watchtower for wildlife observation.",
+        "price": 4500
     },
     {
-        "id":  30,
-        "name":  "Kali Forest Escape Resort",
-        "category":  "Forest Resort",
-        "city":  "Dandeli",
-        "location":  "Anshi Forest Edge, 13 km from Dandeli",
-        "latitude":  15.2368,
-        "longitude":  74.6424,
-        "phone":  "+91 9813457620",
-        "email":  "booking@kaliforestescape.com",
-        "website":  "https://www.kaliforestescape.com",
-        "rating":  4.3,
-        "review_count":  211,
-        "rooms":  [
-                      "Deluxe Cottage",
-                      "Family Room"
-                  ],
-        "amenities":  [
-                          "Restaurant",
-                          "Campfire",
-                          "Garden",
-                          "Parking",
-                          "WiFi"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Nature walk"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Bird watching"
-                              ],
-        "water_activities":  [
-                                 "Rafting"
-                             ],
-        "food_options":  [
-                             "Veg",
-                             "Non-Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "12:30 PM",
-        "check_out":  "10:30 AM",
-        "description":  "Forest resort located near Anshi forest zone offering peaceful nature stays.",
-        "unique_features":  "Large garden surrounded by forest.",
-        "price":  3700
+        "id": 30,
+        "name": "Kali Forest Escape Resort",
+        "category": "Forest Resort",
+        "city": "Dandeli",
+        "location": "Anshi Forest Edge, 13 km from Dandeli",
+        "latitude": 15.2368,
+        "longitude": 74.6424,
+        "phone": "+91 9813457620",
+        "email": "booking@kaliforestescape.com",
+        "website": "https://www.kaliforestescape.com",
+        "rating": 4.3,
+        "review_count": 211,
+        "rooms": [
+            "Deluxe Cottage",
+            "Family Room"
+        ],
+        "amenities": [
+            "Restaurant",
+            "Campfire",
+            "Garden",
+            "Parking",
+            "WiFi"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature walk"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Bird watching"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:30 PM",
+        "check_out": "10:30 AM",
+        "description": "Forest resort located near Anshi forest zone offering peaceful nature stays.",
+        "unique_features": "Large garden surrounded by forest.",
+        "price": 3700
     },
     {
-        "id":  31,
-        "name":  "Tiger and Lion Safari Resort",
-        "category":  "Safari Resort",
-        "city":  "Dandeli",
-        "location":  "From Dandeli Edge, 3 km from Dandeli",
-        "latitude":  15.268,
-        "longitude":  72.424,
-        "phone":  "+91 9793457832",
-        "email":  "tiger@gmail.com ",
-        "website":  "https://www.tigerandlionsafariresort.com",
-        "rating":  4.8,
-        "review_count":  21,
-        "rooms":  [
-                      "Jungle Cottage",
-                      "Family Room",
-                      "Tree House"
-                  ],
-        "amenities":  [
-                          "Campfire",
-                          "Garden",
-                          "Parking",
-                          "WiFi",
-                          "Restaurant",
-                          "Kids play area"
-                      ],
-        "activities_onsite":  [
-                                  "Campfire",
-                                  "Nature walk",
-                                  "Jungle safari",
-                                  "Bird watching"
-                              ],
-        "activities_nearby":  [
-                                  "Jungle safari",
-                                  "Bird watching",
-                                  "Trekking"
-                              ],
-        "water_activities":  [
-                                 "Rafting"
-                             ],
-        "food_options":  [
-                             "Veg"
-                         ],
-        "family_friendly":  true,
-        "romantic_couples":  true,
-        "check_in":  "1:30 PM",
-        "check_out":  "11:30 AM",
-        "description":  "jungle resort located near zone offering peaceful nature stays.",
-        "unique_features":  "Large garden surrounded by jungle.",
-        "price":  450
+        "id": 31,
+        "name": "Tiger and Lion Safari Resort",
+        "category": "Safari Resort",
+        "city": "Dandeli",
+        "location": "From Dandeli Edge, 3 km from Dandeli",
+        "latitude": 15.268,
+        "longitude": 72.424,
+        "phone": "+91 9793457832",
+        "email": "tiger@gmail.com ",
+        "website": "https://www.tigerandlionsafariresort.com",
+        "rating": 4.8,
+        "review_count": 21,
+        "rooms": [
+            "Jungle Cottage",
+            "Family Room",
+            "Tree House"
+        ],
+        "amenities": [
+            "Campfire",
+            "Garden",
+            "Parking",
+            "WiFi",
+            "Restaurant",
+            "Kids play area"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature walk",
+            "Jungle safari",
+            "Bird watching"
+        ],
+        "activities_nearby": [
+            "Jungle safari",
+            "Bird watching",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "1:30 PM",
+        "check_out": "11:30 AM",
+        "description": "jungle resort located near zone offering peaceful nature stays.",
+        "unique_features": "Large garden surrounded by jungle.",
+        "price": 450
+    },
+    {
+        "id": 32,
+        "name": "Panther Valley Dandeli",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.224961886273013,
+        "longitude": 74.61345776786514,
+        "phone": "+91 9487636720",
+        "email": "booking@panthervalleydandeli.com",
+        "website": "https://www.panthervalleydandeli.com",
+        "rating": 3.7,
+        "review_count": 319,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7552
+    },
+    {
+        "id": 33,
+        "name": "Panther Haven Dandeli",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.24740031827229,
+        "longitude": 74.62463789810212,
+        "phone": "+91 9820005553",
+        "email": "booking@pantherhavendandeli.com",
+        "website": "https://www.pantherhavendandeli.com",
+        "rating": 3.8,
+        "review_count": 87,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7627
+    },
+    {
+        "id": 34,
+        "name": "Jungle Retreat Ganeshgudi",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.239898829542692,
+        "longitude": 74.62472688486098,
+        "phone": "+91 9716761994",
+        "email": "booking@jungleretreatganeshgudi.com",
+        "website": "https://www.jungleretreatganeshgudi.com",
+        "rating": 4.3,
+        "review_count": 370,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5966
+    },
+    {
+        "id": 35,
+        "name": "Green Haven Ganeshgudi",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.228784185304542,
+        "longitude": 74.61576845055036,
+        "phone": "+91 9276885339",
+        "email": "booking@greenhavenganeshgudi.com",
+        "website": "https://www.greenhavenganeshgudi.com",
+        "rating": 4.0,
+        "review_count": 198,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2532
+    },
+    {
+        "id": 36,
+        "name": "Green Camp Ganeshgudi",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.228650177959624,
+        "longitude": 74.64623856493381,
+        "phone": "+91 9690934764",
+        "email": "booking@greencampganeshgudi.com",
+        "website": "https://www.greencampganeshgudi.com",
+        "rating": 4.9,
+        "review_count": 323,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4145
+    },
+    {
+        "id": 37,
+        "name": "Mystic Oasis",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.215955192142085,
+        "longitude": 74.63209485755411,
+        "phone": "+91 9652095071",
+        "email": "booking@mysticoasis.com",
+        "website": "https://www.mysticoasis.com",
+        "rating": 4.7,
+        "review_count": 72,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7814
+    },
+    {
+        "id": 38,
+        "name": "Hornbill Hideaway",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.221937432097917,
+        "longitude": 74.64597021138965,
+        "phone": "+91 9438963128",
+        "email": "booking@hornbillhideaway.com",
+        "website": "https://www.hornbillhideaway.com",
+        "rating": 3.5,
+        "review_count": 241,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4731
+    },
+    {
+        "id": 39,
+        "name": "Emerald Cove Ganeshgudi",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.235232662917005,
+        "longitude": 74.63280220702973,
+        "phone": "+91 9282575249",
+        "email": "booking@emeraldcoveganeshgudi.com",
+        "website": "https://www.emeraldcoveganeshgudi.com",
+        "rating": 4.8,
+        "review_count": 399,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6126
+    },
+    {
+        "id": 40,
+        "name": "Emerald Oasis",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.217318554237261,
+        "longitude": 74.62133158701154,
+        "phone": "+91 9522907214",
+        "email": "booking@emeraldoasis.com",
+        "website": "https://www.emeraldoasis.com",
+        "rating": 4.3,
+        "review_count": 187,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6977
+    },
+    {
+        "id": 41,
+        "name": "Hidden Trails Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.22254986202587,
+        "longitude": 74.64454341266483,
+        "phone": "+91 9688480969",
+        "email": "booking@hiddentrailsdandeli.com",
+        "website": "https://www.hiddentrailsdandeli.com",
+        "rating": 4.7,
+        "review_count": 283,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3275
+    },
+    {
+        "id": 42,
+        "name": "Tiger Haven Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.240184529893723,
+        "longitude": 74.6213105050678,
+        "phone": "+91 9714820167",
+        "email": "booking@tigerhavendandeli.com",
+        "website": "https://www.tigerhavendandeli.com",
+        "rating": 3.5,
+        "review_count": 433,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4468
+    },
+    {
+        "id": 43,
+        "name": "Wild Trails Kali",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.215978595256876,
+        "longitude": 74.61279981223312,
+        "phone": "+91 9200111155",
+        "email": "booking@wildtrailskali.com",
+        "website": "https://www.wildtrailskali.com",
+        "rating": 4.5,
+        "review_count": 186,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5476
+    },
+    {
+        "id": 44,
+        "name": "Whispering Haven",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.238637173686056,
+        "longitude": 74.61213276411607,
+        "phone": "+91 9478665818",
+        "email": "booking@whisperinghaven.com",
+        "website": "https://www.whisperinghaven.com",
+        "rating": 4.9,
+        "review_count": 452,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2574
+    },
+    {
+        "id": 45,
+        "name": "Green Lodge Ganeshgudi",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.23601254217785,
+        "longitude": 74.64085770374056,
+        "phone": "+91 9273744056",
+        "email": "booking@greenlodgeganeshgudi.com",
+        "website": "https://www.greenlodgeganeshgudi.com",
+        "rating": 4.4,
+        "review_count": 198,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6820
+    },
+    {
+        "id": 46,
+        "name": "Kali Oasis Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.226842524063073,
+        "longitude": 74.64637151315883,
+        "phone": "+91 9221094934",
+        "email": "booking@kalioasisdandeli.com",
+        "website": "https://www.kalioasisdandeli.com",
+        "rating": 4.6,
+        "review_count": 263,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3781
+    },
+    {
+        "id": 47,
+        "name": "Green Oasis Ganeshgudi",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.244638604076211,
+        "longitude": 74.61149380001922,
+        "phone": "+91 9118542966",
+        "email": "booking@greenoasisganeshgudi.com",
+        "website": "https://www.greenoasisganeshgudi.com",
+        "rating": 4.7,
+        "review_count": 415,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6494
+    },
+    {
+        "id": 48,
+        "name": "Green Cove Kali",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.221947876357516,
+        "longitude": 74.61914699471167,
+        "phone": "+91 9966168932",
+        "email": "booking@greencovekali.com",
+        "website": "https://www.greencovekali.com",
+        "rating": 3.9,
+        "review_count": 71,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5856
+    },
+    {
+        "id": 49,
+        "name": "Jungle Hideaway Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.210082628476627,
+        "longitude": 74.63083172259962,
+        "phone": "+91 9704235584",
+        "email": "booking@junglehideawaydandeli.com",
+        "website": "https://www.junglehideawaydandeli.com",
+        "rating": 3.9,
+        "review_count": 76,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4114
+    },
+    {
+        "id": 50,
+        "name": "Bison Resort Ganeshgudi",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.211055706847258,
+        "longitude": 74.616383049536,
+        "phone": "+91 9956452062",
+        "email": "booking@bisonresortganeshgudi.com",
+        "website": "https://www.bisonresortganeshgudi.com",
+        "rating": 4.4,
+        "review_count": 131,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3818
+    },
+    {
+        "id": 51,
+        "name": "River Oasis Kali",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.228997335186543,
+        "longitude": 74.61258540404462,
+        "phone": "+91 9805199961",
+        "email": "booking@riveroasiskali.com",
+        "website": "https://www.riveroasiskali.com",
+        "rating": 4.1,
+        "review_count": 400,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3784
+    },
+    {
+        "id": 52,
+        "name": "Whispering Hideaway Kali",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.237969895467018,
+        "longitude": 74.64506292263496,
+        "phone": "+91 9394629508",
+        "email": "booking@whisperinghideawaykali.com",
+        "website": "https://www.whisperinghideawaykali.com",
+        "rating": 3.7,
+        "review_count": 427,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5836
+    },
+    {
+        "id": 53,
+        "name": "Wild Lodge Kali",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.246523613184142,
+        "longitude": 74.61750998656251,
+        "phone": "+91 9282848636",
+        "email": "booking@wildlodgekali.com",
+        "website": "https://www.wildlodgekali.com",
+        "rating": 3.6,
+        "review_count": 157,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5959
+    },
+    {
+        "id": 54,
+        "name": "Bison Resort Dandeli",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.242081452266415,
+        "longitude": 74.61416445792779,
+        "phone": "+91 9316158579",
+        "email": "booking@bisonresortdandeli.com",
+        "website": "https://www.bisonresortdandeli.com",
+        "rating": 4.4,
+        "review_count": 223,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2123
+    },
+    {
+        "id": 55,
+        "name": "Wild Trails Ganeshgudi",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.233921994819502,
+        "longitude": 74.61101440307286,
+        "phone": "+91 9553744327",
+        "email": "booking@wildtrailsganeshgudi.com",
+        "website": "https://www.wildtrailsganeshgudi.com",
+        "rating": 4.8,
+        "review_count": 150,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4386
+    },
+    {
+        "id": 56,
+        "name": "Hornbill Cove Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.23677928419282,
+        "longitude": 74.61682260448472,
+        "phone": "+91 9138110945",
+        "email": "booking@hornbillcovedandeli.com",
+        "website": "https://www.hornbillcovedandeli.com",
+        "rating": 4.3,
+        "review_count": 492,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6116
+    },
+    {
+        "id": 57,
+        "name": "Mystic Lodge",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.235111530303623,
+        "longitude": 74.62872812381123,
+        "phone": "+91 9989861429",
+        "email": "booking@mysticlodge.com",
+        "website": "https://www.mysticlodge.com",
+        "rating": 3.6,
+        "review_count": 306,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2291
+    },
+    {
+        "id": 58,
+        "name": "Silent Lodge",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.211743758976636,
+        "longitude": 74.61134852337445,
+        "phone": "+91 9251268924",
+        "email": "booking@silentlodge.com",
+        "website": "https://www.silentlodge.com",
+        "rating": 4.4,
+        "review_count": 212,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3526
+    },
+    {
+        "id": 59,
+        "name": "Tiger Resort",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.212917934742615,
+        "longitude": 74.61803311625714,
+        "phone": "+91 9578594911",
+        "email": "booking@tigerresort.com",
+        "website": "https://www.tigerresort.com",
+        "rating": 4.8,
+        "review_count": 228,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7266
+    },
+    {
+        "id": 60,
+        "name": "River Oasis",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.2454369096984,
+        "longitude": 74.61180528446546,
+        "phone": "+91 9578061787",
+        "email": "booking@riveroasis.com",
+        "website": "https://www.riveroasis.com",
+        "rating": 3.6,
+        "review_count": 117,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4179
+    },
+    {
+        "id": 61,
+        "name": "Tiger Trails",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.232574618969322,
+        "longitude": 74.64255196224035,
+        "phone": "+91 9980485692",
+        "email": "booking@tigertrails.com",
+        "website": "https://www.tigertrails.com",
+        "rating": 4.0,
+        "review_count": 391,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4410
+    },
+    {
+        "id": 62,
+        "name": "Whispering Cove",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.249557341261328,
+        "longitude": 74.62545752960432,
+        "phone": "+91 9986098936",
+        "email": "booking@whisperingcove.com",
+        "website": "https://www.whisperingcove.com",
+        "rating": 3.7,
+        "review_count": 63,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7761
+    },
+    {
+        "id": 63,
+        "name": "Emerald Haven Kali",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.235898283916683,
+        "longitude": 74.61144119173913,
+        "phone": "+91 9411791917",
+        "email": "booking@emeraldhavenkali.com",
+        "website": "https://www.emeraldhavenkali.com",
+        "rating": 4.1,
+        "review_count": 103,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6123
+    },
+    {
+        "id": 64,
+        "name": "Bison Valley Dandeli",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.22599377747631,
+        "longitude": 74.63398521198387,
+        "phone": "+91 9606512562",
+        "email": "booking@bisonvalleydandeli.com",
+        "website": "https://www.bisonvalleydandeli.com",
+        "rating": 4.8,
+        "review_count": 95,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2962
+    },
+    {
+        "id": 65,
+        "name": "Bison Oasis Ganeshgudi",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.213664280361224,
+        "longitude": 74.64517416892652,
+        "phone": "+91 9776235774",
+        "email": "booking@bisonoasisganeshgudi.com",
+        "website": "https://www.bisonoasisganeshgudi.com",
+        "rating": 3.6,
+        "review_count": 110,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4803
+    },
+    {
+        "id": 66,
+        "name": "Wild Trails Ganeshgudi",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.239485459459756,
+        "longitude": 74.62071755727172,
+        "phone": "+91 9332625383",
+        "email": "booking@wildtrailsganeshgudi.com",
+        "website": "https://www.wildtrailsganeshgudi.com",
+        "rating": 3.8,
+        "review_count": 335,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2540
+    },
+    {
+        "id": 67,
+        "name": "Green Haven Ganeshgudi",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.230608553035571,
+        "longitude": 74.63340181522955,
+        "phone": "+91 9177570946",
+        "email": "booking@greenhavenganeshgudi.com",
+        "website": "https://www.greenhavenganeshgudi.com",
+        "rating": 4.4,
+        "review_count": 72,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 3159
+    },
+    {
+        "id": 68,
+        "name": "Wild Valley",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.228178852171524,
+        "longitude": 74.61361179669862,
+        "phone": "+91 9693418870",
+        "email": "booking@wildvalley.com",
+        "website": "https://www.wildvalley.com",
+        "rating": 4.6,
+        "review_count": 143,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6485
+    },
+    {
+        "id": 69,
+        "name": "Jungle Camp",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.244855516474477,
+        "longitude": 74.63116805568697,
+        "phone": "+91 9901340067",
+        "email": "booking@junglecamp.com",
+        "website": "https://www.junglecamp.com",
+        "rating": 3.8,
+        "review_count": 316,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6044
+    },
+    {
+        "id": 70,
+        "name": "Bison Cove Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.24467794643659,
+        "longitude": 74.6125714137162,
+        "phone": "+91 9845263679",
+        "email": "booking@bisoncovedandeli.com",
+        "website": "https://www.bisoncovedandeli.com",
+        "rating": 3.7,
+        "review_count": 462,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6823
+    },
+    {
+        "id": 71,
+        "name": "Emerald Valley Kali",
+        "category": "Eco Resort",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.235088700655183,
+        "longitude": 74.62747164184177,
+        "phone": "+91 9294625635",
+        "email": "booking@emeraldvalleykali.com",
+        "website": "https://www.emeraldvalleykali.com",
+        "rating": 4.5,
+        "review_count": 344,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5448
+    },
+    {
+        "id": 72,
+        "name": "River Valley Kali",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.233181292552631,
+        "longitude": 74.64145564630506,
+        "phone": "+91 9612964801",
+        "email": "booking@rivervalleykali.com",
+        "website": "https://www.rivervalleykali.com",
+        "rating": 5.0,
+        "review_count": 377,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2703
+    },
+    {
+        "id": 73,
+        "name": "Jungle Resort Kali",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.234655932578153,
+        "longitude": 74.61211532163529,
+        "phone": "+91 9264591550",
+        "email": "booking@jungleresortkali.com",
+        "website": "https://www.jungleresortkali.com",
+        "rating": 3.9,
+        "review_count": 400,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5205
+    },
+    {
+        "id": 74,
+        "name": "Wild Sanctuary Ganeshgudi",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.242379888472371,
+        "longitude": 74.6171719964495,
+        "phone": "+91 9294050167",
+        "email": "booking@wildsanctuaryganeshgudi.com",
+        "website": "https://www.wildsanctuaryganeshgudi.com",
+        "rating": 4.8,
+        "review_count": 454,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool",
+            "Spa"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful wildlife camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2707
+    },
+    {
+        "id": 75,
+        "name": "Jungle Nest",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 1, Dandeli Forest Reserve",
+        "latitude": 15.215962782473662,
+        "longitude": 74.63148566454427,
+        "phone": "+91 9525646102",
+        "email": "booking@junglenest.com",
+        "website": "https://www.junglenest.com",
+        "rating": 3.7,
+        "review_count": 481,
+        "rooms": [
+            "Standard Tent"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful luxury resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 4331
+    },
+    {
+        "id": 76,
+        "name": "Silent Hideaway",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 4, Dandeli Forest Reserve",
+        "latitude": 15.242063814022599,
+        "longitude": 74.63055552213207,
+        "phone": "+91 9802976797",
+        "email": "booking@silenthideaway.com",
+        "website": "https://www.silenthideaway.com",
+        "rating": 4.0,
+        "review_count": 485,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2506
+    },
+    {
+        "id": 77,
+        "name": "Kali Hideaway Kali",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.225779194671212,
+        "longitude": 74.61257287477794,
+        "phone": "+91 9840069126",
+        "email": "booking@kalihideawaykali.com",
+        "website": "https://www.kalihideawaykali.com",
+        "rating": 3.5,
+        "review_count": 344,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": true,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 5556
+    },
+    {
+        "id": 78,
+        "name": "River Oasis Dandeli",
+        "category": "Luxury Resort",
+        "city": "Dandeli",
+        "location": "Zone 5, Dandeli Forest Reserve",
+        "latitude": 15.245463491477077,
+        "longitude": 74.61582325931764,
+        "phone": "+91 9637117661",
+        "email": "booking@riveroasisdandeli.com",
+        "website": "https://www.riveroasisdandeli.com",
+        "rating": 3.5,
+        "review_count": 425,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful adventure camp located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7811
+    },
+    {
+        "id": 79,
+        "name": "Wild Resort",
+        "category": "Adventure Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.211132461555714,
+        "longitude": 74.62713926971753,
+        "phone": "+91 9609429739",
+        "email": "booking@wildresort.com",
+        "website": "https://www.wildresort.com",
+        "rating": 4.4,
+        "review_count": 261,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful eco resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 2659
+    },
+    {
+        "id": 80,
+        "name": "Emerald Haven",
+        "category": "Wildlife Camp",
+        "city": "Dandeli",
+        "location": "Zone 3, Dandeli Forest Reserve",
+        "latitude": 15.216756201320898,
+        "longitude": 74.63551757746436,
+        "phone": "+91 9323287844",
+        "email": "booking@emeraldhaven.com",
+        "website": "https://www.emeraldhaven.com",
+        "rating": 4.7,
+        "review_count": 375,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage",
+            "Treehouse",
+            "Family Suite"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking",
+            "Campfire",
+            "Pool"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga",
+            "Indoor Games"
+        ],
+        "activities_nearby": [
+            "River Rafting",
+            "Jungle Safari",
+            "Trekking",
+            "Zipline"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking",
+            "Coracle Ride",
+            "Boating"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": false,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 7502
+    },
+    {
+        "id": 81,
+        "name": "River Valley",
+        "category": "Nature Resort",
+        "city": "Dandeli",
+        "location": "Zone 2, Dandeli Forest Reserve",
+        "latitude": 15.230965008662317,
+        "longitude": 74.64871842146152,
+        "phone": "+91 9959489786",
+        "email": "booking@rivervalley.com",
+        "website": "https://www.rivervalley.com",
+        "rating": 4.5,
+        "review_count": 61,
+        "rooms": [
+            "Standard Tent",
+            "Deluxe Cottage"
+        ],
+        "amenities": [
+            "WiFi",
+            "Restaurant",
+            "Parking"
+        ],
+        "activities_onsite": [
+            "Campfire",
+            "Nature Walk",
+            "Bird Watching",
+            "Yoga"
+        ],
+        "activities_nearby": [
+            "River Rafting"
+        ],
+        "water_activities": [
+            "Rafting",
+            "Kayaking"
+        ],
+        "food_options": [
+            "Veg",
+            "Non-Veg"
+        ],
+        "family_friendly": true,
+        "romantic_couples": false,
+        "check_in": "12:00 PM",
+        "check_out": "11:00 AM",
+        "description": "A beautiful nature resort located deep in the heart of Dandeli. Perfect for nature lovers looking for an authentic jungle experience.",
+        "unique_features": "Exclusive river access and guided nature trails.",
+        "price": 6701
     }
 ]

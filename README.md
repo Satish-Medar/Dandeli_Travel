@@ -1,4 +1,4 @@
-# Dandeli Travel AI Agent
+# Vana AI Agent
 
 An intelligent travel assistant for Dandeli resort search, planning, comparison, and booking assistance.
 
