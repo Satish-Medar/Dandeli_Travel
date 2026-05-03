@@ -116,14 +116,14 @@ def reset_session(session_id: str, user_id: str = Query(default=DEFAULT_USER_ID)
 
 
 @app.post("/chat", response_model=ChatResponse)
-def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_user)):
+async def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_user)):
     final_user_id = auth_user_id or normalize_user_id(request.user_id)
     sync_user_profile(final_user_id, request.user_name, request.user_email)
     session_id, session = get_or_create_session(final_user_id, request.session_id)
     user_message = request.message.strip()
     record_message(session, "user", user_message)
     try:
-        reply, node_name = invoke_assistant(session, user_message)
+        reply, node_name = await invoke_assistant(session, user_message)
     except Exception:
         session["messages"].pop()
         reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"
@@ -133,9 +133,9 @@ def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_user)):
 
 
 @app.post("/assistant/reply", response_model=AssistantReplyResponse)
-def assistant_reply(request: AssistantReplyRequest):
+async def assistant_reply(request: AssistantReplyRequest):
     try:
-        reply, node_name = invoke_assistant_from_turns(request.messages, request.message.strip())
+        reply, node_name = await invoke_assistant_from_turns(request.messages, request.message.strip())
     except Exception:
         reply = "I'm having trouble reaching one of the AI services right now. Please try again in a moment."
         node_name = "System"
@@ -153,7 +153,7 @@ async def chat_stream(request: ChatRequest, auth_user_id: str = Depends(verify_c
     user_message = request.message.strip()
     record_message(session, "user", user_message)
     try:
-        reply, node_name = invoke_assistant(session, user_message)
+        reply, node_name = await invoke_assistant(session, user_message)
     except Exception:
         session["messages"].pop()
         reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"

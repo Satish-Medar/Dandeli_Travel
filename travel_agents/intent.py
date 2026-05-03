@@ -1,33 +1,41 @@
 from typing import Sequence
 from langchain_core.messages import BaseMessage, HumanMessage
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from pydantic import BaseModel, Field
 
-from .booking_helpers import booking_in_progress
+from .llms import groq_llm, groq_70b, gemini_llm, prefer_groq_invoke
 
-def classify_user_intent(messages: str | Sequence[BaseMessage]) -> str:
+class IntentClassification(BaseModel):
+    next: str = Field(description="Exactly one of: SmallTalk, Researcher, Planner, Booker, OutOfScope")
+
+intent_prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are an expert intent classifier for a Dandeli Travel Agent.\n"
+               "Determine the user's intent based on the conversation history.\n"
+               "Rules:\n"
+               "- If the user is answering a question about a booking (like giving dates, names, or contact info), modifying a booking (changing numbers or dates), or wants to book a resort, pick 'Booker'.\n"
+               "- If the user is asking to plan an itinerary or trip, pick 'Planner'.\n"
+               "- If the user is asking for resort prices, comparing resorts, or asking for recommendations, pick 'Researcher'.\n"
+               "- If it's a general greeting, thanks, or asking for help, pick 'SmallTalk'.\n"
+               "- Otherwise, pick 'OutOfScope'."),
+    MessagesPlaceholder(variable_name="messages"),
+])
+
+intent_chain = prefer_groq_invoke(
+    intent_prompt | groq_70b.with_structured_output(IntentClassification),
+    prefer_groq_invoke(
+        intent_prompt | groq_llm.with_structured_output(IntentClassification),
+        intent_prompt | gemini_llm.with_structured_output(IntentClassification)
+    )
+)
+
+async def classify_user_intent(messages: str | Sequence[BaseMessage]) -> str:
     if isinstance(messages, str):
-        text = messages
-        msg_list = [HumanMessage(content=text)]
+        msg_list = [HumanMessage(content=messages)]
     else:
-        text = str(getattr(messages[-1], "content", ""))
-        msg_list = messages
+        msg_list = list(messages)
         
-    normalized = " ".join(text.lower().split())
-    booking_markers = ["book it", "book this", "i want to book", "book ", "booking", "booking status", "status of my booking", "check my booking", "check booking status", "bk-"]
-    planning_markers = ["plan it", "plan a trip", "plan my trip", "itinerary", "2 days", "3 days", "coming alone", "coming solo", "what should i do", "plan it simply"]
-    if normalized in {"hi", "hello", "hey"} or any(marker in normalized for marker in ["thanks", "thank you", "help", "what can you do"]):
-        return "SmallTalk"
-    if booking_in_progress(msg_list) or any(marker in normalized for marker in booking_markers):
-        return "Booker"
-    if any(marker in normalized for marker in planning_markers):
-        return "Planner"
-    if any(marker in normalized for marker in ["stay", "trip", "resort", "budget", "rating", "rafting", "bird watching", "nature", "family", "solo"]):
-        return "Researcher"
-        
-    if len(msg_list) >= 2:
-        last_ai_msg = msg_list[-2]
-        if getattr(last_ai_msg, "name", "") == "Researcher":
-            followup_markers = ["price", "cost", "how much", "contact", "phone", "email", "website", "link", "where", "location", "details", "more info", "tell me more", "that one", "the one"]
-            if any(marker in normalized for marker in followup_markers):
-                return "Researcher"
-                
-    return "OutOfScope"
+    try:
+        response = await intent_chain.ainvoke({"messages": msg_list})
+        return response.next
+    except Exception:
+        return "OutOfScope"

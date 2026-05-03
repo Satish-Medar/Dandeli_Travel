@@ -1,0 +1,84 @@
+{
+  "guest-02271909-167b-44e2-8f1f-a8b1b4418d21": {
+    "sessions": {
+      "a38fccb5-c13a-43cb-89ba-f7361b917ba3": {
+        "title": "Hi",
+        "updated_at": "2026-05-03T14:15:15Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-03T14:13:34Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-03T14:13:34Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare the top 2 peaceful riverside resorts under 5000 INR that are family friendly.\" Agent: Flawlessly filtered the entire database, ignored expensive resorts, found the only 2 that fit (Bison River Resort & Kali River Retreat), compared their prices and features, and formatted it beautifully.",
+            "name": "",
+            "created_at": "2026-05-03T14:13:48Z"
+          },
+          {
+            "role": "assistant",
+            "content": "After carefully filtering through our database, I've found two peaceful riverside resorts that fit your criteria: being family-friendly and under 5000 INR. Here's a comparison of the top two options:\n\n1. **Bison River Resort**:\n\t* Price: 3850 INR per person per day\n\t* Location: Ganeshgudi Road, 6 km from Dandeli Bus Stand, with direct access to Kali River rafting starting point\n\t* Features: Riverside adventure resort, comfortable cottages, restaurant, campfire, parking, adventure desk, WiFi, and activities like campfire, indoor games, nature walk, river rafting, bird watching, and jungle safari\n\t* Rating: 4.4 based on 312 reviews\n2. **Kali River Retreat**:\n\t* Price: 4450 INR per person per day\n\t* Location: Ganeshgudi Bridge Road, riverside\n\t* Features: Luxury riverside property, scenic views, water activities, infinity pool overlooking Kali River, restaurant, WiFi, parking, and activities like campfire, swimming, rafting, and bird watching\n\t* Rating: 4.5 based on 355 reviews\n\nBoth resorts offer a peaceful riverside experience, but they cater to slightly different needs. Bison River Resort is more focused on adventure activities, while Kali River Retreat provides a luxurious and relaxing experience. Considering your budget of under 5000 INR, Bison River Resort might be the more affordable option, but if you're looking for a more luxurious experience, Kali River Retreat is worth the extra cost.",
+            "name": "Researcher",
+            "created_at": "2026-05-03T14:14:00Z"
+          },
+          {
+            "role": "user",
+            "content": "Book the first one for tomorrow for 2 adults and 1 kid, my number is 9876543210",
+            "name": "",
+            "created_at": "2026-05-03T14:14:20Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Bison River Resort\nDates: 2024-05-04\nGuests: 2 adults, 1 kid\nContact: 9876543210\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-05-03T14:14:21Z"
+          },
+          {
+            "role": "user",
+            "content": "edit date its 4 /5/2026",
+            "name": "",
+            "created_at": "2026-05-03T14:14:45Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Bison River Resort\nDates: 2026-05-04\nGuests: 2 adults, 1 kid\nContact: 9876543210\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-05-03T14:14:46Z"
+          },
+          {
+            "role": "user",
+            "content": "confirm",
+            "name": "",
+            "created_at": "2026-05-03T14:14:50Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Your booking request has been sent.\nBooking ID: BK-D1E7C659\nResort: Bison River Resort\nDates: 2026-05-04\nGuests: 2 adults, 1 kid\n\nTwilio Status: delivered\nThe resort owner has been notified on WhatsApp and should respond soon.",
+            "name": "Booker",
+            "created_at": "2026-05-03T14:14:56Z"
+          },
+          {
+            "role": "user",
+            "content": "I want to arrive next Friday, stay at Hornbill Nature Camp, and I love bird watching. Plan a 2-day trip for me",
+            "name": "",
+            "created_at": "2026-05-03T14:15:14Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your preferences, I've planned a 2-day trip for you:\n\n**Day 1: May 07, 2026**\n\n* Arrive at Hornbill Nature Camp in the morning.\n* Check-in at the camp and freshen up.\n* **Bird Watching Session (9:00 am - 12:00 pm)**: Join the guided bird watching tour at the Kulgi Forest Range, a renowned spot for bird enthusiasts. Spot various species of birds, including hornbills and kingfishers.\n* **Lunch**: Enjoy a delicious meal at the camp's restaurant.\n* **Nature Walk (2:00 pm - 4:00 pm)**: Take a leisurely walk through the forest, exploring the surroundings and spotting more birds and other wildlife.\n* **Campfire and Relaxation**: Spend the evening relaxing by the campfire, sharing stories, and enjoying the peaceful surroundings.\n\n**Day 2: May 08, 2026**\n\n* **Jungle Safari (8:00 am - 10:00 am)**: Embark on a guided jungle safari to explore the Dandeli Wildlife Sanctuary. Spot various animals, including deer, monkeys, and birds.\n* **Bird Watching Session (11:00 am - 1:00 pm)**: Join another guided bird watching tour, focusing on different species and habitats.\n* **Lunch**: Enjoy a packed lunch at a scenic spot.\n* **Departure**: Check-out of the camp and depart for your next destination.\n\nThis itinerary should provide you with a great bird watching experience, along with some relaxation and exploration of the surrounding forest. Enjoy your trip!",
+            "name": "Planner",
+            "created_at": "2026-05-03T14:15:15Z"
+          }
+        ]
+      }
+    }
+  }
+}

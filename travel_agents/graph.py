@@ -11,14 +11,16 @@ supervisor_prompt = ChatPromptTemplate.from_messages([("system", "You are a Supe
 supervisor_chain = prefer_groq_invoke(supervisor_prompt | groq_llm.with_structured_output(RouteResponse), supervisor_prompt | gemini_llm.with_structured_output(RouteResponse))
 
 
-def supervisor_node(state: AgentState):
+async def supervisor_node(state: AgentState):
     if state["messages"]:
         last_msg = state["messages"][-1]
         if getattr(last_msg, "name", "") in ["SmallTalk", "Researcher", "Planner", "Booker", "OutOfScope"]:
             return {"next": "FINISH"}
         if hasattr(last_msg, "content"):
-            return {"next": classify_user_intent(state["messages"])}
-    return {"next": supervisor_chain.invoke({"messages": state["messages"]}).next}
+            intent = await classify_user_intent(state["messages"])
+            return {"next": intent}
+    response = await supervisor_chain.ainvoke({"messages": state["messages"]})
+    return {"next": response.next}
 
 
 builder = StateGraph(AgentState)

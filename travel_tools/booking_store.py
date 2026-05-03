@@ -1,9 +1,12 @@
 import json
+import threading
+import uuid
 from .config import BOOKINGS_PATH
 
 # Fallback local store if Mongo is missing
 _local_bookings = []
 _local_loaded = False
+_lock = threading.Lock()
 
 def ensure_bookings_store() -> None:
     BOOKINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -17,12 +20,16 @@ def load_bookings() -> list[dict]:
         return list(db.booking_requests.find({}, {"_id": 0}))
     else:
         global _local_loaded, _local_bookings
-        if not _local_loaded:
-            ensure_bookings_store()
-            with BOOKINGS_PATH.open("r", encoding="utf-8") as file:
-                _local_bookings = json.load(file)
-            _local_loaded = True
-        return _local_bookings
+        with _lock:
+            if not _local_loaded:
+                ensure_bookings_store()
+                with BOOKINGS_PATH.open("r", encoding="utf-8") as file:
+                    try:
+                        _local_bookings = json.load(file)
+                    except json.JSONDecodeError:
+                        _local_bookings = []
+                _local_loaded = True
+            return _local_bookings.copy()
 
 def save_bookings(bookings: list[dict]) -> None:
     from travel_api.store import get_db
@@ -33,15 +40,12 @@ def save_bookings(bookings: list[dict]) -> None:
             collection.update_one({"booking_id": b["booking_id"]}, {"$set": b}, upsert=True)
     else:
         global _local_bookings
-        _local_bookings = bookings
-        ensure_bookings_store()
-        with BOOKINGS_PATH.open("w", encoding="utf-8") as file:
-            json.dump(bookings, file, indent=2)
+        with _lock:
+            _local_bookings = bookings.copy()
+            ensure_bookings_store()
+            with BOOKINGS_PATH.open("w", encoding="utf-8") as file:
+                json.dump(_local_bookings, file, indent=2)
 
-def next_booking_id(bookings: list[dict]) -> str:
-    from travel_api.store import get_db
-    db = get_db()
-    if db is not None:
-        count = db.booking_requests.count_documents({})
-        return f"BK-{count + 1:04d}"
-    return f"BK-{len(bookings) + 1:04d}"
+def next_booking_id(bookings: list[dict] = None) -> str:
+    """Generate a unique thread-safe booking ID."""
+    return f"BK-{str(uuid.uuid4())[:8].upper()}"

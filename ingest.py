@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
-from pinecone import Pinecone
+from pinecone import init as pinecone_init
 from pathlib import Path
 
 # Load environment variables
@@ -55,12 +55,17 @@ def load_data():
             "id": resort.get("id"),
             "name": clean_val(resort.get("name")),
             "category": clean_val(resort.get("category")),
+            "city": clean_val(resort.get("city")) or "Dandeli",
             "price": normalized_price,
             "rating": resort.get("rating"),
+            "family_friendly": resort.get("family_friendly", False),
+            "romantic_couples": resort.get("romantic_couples", False),
             "email": clean_val(resort.get("email")) or "Not Available",
             "phone": clean_val(resort.get("phone")) or "Not Available",
             "website": clean_val(resort.get("website")) or "Not Available",
-            "location": clean_val(resort.get("location")) or "Not Available"
+            "location": clean_val(resort.get("location")) or "Not Available",
+            "check_in": clean_val(resort.get("check_in")) or "N/A",
+            "check_out": clean_val(resort.get("check_out")) or "N/A"
         }
 
         # Filter out None values from metadata
@@ -72,8 +77,12 @@ def load_data():
 
 def create_pinecone_store(docs, embeddings):
     print("Connecting to Pinecone...")
-    pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-    
+    pinecone_api_key = os.getenv("PINECONE_API_KEY")
+    pinecone_env = os.getenv("PINECONE_ENVIRONMENT")
+    if not pinecone_api_key or not pinecone_env:
+        raise RuntimeError("PINECONE_API_KEY and PINECONE_ENVIRONMENT must be set to ingest data.")
+    pinecone_init(api_key=pinecone_api_key, environment=pinecone_env)
+
     print(f"Creating/updating Pinecone index: {PINECONE_INDEX_NAME}...")
     vectorstore = PineconeVectorStore.from_documents(
         documents=docs,

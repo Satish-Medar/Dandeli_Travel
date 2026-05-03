@@ -35,12 +35,12 @@ def app_config_payload() -> AppConfig:
     return AppConfig(clerk_publishable_key=publishable_key, clerk_enabled=bool(publishable_key))
 
 
-def invoke_assistant(session: dict, user_message: str) -> tuple[str, str]:
+async def invoke_assistant(session: dict, user_message: str) -> tuple[str, str]:
     messages = [HumanMessage(content=item["content"], name=item.get("name") or "") if item.get("role") == "user" else AIMessage(content=item["content"], name=item.get("name") or "") if item.get("role") == "assistant" else SystemMessage(content=item["content"], name=item.get("name") or "") for item in session.get("messages", [])]
-    return invoke_assistant_from_messages(messages, user_message)
+    return await invoke_assistant_from_messages(messages, user_message)
 
 
-def invoke_assistant_from_turns(messages: list[AssistantTurn], user_message: str) -> tuple[str, str]:
+async def invoke_assistant_from_turns(messages: list[AssistantTurn], user_message: str) -> tuple[str, str]:
     prior_messages = []
     for item in messages:
         if item.role == "user":
@@ -49,14 +49,19 @@ def invoke_assistant_from_turns(messages: list[AssistantTurn], user_message: str
             prior_messages.append(AIMessage(content=item.content, name=item.name or ""))
         else:
             prior_messages.append(SystemMessage(content=item.content, name=item.name or ""))
-    return invoke_assistant_from_messages(prior_messages, user_message)
+    return await invoke_assistant_from_messages(prior_messages, user_message)
 
 
-def invoke_assistant_from_messages(messages, user_message: str) -> tuple[str, str]:
-    working_messages = list(messages) + [HumanMessage(content=user_message)]
+async def invoke_assistant_from_messages(messages, user_message: str) -> tuple[str, str]:
+    # Sliding window: Keep only the most recent 30 messages (15 turns) to prevent context overflow while maintaining deep booking history
+    working_messages = list(messages)[-30:]
+    if len(messages) > 30:
+        while working_messages and not isinstance(working_messages[0], HumanMessage):
+            working_messages.pop(0)
+    working_messages.append(HumanMessage(content=user_message))
     assistant_reply = ""
     node_name = ""
-    for event in graph.stream({"messages": working_messages}):
+    async for event in graph.astream({"messages": working_messages}):
         for node_state in event.values():
             if "messages" in node_state:
                 last_msg = node_state["messages"][-1]

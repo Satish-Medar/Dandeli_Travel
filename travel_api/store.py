@@ -27,7 +27,28 @@ def get_db():
         return None
 
 # Local fallback for dev without Mongo
-_local_store = {}
+import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+LOCAL_STORE_PATH = BASE_DIR / "data" / "local_sessions.json"
+
+def _load_local_store():
+    if LOCAL_STORE_PATH.exists():
+        try:
+            return json.loads(LOCAL_STORE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+def _save_local_store(store):
+    try:
+        LOCAL_STORE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LOCAL_STORE_PATH.write_text(json.dumps(store, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"Failed to save local store: {e}")
+
+_local_store = _load_local_store()
 
 def utc_now() -> str:
     return datetime.utcnow().isoformat(timespec="seconds") + "Z"
@@ -39,6 +60,7 @@ def normalize_user_id(user_id: str | None) -> str:
 def ensure_user_bucket(user_id: str) -> dict:
     if user_id not in _local_store:
         _local_store[user_id] = {"sessions": {}}
+        _save_local_store(_local_store)
     return _local_store[user_id]
 
 def get_or_create_session(user_id: str, session_id: str | None, title: str | None = None) -> tuple[str, dict]:
@@ -61,6 +83,7 @@ def get_or_create_session(user_id: str, session_id: str | None, title: str | Non
         new_session_id = str(uuid4())
         session = {"title": title or "New conversation", "updated_at": utc_now(), "messages": []}
         user_bucket["sessions"][new_session_id] = session
+        _save_local_store(_local_store)
         return new_session_id, session
 
 def persist_session(user_id: str, session_id: str, session: dict) -> None:
@@ -73,6 +96,7 @@ def persist_session(user_id: str, session_id: str, session: dict) -> None:
         )
     else:
         ensure_user_bucket(user_id)["sessions"][session_id] = session
+        _save_local_store(_local_store)
 
 def get_session(user_id: str, session_id: str) -> dict | None:
     db = get_db()
@@ -109,6 +133,7 @@ def clear_session(user_id: str, session_id: str) -> dict | None:
         session["messages"] = []
         session["title"] = "New conversation"
         session["updated_at"] = utc_now()
+        _save_local_store(_local_store)
         return session
 
 def sync_user_profile(user_id: str, user_name: str | None = None, user_email: str | None = None) -> None:

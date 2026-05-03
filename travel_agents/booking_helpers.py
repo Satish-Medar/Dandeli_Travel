@@ -31,7 +31,8 @@ def current_booking_context(messages: Sequence) -> list:
             start_index = index + 1
     for index in range(len(messages) - 1, -1, -1):
         if isinstance(messages[index], HumanMessage) and any(marker in extract_content(messages[index].content).lower() for marker in start_markers):
-            start_index = max(start_index, index)
+            # Include the message prior to the trigger so the LLM can extract the recommended resort name
+            start_index = max(start_index, max(0, index - 1))
             break
     return list(messages[start_index:])
 

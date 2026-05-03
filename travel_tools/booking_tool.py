@@ -30,8 +30,10 @@ def book_resort(resort_name: str, check_in_out_dates: str, guest_details: str, c
         delivery_status = getattr(message_status, "status", "unknown")
         error_code = getattr(message_status, "error_code", None)
         error_message = getattr(message_status, "error_message", None)
+
         bookings.append({"booking_id": booking_id, "resort_name": resort_name, "check_in_out_dates": check_in_out_dates, "guest_details": guest_details, "customer_contact": customer_contact, "status": "requested", "created_at": datetime.now().isoformat(timespec="seconds"), "twilio_message_sid": message.sid, "twilio_status": delivery_status, "twilio_error_code": error_code, "twilio_error_message": error_message})
         save_bookings(bookings)
+        
         if error_code or delivery_status in {"failed", "undelivered"}:
             return f"Booking request created, but WhatsApp delivery did not complete.\nBooking ID: {booking_id}\nResort: {clean_text(resort_name)}\nDates: {clean_text(check_in_out_dates.title())}\nGuests: {clean_text(guest_details)}\nTwilio Status: {delivery_status}\nTwilio SID: {message.sid}\nTwilio Error: {error_message or error_code or 'Unknown error'}"
         return f"Your booking request has been sent.\nBooking ID: {booking_id}\nResort: {clean_text(resort_name)}\nDates: {clean_text(check_in_out_dates.title())}\nGuests: {clean_text(guest_details)}\n\nTwilio Status: {delivery_status}\nThe resort owner has been notified on WhatsApp and should respond soon."
