@@ -55,6 +55,7 @@ async def researcher_node(state):
         "Your job is to read the JSON data and answer the user's latest question in a beautiful, natural, conversational format. "
         "If the user asks for a comparison, logically compare the best options from the JSON. "
         "If the user asks for a specific number of resorts (e.g. 'top 1' or 'just 2'), provide EXACTLY that many. "
+        "If the user asks for contact information (phone, email, website), include it prominently in your response. "
         "If the JSON says no resorts were found, apologize and ask them to adjust their budget or requirements. "
         "Do not invent details not in the search results.\n\n"
         f"Search Results JSON:\n{research_context}"

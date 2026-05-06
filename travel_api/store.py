@@ -1,7 +1,10 @@
 import os
+import logging
 from datetime import datetime
 from uuid import uuid4
 from pymongo import MongoClient
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_USER_ID = "guest-local"
 
@@ -15,7 +18,7 @@ def get_db():
     
     mongo_uri = os.getenv("MONGODB_URI")
     if not mongo_uri:
-        print("WARNING: MONGODB_URI not found. Using local memory store fallback for dev.")
+        logger.warning("MONGODB_URI not found. Using local memory store fallback for dev.")
         return None
         
     try:
@@ -23,7 +26,7 @@ def get_db():
         _db = _client.get_database("dandeli_travel")
         return _db
     except Exception as e:
-        print(f"Failed to connect to MongoDB: {e}")
+        logger.error(f"Failed to connect to MongoDB: {e}")
         return None
 
 # Local fallback for dev without Mongo
@@ -37,7 +40,8 @@ def _load_local_store():
     if LOCAL_STORE_PATH.exists():
         try:
             return json.loads(LOCAL_STORE_PATH.read_text(encoding="utf-8"))
-        except Exception:
+        except (json.JSONDecodeError, IOError, OSError) as e:
+            logger.error(f"Failed to load local store: {e}")
             return {}
     return {}
 
@@ -46,7 +50,7 @@ def _save_local_store(store):
         LOCAL_STORE_PATH.parent.mkdir(parents=True, exist_ok=True)
         LOCAL_STORE_PATH.write_text(json.dumps(store, indent=2), encoding="utf-8")
     except Exception as e:
-        print(f"Failed to save local store: {e}")
+        logger.error(f"Failed to save local store: {e}")
 
 _local_store = _load_local_store()
 

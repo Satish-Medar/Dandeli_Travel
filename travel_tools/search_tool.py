@@ -1,7 +1,10 @@
 import json
+import logging
 from langchain_core.tools import tool
 
 from .search_engine import extract_filters_async, retrieve_matching_resorts, load_all_documents
+
+logger = logging.getLogger(__name__)
 
 def get_known_resort_names() -> list[str]:
     return [str(doc["metadata"].get("name")) for doc in load_all_documents() if doc["metadata"].get("name")]
@@ -44,5 +47,5 @@ async def search_resorts(query: str) -> str:
         }, indent=2)
         
     except Exception as e:
-        print(f"Search tool error: {e}")
+        logger.error(f"Search tool error: {e}")
         return json.dumps({"status": f"Error executing search: {str(e)}"})

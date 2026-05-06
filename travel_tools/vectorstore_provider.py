@@ -1,7 +1,10 @@
 import os
 import threading
+import logging
 from pathlib import Path
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 from dotenv import load_dotenv
 from langchain_pinecone import PineconeVectorStore
 from langchain_classic.chains.query_constructor.base import AttributeInfo
@@ -43,20 +46,20 @@ def _open_error_log(message: str):
     try:
         with open("uvicorn_error.log", "a", encoding="utf-8") as fw:
             fw.write(f"{message}\n")
-    except Exception:
-        pass
+    except (IOError, OSError) as e:
+        logger.error(f"Failed to write to error log: {e}")
 
 
 def _pinecone_env_ready() -> bool:
     if not PINECONE_API_KEY or not PINECONE_ENVIRONMENT:
-        print("Pinecone environment variables are not configured. Skipping Pinecone load.")
+        logger.warning("Pinecone environment variables are not configured. Skipping Pinecone load.")
         return False
     try:
         pinecone_init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
         return True
     except Exception as error:
         _open_error_log(f"Pinecone init error: {error}")
-        print(f"Pinecone init failed: {error}")
+        logger.error(f"Pinecone init failed: {error}")
         return False
 
 
@@ -70,19 +73,19 @@ def _load_pinecone_store(timeout_seconds: int = 12) -> Optional[PineconeVectorSt
         except Exception as error:
             result["error"] = error
 
-    print("Loading Pinecone VectorStore...")
+    logger.info("Loading Pinecone VectorStore...")
     thread_result = {}
     thread = threading.Thread(target=_target, args=(thread_result,), daemon=True)
     thread.start()
     thread.join(timeout=timeout_seconds)
     if thread.is_alive():
         _open_error_log("Pinecone load timeout")
-        print(f"Pinecone load timed out after {timeout_seconds} seconds.")
+        logger.error(f"Pinecone load timed out after {timeout_seconds} seconds.")
         return None
     if thread_result.get("error"):
         error = thread_result["error"]
         _open_error_log(f"Pinecone load error: {error}")
-        print(f"Failed to load Pinecone: {error}")
+        logger.error(f"Failed to load Pinecone: {error}")
         return None
     return thread_result.get("store")
 
@@ -90,15 +93,15 @@ def _load_pinecone_store(timeout_seconds: int = 12) -> Optional[PineconeVectorSt
 def _load_chroma_store() -> Optional[object]:
     try:
         if not Path(CHROMA_DB_PATH).exists():
-            print(f"Chroma persistence path not found: {CHROMA_DB_PATH}")
+            logger.warning(f"Chroma persistence path not found: {CHROMA_DB_PATH}")
             return None
         from langchain_community.vectorstores import Chroma
 
-        print("Loading local Chroma VectorStore...")
+        logger.info("Loading local Chroma VectorStore...")
         return Chroma(persist_directory=CHROMA_DB_PATH, embedding_function=embedding_func)
     except Exception as error:
         _open_error_log(f"Chroma load error: {error}")
-        print(f"Failed to load Chroma: {error}")
+        logger.error(f"Failed to load Chroma: {error}")
         return None
 
 
@@ -116,7 +119,7 @@ def _build_retriever(store):
         )
     except Exception as error:
         _open_error_log(f"Retriever creation error: {error}")
-        print(f"Failed to create retriever: {error}")
+        logger.error(f"Failed to create retriever: {error}")
         return None
 
 
@@ -137,7 +140,7 @@ def initialize_vectorstore() -> None:
                 retriever = _build_retriever(vectorstore)
 
         if vectorstore is None:
-            print("No vector store loaded. Resort search will use local fallback data.")
+            logger.warning("No vector store loaded. Resort search will use local fallback data.")
 
 
 def get_vectorstore() -> Optional[object]:

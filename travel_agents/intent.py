@@ -12,7 +12,8 @@ intent_prompt = ChatPromptTemplate.from_messages([
     ("system", "You are an expert intent classifier for Vana AI, a Dandeli Travel Agent.\n"
                "Determine the user's intent based on the conversation history.\n"
                "Rules:\n"
-               "- If the user is answering a question about a booking (like giving dates, names, or contact info), modifying a booking (changing numbers or dates), or wants to book a resort, pick 'Booker'.\n"
+               "- If the user is asking for resort contact information, phone numbers, emails, or websites, pick 'Researcher'.\n"
+               "- If the user is answering a question about a booking (like giving dates, names, or THEIR OWN contact info for booking), modifying a booking (changing numbers or dates), or wants to book a resort, pick 'Booker'.\n"
                "- If the user is asking to plan an itinerary or trip, pick 'Planner'.\n"
                "- If the user is asking for resort prices, comparing resorts, or asking for recommendations, pick 'Researcher'.\n"
                "- If it's a general greeting, thanks, or asking for help, pick 'SmallTalk'.\n"
@@ -37,5 +38,6 @@ async def classify_user_intent(messages: str | Sequence[BaseMessage]) -> str:
     try:
         response = await intent_chain.ainvoke({"messages": msg_list})
         return response.next
-    except Exception:
+    except Exception as e:
+        print(f"Intent classification failed: {e}")
         return "OutOfScope"

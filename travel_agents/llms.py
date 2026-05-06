@@ -1,8 +1,11 @@
 from dotenv import load_dotenv
+import logging
 from langchain_core.runnables import RunnableLambda
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from langgraph.prebuilt import create_react_agent
+
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -15,18 +18,20 @@ def prefer_groq_invoke(groq_runnable, gemini_runnable):
     def invoke_wrapper(in_val):
         try:
             return groq_runnable.invoke(in_val)
-        except Exception:
+        except Exception as e:
+            logger.warning(f"Groq LLM failed, falling back to Gemini: {str(e)}")
             try:
                 # If 70B fails (rate limit), fallback to 8B internally if it's a ChatModel, else just gemini
                 pass
-            except Exception:
-                pass
+            except Exception as fallback_e:
+                logger.warning(f"Groq fallback also failed: {str(fallback_e)}")
             return gemini_runnable.invoke(in_val)
     
     async def ainvoke_wrapper(in_val):
         try:
             return await groq_runnable.ainvoke(in_val)
-        except Exception:
+        except Exception as e:
+            logger.warning(f"Groq LLM async failed, falling back to Gemini: {str(e)}")
             return await gemini_runnable.ainvoke(in_val)
             
     return RunnableLambda(invoke_wrapper, afunc=ainvoke_wrapper)

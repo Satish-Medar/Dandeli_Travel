@@ -1,4 +1,5 @@
 import os
+import logging
 from datetime import datetime
 from time import sleep
 
@@ -7,6 +8,8 @@ from twilio.rest import Client
 
 from .booking_store import load_bookings, next_booking_id, save_bookings
 from .search_engine import clean_text
+
+logger = logging.getLogger(__name__)
 
 
 def _format_whatsapp_endpoint(number: str) -> str:
@@ -38,4 +41,5 @@ def book_resort(resort_name: str, check_in_out_dates: str, guest_details: str, c
             return f"Booking request created, but WhatsApp delivery did not complete.\nBooking ID: {booking_id}\nResort: {clean_text(resort_name)}\nDates: {clean_text(check_in_out_dates.title())}\nGuests: {clean_text(guest_details)}\nTwilio Status: {delivery_status}\nTwilio SID: {message.sid}\nTwilio Error: {error_message or error_code or 'Unknown error'}"
         return f"Your booking request has been sent.\nBooking ID: {booking_id}\nResort: {clean_text(resort_name)}\nDates: {clean_text(check_in_out_dates.title())}\nGuests: {clean_text(guest_details)}\n\nTwilio Status: {delivery_status}\nThe resort owner has been notified on WhatsApp and should respond soon."
     except Exception as error:
+        logger.error(f"WhatsApp booking failed: {error}")
         return f"Failed to send booking request via WhatsApp: {error}"
