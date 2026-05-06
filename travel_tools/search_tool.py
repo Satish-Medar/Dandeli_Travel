@@ -21,7 +21,7 @@ async def search_resorts(query: str) -> str:
             
         # Format the top matching documents as a clean JSON-like string
         results = []
-        for doc in matching_docs[:10]:  # Pass top 10 matches to the LLM
+        for doc in matching_docs[:50]:  # Pass top 50 matches to the LLM (increased from 10)
             meta = doc["metadata"]
             results.append({
                 "name": meta.get("name"),

@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
-from pinecone import init as pinecone_init
+from pinecone import Pinecone
 from pathlib import Path
 
 # Load environment variables
@@ -78,10 +78,11 @@ def load_data():
 def create_pinecone_store(docs, embeddings):
     print("Connecting to Pinecone...")
     pinecone_api_key = os.getenv("PINECONE_API_KEY")
-    pinecone_env = os.getenv("PINECONE_ENVIRONMENT")
-    if not pinecone_api_key or not pinecone_env:
-        raise RuntimeError("PINECONE_API_KEY and PINECONE_ENVIRONMENT must be set to ingest data.")
-    pinecone_init(api_key=pinecone_api_key, environment=pinecone_env)
+    if not pinecone_api_key:
+        raise RuntimeError("PINECONE_API_KEY must be set to ingest data.")
+    
+    # Initialize Pinecone with the new API
+    pc = Pinecone(api_key=pinecone_api_key)
 
     print(f"Creating/updating Pinecone index: {PINECONE_INDEX_NAME}...")
     vectorstore = PineconeVectorStore.from_documents(
@@ -89,7 +90,7 @@ def create_pinecone_store(docs, embeddings):
         embedding=embeddings,
         index_name=PINECONE_INDEX_NAME
     )
-    print(f"Success! Pinecone index updated.")
+    print(f"Success! Pinecone index updated with {len(docs)} documents.")
 
 if __name__ == "__main__":
     docs = load_data()

@@ -105,7 +105,7 @@
       },
       "7a34f092-69a8-4363-83b2-a1454944ae75": {
         "title": "Tell me about Emerald Valley Lodge",
-        "updated_at": "2026-05-03T18:08:24Z",
+        "updated_at": "2026-05-06T17:40:38Z",
         "messages": [
           {
             "role": "user",
@@ -166,6 +166,18 @@
             "content": "River Valley is a wonderful Nature Resort located in Zone 2, Dandeli Forest Reserve. It has a rating of 4.5 based on 61 reviews, which is very good.\n\nThe price per person is 6701 INR per day. They offer room options like Standard Tent and Deluxe Cottage. The resort provides amenities such as WiFi, Restaurant, and Parking. You can enjoy on-site activities like Campfire, Nature Walk, Bird Watching, and Yoga. They also offer nearby activities like River Rafting, and water activities like Rafting and Kayaking.\n\nRiver Valley is a family-friendly resort, making it a great option for those traveling with family. They offer food options for both vegetarians and non-vegetarians.\n\nIf you're interested in booking or need more information, you can contact them at +91 9959489786 or email them at booking@rivervalley.com. You can also visit their website at https://www.rivervalley.com.\n\nOne of the unique features of River Valley is its exclusive river access and guided nature trails, which makes it an ideal choice for nature lovers looking for an authentic jungle experience.",
             "name": "Researcher",
             "created_at": "2026-05-03T18:08:24Z"
+          },
+          {
+            "role": "user",
+            "content": "tell me about River Valley",
+            "name": "",
+            "created_at": "2026-05-06T17:40:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "River Valley is a Nature Resort located in Zone 2, Dandeli Forest Reserve. It has a rating of 4.5 based on 61 reviews and offers a price of 6701 INR per person per day. The resort is family-friendly, provides amenities like WiFi, Restaurant, and Parking, and offers activities such as Campfire, Nature Walk, Bird Watching, and Yoga. You can contact them at +91 9959489786 or visit their website at https://www.rivervalley.com for more information.",
+            "name": "Researcher",
+            "created_at": "2026-05-06T17:40:38Z"
           }
         ]
       }

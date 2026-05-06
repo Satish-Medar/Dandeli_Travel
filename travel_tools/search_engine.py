@@ -137,7 +137,16 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
         
         # Exact Name Match (if user specified a target resort)
         if filters.target_resort_name:
-            if filters.target_resort_name.lower() not in str(meta.get("name", "")).lower():
+            # Extract the core name without common suffixes like "resort", "camp", "stay", "retreat"
+            query_name = filters.target_resort_name.lower().strip()
+            suffixes = [" resort", " camp", " stay", " retreat", " lodge", " hotel"]
+            for suffix in suffixes:
+                if query_name.endswith(suffix):
+                    query_name = query_name[:-len(suffix)].strip()
+            
+            resort_name = str(meta.get("name", "")).lower().strip()
+            # Check if the core names match
+            if query_name not in resort_name and resort_name not in query_name:
                 continue
                 
         # Rating Filter
