@@ -28,6 +28,19 @@ GEMINI_API_KEYS = [
     os.getenv("GOOGLE_API_KEY_3", "")
 ]
 
+# Fallback to legacy single keys if rotation keys not provided
+if not any(GROQ_API_KEYS):
+    legacy_groq = os.getenv("GROQ_API_KEY", "")
+    if legacy_groq:
+        GROQ_API_KEYS = [legacy_groq, legacy_groq, legacy_groq]
+        logger.warning("Using legacy GROQ_API_KEY (should use GROQ_API_KEY_1/2/3)")
+
+if not any(GEMINI_API_KEYS):
+    legacy_gemini = os.getenv("GOOGLE_API_KEY", "")
+    if legacy_gemini:
+        GEMINI_API_KEYS = [legacy_gemini, legacy_gemini, legacy_gemini]
+        logger.warning("Using legacy GOOGLE_API_KEY (should use GOOGLE_API_KEY_1/2/3)")
+
 # Provider rotation: Alternates between Groq and Gemini
 # Sequence: Groq#1 → Gemini#1 → Groq#2 → Gemini#2 → Groq#3 → Gemini#3 → repeat
 PROVIDER_SEQUENCE = [
@@ -39,33 +52,48 @@ PROVIDER_SEQUENCE = [
 # Initialize rotation counter (start at 0)
 _api_call_counter = 0
 
+# Validate API keys are available
+valid_groq_keys = [k for k in GROQ_API_KEYS if k.strip()]
+valid_gemini_keys = [k for k in GEMINI_API_KEYS if k.strip()]
+
+if not valid_groq_keys:
+    logger.error("❌ NO GROQ API KEYS SET! Set GROQ_API_KEY_1, GROQ_API_KEY_2, GROQ_API_KEY_3 environment variables.")
+    raise ValueError("Groq API keys not configured. Please set environment variables: GROQ_API_KEY_1, GROQ_API_KEY_2, GROQ_API_KEY_3")
+
+if not valid_gemini_keys:
+    logger.error("❌ NO GEMINI API KEYS SET! Set GOOGLE_API_KEY_1, GOOGLE_API_KEY_2, GOOGLE_API_KEY_3 environment variables.")
+    raise ValueError("Gemini API keys not configured. Please set environment variables: GOOGLE_API_KEY_1, GOOGLE_API_KEY_2, GOOGLE_API_KEY_3")
+
+logger.info(f"✅ Groq API: {len(valid_groq_keys)} key(s) configured")
+logger.info(f"✅ Gemini API: {len(valid_gemini_keys)} key(s) configured")
+
 def get_next_groq_api():
     """Return next API key in round-robin rotation."""
     global _api_call_counter
-    api_key = GROQ_API_KEYS[_api_call_counter % len(GROQ_API_KEYS)]
+    api_key = valid_groq_keys[_api_call_counter % len(valid_groq_keys)]
     _api_call_counter += 1
-    logger.info(f"Using Groq API #{(_api_call_counter % len(GROQ_API_KEYS)) or len(GROQ_API_KEYS)} (rotation #{_api_call_counter})")
+    logger.info(f"Using Groq API #{(_api_call_counter % len(valid_groq_keys)) or len(valid_groq_keys)} (rotation #{_api_call_counter})")
     return api_key
 
 # Create multiple Groq instances with different API keys for load balancing
-groq_llm_1 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=GROQ_API_KEYS[0])
-groq_llm_2 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=GROQ_API_KEYS[1])
-groq_llm_3 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=GROQ_API_KEYS[2])
+groq_llm_1 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=valid_groq_keys[0])
+groq_llm_2 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=valid_groq_keys[1] if len(valid_groq_keys) > 1 else valid_groq_keys[0])
+groq_llm_3 = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1, max_retries=2, api_key=valid_groq_keys[2] if len(valid_groq_keys) > 2 else valid_groq_keys[0])
 
 # List of all Groq instances for round-robin rotation
 groq_instances = [groq_llm_1, groq_llm_2, groq_llm_3]
 
 # High-capacity 70B model also with rotation
-groq_70b_1 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=GROQ_API_KEYS[0])
-groq_70b_2 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=GROQ_API_KEYS[1])
-groq_70b_3 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=GROQ_API_KEYS[2])
+groq_70b_1 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=valid_groq_keys[0])
+groq_70b_2 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=valid_groq_keys[1] if len(valid_groq_keys) > 1 else valid_groq_keys[0])
+groq_70b_3 = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_retries=0, api_key=valid_groq_keys[2] if len(valid_groq_keys) > 2 else valid_groq_keys[0])
 
 groq_70b_instances = [groq_70b_1, groq_70b_2, groq_70b_3]
 
 # Create multiple Gemini instances with different API keys for load balancing
-gemini_llm_1 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=GEMINI_API_KEYS[0])
-gemini_llm_2 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=GEMINI_API_KEYS[1])
-gemini_llm_3 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=GEMINI_API_KEYS[2])
+gemini_llm_1 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=valid_gemini_keys[0])
+gemini_llm_2 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=valid_gemini_keys[1] if len(valid_gemini_keys) > 1 else valid_gemini_keys[0])
+gemini_llm_3 = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1, max_retries=2, api_key=valid_gemini_keys[2] if len(valid_gemini_keys) > 2 else valid_gemini_keys[0])
 
 # List of all Gemini instances for round-robin rotation
 gemini_instances = [gemini_llm_1, gemini_llm_2, gemini_llm_3]
@@ -79,7 +107,7 @@ def prefer_groq_invoke(groq_runnable, gemini_runnable):
     """Invoke with Groq (with API rotation) first, then fallback to Gemini."""
     def invoke_wrapper(in_val):
         global _api_call_counter
-        current_index = _api_call_counter % len(GROQ_API_KEYS)
+        current_index = _api_call_counter % len(valid_groq_keys)
         try:
             logger.info(f"Attempting invoke with Groq API #{current_index + 1}")
             return groq_runnable.invoke(in_val)
@@ -94,7 +122,7 @@ def prefer_groq_invoke(groq_runnable, gemini_runnable):
     
     async def ainvoke_wrapper(in_val):
         global _api_call_counter
-        current_index = _api_call_counter % len(GROQ_API_KEYS)
+        current_index = _api_call_counter % len(valid_groq_keys)
         _api_call_counter += 1  # Increment for next call
         try:
             logger.info(f"Attempting async invoke with Groq API #{current_index + 1}")
