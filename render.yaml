@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: dandeli-travel-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn travel_api.app:app --host 0.0.0.0 --port $PORT
+
+    # Environment variables - MUST be set in Render dashboard
+    envVars:
+      - key: GROQ_API_KEY_1
+        value: ${{ secrets.GROQ_API_KEY_1 }}
+      - key: GROQ_API_KEY_2
+        value: ${{ secrets.GROQ_API_KEY_2 }}
+      - key: GROQ_API_KEY_3
+        value: ${{ secrets.GROQ_API_KEY_3 }}
+      - key: GOOGLE_API_KEY_1
+        value: ${{ secrets.GOOGLE_API_KEY_1 }}
+      - key: GOOGLE_API_KEY_2
+        value: ${{ secrets.GOOGLE_API_KEY_2 }}
+      - key: GOOGLE_API_KEY_3
+        value: ${{ secrets.GOOGLE_API_KEY_3 }}
+      - key: GOOGLE_API_KEY
+        value: ${{ secrets.GOOGLE_API_KEY }}
+      - key: GROQ_API_KEY
+        value: ${{ secrets.GROQ_API_KEY }}
+      - key: MONGODB_URI
+        value: ${{ secrets.MONGODB_URI }}
+
+  - type: web
+    name: dandeli-travel-frontend
+    env: node
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://dandeli-travel-api.onrender.com
