@@ -46,6 +46,34 @@ def save_bookings(bookings: list[dict]) -> None:
             with BOOKINGS_PATH.open("w", encoding="utf-8") as file:
                 json.dump(_local_bookings, file, indent=2)
 
+class BookingStore:
+    """Simple in-memory local booking store for tests and local fallback."""
+
+    def __init__(self):
+        self._bookings = load_bookings() or []
+
+    def save_booking(self, booking_data: dict) -> dict:
+        booking_id = next_booking_id()
+        booking = {
+            "booking_id": booking_id,
+            "resort": booking_data.get("resort"),
+            "dates": booking_data.get("dates"),
+            "guests": booking_data.get("guests"),
+            "contactInfo": booking_data.get("contactInfo"),
+            "status": "confirmed",
+            "created_at": datetime.now().isoformat(timespec="seconds")
+        }
+        self._bookings.append(booking)
+        save_bookings(self._bookings)
+        return booking
+
+    def get_status(self, booking_id: str) -> str | None:
+        for booking in self._bookings:
+            if booking.get("booking_id") == booking_id:
+                return booking.get("status")
+        return None
+
+
 def next_booking_id(bookings: list[dict] = None) -> str:
     """Generate a unique thread-safe booking ID."""
     return f"BK-{str(uuid.uuid4())[:8].upper()}"

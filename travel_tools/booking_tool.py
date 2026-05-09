@@ -7,14 +7,43 @@ from langchain_core.tools import tool
 from twilio.rest import Client
 
 from .booking_store import load_bookings, next_booking_id, save_bookings
+from .booking_status_tool import get_booking_status as _get_booking_status
 from .search_engine import clean_text
 
-logger = logging.getLogger(__name__)
+
+def create_booking(booking_data: dict) -> dict:
+    required_fields = ["sessionId", "resort", "dates", "guests", "contactInfo"]
+    missing = [field for field in required_fields if field not in booking_data]
+    if missing:
+        raise ValueError(f"Missing required booking fields: {', '.join(missing)}")
+
+    booking_id = next_booking_id()
+    booking = {
+        "bookingId": booking_id,
+        "sessionId": booking_data.get("sessionId"),
+        "resort": booking_data.get("resort"),
+        "dates": booking_data.get("dates"),
+        "guests": booking_data.get("guests"),
+        "contactInfo": booking_data.get("contactInfo"),
+        "status": "confirmed",
+        "created_at": datetime.now().isoformat(timespec="seconds")
+    }
+
+    bookings = load_bookings() or []
+    bookings.append(booking)
+    save_bookings(bookings)
+    return booking
+
+
+def get_booking_status(booking_id: str) -> str:
+    return _get_booking_status(booking_id)
 
 
 def _format_whatsapp_endpoint(number: str) -> str:
     normalized = number.strip()
     return normalized if normalized.lower().startswith("whatsapp:") else f"whatsapp:{normalized}"
+
+logger = logging.getLogger(__name__)
 
 
 @tool

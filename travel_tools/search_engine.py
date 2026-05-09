@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import re
 from pathlib import Path
@@ -6,6 +7,8 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 from .vectorstore_provider import get_retriever, get_vectorstore
+
+logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 RESORT_DATA_PATH = BASE_DIR / "data" / "json_files" / "resorts.json"
@@ -21,11 +24,85 @@ def clean_text(value: str) -> str:
 
 
 class SearchFilters(BaseModel):
-    min_rating: Optional[float] = Field(description="Minimum rating required by the user (1-5)")
-    max_budget: Optional[int] = Field(description="Maximum total budget in INR. E.g. 'under 5000' -> 5000")
-    guest_count: Optional[int] = Field(description="Number of guests traveling")
-    family_friendly: Optional[bool] = Field(description="Whether the user explicitly wants family friendly options")
-    target_resort_name: Optional[str] = Field(description="If the user asks about a specific resort by name, extract the name here")
+    min_rating: Optional[float] = Field(default=None, description="Minimum rating required by the user (1-5)")
+    max_budget: Optional[int] = Field(default=None, description="Maximum total budget in INR. E.g. 'under 5000' -> 5000")
+    guest_count: Optional[int] = Field(default=None, description="Number of guests traveling")
+    family_friendly: Optional[bool] = Field(default=None, description="Whether the user explicitly wants family friendly options")
+    target_resort_names: Optional[list[str]] = Field(default=None, description="If the user asks about specific resorts by name, extract all names here (e.g., for 'compare X, Y, and Z', extract ['X', 'Y', 'Z'])")
+    required_amenities: Optional[list[str]] = Field(default=None, description="List of required amenities like 'swimming pool', 'wifi', 'restaurant', 'parking', etc. Only extract what user explicitly asks for.")
+
+
+def _normalize_amenities(amenities):
+    if not amenities:
+        return []
+    return [str(item).lower().strip() for item in amenities if isinstance(item, str)]
+
+
+def _extract_amenities_from_content(content: str) -> list[str]:
+    if not content:
+        return []
+    for line in content.splitlines():
+        if line.lower().startswith("amenities:"):
+            return _normalize_amenities(line.split(":", 1)[1].split(","))
+    return []
+
+
+def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
+    if not filters:
+        return True
+
+    # Support both raw resorts and LangChain doc metadata structures
+    if "metadata" in resort:
+        data = resort["metadata"]
+    else:
+        data = resort
+
+    price = data.get("price") or 0
+    rating = data.get("rating") or 0
+    amenities = _normalize_amenities(data.get("amenities") or resort.get("amenities"))
+    family = data.get("family_friendly")
+    resort_name = str(data.get("name", "")).lower().strip()
+
+    if filters.max_budget is not None:
+        if price > filters.max_budget:
+            return False
+
+    if filters.min_rating is not None:
+        if rating < filters.min_rating:
+            return False
+
+    if filters.family_friendly is not None:
+        if filters.family_friendly:
+            if family is False:
+                return False
+        else:
+            if family is True:
+                return False
+
+    if filters.required_amenities:
+        for required in filters.required_amenities:
+            req_norm = str(required).lower().strip()
+            if not any(req_norm in amen or amen in req_norm for amen in amenities):
+                return False
+
+    if filters.target_resort_names:
+        matches_name = False
+        for target_name in filters.target_resort_names:
+            target = str(target_name).lower().strip()
+            if target in resort_name or resort_name in target:
+                matches_name = True
+                break
+        if not matches_name:
+            return False
+
+    return True
+
+
+def filter_resorts(resorts: list[dict], filters: SearchFilters) -> list[dict]:
+    """Filter a list of resorts or resort docs by SearchFilters."""
+    if not filters:
+        return resorts
+    return [resort for resort in resorts if _matches_filters(resort, filters)]
 
 
 async def extract_filters_async(query: str) -> SearchFilters:
@@ -49,7 +126,7 @@ async def extract_filters_async(query: str) -> SearchFilters:
         result = await chain.ainvoke({"query": query})
         return result
     except Exception as e:
-        print(f"Filter extraction failed: {e}")
+        logger.error(f"Filter extraction failed: {e}")
         return SearchFilters()
 
 
@@ -59,7 +136,7 @@ def _load_local_documents() -> list[dict]:
         with open(RESORT_DATA_PATH, encoding="utf-8-sig") as source:
             resorts = json.load(source)
     except Exception as error:
-        print(f"Failed to load local resort data: {error}")
+        logger.error(f"Failed to load local resort data: {error}")
         return []
 
     rows = []
@@ -74,6 +151,7 @@ def _load_local_documents() -> list[dict]:
             "rating": resort.get("rating"),
             "family_friendly": bool(resort.get("family_friendly", False)),
             "romantic_couples": bool(resort.get("romantic_couples", False)),
+            "amenities": _normalize_amenities(resort.get("amenities", [])),
             "phone": clean_text(resort.get("phone")),
             "email": clean_text(resort.get("email")),
             "website": clean_text(resort.get("website")),
@@ -122,7 +200,7 @@ def load_all_documents() -> list[dict]:
         _cached_all_docs = rows
         return rows
     except Exception as e:
-        print(f"Failed to load documents from vector store: {e}")
+        logger.error(f"Failed to load documents from vector store: {e}")
         _cached_all_docs = _load_local_documents()
         return _cached_all_docs
 
@@ -135,18 +213,32 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
     for doc in all_docs:
         meta = doc["metadata"]
         
-        # Exact Name Match (if user specified a target resort)
-        if filters.target_resort_name:
-            # Extract the core name without common suffixes like "resort", "camp", "stay", "retreat"
-            query_name = filters.target_resort_name.lower().strip()
-            suffixes = [" resort", " camp", " stay", " retreat", " lodge", " hotel"]
-            for suffix in suffixes:
-                if query_name.endswith(suffix):
-                    query_name = query_name[:-len(suffix)].strip()
-            
+        # Exact Name Match (if user specified target resort(s))
+        if filters.target_resort_names:
             resort_name = str(meta.get("name", "")).lower().strip()
-            # Check if the core names match
-            if query_name not in resort_name and resort_name not in query_name:
+            suffixes = [" resort", " camp", " stay", " retreat", " lodge", " hotel"]
+            
+            # Remove suffixes from resort name for matching
+            resort_name_normalized = resort_name
+            for suffix in suffixes:
+                if resort_name_normalized.endswith(suffix):
+                    resort_name_normalized = resort_name_normalized[:-len(suffix)].strip()
+            
+            # Check if this resort matches any of the requested names
+            found_match = False
+            for target_name in filters.target_resort_names:
+                query_name = target_name.lower().strip()
+                # Remove suffixes from query name too
+                for suffix in suffixes:
+                    if query_name.endswith(suffix):
+                        query_name = query_name[:-len(suffix)].strip()
+                
+                # Check for match (exact or partial)
+                if query_name == resort_name_normalized or query_name in resort_name_normalized or resort_name_normalized in query_name:
+                    found_match = True
+                    break
+            
+            if not found_match:
                 continue
                 
         # Rating Filter
@@ -166,11 +258,35 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
             max_price_per_person = filters.max_budget / guest_count
             if (meta.get("price") or 100000) > max_price_per_person:
                 continue
+        
+        # Amenities Filter
+        if filters.required_amenities:
+            resort_amenities = [a.lower().strip() for a in doc["page_content"].lower().split("amenities:")[-1].split("\n")[0].split(",") if a.strip()]
+            if not resort_amenities:
+                resort_amenities = [a.lower().strip() for a in doc.get("metadata", {}).get("amenities", [])]
+            
+            missing_amenity = False
+            for required_amenity in filters.required_amenities:
+                required_normalized = required_amenity.lower().strip()
+                # Check if any resort amenity matches the requirement
+                found = False
+                for resort_amenity in resort_amenities:
+                    if required_normalized in resort_amenity or resort_amenity in required_normalized:
+                        found = True
+                        break
+                
+                # Also check in page content directly
+                if not found and required_normalized not in doc["page_content"].lower():
+                    missing_amenity = True
+                    break
+            
+            if missing_amenity:
+                continue
                 
         filtered_docs.append(doc)
 
-    # If no filters or specific name, do semantic ranking
-    if not filters.target_resort_name:
+    # If no filters or specific names, do semantic ranking
+    if not filters.target_resort_names:
         retriever = get_retriever()
         semantic_docs = []
         if retriever:
@@ -184,7 +300,7 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
                     if doc["metadata"].get("name") in retrieved_names:
                         semantic_docs.append(doc)
             except Exception as e:
-                print(f"Vector search failed: {e}")
+                logger.error(f"Vector search failed: {e}")
                 
         # Combine semantic hits first, then the rest of filtered docs
         final_docs = semantic_docs

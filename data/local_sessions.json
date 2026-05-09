@@ -219,5 +219,446 @@
         ]
       }
     }
+  },
+  "user123": {
+    "sessions": {
+      "daafa1b7-1242-4491-8af3-6492bf1ef9d7": {
+        "title": "Hello, can you help me find a resort?",
+        "updated_at": "2026-05-06T18:12:52Z",
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-05-06T18:12:52Z"
+          }
+        ]
+      },
+      "eb7fbb18-d2c7-4297-b3a7-ccffa469d200": {
+        "title": "alert('xss')Hello world",
+        "updated_at": "2026-05-06T18:12:53Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "alert('xss')Hello world",
+            "name": "",
+            "created_at": "2026-05-06T18:12:52Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-06T18:12:53Z"
+          }
+        ]
+      }
+    }
+  },
+  "test": {
+    "sessions": {
+      "4cfc5595-61da-4fa9-bc46-9d286bd868b9": {
+        "title": "test",
+        "updated_at": "2026-05-06T18:13:06Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "test",
+            "name": "",
+            "created_at": "2026-05-06T18:13:05Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-06T18:13:06Z"
+          }
+        ]
+      }
+    }
+  },
+  "user_3DRXmEGPjXZ2LWw4C4VwgWdUWnX": {
+    "sessions": {
+      "865a7cc1-6c4e-4542-ad1b-205dc3569ba6": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T13:15:28Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T13:13:49Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T13:13:50Z"
+          },
+          {
+            "role": "user",
+            "content": "top 3 resorts in dandeli",
+            "name": "",
+            "created_at": "2026-05-08T13:14:11Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on the search results, here are the top 3 resorts in Dandeli:\n\n1. **Bison Valley Dandeli**: This adventure camp is located in Zone 2, Dandeli Forest Reserve, and has a rating of 4.8. The price per person is 2962 INR per day. You can contact them at +91 9606512562 or visit their website at https://www.bisonvalleydandeli.com.\n\n2. **Hidden Trails Dandeli**: This luxury resort is located in Zone 1, Dandeli Forest Reserve, and has a rating of 4.7. The price per person is 3275 INR per day. You can contact them at +91 9688480969 or visit their website at https://www.hiddentrailsdandeli.com.\n\n3. **Bison Resort Dandeli**: This wildlife camp is located in Zone 1, Dandeli Forest Reserve, and has a rating of 4.4. The price per person is 2123 INR per day. You can contact them at +91 9316158579 or visit their website at https://www.bisonresortdandeli.com.\n\nAll three resorts offer a unique experience, with amenities like WiFi, restaurant, parking, and campfire. They also offer various on-site and nearby activities like nature walks, bird watching, and river rafting.",
+            "name": "Researcher",
+            "created_at": "2026-05-08T13:14:21Z"
+          },
+          {
+            "role": "user",
+            "content": "book 1st",
+            "name": "",
+            "created_at": "2026-05-08T13:14:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.",
+            "name": "Booker",
+            "created_at": "2026-05-08T13:14:31Z"
+          },
+          {
+            "role": "user",
+            "content": "check in is March 26, 2026 and check out is March 28, 2026",
+            "name": "",
+            "created_at": "2026-05-08T13:14:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Before I place the booking request, send your contact number or email so the resort owner can reach you.",
+            "name": "Booker",
+            "created_at": "2026-05-08T13:14:52Z"
+          },
+          {
+            "role": "user",
+            "content": "7204113513",
+            "name": "",
+            "created_at": "2026-05-08T13:14:58Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please tell me how many guests will be staying, and if there are any children.",
+            "name": "Booker",
+            "created_at": "2026-05-08T13:14:59Z"
+          },
+          {
+            "role": "user",
+            "content": "2 adults one kid",
+            "name": "",
+            "created_at": "2026-05-08T13:15:12Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Please confirm this booking:\nResort: Bison Valley Dandeli\nDates: March 26, 2026 to March 28, 2026\nGuests: 2 adults, 1 kid\nContact: 7204113513\n\nReply `confirm` to send it.",
+            "name": "Booker",
+            "created_at": "2026-05-08T13:15:13Z"
+          },
+          {
+            "role": "user",
+            "content": "confirm",
+            "name": "",
+            "created_at": "2026-05-08T13:15:23Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Booking request created, but WhatsApp delivery did not complete.\nBooking ID: BK-62DA6873\nResort: Bison Valley Dandeli\nDates: March 26, 2026 To March 28, 2026\nGuests: 2 adults, 1 kid\nTwilio Status: failed\nTwilio SID: SM80bb1db2c1f47c0d729a263ce106e3ce\nTwilio Error: 63015",
+            "name": "Booker",
+            "created_at": "2026-05-08T13:15:28Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-84d1ed16-9142-4d3f-9cde-ffc108fdc5cb": {
+    "sessions": {}
+  },
+  "guest-3697d68b-dace-4dc5-a540-22c3ba97e527": {
+    "sessions": {
+      "7830e49c-2dca-446a-af1c-5a37ff96c4d1": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T13:38:56Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T13:35:55Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T13:35:56Z"
+          },
+          {
+            "role": "user",
+            "content": "Find me three Dandeli resorts with swimming pool and wifi for two adults, budget under \u20b98,000 per night.",
+            "name": "",
+            "created_at": "2026-05-08T13:37:14Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've found three Dandeli resorts that fit your requirements. Here they are:\n\n1. **Wildwood Nature Resort**: This resort has a swimming pool and WiFi. The price per night for two adults is \u20b93750. You can contact them at +91 9648123574 or visit their website at https://www.wildwoodnature.com.\n2. **Timber Ridge Jungle Resort**: This resort features a large swimming pool and WiFi. The price per night for two adults is \u20b94000. You can contact them at +91 9612348756 or visit their website at https://www.timberridgejungle.com.\n3. **Timber Trails Dandeli**: This resort has a swimming pool and WiFi. The price per night for two adults is \u20b93700. You can contact them at +91 9012456738 or visit their website at https://www.timbertrailsdandeli.com.\n\nAll of these resorts are within your budget of \u20b98,000 per night and offer the amenities you're looking for. I hope this helps you find the perfect resort for your stay in Dandeli!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T13:37:19Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-05-08T13:37:50Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'm having trouble reaching one of the AI services right now. Please try again in a moment.",
+            "name": "System",
+            "created_at": "2026-05-08T13:38:46Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare River Valley, Sunset Resort, and Jungle Camp on price, amenities, and how easy it is to book them.",
+            "name": "",
+            "created_at": "2026-05-08T13:38:54Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on the search results, I can only provide information about River Valley, as it's the only resort that matches your search query. Here's what I found:\n\nRiver Valley is a Nature Resort located in Zone 2, Dandeli Forest Reserve. The price per person is \u20b96,701. As for amenities, River Valley offers WiFi, a restaurant, and parking. On-site activities include campfire, nature walk, bird watching, and yoga. Nearby activities include river rafting, and water activities like rafting and kayaking are also available.\n\nTo book River Valley, you can contact them directly through their phone number: +91 9959489786, or email: booking@rivervalley.com. They also have a website: https://www.rivervalley.com, where you can find more information and book your stay.\n\nUnfortunately, I don't have any information about Sunset Resort and Jungle Camp, as they didn't match the search results. If you'd like to know more about these resorts or compare them with River Valley, I suggest adjusting your search query or providing more information about what you're looking for.",
+            "name": "Researcher",
+            "created_at": "2026-05-08T13:38:56Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-da64ab0b-d635-45b3-bd26-6f128d62fe17": {
+    "sessions": {
+      "3510be6c-e0ea-4927-ba15-062d598d6ff2": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T13:55:19Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T13:54:27Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T13:54:28Z"
+          },
+          {
+            "role": "user",
+            "content": "Find me three Dandeli resorts with swimming pool and wifi for two adults, budget under \u20b98,000 per night",
+            "name": "",
+            "created_at": "2026-05-08T13:54:43Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've found some great options for you. Here are three Dandeli resorts that fit your criteria:\n\n1. **River Valley Kali**: This nature resort is located in Zone 5, Dandeli Forest Reserve. It offers a swimming pool, WiFi, and other amenities like a restaurant, parking, and campfire. The price per person is \u20b92,703, so for two adults, it would be \u20b95,406 per night. You can contact them at +91 9612964801, email booking@rivervalleykali.com, or visit their website https://www.rivervalleykali.com.\n2. **Whispering Haven**: This eco-resort is located in Zone 1, Dandeli Forest Reserve. It features a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,574, so for two adults, it would be \u20b95,148 per night. You can contact them at +91 9478665818, email booking@whisperinghaven.com, or visit their website https://www.whisperinghaven.com.\n3. **Mystic Lodge**: This wildlife camp is located in Zone 3, Dandeli Forest Reserve. It offers a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,291, so for two adults, it would be \u20b94,582 per night. You can contact them at +91 9989861429, email booking@mysticlodge.com, or visit their website https://www.mysticlodge.com.\n\nAll of these resorts meet your requirements and are within your budget of \u20b98,000 per night. Let me know if you'd like more information or if you'd like to compare other options!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T13:54:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Error: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8507, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+            "name": "System",
+            "created_at": "2026-05-08T13:55:04Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare River Valley, Sunset Resort, and Jungle Camp on price, amenities, and how easy it is to book them.",
+            "name": "",
+            "created_at": "2026-05-08T13:55:17Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on the search results, I can only provide information about River Valley, as the other two resorts (Sunset Resort and Jungle Camp) are not found in the results. Here's a comparison of the available information:\n\n* **Price**: River Valley costs \u20b96,701 per person per day.\n* **Amenities**: River Valley offers amenities like WiFi, restaurant, parking, campfire, nature walk, bird watching, yoga, river rafting, kayaking, and exclusive river access.\n* **Ease of booking**: River Valley can be booked by contacting them at +91 9959489786, emailing booking@rivervalley.com, or visiting their website https://www.rivervalley.com.\n\nUnfortunately, I don't have information about Sunset Resort and Jungle Camp to compare with River Valley. If you'd like to know more about River Valley or need help with booking, I'd be happy to assist you!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T13:55:19Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-a771a301-e493-4823-805a-833ac219e430": {
+    "sessions": {
+      "26dbed9b-011d-4bfb-9e02-f725e4f710ac": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T14:14:50Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T14:14:22Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T14:14:22Z"
+          },
+          {
+            "role": "user",
+            "content": "Find me three Dandeli resorts with swimming pool and wifi for two adults, budget under \u20b98,000 per night",
+            "name": "",
+            "created_at": "2026-05-08T14:14:28Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've found some great options for you. Here are three Dandeli resorts that fit your requirements:\n\n1. **River Valley Kali**: This nature resort is located in Zone 5, Dandeli Forest Reserve. It offers a swimming pool, WiFi, and other amenities like a restaurant, parking, and campfire. The price per person is \u20b92,703, so for two adults, it would be \u20b95,406 per night. You can contact them at +91 9612964801, email booking@rivervalleykali.com, or visit their website https://www.rivervalleykali.com.\n2. **Whispering Haven**: This eco-resort is located in Zone 1, Dandeli Forest Reserve. It features a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,574, so for two adults, it would be \u20b95,148 per night. You can contact them at +91 9478665818, email booking@whisperinghaven.com, or visit their website https://www.whisperinghaven.com.\n3. **Mystic Lodge**: This wildlife camp is located in Zone 3, Dandeli Forest Reserve. It offers a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,291, so for two adults, it would be \u20b94,582 per night. You can contact them at +91 9989861429, email booking@mysticlodge.com, or visit their website https://www.mysticlodge.com.\n\nAll of these resorts meet your requirements and are within your budget of \u20b98,000 per night for two adults. Let me know if you'd like more information or if you'd like to compare other options!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:14:36Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Error: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8034, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+            "name": "System",
+            "created_at": "2026-05-08T14:14:43Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare River Valley, Sunset Resort, and Jungle Camp on price, amenities, and how easy it is to book them.",
+            "name": "",
+            "created_at": "2026-05-08T14:14:48Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I can provide a comparison of River Valley and Jungle Camp, as they are the two resorts that were found in the search results. Unfortunately, Sunset Resort was not found in the search results.\n\nRiver Valley and Jungle Camp are both located in Zone 2, Dandeli Forest Reserve, and are suitable for families. Here's a comparison of the two resorts:\n\n* Price: River Valley is priced at 6701 INR per person per day, while Jungle Camp is priced at 6044 INR per person per day. Jungle Camp is the more affordable option.\n* Amenities: Both resorts offer WiFi, restaurant, and parking facilities. River Valley offers additional amenities such as guided nature trails and yoga, while Jungle Camp offers a pool and coracle ride.\n* Booking: Both resorts have a website, phone number, and email address for booking. River Valley can be booked at https://www.rivervalley.com, or by calling +91 9959489786, or by emailing booking@rivervalley.com. Jungle Camp can be booked at https://www.junglecamp.com, or by calling +91 9901340067, or by emailing booking@junglecamp.com.\n\nOverall, the choice between River Valley and Jungle Camp depends on your priorities. If you're looking for a more affordable option with a pool, Jungle Camp might be the better choice. If you're looking for a resort with more amenities and activities, River Valley might be the better choice.",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:14:50Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-6c7eb1ed-9229-4fe1-89de-95910affaa63": {
+    "sessions": {
+      "2f445816-ff08-45e5-8da2-91435b38fb49": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T14:19:53Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T14:19:13Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T14:19:13Z"
+          },
+          {
+            "role": "user",
+            "content": "Find me three Dandeli resorts with swimming pool and wifi for two adults, budget under \u20b98,000 per night.",
+            "name": "",
+            "created_at": "2026-05-08T14:19:18Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've found three great options for you in Dandeli that fit your requirements. Since you're looking for resorts with a swimming pool and WiFi for two adults with a budget under \u20b98,000 per night, here are my top recommendations:\n\n1. **River Valley Kali**: This nature resort is located in Zone 5, Dandeli Forest Reserve. It offers a swimming pool, WiFi, and other amenities like a restaurant, parking, and campfire. The price per person is \u20b92,703, so for two adults, it would be \u20b95,406 per night. You can contact them at +91 9612964801, email booking@rivervalleykali.com, or visit their website at https://www.rivervalleykali.com.\n\n2. **Whispering Haven**: This eco-resort is situated in Zone 1, Dandeli Forest Reserve. It features a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,574, so for two adults, it would be \u20b95,148 per night. You can reach them at +91 9478665818, email booking@whisperinghaven.com, or visit their website at https://www.whisperinghaven.com.\n\n3. **Mystic Lodge**: Located in Zone 3, Dandeli Forest Reserve, this wildlife camp offers a swimming pool, WiFi, and other amenities like a restaurant, parking, campfire, and spa. The price per person is \u20b92,291, so for two adults, it would be \u20b94,582 per night. You can contact them at +91 9989861429, email booking@mysticlodge.com, or visit their website at https://www.mysticlodge.com.\n\nAll of these options should provide a great experience for you and your companion, and they're within your budget of \u20b98,000 per night for two adults.",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:19:26Z"
+          },
+          {
+            "role": "user",
+            "content": "Plan a 2-night Dandeli trip with river rafting, nature walks, and a stay at a resort that has pool + wifi.",
+            "name": "",
+            "created_at": "2026-05-08T14:19:31Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your requirements, I recommend staying at the **Tiger Resort**. It has a pool and WiFi, and it's located in the heart of Dandeli Forest Reserve, making it an ideal base for your activities.\n\nHere's a suggested itinerary for your 2-night trip:\n\n**Day 1:**\n\n* Morning: Check-in at the **Tiger Resort**.\n* 10:00 AM: Start your day with a guided nature walk in the Dandeli Forest Reserve. The resort can arrange for a guide to take you through the forest, pointing out various species of plants and animals.\n* 1:00 PM: Have lunch at the resort's restaurant.\n* 2:30 PM: Head out for river rafting. The resort can arrange for a rafting trip on the Kali River, which offers exciting rapids and scenic views.\n* 6:00 PM: Return to the resort and relax by the pool or enjoy a campfire (if available).\n* 8:00 PM: Have dinner at the resort's restaurant.\n\n**Day 2:**\n\n* 9:00 AM: Start the day with a bird-watching session. The Dandeli Forest Reserve is a birdwatcher's paradise, with over 300 species of birds.\n* 12:00 PM: Have lunch at the resort's restaurant.\n* 2:00 PM: Take some time to relax by the pool or explore the surrounding area.\n* 4:00 PM: Check-out of the resort.\n\nThe Tiger Resort offers a range of rooms, including Standard Tent, Deluxe Cottage, and Treehouse. The prices are as follows:\n\n* Standard Tent: \u20b97266 per day per person\n* Deluxe Cottage: \u20b97266 per day per person\n* Treehouse: \u20b97266 per day per person\n\nPlease note that the prices may vary depending on the season and availability.\n\nI hope this itinerary meets your requirements. Let me know if you need any further assistance!",
+            "name": "Planner",
+            "created_at": "2026-05-08T14:19:45Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare River Valley, Sunset Resort, and Jungle Camp on price, amenities, and how easy it is to book them.",
+            "name": "",
+            "created_at": "2026-05-08T14:19:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'd be happy to help you compare these resorts. However, I need to let you know that Sunset Resort was not found in our search results. Let's compare River Valley and Jungle Camp instead.\n\nIn terms of price, River Valley costs 6701 INR per person per day, while Jungle Camp costs 6044 INR per person per day. So, Jungle Camp is the more budget-friendly option.\n\nWhen it comes to amenities, both resorts offer WiFi, restaurant, and parking. However, Jungle Camp has a few extra amenities like a pool and coracle ride. River Valley, on the other hand, offers guided nature trails and bird watching.\n\nAs for booking, both resorts have a website and contact information. You can book River Valley by visiting their website at https://www.rivervalley.com, calling them at +91 9959489786, or emailing them at booking@rivervalley.com. For Jungle Camp, you can visit their website at https://www.junglecamp.com, call them at +91 9901340067, or email them at booking@junglecamp.com. Both resorts seem to be easily bookable through their websites or by contacting them directly.\n\nI hope this comparison helps you make a decision. If you have any other questions or if you'd like to know more about these resorts, feel free to ask!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:19:53Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-2942dccd-ffbf-4d71-b770-b3bcbd92117d": {
+    "sessions": {
+      "c9aeedc3-9d9b-4436-b81b-ee47547d3a17": {
+        "title": "Hi",
+        "updated_at": "2026-05-08T14:34:06Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-08T14:34:06Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-08T14:34:06Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-4bc0f3cc-2b35-46f2-a4ab-ce591e1d3b80": {
+    "sessions": {
+      "cb123859-150b-4d85-bf58-c4fac8844277": {
+        "title": "Find me three Dandeli resorts with swimming pool...",
+        "updated_at": "2026-05-08T14:49:37Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Find me three Dandeli resorts with swimming pool and wifi for two adults, budget under \u20b98,000 per night.",
+            "name": "",
+            "created_at": "2026-05-08T14:49:13Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I've found some great options for you. Based on your requirements, here are three Dandeli resorts that fit your budget and offer a swimming pool and WiFi for two adults:\n\n1. **River Valley Kali**: This nature resort is located in Zone 5, Dandeli Forest Reserve, and offers a price of \u20b92703 per person per night. With a total cost of \u20b95406 for two adults, it's well within your budget. You can contact them at +91 9612964801, email booking@rivervalleykali.com, or visit their website at https://www.rivervalleykali.com.\n2. **Whispering Haven**: This eco-resort is situated in Zone 1, Dandeli Forest Reserve, and offers a price of \u20b92574 per person per night. For two adults, the total cost would be \u20b95148, which is under your budget. You can reach out to them at +91 9478665818, email booking@whisperinghaven.com, or visit their website at https://www.whisperinghaven.com.\n3. **Mystic Lodge**: Located in Zone 3, Dandeli Forest Reserve, this wildlife camp offers a price of \u20b92291 per person per night. For two adults, the total cost would be \u20b94582, making it an affordable option. You can contact them at +91 9989861429, email booking@mysticlodge.com, or visit their website at https://www.mysticlodge.com.\n\nAll three resorts offer a swimming pool and WiFi, and are within your budget of \u20b98,000 per night for two adults. I hope this helps you find the perfect resort for your stay in Dandeli!",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:49:21Z"
+          },
+          {
+            "role": "user",
+            "content": "Plan a 2-night Dandeli trip with river rafting, nature walks, and a stay at a resort that has pool + wifi.",
+            "name": "",
+            "created_at": "2026-05-08T14:49:28Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on your requirements, I recommend staying at the **Tiger Resort**. It has a pool and WiFi, and it's located in the heart of Dandeli Forest Reserve, making it an ideal base for your activities.\n\nHere's a suggested itinerary for your 2-night trip:\n\n**Day 1:**\n\n* Morning: Check-in at the **Tiger Resort**.\n* 10:00 AM: Start your day with a guided nature walk in the Dandeli Forest Reserve. The resort can arrange for a guide to take you through the forest, pointing out various species of birds, plants, and animals.\n* 1:00 PM: Have lunch at the resort's restaurant.\n* 2:30 PM: Head out for river rafting. The resort can arrange for a rafting trip on the Kali River, which offers exciting rapids and scenic views.\n* 6:00 PM: Return to the resort and relax by the pool or enjoy a campfire (if available).\n* 8:00 PM: Have dinner at the resort's restaurant.\n\n**Day 2:**\n\n* 9:00 AM: Start the day with a leisurely breakfast at the resort.\n* 10:30 AM: Take another guided nature walk in the forest, exploring different trails and spotting more wildlife.\n* 1:00 PM: Have lunch at the resort.\n* 2:30 PM: Spend the afternoon relaxing at the resort or exploring the surrounding area.\n* 6:00 PM: Have dinner at the resort's restaurant.\n* 8:00 PM: Check-out of the resort and head back home.\n\nThe Tiger Resort offers comfortable accommodations, delicious food, and a range of activities to suit your interests. I hope you have a great time on your Dandeli trip!",
+            "name": "Planner",
+            "created_at": "2026-05-08T14:49:30Z"
+          },
+          {
+            "role": "user",
+            "content": "Compare River Valley, Sunset Resort, and Jungle Camp on price, amenities, and how easy it is to book them.",
+            "name": "",
+            "created_at": "2026-05-08T14:49:35Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I'd be happy to compare River Valley, and Jungle Camp for you. Unfortunately, I couldn't find any information on Sunset Resort in our search results. \n\nLet's start with the price: River Valley costs 6701 INR per person per day, while Jungle Camp costs 6044 INR per person per day. So, Jungle Camp is the more budget-friendly option.\n\nIn terms of amenities, both resorts offer WiFi, restaurants, and parking. However, River Valley has more on-site activities like campfire, nature walk, bird watching, and yoga, whereas Jungle Camp has a pool and offers coracle rides as a water activity. River Valley also has more room options, including Standard Tent and Deluxe Cottage.\n\nAs for booking, both resorts have a website and contact information. You can book River Valley by visiting https://www.rivervalley.com, calling +91 9959489786, or emailing booking@rivervalley.com. For Jungle Camp, you can visit https://www.junglecamp.com, call +91 9901340067, or email booking@junglecamp.com. They seem to be equally easy to book.\n\nOverall, the choice between River Valley and Jungle Camp depends on your priorities. If you're looking for a more luxurious experience with a wider range of activities, River Valley might be the better choice. However, if you're on a tighter budget and still want a great jungle experience, Jungle Camp could be the way to go.",
+            "name": "Researcher",
+            "created_at": "2026-05-08T14:49:37Z"
+          }
+        ]
+      }
+    }
   }
 }

@@ -13,7 +13,7 @@ function createMetaMessage(content) {
   return {
     id: crypto.randomUUID(),
     role: "meta",
-    content
+    content,
   };
 }
 
@@ -22,13 +22,13 @@ function createMessage(role, content, extra = {}) {
     id: crypto.randomUUID(),
     role,
     content,
-    ...extra
+    ...extra,
   };
 }
 
 function createInitialMessage() {
   return createMetaMessage(
-    "Ask about resorts, trip plans, prices, or bookings."
+    "Ask about resorts, trip plans, prices, or bookings.",
   );
 }
 
@@ -36,25 +36,31 @@ function getAuthProfile(user) {
   if (!user) {
     return {
       user_name: null,
-      user_email: null
+      user_email: null,
     };
   }
 
   return {
-    user_name: [user.firstName, user.lastName].filter(Boolean).join(" ").trim() || user.username || null,
-    user_email: user.primaryEmailAddress?.emailAddress || null
+    user_name:
+      [user.firstName, user.lastName].filter(Boolean).join(" ").trim() ||
+      user.username ||
+      null,
+    user_email: user.primaryEmailAddress?.emailAddress || null,
   };
 }
 
 export default function Page() {
   const router = useRouter();
   const { isLoaded, isSignedIn, user } = useUser();
-  const [config, setConfig] = useState({ clerk_enabled: false, clerk_publishable_key: null });
+  const [config, setConfig] = useState({
+    clerk_enabled: false,
+    clerk_publishable_key: null,
+  });
   const [authState, setAuthState] = useState({
     enabled: false,
     ready: false,
     clerk: null,
-    user: null
+    user: null,
   });
   const [booted, setBooted] = useState(false);
   const [currentUserId, setCurrentUserId] = useState("guest-local");
@@ -68,38 +74,65 @@ export default function Page() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [sessionCount, setSessionCount] = useState(0);
   const threadRef = useRef(null);
+  const isGuest = authState.ready && !authState.user;
 
   useEffect(() => {
     threadRef.current?.scrollTo({
       top: threadRef.current.scrollHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }, [messages]);
 
   async function loadHistory(userId) {
-    const data = await fetchJson(`/sessions?user_id=${encodeURIComponent(userId)}`);
+    if (isGuest) {
+      setSessions([]);
+      setSessionCount(0);
+      return [];
+    }
+
+    const data = await fetchJson(
+      `/sessions?user_id=${encodeURIComponent(userId)}`,
+    );
     setSessions(data);
     setSessionCount(data.length);
     return data;
   }
 
   async function openSession(targetSessionId, userId) {
-    const data = await fetchJson(`/sessions/${targetSessionId}?user_id=${encodeURIComponent(userId)}`);
+    if (isGuest) {
+      setSessionId(null);
+      setSessionTitle("Untitled trip thread");
+      setMessages([createInitialMessage()]);
+      setSidebarOpen(false);
+      return;
+    }
+
+    const data = await fetchJson(
+      `/sessions/${targetSessionId}?user_id=${encodeURIComponent(userId)}`,
+    );
     setSessionId(data.session_id);
     setSessionTitle(data.title || "Untitled trip thread");
     setMessages(
       data.messages.length
-        ? data.messages.map((message) => createMessage(message.role, message.content))
-        : [createMetaMessage("This conversation is empty. Ask anything about your Dandeli trip to continue.")]
+        ? data.messages.map((message) =>
+            createMessage(message.role, message.content),
+          )
+        : [
+            createMetaMessage(
+              "This conversation is empty. Ask anything about your Dandeli trip to continue.",
+            ),
+          ],
     );
     setSidebarOpen(false);
   }
 
   async function refreshCurrentSessionTitle(userId, activeSessionId) {
-    if (!activeSessionId) {
+    if (isGuest || !activeSessionId) {
       return;
     }
-    const data = await fetchJson(`/sessions/${activeSessionId}?user_id=${encodeURIComponent(userId)}`);
+    const data = await fetchJson(
+      `/sessions/${activeSessionId}?user_id=${encodeURIComponent(userId)}`,
+    );
     setSessionTitle(data.title || "Untitled trip thread");
   }
 
@@ -108,9 +141,11 @@ export default function Page() {
     setSessionId(null);
     setSessionTitle("Untitled trip thread");
     setMessages([createInitialMessage()]);
-    const sessionList = await loadHistory(userId);
-    if (sessionList.length) {
-      await openSession(sessionList[0].session_id, userId);
+    if (!isGuest) {
+      const sessionList = await loadHistory(userId);
+      if (sessionList.length) {
+        await openSession(sessionList[0].session_id, userId);
+      }
     }
   }
 
@@ -123,7 +158,9 @@ export default function Page() {
         console.error(error);
         setStatus("Unavailable");
         setMessages([
-          createMetaMessage("The workspace could not load. Check whether the backend is running.")
+          createMetaMessage(
+            "The workspace could not load. Check whether the backend is running.",
+          ),
         ]);
       }
     }
@@ -132,14 +169,14 @@ export default function Page() {
 
   useEffect(() => {
     if (!isLoaded || booted || status === "Unavailable") return;
-    
+
     async function applyAuth() {
       if (isSignedIn && user) {
         setAuthState({
           enabled: true,
           ready: true,
           clerk: {},
-          user: user
+          user: user,
         });
         await bootUserState(user.id);
       } else {
@@ -147,34 +184,38 @@ export default function Page() {
           enabled: true,
           ready: true,
           clerk: null,
-          user: null
+          user: null,
         });
         await bootUserState(ensureGuestUserId());
       }
       setStatus("Ready");
       setBooted(true);
     }
-    
+
     applyAuth();
   }, [isLoaded, isSignedIn, user, booted, status]);
 
   async function handleNewChat() {
     setPending(true);
     try {
-      const data = await fetchJson("/sessions", {
-        method: "POST",
-        body: JSON.stringify({
-          user_id: currentUserId,
-          title: "New conversation",
-          ...getAuthProfile(authState.user)
-        })
-      });
-      setSessionId(data.session_id);
-      setSessionTitle(data.title || "New conversation");
-      setMessages([
-        createMetaMessage("New conversation ready.")
-      ]);
-      await loadHistory(currentUserId);
+      if (!isGuest) {
+        const data = await fetchJson("/sessions", {
+          method: "POST",
+          body: JSON.stringify({
+            user_id: currentUserId,
+            title: "New conversation",
+            ...getAuthProfile(authState.user),
+          }),
+        });
+        setSessionId(data.session_id);
+        setSessionTitle(data.title || "New conversation");
+        await loadHistory(currentUserId);
+      } else {
+        setSessionId(null);
+        setSessionTitle("New conversation");
+      }
+
+      setMessages([createMetaMessage("New conversation ready.")]);
       setSidebarOpen(false);
       setStatus("Ready");
     } finally {
@@ -187,13 +228,20 @@ export default function Page() {
       return sessionId;
     }
 
+    if (isGuest) {
+      const guestSessionId = crypto.randomUUID();
+      setSessionId(guestSessionId);
+      setSessionTitle("New conversation");
+      return guestSessionId;
+    }
+
     const data = await fetchJson("/sessions", {
       method: "POST",
       body: JSON.stringify({
         user_id: currentUserId,
         title: "New conversation",
-        ...getAuthProfile(authState.user)
-      })
+        ...getAuthProfile(authState.user),
+      }),
     });
     setSessionId(data.session_id);
     setSessionTitle(data.title || "New conversation");
@@ -201,21 +249,22 @@ export default function Page() {
   }
 
   async function handleReset() {
-    if (!sessionId) {
-      setMessages([
-        createMetaMessage("New conversation ready.")
-      ]);
+    if (!sessionId || isGuest) {
+      setSessionId(null);
+      setMessages([createMetaMessage("New conversation ready.")]);
+      setSessionTitle("New conversation");
       return;
     }
 
     setPending(true);
     try {
-      await fetchJson(`/sessions/${sessionId}?user_id=${encodeURIComponent(currentUserId)}`, {
-        method: "DELETE"
-      });
-      setMessages([
-        createMetaMessage("Conversation cleared.")
-      ]);
+      await fetchJson(
+        `/sessions/${sessionId}?user_id=${encodeURIComponent(currentUserId)}`,
+        {
+          method: "DELETE",
+        },
+      );
+      setMessages([createMetaMessage("Conversation cleared.")]);
       setSessionTitle("New conversation");
       await loadHistory(currentUserId);
       setStatus("Ready");
@@ -225,10 +274,20 @@ export default function Page() {
   }
 
   async function handleDeleteSession(targetSessionId) {
+    if (isGuest) {
+      setSessionId(null);
+      setSessionTitle("New conversation");
+      setMessages([createInitialMessage()]);
+      return;
+    }
+
     try {
-      await fetchJson(`/sessions/${targetSessionId}?user_id=${encodeURIComponent(currentUserId)}`, {
-        method: "DELETE"
-      });
+      await fetchJson(
+        `/sessions/${targetSessionId}?user_id=${encodeURIComponent(currentUserId)}`,
+        {
+          method: "DELETE",
+        },
+      );
       await loadHistory(currentUserId);
       if (sessionId === targetSessionId) {
         setSessionId(null);
@@ -259,18 +318,28 @@ export default function Page() {
         id: assistantId,
         role: "assistant",
         content: "",
-        streaming: true
-      }
+        streaming: true,
+      },
     ]);
 
     try {
       const activeSessionId = await ensureSession();
+      const sessionMessages = messages
+        .filter((message) => message.role !== "meta" && message.content)
+        .map(({ role, content, name }) => ({
+          role,
+          content,
+          name: name || "",
+        }));
+
       const reply = await streamChat(
         {
           session_id: activeSessionId,
           user_id: currentUserId,
           message: content,
-          ...getAuthProfile(authState.user)
+          messages: sessionMessages,
+          persist_history: !isGuest,
+          ...getAuthProfile(authState.user),
         },
         {
           onSession: (nextSessionId) => setSessionId(nextSessionId),
@@ -279,11 +348,11 @@ export default function Page() {
               prev.map((message) =>
                 message.id === assistantId
                   ? { ...message, content: partialReply, streaming: true }
-                  : message
-              )
+                  : message,
+              ),
             );
-          }
-        }
+          },
+        },
       );
 
       setMessages((prev) =>
@@ -292,10 +361,10 @@ export default function Page() {
             ? {
                 ...message,
                 content: reply || "I could not produce a response right now.",
-                streaming: false
+                streaming: false,
               }
-            : message
-        )
+            : message,
+        ),
       );
 
       await loadHistory(currentUserId);
@@ -308,11 +377,12 @@ export default function Page() {
           message.id === assistantId
             ? {
                 ...message,
-                content: "The assistant could not respond right now. Please try again in a moment.",
-                streaming: false
+                content:
+                  "The assistant could not respond right now. Please try again in a moment.",
+                streaming: false,
               }
-            : message
-        )
+            : message,
+        ),
       );
       setStatus("Unavailable");
     } finally {
@@ -336,7 +406,9 @@ export default function Page() {
         sidebarOpen={sidebarOpen}
         sessions={sessions}
         activeSessionId={sessionId}
-        onSelectSession={(nextSessionId) => openSession(nextSessionId, currentUserId)}
+        onSelectSession={(nextSessionId) =>
+          openSession(nextSessionId, currentUserId)
+        }
         onDeleteSession={handleDeleteSession}
         onNewChat={handleNewChat}
         authState={authState}
@@ -345,40 +417,111 @@ export default function Page() {
 
       <main className="workspace">
         {!sidebarOpen && (
-          <button className="open-sidebar-btn" onClick={() => setSidebarOpen(true)} title="Open sidebar">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <button
+            className="open-sidebar-btn"
+            onClick={() => setSidebarOpen(true)}
+            title="Open sidebar"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="9" y1="3" x2="9" y2="21"></line>
             </svg>
           </button>
         )}
-        
-        <div style={{ 
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
-            padding: '12px 16px', position: 'sticky', top: 0, zIndex: 10, background: 'var(--bg)' 
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: sidebarOpen ? '0' : '40px' }}>
-             <button style={{ 
-               display: 'flex', alignItems: 'center', gap: '4px', background: 'transparent', 
-               border: 'none', cursor: 'pointer', padding: '6px 10px', borderRadius: '8px',
-               color: 'var(--text-main)', fontSize: '1.125rem', fontWeight: 600
-             }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#efefef'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-               Vana AI
-               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-muted)' }}>
-                 <polyline points="6 9 12 15 18 9"></polyline>
-               </svg>
-             </button>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "12px 16px",
+            position: "sticky",
+            top: 0,
+            zIndex: 10,
+            background: "var(--bg)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginLeft: sidebarOpen ? "0" : "40px",
+            }}
+          >
+            <button
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                padding: "6px 10px",
+                borderRadius: "8px",
+                color: "var(--text-main)",
+                fontSize: "1.125rem",
+                fontWeight: 600,
+              }}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.backgroundColor = "#efefef")
+              }
+              onMouseOut={(e) =>
+                (e.currentTarget.style.backgroundColor = "transparent")
+              }
+            >
+              Vana AI
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ color: "var(--text-muted)" }}
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span className={`status-pill ${status.toLowerCase()}`}>{status}</span>
-            <button style={{ 
-               display: 'flex', alignItems: 'center', gap: '6px', 
-               padding: '8px 12px', borderRadius: '9999px', 
-               backgroundColor: '#F3F0FF', color: '#6B4CFF', 
-               fontWeight: 600, fontSize: '0.875rem', border: 'none', cursor: 'pointer' 
-            }} onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'} onMouseOut={(e) => e.currentTarget.style.opacity = '1'}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <span className={`status-pill ${status.toLowerCase()}`}>
+              {status}
+            </span>
+            <button
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                padding: "8px 12px",
+                borderRadius: "9999px",
+                backgroundColor: "#F3F0FF",
+                color: "#6B4CFF",
+                fontWeight: 600,
+                fontSize: "0.875rem",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.opacity = "0.9")}
+              onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
                 <path d="M12 2l2.4 7.4L22 10.6l-6.2 5.5 1.8 7.9L12 19l-5.6 5 1.8-7.9-6.2-5.5 7.6-1.2L12 2z"></path>
               </svg>
               Get Plus

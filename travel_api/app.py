@@ -266,9 +266,9 @@ async def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_us
         # Remove the failed user message from session
         if session["messages"]:
             session["messages"].pop()
-        # Log the actual error for debugging
-        logger.error(f"Assistant invocation failed: {str(e)}")
-        reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"
+        # Log the actual error with full traceback for debugging
+        logger.error(f"Assistant invocation failed: {type(e).__name__}: {str(e)}", exc_info=True)
+        reply, node_name = f"Error: {str(e)}", "System"
     record_message(session, "assistant", reply, node_name)
     persist_session(final_user_id, session_id, session)
     return ChatResponse(session_id=session_id, reply=reply)
@@ -289,9 +289,9 @@ async def assistant_reply(request: AssistantReplyRequest):
     try:
         reply, node_name = await invoke_assistant_from_turns(request.messages, message)
     except Exception as e:
-        # Log the actual error for debugging
-        logger.error(f"Assistant reply failed: {str(e)}")
-        reply = "I'm having trouble reaching one of the AI services right now. Please try again in a moment."
+        # Log the actual error with full traceback for debugging
+        logger.error(f"Assistant reply failed: {type(e).__name__}: {str(e)}", exc_info=True)
+        reply = f"Error: {str(e)}"
         node_name = "System"
     return AssistantReplyResponse(reply=reply, node_name=node_name)
 
@@ -324,9 +324,9 @@ async def chat_stream(request: ChatRequest, auth_user_id: str = Depends(verify_c
         # Remove the failed user message from session
         if session["messages"]:
             session["messages"].pop()
-        # Log the actual error for debugging
-        logger.error(f"Streaming assistant invocation failed: {str(e)}")
-        reply, node_name = "I'm having trouble reaching one of the AI services right now. Please try again in a moment.", "System"
+        # Log the actual error with full traceback for debugging
+        logger.error(f"Streaming assistant invocation failed: {type(e).__name__}: {str(e)}", exc_info=True)
+        reply, node_name = f"Error: {str(e)}", "System"
     record_message(session, "assistant", reply, node_name)
     persist_session(final_user_id, session_id, session)
 

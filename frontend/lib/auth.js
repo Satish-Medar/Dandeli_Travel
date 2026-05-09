@@ -1,13 +1,7 @@
-const GUEST_USER_STORAGE_KEY = "collegeproject_guest_user_id";
 const CLERK_SCRIPT_ID = "clerk-js-sdk";
 
 export function ensureGuestUserId() {
-  let stored = window.localStorage.getItem(GUEST_USER_STORAGE_KEY);
-  if (!stored) {
-    stored = `guest-${crypto.randomUUID()}`;
-    window.localStorage.setItem(GUEST_USER_STORAGE_KEY, stored);
-  }
-  return stored;
+  return `guest-${crypto.randomUUID()}`;
 }
 
 export function getCurrentUserId(clerkInstance) {
@@ -33,7 +27,8 @@ export async function loadClerkInstance(publishableKey) {
 
       const script = document.createElement("script");
       script.id = CLERK_SCRIPT_ID;
-      script.src = "https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js";
+      script.src =
+        "https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js";
       script.async = true;
       script.crossOrigin = "anonymous";
       script.setAttribute("data-clerk-publishable-key", publishableKey);
@@ -50,7 +45,7 @@ export async function loadClerkInstance(publishableKey) {
 
   if (typeof clerkGlobal.load === "function") {
     await clerkGlobal.load({
-      publishableKey
+      publishableKey,
     });
     return clerkGlobal;
   }

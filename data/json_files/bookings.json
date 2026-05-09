@@ -281,5 +281,18 @@
     "twilio_status": "delivered",
     "twilio_error_code": null,
     "twilio_error_message": null
+  },
+  {
+    "booking_id": "BK-62DA6873",
+    "resort_name": "Bison Valley Dandeli",
+    "check_in_out_dates": "March 26, 2026 to March 28, 2026",
+    "guest_details": "2 adults, 1 kid",
+    "customer_contact": "7204113513",
+    "status": "requested",
+    "created_at": "2026-05-08T18:45:28",
+    "twilio_message_sid": "SM80bb1db2c1f47c0d729a263ce106e3ce",
+    "twilio_status": "failed",
+    "twilio_error_code": 63015,
+    "twilio_error_message": null
   }
 ]

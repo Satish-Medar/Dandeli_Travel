@@ -1,0 +1,1888 @@
+2026-05-08 18:41:05,610 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 18:41:05,613 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 18:41:05,613 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 18:42:48,132 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:42:48,161 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:35,746 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:49,372 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:49,373 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:49,398 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:49,398 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:50,205 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:43:50,246 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:50,797 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:43:50,818 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:11,618 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:11,619 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:12,039 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:12,463 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:12,468 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 18:44:12,494 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 18:44:20,016 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 18:44:21,402 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:21,413 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:24,128 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:24,149 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:30,141 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:30,142 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:30,630 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:31,032 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:31,039 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:31,419 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:31,441 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:51,291 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:51,291 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:51,786 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:52,194 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:52,202 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:52,525 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:52,545 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:58,386 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:58,387 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:58,851 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:59,260 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:44:59,267 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:59,536 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:44:59,555 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:12,140 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:12,140 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:12,674 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:45:13,289 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:45:13,296 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:13,759 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:13,778 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:23,435 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:23,436 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:23,836 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:45:24,349 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 18:45:24,357 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:24,662 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2026-05-08 18:45:24,662 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/[REDACTED]/Messages.json
+2026-05-08 18:45:24,663 - twilio.http_client - INFO - Headers:
+2026-05-08 18:45:24,663 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2026-05-08 18:45:24,663 - twilio.http_client - INFO - Accept : application/json
+2026-05-08 18:45:24,664 - twilio.http_client - INFO - User-Agent : twilio-python/9.10.3 (Windows AMD64) Python/3.12.10
+2026-05-08 18:45:24,664 - twilio.http_client - INFO - X-Twilio-Client : python-9.10.3
+2026-05-08 18:45:24,665 - twilio.http_client - INFO - Accept-Charset : utf-8
+2026-05-08 18:45:24,665 - twilio.http_client - INFO - -- END Twilio API Request --
+2026-05-08 18:45:25,987 - twilio.http_client - INFO - Response Status Code: 201
+2026-05-08 18:45:25,988 - twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1006', 'Connection': 'keep-alive', 'Date': 'Fri, 08 May 2026 13:15:25 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': '[REDACTED]', 'Twilio-Request-Duration': '0.177', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 13b043a2bcb396a6ddc6a147f4288230.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'MAA51-P2', 'X-Amz-Cf-Id': '[REDACTED]', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-05-08 18:45:27,989 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2026-05-08 18:45:27,989 - twilio.http_client - INFO - GET Request: https://api.twilio.com/2010-04-01/Accounts/[REDACTED]/Messages/[REDACTED].json
+2026-05-08 18:45:27,990 - twilio.http_client - INFO - Headers:
+2026-05-08 18:45:27,990 - twilio.http_client - INFO - Accept : application/json
+2026-05-08 18:45:27,991 - twilio.http_client - INFO - User-Agent : twilio-python/9.10.3 (Windows AMD64) Python/3.12.10
+2026-05-08 18:45:27,991 - twilio.http_client - INFO - X-Twilio-Client : python-9.10.3
+2026-05-08 18:45:27,992 - twilio.http_client - INFO - Accept-Charset : utf-8
+2026-05-08 18:45:27,992 - twilio.http_client - INFO - -- END Twilio API Request --
+2026-05-08 18:45:28,345 - twilio.http_client - INFO - Response Status Code: 200
+2026-05-08 18:45:28,345 - twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '537', 'Connection': 'keep-alive', 'Date': 'Fri, 08 May 2026 13:15:28 GMT', 'Content-Encoding': 'gzip', 'ETag': '6e27cd3ff5fb1823c399de7765fac2d5--gzip', 'Last-Modified': '2026-05-08T06:15:25.000-07:00', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ3bc0d0e036b8361abf4e8750f4b8a9e9', 'Twilio-Request-Duration': '0.068', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Vary': 'Accept-Encoding, Origin', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 13b043a2bcb396a6ddc6a147f4288230.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'MAA51-P2', 'X-Amz-Cf-Id': 'nPiMFPwikCc9zjnJnApp1MgM_jCtQLz-FYQGMjHg4Sw7Ei2v2U5Oew==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none'}
+2026-05-08 18:45:28,346 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:28,351 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:28,967 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:45:28,991 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:47:31,788 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 18:47:31,801 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:03:30,532 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:03:30,548 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:03:33,298 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:03:33,315 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:05:47,363 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:05:53,774 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:05:55,843 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:05:55,844 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:05:56,233 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:05:56,244 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:14,393 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:14,393 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:14,685 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:15,049 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:17,608 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:17,806 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "swimming pool wifi",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\", 10000)), and(eq(\"price\", 8000), lt(\"price\",
+ raised following error:
+Unexpected token Token('$END', '') at line 1, column 5272.
+Expected one of: 
+	* FALSE
+	* __ANON_2
+	* __ANON_1
+	* __ANON_3
+	* __ANON_0
+	* TRUE
+	* LSQB
+	* CNAME
+	* DATETIME
+	* SIGNED_INT
+	* ESCAPED_STRING
+	* __ANON_4
+	* SIGNED_FLOAT
+	* DATE
+
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:07:19,454 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:19,459 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:48,922 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:48,922 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:07:49,334 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:49,714 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:50,171 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:07:50,174 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:07:50,393 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:07:50,397 - travel_agents.llms - WARNING - Groq LLM async failed, falling back to Gemini: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 16977, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-08 19:07:50,401 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:07:50,721 - travel_api.app - ERROR - Streaming assistant invocation failed: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-08 19:07:50,722 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:44,197 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:44,197 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:44,626 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:44,992 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:45,617 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:45,622 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:08:45,856 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:08:45,857 - travel_agents.llms - WARNING - Groq LLM async failed, falling back to Gemini: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 17002, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-08 19:08:45,860 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:08:46,156 - travel_api.app - ERROR - Streaming assistant invocation failed: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-08 19:08:46,156 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:54,905 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:54,905 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:08:55,224 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:55,510 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:56,369 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:08:56,372 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:14:13,556 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:14:13,560 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:14:13,560 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:14:26,774 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:14:26,776 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:14:26,776 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:14:37,063 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:14:37,066 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:14:37,066 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:14:47,574 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:14:47,576 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:14:47,576 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:14:57,803 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:14:57,806 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:14:57,806 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:15:09,418 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:15:09,419 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:15:09,420 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:15:25,761 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:15:25,763 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:15:25,763 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:15:36,643 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:15:36,645 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:15:36,645 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:15:46,182 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:15:46,184 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:15:46,184 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:24:24,037 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:27,593 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:27,593 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:28,215 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:24:28,243 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:43,638 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:43,638 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:24:44,043 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:24:44,389 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:24:44,391 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 19:24:44,401 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 19:24:47,782 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:24:50,245 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:24:50,398 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "swimming pool wifi",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"location\", \"Dandeli\"), eq(\"location\", \"Dandeli\")), and(eq(\"website\", \"https://www.example.com\"), eq(\"website\", \"https://www.example.com\")), and(eq(\"phone\", \"1234567890\"), eq(\"phone\", \"1234567890\")), and(eq(\"email\", \"example@example.com\"), eq(\"email\", \"example@example.com\")), and(eq(\"name\", \"Resort Name\"), eq(\"name\", \"Resort Name\")), and(eq(\"rating\", 5), gt(\"rating\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"
+ raised following error:
+No terminal matches '"' in the current parser context, at line 1 col 5164
+
+"price", 8000), gt("price", 0)), and(eq("
+                                        ^
+Expected one of: 
+	* SIGNED_FLOAT
+	* /'[^']*'/
+	* RPAR
+	* DATE
+	* ESCAPED_STRING
+	* CNAME
+	* SIGNED_INT
+	* LSQB
+	* DATETIME
+
+Previous tokens: Token('LPAR', '(')
+
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:24:51,557 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:24:51,561 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:02,114 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:02,114 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:02,446 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:02,827 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:03,491 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:03,495 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:25:03,715 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:25:03,718 - travel_agents.llms - ERROR - Groq LLM async failed: APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8507, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8507, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'agent' and id '3ed54560-b66d-50f9-3f6c-548d75b09567'
+2026-05-08 19:25:03,734 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:25:03,737 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:25:04,222 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 7575, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 6330, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1447, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1379, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1325, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 216, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 238, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id 'd18c3204-d329-5a0a-e5a8-9366490f87c6'
+2026-05-08 19:25:04,232 - travel_api.app - ERROR - Streaming assistant invocation failed: Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8507, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 7575, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 6330, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1447, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1379, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1325, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 216, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 238, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id 'd18c3204-d329-5a0a-e5a8-9366490f87c6'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_api\app.py", line 322, in chat_stream
+    reply, node_name = await invoke_assistant(session, user_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_api\services.py", line 40, in invoke_assistant
+    return await invoke_assistant_from_messages(messages, user_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_api\services.py", line 64, in invoke_assistant_from_messages
+    async for event in graph.astream({"messages": working_messages}):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_agents\nodes.py", line 80, in planner_node
+    result = await planner_agent.ainvoke({"messages": [SystemMessage(content=planner_prompt), SystemMessage(content=planner_context)] + list(state["messages"])})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5045, in ainvoke
+    return await self._acall_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 2111, in _acall_with_config
+    output: Output = await coro_with_context(coro, context)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 4975, in _ainvoke
+    output = await acall_func_with_variable_args(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 40, in ainvoke_wrapper
+    raise Exception(f"Both LLM providers failed (async). Groq: {str(e)} | Gemini: {str(fallback_e)}")
+Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8507, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'Planner' and id 'c487ad5f-47c8-e588-658f-1d24f6e9f7ac'
+2026-05-08 19:25:04,235 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:17,690 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:17,690 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:25:18,000 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:18,350 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:19,122 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:25:19,126 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:27:00,075 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:27:00,077 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:27:00,077 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:29:10,116 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:29:10,118 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:29:10,118 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:30:56,359 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:30:56,361 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:30:56,361 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:31:07,901 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:31:07,903 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:31:07,904 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:31:36,018 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:31:36,021 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:31:36,022 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:32:06,928 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:32:06,931 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:32:06,933 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:32:21,905 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:32:21,907 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:32:21,908 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:32:35,896 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:32:35,900 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:32:35,900 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:32:50,723 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:32:50,727 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:32:50,727 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:33:02,337 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:33:02,339 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:33:02,339 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:33:15,540 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:33:15,542 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:33:15,542 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:33:41,650 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:33:41,652 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:33:41,652 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:33:43,782 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:44,065 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:44,070 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 19:33:44,073 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 19:33:46,461 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:33:46,994 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:47,437 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:33:49,142 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:49,376 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:49,764 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:50,003 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:50,475 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:33:50,733 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:33:50,735 - travel_agents.llms - ERROR - Groq LLM async failed: APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 14603, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 14603, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'agent' and id '8785c486-e598-16d1-3775-8bc55f425a53'
+2026-05-08 19:33:50,738 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:33:50,741 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:33:51,031 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 7575, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 6330, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1447, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1379, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1325, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 216, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 238, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id '5eb5a360-d8a6-e46b-c830-2d4434a5c76d'
+2026-05-08 19:33:51,378 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:51,651 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:33:51,653 - travel_tools.search_tool - INFO - Searching for resort: 'River Valley Resort' -> normalized: 'river valley'
+2026-05-08 19:33:51,653 - travel_tools.search_tool - INFO - Found exact match: 'River Valley'
+2026-05-08 19:33:51,653 - travel_tools.search_tool - INFO - Searching for resort: 'Jungle Camp' -> normalized: 'jungle'
+2026-05-08 19:33:51,653 - travel_tools.search_tool - INFO - Found exact match: 'Jungle Camp'
+2026-05-08 19:33:51,653 - travel_tools.search_tool - INFO - Searching for resort: 'Sunset Resort' -> normalized: 'sunset'
+2026-05-08 19:33:51,654 - travel_tools.search_tool - WARNING - Resort 'Sunset Resort' not found. Available resorts: ['Wild Resort', 'Tiger Resort', 'Silent Hideaway', 'Kali River Retreat', 'River Oasis Dandeli']
+2026-05-08 19:33:52,687 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:26,483 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:26,871 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:26,873 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 19:34:26,881 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 19:34:26,882 - travel_tools.vectorstore_provider - ERROR - Failed to load Chroma: Could not import chromadb python package. Please install it with `pip install chromadb`.
+2026-05-08 19:34:26,883 - travel_tools.vectorstore_provider - WARNING - No vector store loaded. Resort search will use local fallback data.
+2026-05-08 19:34:27,013 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-08 19:34:27,014 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5009, Requested 7513. Please try again in 2.61s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 5009, Requested 7513. Please try again in 2.61s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-08 19:34:27,020 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:34:27,215 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:34:27,216 - travel_agents.llms - ERROR - Groq LLM async failed: APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7456, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7456, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-08 19:34:27,217 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:34:27,217 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:34:27,486 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 8418, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 6951, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1625, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1557, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1489, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 247, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 269, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-08 19:34:27,495 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7456, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 8418, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 6951, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1625, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1557, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1489, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 247, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 269, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5045, in ainvoke
+    return await self._acall_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 2111, in _acall_with_config
+    output: Output = await coro_with_context(coro, context)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 4975, in _ainvoke
+    output = await acall_func_with_variable_args(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 40, in ainvoke_wrapper
+    raise Exception(f"Both LLM providers failed (async). Groq: {str(e)} | Gemini: {str(fallback_e)}")
+Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 7456, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2026-05-08 19:34:27,810 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:28,076 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:28,196 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:34:28,196 - travel_agents.llms - ERROR - Groq LLM async failed: APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12783, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 12783, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'agent' and id 'c49c32cb-40c8-02e3-ba7f-9b7b08c2c397'
+2026-05-08 19:34:28,197 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:34:28,199 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:34:28,357 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 8418, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\models.py", line 6951, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1625, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1557, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\_api_client.py", line 1489, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 247, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\google\genai\errors.py", line 269, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "D:\RAG\CollegeProject\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id '528093ee-a668-a296-d794-d8d44779af21'
+2026-05-08 19:34:28,554 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:28,839 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:28,841 - travel_tools.search_tool - INFO - Searching for resort: 'River Valley Resort' -> normalized: 'river valley'
+2026-05-08 19:34:28,841 - travel_tools.search_tool - INFO - Found exact match: 'River Valley'
+2026-05-08 19:34:28,842 - travel_tools.search_tool - INFO - Searching for resort: 'Jungle Camp' -> normalized: 'jungle'
+2026-05-08 19:34:28,842 - travel_tools.search_tool - INFO - Found exact match: 'Jungle Camp'
+2026-05-08 19:34:28,842 - travel_tools.search_tool - INFO - Searching for resort: 'Sunset Resort' -> normalized: 'sunset'
+2026-05-08 19:34:28,842 - travel_tools.search_tool - WARNING - Resort 'Sunset Resort' not found. Available resorts: ['Bison River Resort', 'Whispering Woods Jungle Resort', 'Panther Stay Dandeli', 'Hornbill Nature Camp', 'River Edge Adventure Resort']
+2026-05-08 19:34:29,866 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:34:53,025 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:34:53,027 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:34:53,027 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:35:01,815 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:35:01,817 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:35:01,817 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:36:42,177 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:36:42,179 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:36:42,179 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:38:25,553 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:38:25,556 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:38:25,557 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:38:37,146 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:38:37,148 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:38:37,148 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:39:20,636 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:39:20,638 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:39:20,638 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:40:02,379 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:40:02,381 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:40:02,381 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:40:11,503 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:40:11,505 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:40:11,505 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:40:46,471 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:40:46,473 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:40:46,473 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:44:19,946 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:22,456 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:22,456 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:22,834 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:22,856 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:28,194 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:28,195 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:28,626 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:29,013 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:29,015 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 19:44:29,019 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 19:44:32,667 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:44:35,174 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:35,365 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "swimming pool wifi",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"location\", \"Dandeli\"), eq(\"location\", \"Dandeli\")), and(eq(\"website\", \"https://www.example.com\"), eq(\"website\", \"https://www.example.com\")), and(eq(\"phone\", \"1234567890\"), eq(\"phone\", \"1234567890\")), and(eq(\"email\", \"example@example.com\"), eq(\"email\", \"example@example.com\")), and(eq(\"name\", \"Resort Name\"), eq(\"name\", \"Resort Name\")), and(eq(\"rating\", 5), gt(\"rating\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"price\", 8000), gt(\"price\", 0)), and(eq(\"
+ raised following error:
+No terminal matches '"' in the current parser context, at line 1 col 5164
+
+"price", 8000), gt("price", 0)), and(eq("
+                                        ^
+Expected one of: 
+	* SIGNED_INT
+	* DATETIME
+	* DATE
+	* RPAR
+	* ESCAPED_STRING
+	* CNAME
+	* SIGNED_FLOAT
+	* /'[^']*'/
+	* LSQB
+
+Previous tokens: Token('LPAR', '(')
+
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:44:36,818 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:36,824 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:41,420 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:41,420 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:41,873 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:42,282 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:42,812 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:42,816 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:44:43,031 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-05-08 19:44:43,033 - travel_agents.llms - ERROR - Groq LLM async failed: APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8034, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 32, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8034, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'agent' and id 'd5fd8837-0045-79e3-3343-af9d751ed95c'
+2026-05-08 19:44:43,042 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-08 19:44:43,045 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-08 19:44:43,484 - travel_agents.llms - ERROR - Gemini LLM async fallback also failed: ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 7575, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 6330, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1447, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1379, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1325, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 216, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 238, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id '2f603d07-de42-20fd-1e89-c8111fab4f50'
+2026-05-08 19:44:43,493 - travel_api.app - ERROR - Streaming assistant invocation failed: Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8034, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+Traceback (most recent call last):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3088, in _agenerate
+    await self.client.aio.models.generate_content(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 7575, in generate_content
+    response = await self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\models.py", line 6330, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1447, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1379, in _async_request
+    return await retry(self._async_request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\_api_client.py", line 1325, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 216, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\google\genai\errors.py", line 238, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 37, in ainvoke_wrapper
+    return await gemini_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 3161, in ainvoke
+    async for chunk in self.astream(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 701, in acall_model
+    response = cast(AIMessage, await static_model.ainvoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 3093, in _agenerate
+    _handle_client_error(e, request)
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_google_genai\chat_models.py", line 145, in _handle_client_error
+    raise ChatGoogleGenerativeAIError(msg) from e
+langchain_google_genai.chat_models.ChatGoogleGenerativeAIError: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'agent' and id '2f603d07-de42-20fd-1e89-c8111fab4f50'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_api\app.py", line 322, in chat_stream
+    reply, node_name = await invoke_assistant(session, user_message)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_api\services.py", line 40, in invoke_assistant
+    return await invoke_assistant_from_messages(messages, user_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_api\services.py", line 64, in invoke_assistant_from_messages
+    async for event in graph.astream({"messages": working_messages}):
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\main.py", line 2974, in astream
+    async for _ in runner.atick(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\pregel\_retry.py", line 138, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_agents\nodes.py", line 80, in planner_node
+    result = await planner_agent.ainvoke({"messages": [SystemMessage(content=planner_prompt), SystemMessage(content=planner_context)] + list(state["messages"])[-2:]})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5045, in ainvoke
+    return await self._acall_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 2111, in _acall_with_config
+    output: Output = await coro_with_context(coro, context)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 4975, in _ainvoke
+    output = await acall_func_with_variable_args(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 40, in ainvoke_wrapper
+    raise Exception(f"Both LLM providers failed (async). Groq: {str(e)} | Gemini: {str(fallback_e)}")
+Exception: Both LLM providers failed (async). Groq: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.1-8b-instant` in organization `org_01k818f9e0ftnbx0b0y8ewn0mj` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 8034, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}} | Gemini: Error calling model 'gemini-1.5-flash-latest' (NOT_FOUND): 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+During task with name 'Planner' and id '8ce6d820-e848-98db-7b0c-995aafa342d0'
+2026-05-08 19:44:43,498 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:48,831 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:48,831 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:44:49,300 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:49,682 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:49,684 - travel_tools.search_tool - INFO - Searching for resort: 'River Valley' -> normalized: 'river valley'
+2026-05-08 19:44:49,684 - travel_tools.search_tool - INFO - Found exact match: 'River Valley'
+2026-05-08 19:44:49,684 - travel_tools.search_tool - INFO - Searching for resort: 'Sunset Resort' -> normalized: 'sunset'
+2026-05-08 19:44:49,685 - travel_tools.search_tool - WARNING - Resort 'Sunset Resort' not found. Available resorts: ['Wild Resort', 'Tiger Resort', 'Silent Hideaway', 'Kali River Retreat', 'River Oasis Dandeli']
+2026-05-08 19:44:49,685 - travel_tools.search_tool - INFO - Searching for resort: 'Jungle Camp' -> normalized: 'jungle'
+2026-05-08 19:44:49,685 - travel_tools.search_tool - INFO - Found exact match: 'Jungle Camp'
+2026-05-08 19:44:50,776 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:44:50,781 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:45:57,472 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:45:57,475 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:45:57,475 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:46:08,934 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:46:08,936 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:46:08,936 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:46:19,253 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:46:19,256 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:46:19,256 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:47:45,815 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:47:45,817 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:47:45,817 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:47:55,971 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:47:55,975 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:47:55,976 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:49:11,239 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:13,031 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:13,031 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:13,540 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:13,563 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:18,419 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:18,419 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:18,753 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:19,044 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:19,046 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 19:49:19,052 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 19:49:22,749 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 19:49:25,127 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:25,318 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "swimming pool wifi",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price
+ raised following error:
+No terminal matches '"' in the current parser context, at line 1 col 5152
+
+ice", 8000)), and(eq("price", 8000), eq("price
+                                        ^
+Expected one of: 
+	* RPAR
+	* DATETIME
+	* /'[^']*'/
+	* LSQB
+	* SIGNED_FLOAT
+	* ESCAPED_STRING
+	* DATE
+	* SIGNED_INT
+	* CNAME
+
+Previous tokens: Token('LPAR', '(')
+
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:49:26,473 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:26,477 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:31,292 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:31,292 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:31,624 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:31,919 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:32,432 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:32,437 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 19:49:32,573 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-08 19:49:32,573 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2026-05-08 19:49:45,755 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:45,759 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:51,958 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:51,958 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:49:52,462 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:52,743 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:52,744 - travel_tools.search_tool - INFO - Searching for resort: 'River Valley' -> normalized: 'river valley'
+2026-05-08 19:49:52,745 - travel_tools.search_tool - INFO - Found exact match: 'River Valley'
+2026-05-08 19:49:52,745 - travel_tools.search_tool - INFO - Searching for resort: 'Sunset Resort' -> normalized: 'sunset'
+2026-05-08 19:49:52,745 - travel_tools.search_tool - WARNING - Resort 'Sunset Resort' not found. Available resorts: ['Wild Resort', 'Tiger Resort', 'Silent Hideaway', 'Kali River Retreat', 'River Oasis Dandeli']
+2026-05-08 19:49:52,745 - travel_tools.search_tool - INFO - Searching for resort: 'Jungle Camp' -> normalized: 'jungle'
+2026-05-08 19:49:52,745 - travel_tools.search_tool - INFO - Found exact match: 'Jungle Camp'
+2026-05-08 19:49:53,711 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 19:49:53,713 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 19:56:20,416 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:56:20,418 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:56:20,418 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:56:33,689 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:56:33,693 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:56:33,693 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:56:50,552 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:56:50,554 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:56:50,554 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:59:18,181 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:59:18,183 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:59:18,183 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 19:59:29,282 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 19:59:29,284 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 19:59:29,284 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:04:03,942 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:04:06,069 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:04:06,069 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:04:06,072 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-08 20:04:06,572 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:04:06,595 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:04:25,846 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:04:25,849 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:04:25,850 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:04:46,718 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:04:46,722 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:04:46,723 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:05:00,755 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:05:00,757 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:05:00,757 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:05:15,795 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:05:15,799 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:05:15,800 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:19:02,992 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:13,803 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:13,804 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:13,807 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-08 20:19:14,197 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:14,219 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-08 20:19:14,599 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:14,601 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-08 20:19:14,605 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-08 20:19:18,192 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-08 20:19:20,488 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:20,618 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "swimming pool wifi",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price\", 8000)), and(eq(\"price\", 8000), eq(\"price
+ raised following error:
+No terminal matches '"' in the current parser context, at line 1 col 5152
+
+ice", 8000)), and(eq("price", 8000), eq("price
+                                        ^
+Expected one of: 
+	* ESCAPED_STRING
+	* DATETIME
+	* /'[^']*'/
+	* LSQB
+	* DATE
+	* SIGNED_FLOAT
+	* RPAR
+	* CNAME
+	* SIGNED_INT
+
+Previous tokens: Token('LPAR', '(')
+
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 20:19:20,619 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-08 20:19:21,720 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:21,724 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:28,019 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:28,019 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:28,020 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-08 20:19:28,450 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:28,458 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-08 20:19:28,763 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:29,242 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:29,247 - travel_tools.search_engine - ERROR - Vector search failed: Parsing text
+```json
+{
+    "query": "Dandeli trip river rafting nature walks",
+    "filter": "and(eq(\"category\", \"resort\"), and(eq(\"family_friendly\", true), eq(\"romantic_couples\", true), and(eq(\"amenities\", \"pool\"), eq(\"amenities\", \"wifi\")), and(eq(\"price\", 2000), eq(\"price\", 4000)), and(eq(\"rating\", 4), eq(\"rating\", 5))))"
+}
+```
+ raised following error:
+Received invalid attributes amenities. Allowed attributes are ['price', 'rating', 'category', 'name', 'email', 'phone', 'location', 'website', 'family_friendly', 'romantic_couples']
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-05-08 20:19:29,247 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-08 20:19:30,182 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:30,184 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:35,830 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:35,830 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:19:35,831 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-08 20:19:36,355 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:36,362 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-08 20:19:36,629 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:36,630 - travel_tools.search_tool - INFO - Searching for resort: 'River Valley' -> normalized: 'river valley'
+2026-05-08 20:19:36,631 - travel_tools.search_tool - INFO - Found exact match: 'River Valley'
+2026-05-08 20:19:36,631 - travel_tools.search_tool - INFO - Searching for resort: 'Sunset Resort' -> normalized: 'sunset'
+2026-05-08 20:19:36,631 - travel_tools.search_tool - WARNING - Resort 'Sunset Resort' not found. Available resorts: ['Wild Resort', 'Tiger Resort', 'Silent Hideaway', 'Kali River Retreat', 'River Oasis Dandeli']
+2026-05-08 20:19:36,632 - travel_tools.search_tool - INFO - Searching for resort: 'Jungle Camp' -> normalized: 'jungle'
+2026-05-08 20:19:36,632 - travel_tools.search_tool - INFO - Found exact match: 'Jungle Camp'
+2026-05-08 20:19:36,632 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-08 20:19:37,757 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 20:19:37,760 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-08 20:26:29,843 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:26:29,845 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:26:29,845 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:26:47,382 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:26:47,384 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:26:47,384 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:27:14,001 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:27:14,003 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:27:14,003 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:27:27,814 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:27:27,816 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:27:27,816 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:27:40,798 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:27:40,800 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:27:40,800 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:27:52,477 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:27:52,479 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:27:52,479 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:28:04,090 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:28:04,092 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:28:04,092 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:28:35,128 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:28:35,131 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:28:35,132 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:30:01,352 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:30:01,353 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:30:01,354 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:30:36,353 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:30:36,355 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:30:36,356 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:31:18,573 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:31:18,575 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:31:18,575 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:34:21,877 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:34:21,879 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:34:21,879 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:38:58,588 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:38:58,589 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:38:58,590 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:39:11,231 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:39:11,233 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:39:11,233 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:39:25,090 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:39:25,093 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:39:25,093 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:54:32,897 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:54:32,900 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:54:32,900 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:54:44,609 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:54:44,611 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:54:44,611 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 20:56:33,068 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 20:56:33,070 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 20:56:33,070 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 21:01:40,784 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 21:01:40,785 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 21:01:40,785 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-08 21:02:06,965 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-08 21:02:06,967 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-08 21:02:06,967 - travel_tools.data_validator - INFO - Successfully validated 81 resorts

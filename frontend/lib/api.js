@@ -5,13 +5,32 @@ function toApiUrl(path) {
   return `/api${path}`;
 }
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    return await fetch(url, {
+      signal: controller.signal,
+      ...options,
+    });
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw new Error("Request timed out. The backend may not be running.");
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
 export async function fetchJson(path, options = {}) {
-  const response = await fetch(toApiUrl(path), {
+  const response = await fetchWithTimeout(toApiUrl(path), {
     ...options,
     headers: {
       "Content-Type": "application/json",
-      ...(options.headers || {})
-    }
+      ...(options.headers || {}),
+    },
   });
 
   if (!response.ok) {
@@ -34,10 +53,10 @@ export async function fetchJson(path, options = {}) {
 }
 
 export async function streamChat(body, { onSession, onChunk }) {
-  const response = await fetch(toApiUrl("/chat/stream"), {
+  const response = await fetchWithTimeout(toApiUrl("/chat/stream"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   });
 
   if (!response.ok || !response.body) {

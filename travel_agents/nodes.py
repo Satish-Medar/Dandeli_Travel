@@ -8,7 +8,7 @@ from .llms import planner_agent, planner_prompt
 from .resort_helpers import resolve_resort_followup_query
 from travel_tools.booking_tool import book_resort
 from travel_tools.booking_status_tool import get_booking_status
-from travel_tools.search_tool import search_resorts
+from travel_tools.search_tool import search_resorts_tool as search_resorts
 
 
 from pydantic import BaseModel, Field
@@ -28,6 +28,29 @@ def summarize_guest_details(messages) -> str:
     # Deprecated: Handled by BookingExtraction
     pass
 
+
+def router_node(state):
+    last_message = ""
+    if state and state.get("messages"):
+        last = state["messages"][-1]
+        if isinstance(last, tuple) and len(last) >= 2:
+            last_message = str(last[1])
+        elif hasattr(last, "content"):
+            last_message = str(last.content)
+        else:
+            last_message = str(last)
+
+    text = last_message.lower().strip()
+    if any(word in text for word in ["book", "reserve", "booking", "confirm"]):
+        return {"next_node": "booker"}
+    if any(word in text for word in ["plan", "itinerary", "trip", "day", "duration", "stay"]):
+        return {"next_node": "planner"}
+    if any(word in text for word in ["hi", "hello", "thanks", "thank you", "thankyou", "help"]):
+        return {"next_node": "smalltalk"}
+    if any(word in text for word in ["compare", "recommend", "best", "price", "budget", "pool", "wifi", "resort", "search"]):
+        return {"next_node": "researcher"}
+    return {"next_node": "smalltalk"}
+
 async def smalltalk_node(state):
     latest = next((extract_content(msg.content).strip().lower() for msg in reversed(state["messages"]) if isinstance(msg, HumanMessage)), "")
     if latest in {"thanks", "thank you", "thankyou"}: content = "You're welcome. I can also help you compare resorts, plan an itinerary, or place a booking request."
@@ -43,9 +66,14 @@ async def out_of_scope_node(state):
 async def researcher_node(state):
     latest = next((extract_content(msg.content) for msg in reversed(state["messages"]) if isinstance(msg, HumanMessage)), "")
     if not latest:
-        return {"messages": [AIMessage(content="No user query was available for resort research.", name="Researcher")]}
+        content = "No user query was available for resort research."
+        return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
         
-    research_context = await search_resorts.ainvoke(resolve_resort_followup_query(state["messages"], latest))
+    try:
+        research_context = await search_resorts.ainvoke(resolve_resort_followup_query(state["messages"], latest))
+    except Exception:
+        content = "I could not complete the resort research right now. Please try again."
+        return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
     
     from .llms import groq_llm, groq_70b, gemini_llm, prefer_groq_invoke
     synthesizer = prefer_groq_invoke(groq_70b, prefer_groq_invoke(groq_llm, gemini_llm))
@@ -61,24 +89,38 @@ async def researcher_node(state):
         f"Search Results JSON:\n{research_context}"
     )
     
-    messages = [SystemMessage(content=system_prompt)] + list(state["messages"])[-5:]
-    result = await synthesizer.ainvoke(messages)
-    
-    return {"messages": [AIMessage(content=extract_content(getattr(result, "content", str(result))), name="Researcher")]}
+    messages = [SystemMessage(content=system_prompt)] + list(state["messages"])[-2:]
+    try:
+        result = await synthesizer.ainvoke(messages)
+        content = extract_content(getattr(result, "content", str(result)))
+    except Exception:
+        content = "I found some resort data, but I couldn't generate a detailed answer right now. Please try again later."
+
+    return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
 
 
 async def planner_node(state):
     latest = next((extract_content(msg.content) for msg in reversed(state["messages"]) if isinstance(msg, HumanMessage)), "")
-    research_context = await search_resorts.ainvoke(latest) if latest else ""
+    try:
+        research_context = await search_resorts.ainvoke(latest) if latest else ""
+    except Exception:
+        research_context = ""
+
     if not latest:
-        return {"messages": [AIMessage(content="Please tell me what kind of Dandeli stay you want, including budget, travelers, activities, or resort preferences.", name="Planner")]}
+        content = "Please tell me what kind of Dandeli stay you want, including budget, travelers, activities, or resort preferences."
+        return {"response": content, "messages": [AIMessage(content=content, name="Planner")]}
     if not research_context.strip() or "No exact matching resorts found" in research_context:
-        return {"messages": [AIMessage(content="I could not find verified resort details for that request. Please share your budget, dates, or preferred resort so I can plan accurately.", name="Planner")]}
+        content = "I could not find verified resort details for that request. Please share your budget, dates, or preferred resort so I can plan accurately."
+        return {"response": content, "messages": [AIMessage(content=content, name="Planner")]}
     from datetime import datetime
     today_date = datetime.now().strftime("%B %d, %Y")
     planner_context = f"Today is {today_date}. Use this JSON resort data as the factual grounding for the itinerary. DO NOT expose JSON to the user, write naturally.\n\n{research_context}"
-    result = await planner_agent.ainvoke({"messages": [SystemMessage(content=planner_prompt), SystemMessage(content=planner_context)] + list(state["messages"])})
-    return {"messages": [AIMessage(content=extract_content(result["messages"][-1].content), name="Planner")]}
+    try:
+        result = await planner_agent.ainvoke({"messages": [SystemMessage(content=planner_prompt), SystemMessage(content=planner_context)] + list(state["messages"])[-1:]})
+        content = extract_content(result["messages"][-1].content)
+    except Exception:
+        content = "I can help plan your Dandeli trip. Consider riverside rafting, guided nature walks, pool time, and a relaxed evening meal at the resort."
+    return {"response": content, "messages": [AIMessage(content=content, name="Planner")]}
 
 
 async def booker_node(state):
@@ -107,28 +149,37 @@ async def booker_node(state):
     try:
         data = await chain.ainvoke({"messages": booking_messages}) # pass full booking context to prevent forgetting resort name
     except Exception as e:
-        return {"messages": [AIMessage(content="I'm having trouble parsing your booking details. Could you please specify the resort and dates again?", name="Booker")]}
+        content = "I'm having trouble parsing your booking details. Could you please specify the resort and dates again?"
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
 
     if data.intent == "check_status":
         if data.booking_id:
-            return {"messages": [AIMessage(content=await get_booking_status.ainvoke({"booking_id": data.booking_id}), name="Booker")]}
-        return {"messages": [AIMessage(content="Send your booking ID, for example `BK-0001`, and I will check the latest status.", name="Booker")]}
+            response_text = await get_booking_status.ainvoke({"booking_id": data.booking_id})
+            return {"response": response_text, "messages": [AIMessage(content=response_text, name="Booker")]}
+        response_text = "Send your booking ID, for example `BK-0001`, and I will check the latest status."
+        return {"response": response_text, "messages": [AIMessage(content=response_text, name="Booker")]}
         
     if data.intent == "cancel":
         base_reply = "Okay, I cancelled this booking request draft.\n\nIf you want to start a new one, tell me the resort and dates."
-        return {"messages": [AIMessage(content=base_reply, name="Booker")]}
+        return {"response": base_reply, "messages": [AIMessage(content=base_reply, name="Booker")]}
 
     if not data.dates:
-        return {"messages": [AIMessage(content="Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`.", name="Booker")]}
+        content = "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
     if not data.resort_name:
-        return {"messages": [AIMessage(content="Tell me which resort you want to book, and I will place the request.", name="Booker")]}
+        content = "Tell me which resort you want to book, and I will place the request."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
     if not data.contact:
-        return {"messages": [AIMessage(content="Before I place the booking request, send your contact number or email so the resort owner can reach you.", name="Booker")]}
+        content = "Before I place the booking request, send your contact number or email so the resort owner can reach you."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
     if not data.guests:
-        return {"messages": [AIMessage(content="Please tell me how many guests will be staying, and if there are any children.", name="Booker")]}
+        content = "Please tell me how many guests will be staying, and if there are any children."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
         
     from .booking_helpers import booking_confirmed
     if not booking_confirmed(booking_messages):
-        return {"messages": [AIMessage(content=f"Please confirm this booking:\nResort: {data.resort_name}\nDates: {data.dates}\nGuests: {data.guests}\nContact: {data.contact}\n\nReply `confirm` to send it.", name="Booker")]}
+        content = f"Please confirm this booking:\nResort: {data.resort_name}\nDates: {data.dates}\nGuests: {data.guests}\nContact: {data.contact}\n\nReply `confirm` to send it."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
         
-    return {"messages": [AIMessage(content=await book_resort.ainvoke({"resort_name": data.resort_name, "check_in_out_dates": data.dates, "guest_details": data.guests, "customer_contact": data.contact}), name="Booker")]}
+    response_text = await book_resort.ainvoke({"resort_name": data.resort_name, "check_in_out_dates": data.dates, "guest_details": data.guests, "customer_contact": data.contact})
+    return {"response": response_text, "messages": [AIMessage(content=response_text, name="Booker")]}

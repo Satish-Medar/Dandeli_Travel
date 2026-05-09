@@ -1,0 +1,43 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-7.4.3, pluggy-1.6.0
+rootdir: D:\RAG\CollegeProject
+configfile: pytest.ini
+plugins: anyio-4.12.1, langsmith-0.7.3, asyncio-0.21.1, cov-4.1.0, mock-3.12.0
+asyncio: mode=Mode.AUTO
+collected 1 item
+
+tests\test_search_tool.py F                                              [100%]
+
+================================== FAILURES ===================================
+_________________ TestFindResortByName.test_find_exact_match __________________
+tests\test_search_tool.py:14: in test_find_exact_match
+    assert resort['name'] == "River Valley"
+E   KeyError: 'name'
+------------------------------ Captured log call ------------------------------
+ERROR    travel_tools.vectorstore_provider:vectorstore_provider.py:62 Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+=========================== short test summary info ===========================
+FAILED tests/test_search_tool.py::TestFindResortByName::test_find_exact_match
+======================= 1 failed, 4 warnings in 13.86s ========================
