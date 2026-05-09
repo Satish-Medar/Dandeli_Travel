@@ -14,29 +14,67 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Close mobile menu on window resize
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link href="/" className="navbar-brand">
-          <Image src="/assets/vana-logo.svg" alt="Vana AI Logo" width={28} height={28} className="brand-icon" />
+          <Image
+            src="/assets/vana-logo.svg"
+            alt="Vana AI Logo"
+            width={28}
+            height={28}
+            className="brand-icon"
+            priority
+          />
           <span>Vana AI</span>
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? "open" : ""}`}>
-          <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)}>How it Works</Link>
-          <Link href="/explore" onClick={() => setMobileMenuOpen(false)}>Explore Dandeli</Link>
+          <Link href="/about" onClick={handleLinkClick}>
+            About
+          </Link>
+          <Link href="/how-it-works" onClick={handleLinkClick}>
+            How it Works
+          </Link>
+          <Link href="/explore" onClick={handleLinkClick}>
+            Explore Dandeli
+          </Link>
         </nav>
 
         <div className="navbar-actions">
           <Link href="/chat" className="btn-primary">
             Launch Assistant
           </Link>
-          <button 
+          <button
             className="mobile-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               {mobileMenuOpen ? (
                 <>
                   <line x1="18" y1="6" x2="6" y2="18"></line>
