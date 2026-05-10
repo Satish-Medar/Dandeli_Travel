@@ -245,7 +245,24 @@ img {
 
 @media (min-width: 769px) {
   .open-sidebar-btn {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    right: auto;
+    bottom: auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-muted);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    z-index: 50;
+  }
+
+  .open-sidebar-btn:hover {
+    background-color: #f7f7f7;
+    color: var(--text-main);
+    transform: none;
   }
 }
 
@@ -1136,6 +1153,299 @@ img {
 @media (min-width: 769px) {
   .show-mobile {
     display: none !important;
+  }
+}
+
+/* Additional responsive adjustments for mobile-first layout */
+@media (max-width: 900px) {
+  .hero-wrapper {
+    padding: 120px 20px 80px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .glass-card {
+    padding: 24px;
+  }
+
+  .chat-bubble {
+    max-width: 100%;
+    width: auto;
+    word-break: break-word;
+  }
+
+  .adventure-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .adventure-card {
+    height: 340px;
+  }
+
+  .timeline-container {
+    padding: 0 16px;
+  }
+
+  .timeline-line {
+    left: 16px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 28px;
+  }
+
+  .cta-section {
+    padding: 100px 20px;
+  }
+
+  .cta-container h2 {
+    font-size: 3rem;
+  }
+
+  .cta-container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-wrapper {
+    padding: 100px 16px 60px;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .glass-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .adventure-card {
+    height: 280px;
+  }
+
+  .adventure-overlay {
+    padding: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-header p,
+  .timeline-content p,
+  .hero-subtitle,
+  .cta-container p {
+    font-size: 0.95rem;
+  }
+
+  .timeline-content {
+    padding: 24px;
+  }
+
+  .cta-section {
+    padding: 80px 16px;
+  }
+
+  .cta-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-container .btn-primary {
+    width: 100%;
+    white-space: normal;
+    padding: 16px 20px;
+  }
+
+  .page-hero {
+    padding: 120px 16px 80px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    padding: 24px 16px;
+  }
+}
+
+/* Disable only the extra tiger bubble and keep the natural wildlife motion */
+.hero-bg,
+.cta-overlay-art,
+.tiger-bubble {
+  animation: none !important;
+  transition: none !important;
+}
+
+.tiger-guide-shell {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.tiger-guide {
+  width: 140px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.tiger-bubble {
+  position: relative;
+  width: 100%;
+  border-radius: 24px 24px 24px 4px;
+  background: var(--forest-dark);
+  color: white;
+  border: none;
+  padding: 32px;
+}
+
+.tiger-bubble-arrow {
+  position: absolute;
+  left: -15px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid var(--forest-dark);
+}
+
+@media (max-width: 768px) {
+  .tiger-guide-shell {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .tiger-guide {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .tiger-bubble {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .tiger-bubble-arrow {
+    display: none;
+  }
+
+  .hero-wrapper,
+  .section-header,
+  .cta-container,
+  .footer-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .adventure-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-card {
+    height: 300px;
+  }
+
+  .timeline-line {
+    left: 8px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .timeline-number {
+    margin: 0 auto 20px;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .cta-section {
+    padding: 80px 16px;
+  }
+
+  .cta-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 

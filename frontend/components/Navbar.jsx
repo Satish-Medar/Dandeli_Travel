@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -33,15 +32,16 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link href="/" className="navbar-brand">
-          <Image
-            src="/assets/vana-logo.svg"
-            alt="Vana AI Logo"
-            width={28}
-            height={28}
-            className="brand-icon"
-            priority
-          />
-          <span>Vana AI</span>
+          <div className="brand-icon-wrapper">
+            <img
+              src="/assets/Gemini_Generated_Image.png"
+              alt="WayFind Logo"
+              className="brand-icon"
+              width={60}
+              height={60}
+            />
+          </div>
+          <span>WayFind</span>
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? "open" : ""}`}>

@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Vana AI | Resort & Booking Assistant",
+  title: "WayFind | AI Travel Assistant",
   description:
-    "Find the best resorts, plan trips, and book your stay in Dandeli with our smart AI assistant.",
+    "Find the best resorts, plan trips, and book your stay with WayFind - your intelligent AI travel assistant.",
   keywords:
-    "Dandeli resorts, book Dandeli trips, Dandeli tourism, Vana AI, Dandeli travel agent, best resorts in Dandeli",
+    "travel assistant, resort booking, trip planning, AI travel, find resorts, travel agent, best resorts",
   icons: {
-    icon: "/assets/logo.png",
+    icon: "/assets/Gemini_Generated_Image.png",
   },
   viewport: {
     width: "device-width",

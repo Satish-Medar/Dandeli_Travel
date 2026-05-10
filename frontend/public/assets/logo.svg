@@ -1,0 +1,120 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cffafe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountainGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountainGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="150" cy="150" r="140" fill="url(#bgGradient)" stroke="#0ea5e9" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Decorative rings -->
+  <circle cx="150" cy="150" r="135" fill="none" stroke="#bfdbfe" stroke-width="1" opacity="0.5"/>
+  <circle cx="150" cy="150" r="130" fill="none" stroke="#7dd3fc" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Sun/sunrise element -->
+  <circle cx="150" cy="85" r="28" fill="url(#sunGradient)" filter="url(#shadow)"/>
+  <circle cx="150" cy="85" r="26" fill="url(#sunGradient)" opacity="0.3" r="35"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="150" y1="45" x2="150" y2="30"/>
+    <line x1="193" y1="62" x2="203" y2="52"/>
+    <line x1="210" y1="85" x2="230" y2="85"/>
+  </g>
+  
+  <!-- Left mountain (emerald) -->
+  <path d="M 50 200 L 110 100 L 130 140 Z" fill="url(#mountainGrad1)" filter="url(#shadow)"/>
+  <path d="M 110 100 L 130 140 L 115 165 Z" fill="#047857" opacity="0.4"/>
+  
+  <!-- Right mountain (cyan) -->
+  <path d="M 170 140 L 220 70 L 260 200 Z" fill="url(#mountainGrad2)" filter="url(#shadow)"/>
+  <path d="M 220 70 L 260 200 L 240 190 Z" fill="#0e7490" opacity="0.4"/>
+  
+  <!-- Snow peaks with glow -->
+  <ellipse cx="110" cy="100" rx="8" ry="10" fill="#f8fafc" filter="url(#shadow)"/>
+  <ellipse cx="110" cy="100" rx="6" ry="8" fill="white" opacity="0.7"/>
+  
+  <ellipse cx="220" cy="70" rx="10" ry="12" fill="#f8fafc" filter="url(#shadow)"/>
+  <ellipse cx="220" cy="70" rx="7" ry="9" fill="white" opacity="0.7"/>
+  
+  <!-- Water/waves section -->
+  <path d="M 50 200 Q 75 190 100 200 T 150 200 T 200 200 T 250 200 L 280 240 L 20 240 Z" fill="#0284c7" opacity="0.9" filter="url(#shadow)"/>
+  
+  <!-- Wave details -->
+  <path d="M 50 205 Q 75 198 100 205 T 150 205 T 200 205 T 250 205" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 60 215 Q 85 208 110 215 T 160 215 T 210 215 T 260 215" fill="none" stroke="#0891b2" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  
+  <!-- Foam/bubbles on waves -->
+  <circle cx="70" cy="203" r="2" fill="white" opacity="0.7"/>
+  <circle cx="120" cy="206" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="180" cy="204" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="230" cy="207" r="2" fill="white" opacity="0.7"/>
+  
+  <!-- Palm tree left -->
+  <g filter="url(#shadow)">
+    <line x1="85" y1="165" x2="85" y2="210" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+    <!-- Palm fronds -->
+    <path d="M 85 160 Q 75 150 70 145" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 85 160 Q 70 155 60 160" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 85 165 Q 100 155 110 150" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 85 165 Q 75 175 70 185" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Palm tree right -->
+  <g filter="url(#shadow)">
+    <line x1="220" y1="165" x2="220" y2="210" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+    <!-- Palm fronds -->
+    <path d="M 220 160 Q 210 150 205 145" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 220 160 Q 235 155 245 160" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M 220 165 Q 205 155 190 150" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 220 165 Q 230 175 235 185" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Compass rose in center -->
+  <g opacity="0.85">
+    <circle cx="150" cy="130" r="18" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+    <circle cx="150" cy="130" r="16" fill="none" stroke="#fbbf24" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Compass points -->
+    <g stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round">
+      <line x1="150" y1="108" x2="150" y2="98" />
+      <line x1="168" y1="130" x2="180" y2="130" />
+    </g>
+    
+    <!-- Secondary points -->
+    <g stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+      <line x1="164" y1="116" x2="171" y2="109" />
+      <line x1="164" y1="144" x2="171" y2="151" />
+    </g>
+    
+    <!-- Center circle -->
+    <circle cx="150" cy="130" r="5" fill="#f59e0b"/>
+    <circle cx="150" cy="130" r="3" fill="#fef3c7"/>
+  </g>
+  
+  <!-- Decorative dots -->
+  <circle cx="60" cy="120" r="2.5" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="250" cy="140" r="2.5" fill="#f59e0b" opacity="0.5"/>
+</svg>

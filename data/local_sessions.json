@@ -660,5 +660,115 @@
         ]
       }
     }
+  },
+  "guest-ad043e47-6675-4a83-b9c4-712e7286e786": {
+    "sessions": {}
+  },
+  "guest-a799d2e9-c63c-42b2-977f-28beb14134f7": {
+    "sessions": {}
+  },
+  "guest-554a805c-f52b-4220-9e0a-366a54fb9914": {
+    "sessions": {}
+  },
+  "guest-881e5e2d-2b98-43f5-8420-16b1e8a15eba": {
+    "sessions": {}
+  },
+  "guest-6952f050-e1a5-480f-95e9-d7d4b489944b": {
+    "sessions": {}
+  },
+  "guest-ae953ed9-1316-48f4-9529-9bb0a7d64c0f": {
+    "sessions": {}
+  },
+  "guest-746fab03-9579-4468-80b4-380b8eaa1e2f": {
+    "sessions": {
+      "0d248c24-4215-449c-9647-a82b2b6282f2": {
+        "title": "Hi",
+        "updated_at": "2026-05-10T07:54:38Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-10T07:53:20Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-10T07:53:21Z"
+          },
+          {
+            "role": "user",
+            "content": "tell me which resort is best in dandeli",
+            "name": "",
+            "created_at": "2026-05-10T07:53:30Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on the search results, the best resort in Dandeli is **Wild Trails Ganeshgudi**. It has a rating of **4.8** based on 150 reviews, which is the highest among all the resorts listed. It's a wildlife camp located in Zone 4, Dandeli Forest Reserve, and offers exclusive river access and guided nature trails. You can contact them at **+91 9553744327** or visit their website at **https://www.wildtrailsganeshgudi.com** for more information. However, please note that it's not family-friendly. If you're looking for a family-friendly option, **Bison River Resort** is a great alternative with a rating of **4.4** and a price of **3850 INR per person per day**.",
+            "name": "Researcher",
+            "created_at": "2026-05-10T07:53:39Z"
+          },
+          {
+            "role": "user",
+            "content": "tell me which resort is best in haliyal",
+            "name": "",
+            "created_at": "2026-05-10T07:54:05Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I couldn't find any information about resorts in Haliyal in the provided search results. The search results seem to be focused on Dandeli. If you're looking for recommendations in Dandeli, I can suggest the top-rated resorts there. \n\nFor example, Kali River Retreat and Hornbill Haven Eco Resort are both highly rated, with a 4.5-star rating. They offer a range of amenities and activities, including scenic views, water activities, and birdwatching. \n\nIf you could provide more information or clarify your question, I'd be happy to try and assist you further.",
+            "name": "Researcher",
+            "created_at": "2026-05-10T07:54:07Z"
+          },
+          {
+            "role": "user",
+            "content": "how many km difference is theere between haliyal and dandeli",
+            "name": "",
+            "created_at": "2026-05-10T07:54:35Z"
+          },
+          {
+            "role": "assistant",
+            "content": "The JSON data provided doesn't contain information about the distance between Haliyal and Dandeli. It only provides details about various resorts in Dandeli. If you're looking for distance information, I recommend checking a map or a reliable source for the most accurate answer.",
+            "name": "Researcher",
+            "created_at": "2026-05-10T07:54:38Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-f0901b75-2c2b-4dfe-a372-f0c47a3e9bbc": {
+    "sessions": {}
+  },
+  "guest-c1d80562-f0b4-49ee-8f01-cd0d6de99dde": {
+    "sessions": {
+      "4e946992-c9b0-41c8-9af0-b544b4c5fcce": {
+        "title": "Hi",
+        "updated_at": "2026-05-10T08:58:52Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-10T08:58:51Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-10T08:58:52Z"
+          }
+        ]
+      }
+    }
+  },
+  "guest-63f2ffc9-82d5-466d-85af-c1bdb24f0a89": {
+    "sessions": {}
+  },
+  "guest-76bdf87d-2c8e-4569-a9b2-34ec2c93574e": {
+    "sessions": {}
+  },
+  "guest-61b39747-6eb0-4e3a-ac41-4211cf63215a": {
+    "sessions": {}
   }
 }

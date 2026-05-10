@@ -1,4 +1,4 @@
-# Vana AI Agent
+# WayFind
 
 An intelligent travel assistant for Dandeli resort search, planning, comparison, and booking assistance.
 
@@ -9,7 +9,6 @@ An intelligent travel assistant for Dandeli resort search, planning, comparison,
 - AI: LangGraph multi-agent orchestrator
 - Search: Pinecone vector retrieval + local JSON fallback
 - LLMs: Google Gemini Generative AI and Groq Llama instant
-
 ## What was improved
 
 - Lazy vector store initialization to avoid backend startup hang

@@ -2,61 +2,93 @@
 
 import { useEffect, useState } from "react";
 
+const randomPercent = () =>
+  Math.max(5, Math.min(95, Math.floor(Math.random() * 90) + 5));
+const randomScale = () => Number((0.7 + Math.random() * 0.5).toFixed(2));
+
+const initialButterflies = [
+  {
+    id: 1,
+    top: randomPercent(),
+    left: randomPercent(),
+    scale: randomScale(),
+    color: "#10b981",
+    delay: 0,
+  },
+  {
+    id: 2,
+    top: randomPercent(),
+    left: randomPercent(),
+    scale: randomScale(),
+    color: "#34d399",
+    delay: 150,
+  },
+  {
+    id: 3,
+    top: randomPercent(),
+    left: randomPercent(),
+    scale: randomScale(),
+    color: "#047857",
+    delay: 300,
+  },
+];
+
 export default function Butterflies() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [butterflies, setButterflies] = useState(initialButterflies);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
+    const interval = window.setInterval(() => {
+      setButterflies((current) =>
+        current.map((butterfly) => ({
+          ...butterfly,
+          top: randomPercent(),
+          left: randomPercent(),
+          scale: randomScale(),
+        })),
+      );
+    }, 3000);
 
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    return () => window.clearInterval(interval);
   }, []);
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 100 }}>
-      {/* Primary Butterfly */}
-      <div 
-        className="butterfly" 
-        style={{ 
-          transform: `translate(${mousePos.x + 20}px, ${mousePos.y + 20}px)`,
-          transitionDelay: '0.05s'
-        }}
-      >
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="#10b981">
-          <path className="butterfly-wing" d="M50 50 C20 0, 0 30, 45 50 C0 70, 20 100, 50 50 C80 100, 100 70, 55 50 C100 30, 80 0, 50 50 Z" />
-        </svg>
-      </div>
-
-      {/* Trailing Butterfly 1 */}
-      <div 
-        className="butterfly" 
-        style={{ 
-          transform: `translate(${mousePos.x - 30}px, ${mousePos.y + 40}px) scale(0.7)`,
-          transitionDelay: '0.15s'
-        }}
-      >
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="#34d399">
-          <path className="butterfly-wing" d="M50 50 C20 0, 0 30, 45 50 C0 70, 20 100, 50 50 C80 100, 100 70, 55 50 C100 30, 80 0, 50 50 Z" />
-        </svg>
-      </div>
-
-      {/* Trailing Butterfly 2 */}
-      <div 
-        className="butterfly" 
-        style={{ 
-          transform: `translate(${mousePos.x + 40}px, ${mousePos.y - 10}px) scale(0.5)`,
-          transitionDelay: '0.25s'
-        }}
-      >
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="#047857">
-          <path className="butterfly-wing" d="M50 50 C20 0, 0 30, 45 50 C0 70, 20 100, 50 50 C80 100, 100 70, 55 50 C100 30, 80 0, 50 50 Z" />
-        </svg>
-      </div>
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        pointerEvents: "none",
+        zIndex: 100,
+      }}
+    >
+      {butterflies.map((butterfly) => (
+        <div
+          key={butterfly.id}
+          className="butterfly"
+          style={{
+            position: "absolute",
+            top: `${butterfly.top}%`,
+            left: `${butterfly.left}%`,
+            transform: `translate(-50%, -50%) scale(${butterfly.scale})`,
+            transition: "top 2.5s ease, left 2.5s ease, transform 2.5s ease",
+            transitionDelay: `${butterfly.delay}ms`,
+          }}
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 100 100"
+            fill={butterfly.color}
+          >
+            <path
+              className="butterfly-wing"
+              d="M50 50 C20 0, 0 30, 45 50 C0 70, 20 100, 50 50 C80 100, 100 70, 55 50 C100 30, 80 0, 50 50 Z"
+            />
+          </svg>
+        </div>
+      ))}
     </div>
   );
 }

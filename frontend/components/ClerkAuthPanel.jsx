@@ -13,7 +13,7 @@ function buildClerkHostedUrl(mode) {
   const params = new URLSearchParams({
     redirect_url: redirectUrl,
     after_sign_in_url: redirectUrl,
-    after_sign_up_url: redirectUrl
+    after_sign_up_url: redirectUrl,
   });
 
   if (publishableKey.startsWith("pk_test_")) {
@@ -58,7 +58,7 @@ export default function ClerkAuthPanel({ mode }) {
     <div className="auth-page-shell">
       <div className="auth-page-card">
         <div className="auth-page-copy">
-          <p className="kicker">Vana AI</p>
+          <p className="kicker">WayFind</p>
           <h1>{mode === "signup" ? "Create your account" : "Welcome back"}</h1>
           <p className="subtitle">
             {mode === "signup"
@@ -70,7 +70,9 @@ export default function ClerkAuthPanel({ mode }) {
         {error ? <p className="auth-error">{error}</p> : null}
         {!error ? (
           <div className="auth-actions">
-            <p className="auth-loading">Redirecting to secure authentication...</p>
+            <p className="auth-loading">
+              Redirecting to secure authentication...
+            </p>
             <a className="auth-link" href={authUrl}>
               Continue
             </a>

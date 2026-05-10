@@ -478,7 +478,7 @@ export default function Page() {
                 (e.currentTarget.style.backgroundColor = "transparent")
               }
             >
-              Vana AI
+              WayFind
               <svg
                 width="16"
                 height="16"

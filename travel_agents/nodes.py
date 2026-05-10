@@ -60,7 +60,15 @@ async def smalltalk_node(state):
 
 
 async def out_of_scope_node(state):
-    return {"messages": [AIMessage(content="Please ask queries related to Dandeli, resorts, trip planning, pricing, activities, or booking.", name="OutOfScope")]}
+    return {
+        "messages": [
+            AIMessage(
+                content="I can help with Dandeli resorts, pricing, trip planning, activities, and booking requests. "
+                        "For questions outside those topics, please ask about resorts, travel options, or booking details.",
+                name="OutOfScope",
+            )
+        ]
+    }
 
 
 async def researcher_node(state):
@@ -79,12 +87,14 @@ async def researcher_node(state):
     synthesizer = prefer_groq_invoke(groq_70b, prefer_groq_invoke(groq_llm, gemini_llm))
     
     system_prompt = (
-        "You are Vana, a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
+        "You are WayFind, a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
         "Your job is to read the JSON data and answer the user's latest question in a beautiful, natural, conversational format. "
         "If the user asks for a comparison, logically compare the best options from the JSON. "
         "If the user asks for a specific number of resorts (e.g. 'top 1' or 'just 2'), provide EXACTLY that many. "
         "If the user asks for contact information (phone, email, website), include it prominently in your response. "
         "If the JSON says no resorts were found, apologize and ask them to adjust their budget or requirements. "
+        "If the user's question is unrelated to Dandeli resorts, activities, pricing, bookings, or trip planning, say that you can only help with Dandeli travel and resort-related questions and suggest they ask about resorts, prices, bookings, or itineraries. "
+        "Do not say 'The JSON data provided...' or otherwise mention internal data availability. "
         "Do not invent details not in the search results.\n\n"
         f"Search Results JSON:\n{research_context}"
     )

@@ -1,0 +1,68 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle border -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Background soft gradient circle -->
+  <circle cx="100" cy="100" r="95" fill="#f0fdf4" opacity="0.5"/>
+  
+  <!-- Main mountain peak (center) -->
+  <path d="M 100 45 L 130 85 L 100 85 L 70 85 Z" fill="url(#mountainGradient)" filter="url(#softGlow)"/>
+  
+  <!-- Left mountain -->
+  <path d="M 60 120 L 85 75 L 100 120 Z" fill="#10b981" opacity="0.85"/>
+  
+  <!-- Right mountain -->
+  <path d="M 140 120 L 115 75 L 100 120 Z" fill="#059669" opacity="0.85"/>
+  
+  <!-- Sun/circle at peak -->
+  <circle cx="100" cy="45" r="16" fill="url(#sunGradient)" filter="url(#softGlow)"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="100" y1="20" x2="100" y2="8"/>
+    <line x1="128" y1="32" x2="137" y2="23"/>
+    <line x1="145" y1="45" x2="157" y2="45"/>
+    <line x1="128" y1="58" x2="137" y2="67"/>
+    <line x1="72" y1="32" x2="63" y2="23"/>
+    <line x1="55" y1="45" x2="43" y2="45"/>
+    <line x1="72" y1="58" x2="63" y2="67"/>
+  </g>
+  
+  <!-- Water/river wave below mountains -->
+  <path d="M 50 125 Q 65 120 80 125 T 110 125 T 140 125 T 170 125" stroke="#06b6d4" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 50 135 Q 65 130 80 135 T 110 135 T 140 135 T 170 135" stroke="#06b6d4" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Decorative leaf elements -->
+  <g transform="translate(70, 145)">
+    <!-- Left leaf -->
+    <path d="M 0 0 Q 3 -6 5 -12 Q 3 -6 0 0" fill="#10b981" opacity="0.8"/>
+    <line x1="0" y1="0" x2="5" y2="-12" stroke="#059669" stroke-width="0.8" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(130, 145)">
+    <!-- Right leaf -->
+    <path d="M 0 0 Q -3 -6 -5 -12 Q -3 -6 0 0" fill="#10b981" opacity="0.8"/>
+    <line x1="0" y1="0" x2="-5" y2="-12" stroke="#059669" stroke-width="0.8" opacity="0.6"/>
+  </g>
+  
+  <!-- Center accent dot -->
+  <circle cx="100" cy="85" r="3" fill="#f59e0b" opacity="0.8"/>
+</svg>

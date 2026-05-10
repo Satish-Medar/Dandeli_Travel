@@ -141,7 +141,7 @@ FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
 NEXT_ASSET_DIR = FRONTEND_OUT_DIR / "_next"
 VITE_ASSET_DIR = FRONTEND_DIST_DIR / "assets"
 
-app = FastAPI(title="Vana AI API", version="0.2.0")
+app = FastAPI(title="WayFind API", version="0.2.0")
 
 @app.on_event("startup")
 async def startup_event():

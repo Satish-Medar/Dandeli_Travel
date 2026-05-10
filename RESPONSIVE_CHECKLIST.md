@@ -7,6 +7,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 📱 Mobile Devices (320px - 640px)
 
 ### Layout
+
 - [ ] No horizontal scrolling
 - [ ] Single column layout
 - [ ] Full-width images
@@ -14,6 +15,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Proper spacing between elements
 
 ### Navigation
+
 - [ ] Hamburger menu for navigation
 - [ ] Menu closes after selection
 - [ ] Touch-friendly menu items (≥44px)
@@ -21,6 +23,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Proper z-index layering
 
 ### Typography
+
 - [ ] Text sizes readable (≥14px minimum)
 - [ ] Proper line-height (≥1.5)
 - [ ] No text overflow
@@ -28,6 +31,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Links are clickable (≥44px)
 
 ### Images
+
 - [ ] Responsive images using Next.js `Image`
 - [ ] Proper aspect ratios maintained
 - [ ] No image distortion
@@ -35,6 +39,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Alt text present
 
 ### Forms
+
 - [ ] Input fields full-width
 - [ ] Labels clear and readable
 - [ ] Form fields ≥44px tall
@@ -42,6 +47,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Submit button easy to tap
 
 ### Buttons
+
 - [ ] Buttons ≥44x44px
 - [ ] Clear visual hierarchy
 - [ ] Proper spacing between buttons
@@ -53,6 +59,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 📱 Tablets (768px - 1024px)
 
 ### Layout
+
 - [ ] Multi-column layout (2 columns)
 - [ ] Proper content distribution
 - [ ] Adequate white space
@@ -60,6 +67,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Scalable components
 
 ### Navigation
+
 - [ ] Full navigation visible on larger tablets
 - [ ] Mobile menu optional
 - [ ] Menu items well-spaced
@@ -67,6 +75,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Action buttons visible
 
 ### Typography
+
 - [ ] Font sizes scaled appropriately
 - [ ] Line-height readable
 - [ ] Headings prominent
@@ -74,6 +83,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Links properly sized
 
 ### Images
+
 - [ ] Medium-sized images
 - [ ] Aspect ratios correct
 - [ ] Gallery layouts working
@@ -81,6 +91,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Smooth image loading
 
 ### Components
+
 - [ ] Cards properly sized
 - [ ] Grid layouts responsive
 - [ ] Modals fit screen
@@ -92,6 +103,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 🖥️ Desktop (1024px+)
 
 ### Layout
+
 - [ ] Multi-column layout (3+ columns)
 - [ ] Full content width utilized
 - [ ] Proper margins/padding
@@ -99,6 +111,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Optimal reading width (≤100 chars)
 
 ### Navigation
+
 - [ ] Full navigation menu visible
 - [ ] No mobile menu needed
 - [ ] Hover effects visible
@@ -106,6 +119,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Breadcrumbs present if needed
 
 ### Typography
+
 - [ ] Optimal font sizes
 - [ ] Proper line-height
 - [ ] Headings prominent
@@ -113,6 +127,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Multiple font sizes used
 
 ### Images
+
 - [ ] Large, high-quality images
 - [ ] Proper aspect ratios
 - [ ] Carousels working
@@ -120,6 +135,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Image optimization
 
 ### Interactive Elements
+
 - [ ] Hover effects visible
 - [ ] Tooltips working
 - [ ] Dropdowns functional
@@ -131,6 +147,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 🎨 Visual Design
 
 ### Colors
+
 - [ ] Colors consistent across breakpoints
 - [ ] Text contrast ≥4.5:1
 - [ ] Focus states visible
@@ -138,6 +155,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Links underlined or styled
 
 ### Typography
+
 - [ ] Font sizes scale smoothly
 - [ ] Line heights appropriate
 - [ ] Letter spacing readable
@@ -145,6 +163,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] No orphaned text
 
 ### Spacing
+
 - [ ] Padding responsive
 - [ ] Margins proportional
 - [ ] Gaps between elements
@@ -156,6 +175,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## ⚡ Performance
 
 ### Images
+
 - [ ] Images optimized for size
 - [ ] WebP/AVIF formats used
 - [ ] Lazy loading implemented
@@ -163,6 +183,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Priority images loaded first
 
 ### CSS
+
 - [ ] CSS minified
 - [ ] No unused styles
 - [ ] Efficient selectors
@@ -170,6 +191,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Responsive CSS file linked
 
 ### JavaScript
+
 - [ ] Minimal JS for responsiveness
 - [ ] Event listeners cleaned up
 - [ ] No memory leaks
@@ -177,6 +199,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Debounced resize handlers
 
 ### Loading
+
 - [ ] Page loads quickly on mobile
 - [ ] Images load progressively
 - [ ] Content visible quickly
@@ -188,6 +211,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## ♿ Accessibility
 
 ### Mobile
+
 - [ ] Touch targets ≥44x44px
 - [ ] Proper zoom enabled
 - [ ] No text too small
@@ -195,6 +219,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Touch gestures have alternatives
 
 ### Semantic HTML
+
 - [ ] Proper heading hierarchy
 - [ ] Semantic elements used
 - [ ] ARIA labels where needed
@@ -202,6 +227,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Skip links available
 
 ### Focus
+
 - [ ] Focus visible on all elements
 - [ ] Focus order logical
 - [ ] No focus traps
@@ -213,6 +239,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 🧪 Testing Checklist
 
 ### Browser Testing
+
 - [ ] Chrome/Edge latest
 - [ ] Firefox latest
 - [ ] Safari latest
@@ -220,6 +247,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Mobile Safari
 
 ### Device Testing
+
 - [ ] iPhone SE (375px)
 - [ ] iPhone 12 Pro (390px)
 - [ ] iPhone 14 Pro Max (430px)
@@ -228,6 +256,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] iPad Pro (1024px)
 
 ### Orientation Testing
+
 - [ ] Portrait mode looks good
 - [ ] Landscape mode works
 - [ ] No content cut off
@@ -235,6 +264,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Layout adjusts correctly
 
 ### Network Testing
+
 - [ ] Works on 4G
 - [ ] Works on 3G
 - [ ] Images load properly
@@ -242,6 +272,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Graceful degradation
 
 ### Touch Testing
+
 - [ ] Touch events work
 - [ ] Tap actions responsive
 - [ ] Swipe gestures work
@@ -253,6 +284,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 📋 Component Checklist
 
 ### Navigation Components
+
 - [ ] Navbar responsive
 - [ ] Menu toggles correctly
 - [ ] Links clickable
@@ -260,6 +292,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Search bar works
 
 ### Image Components
+
 - [ ] Images responsive
 - [ ] Aspect ratios correct
 - [ ] Alt text present
@@ -267,6 +300,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Error states
 
 ### Form Components
+
 - [ ] Inputs responsive
 - [ ] Labels visible
 - [ ] Validation works
@@ -274,6 +308,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Success states
 
 ### Card Components
+
 - [ ] Cards stack on mobile
 - [ ] Images scale correctly
 - [ ] Text readable
@@ -281,6 +316,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Hover states work
 
 ### Grid Components
+
 - [ ] 3 columns on desktop
 - [ ] 2 columns on tablet
 - [ ] 1 column on mobile
@@ -288,6 +324,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Items scale evenly
 
 ### Modal Components
+
 - [ ] Modal fit screen
 - [ ] Close button visible
 - [ ] Content readable
@@ -299,18 +336,21 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 🎯 Breakpoint Testing
 
 ### Mobile Breakpoints
+
 - [ ] 320px (Extra small phones)
 - [ ] 375px (Standard phones)
 - [ ] 428px (Larger phones)
 - [ ] 480px (Phone landscape)
 
 ### Tablet Breakpoints
+
 - [ ] 640px (Small tablet)
 - [ ] 768px (Standard tablet)
 - [ ] 820px (Tablet landscape)
 - [ ] 1024px (Large tablet)
 
 ### Desktop Breakpoints
+
 - [ ] 1024px (Small desktop)
 - [ ] 1280px (Standard desktop)
 - [ ] 1536px (Large desktop)
@@ -321,6 +361,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 🔄 Maintenance Checklist
 
 ### Code Review
+
 - [ ] CSS follows mobile-first approach
 - [ ] Uses CSS variables
 - [ ] No hardcoded sizes
@@ -328,6 +369,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Comments explain responsive logic
 
 ### Documentation
+
 - [ ] Components documented
 - [ ] Breakpoints documented
 - [ ] Classes explained
@@ -335,6 +377,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] Maintenance guide included
 
 ### Updates
+
 - [ ] Breakpoints consistent across project
 - [ ] Font sizes using variables
 - [ ] New components follow pattern
@@ -346,6 +389,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 ## 📊 Performance Metrics
 
 ### Desktop Target
+
 - [ ] Lighthouse: ≥90 (Performance)
 - [ ] Load time: <3s
 - [ ] LCP: <2.5s
@@ -353,6 +397,7 @@ Use this checklist to ensure all components and pages are fully responsive.
 - [ ] CLS: <0.1
 
 ### Mobile Target
+
 - [ ] Lighthouse: ≥85 (Performance)
 - [ ] Load time: <5s
 - [ ] LCP: <3.5s

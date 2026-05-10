@@ -9,7 +9,7 @@ class IntentClassification(BaseModel):
     next: str = Field(description="Exactly one of: SmallTalk, Researcher, Planner, Booker, OutOfScope")
 
 intent_prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are an expert intent classifier for Vana AI, a Dandeli Travel Agent.\n"
+    ("system", "You are an expert intent classifier for WayFind, a Dandeli Travel Agent.\n"
                "Determine the user's intent based on the conversation history.\n"
                "Rules:\n"
                "- If the user is asking for resort contact information, phone numbers, emails, or websites, pick 'Researcher'.\n"

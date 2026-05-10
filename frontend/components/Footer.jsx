@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,11 +6,20 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-brand">
           <div className="brand-logo">
-            <Image src="/assets/vana-logo.svg" alt="Vana AI Logo" width={32} height={32} className="brand-icon" />
-            <span>Vana AI</span>
+            <div className="brand-logo-icon-wrapper">
+              <img
+                src="/assets/Gemini_Generated_Image.png"
+                alt="WayFind Logo"
+                className="brand-icon"
+                width={60}
+                height={60}
+              />
+            </div>
+            <span>WayFind</span>
           </div>
           <p className="footer-description">
-            Experience Dandeli intelligently. The first AI-powered travel agent connecting you directly with authentic local resorts.
+            Experience travel intelligently. The first AI-powered travel agent
+            connecting you directly with authentic local resorts.
           </p>
         </div>
         <div className="footer-links">
@@ -30,7 +38,10 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Vana AI. Built by humans. Powered by Vana.</p>
+        <p>
+          &copy; {new Date().getFullYear()} WayFind. Built by humans. Powered by
+          AI.
+        </p>
       </div>
     </footer>
   );
