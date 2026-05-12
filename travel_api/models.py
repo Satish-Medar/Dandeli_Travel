@@ -193,7 +193,7 @@ class SessionCreateRequest(BaseModel):
 class SessionSummary(BaseModel):
     session_id: str = Field(..., min_length=1, max_length=100)
     title: str = Field(..., min_length=1, max_length=200)
-    preview: str = Field(..., min_length=1, max_length=500)
+    preview: str = Field(default="", max_length=500)
     updated_at: str = Field(..., min_length=1, max_length=50)
 
 

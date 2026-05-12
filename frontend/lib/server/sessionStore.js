@@ -112,6 +112,19 @@ export async function createSession(userId, title = "New conversation", profile 
   const collection = await getUsersCollection();
 
   await ensureUserDocument(normalizedUserId, profile);
+
+  if (!collection) {
+    // Fall back to file store when MongoDB is unavailable
+    const store = await loadFileStore();
+    const user = store[normalizedUserId] || { user_id: normalizedUserId, profile: {}, sessions: {}, created_at: now };
+    user.sessions = user.sessions || {};
+    user.sessions[sessionId] = { title, updated_at: now, messages: [] };
+    user.updated_at = now;
+    store[normalizedUserId] = user;
+    await saveFileStore(store);
+    return { session_id: sessionId, title };
+  }
+
   await collection.updateOne(
     { _id: normalizedUserId },
     {

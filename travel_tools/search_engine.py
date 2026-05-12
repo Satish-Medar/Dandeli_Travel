@@ -30,6 +30,10 @@ class SearchFilters(BaseModel):
     family_friendly: Optional[bool] = Field(default=None, description="Whether the user explicitly wants family friendly options")
     target_resort_names: Optional[list[str]] = Field(default=None, description="If the user asks about specific resorts by name, extract all names here (e.g., for 'compare X, Y, and Z', extract ['X', 'Y', 'Z'])")
     required_amenities: Optional[list[str]] = Field(default=None, description="List of required amenities like 'swimming pool', 'wifi', 'restaurant', 'parking', etc. Only extract what user explicitly asks for.")
+    required_activities: Optional[list[str]] = Field(default=None, description="List of required activities like 'jungle safari', 'river rafting', 'bird watching', etc.")
+    budget_type: Optional[str] = Field(default="per_person", description="Whether budget is 'per_person' or 'total' for group")
+    adventure_level: Optional[str] = Field(default=None, description="Adventure level: 'mild', 'moderate', 'extreme'")
+    accommodation_type: Optional[str] = Field(default=None, description="Type of accommodation: 'cottage', 'tent', 'villa', etc.")
 
 
 def _normalize_amenities(amenities):
@@ -60,10 +64,22 @@ def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
     price = data.get("price") or 0
     rating = data.get("rating") or 0
     amenities = _normalize_amenities(data.get("amenities") or resort.get("amenities"))
+    activities_onsite = _normalize_amenities(data.get("activities_onsite") or [])
+    activities_nearby = _normalize_amenities(data.get("activities_nearby") or [])
+    all_activities = activities_onsite + activities_nearby
     family = data.get("family_friendly")
     resort_name = str(data.get("name", "")).lower().strip()
 
-    if filters.max_budget is not None:
+    # Budget filtering with group calculation
+    if filters.max_budget is not None and filters.guest_count:
+        if filters.budget_type == "total":
+            total_cost = price * filters.guest_count
+            if total_cost > filters.max_budget:
+                return False
+        else:  # per_person budget
+            if price > filters.max_budget:
+                return False
+    elif filters.max_budget is not None:
         if price > filters.max_budget:
             return False
 
@@ -79,10 +95,28 @@ def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
             if family is True:
                 return False
 
+    # Enhanced amenity matching with fuzzy logic
     if filters.required_amenities:
         for required in filters.required_amenities:
             req_norm = str(required).lower().strip()
-            if not any(req_norm in amen or amen in req_norm for amen in amenities):
+            found = False
+            for amen in amenities:
+                if req_norm in amen or amen in req_norm:
+                    found = True
+                    break
+            if not found:
+                return False
+
+    # Activity matching
+    if filters.required_activities:
+        for required in filters.required_activities:
+            req_norm = str(required).lower().strip()
+            found = False
+            for activity in all_activities:
+                if req_norm in activity or activity in req_norm:
+                    found = True
+                    break
+            if not found:
                 return False
 
     if filters.target_resort_names:

@@ -384,7 +384,7 @@ img {
 
 /* ============= Composer ============= */
 .composer {
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   left: 50%;
   right: auto;
