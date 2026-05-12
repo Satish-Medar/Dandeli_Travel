@@ -2014,3 +2014,154 @@ Example:
 2026-05-10 22:45:23,097 - travel_tools.data_validator - INFO - Validating resort data on startup...
 2026-05-10 22:45:23,101 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
 2026-05-10 22:45:23,101 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-10 23:42:57,052 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-10 23:42:57,055 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-10 23:42:57,055 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-10 23:43:13,384 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-10 23:43:13,386 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-10 23:43:13,387 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-10 23:43:29,646 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-10 23:43:29,649 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-10 23:43:29,650 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-10 23:43:44,928 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-10 23:43:44,930 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-10 23:43:44,930 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-12 12:30:48,921 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-12 12:30:48,925 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-12 12:30:48,925 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-12 12:31:45,447 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:15,812 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:15,814 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:18,688 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:18,689 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:18,701 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 12:32:19,497 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:32:19,553 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:33,997 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:33,997 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:32:34,000 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-12 12:32:34,548 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:32:34,859 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-12 12:32:35,574 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:32:35,669 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-12 12:32:35,687 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-12 12:32:35,691 - travel_tools.vectorstore_provider - ERROR - Failed to load Chroma: Could not import chromadb python package. Please install it with `pip install chromadb`.
+2026-05-12 12:32:35,692 - travel_tools.vectorstore_provider - WARNING - No vector store loaded. Resort search will use local fallback data.
+2026-05-12 12:32:35,703 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 12:32:37,008 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:32:37,021 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:38,784 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:38,876 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:49,156 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:49,156 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:49,217 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:49,218 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:49,220 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-12 12:33:50,428 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:33:50,443 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:51,022 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:51,084 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:57,111 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:57,112 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:33:57,120 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-12 12:35:44,256 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:44,371 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:44,392 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:44,436 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:51,278 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:51,622 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:58,019 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:58,019 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:35:58,079 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:02,978 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:02,978 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:02,983 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 12:36:04,242 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:36:04,256 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:04,803 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:04,867 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:36:35,611 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:38:33,884 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:38:33,943 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:38:39,394 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:38:39,395 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:38:39,434 - travel_api.store - ERROR - Failed to connect to MongoDB: Username and password must be escaped according to RFC 3986, use urllib.parse.quote_plus
+2026-05-12 12:42:12,752 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-12 12:42:12,756 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-12 12:42:12,756 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-12 12:46:43,269 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-12 12:46:43,272 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-12 12:46:43,272 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-12 12:48:01,315 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 12:48:02,087 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:48:27,881 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-12 12:48:28,915 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:48:28,953 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-12 12:48:29,383 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:48:29,391 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-12 12:48:29,408 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-12 12:48:29,412 - travel_tools.vectorstore_provider - ERROR - Failed to load Chroma: Could not import chromadb python package. Please install it with `pip install chromadb`.
+2026-05-12 12:48:29,412 - travel_tools.vectorstore_provider - WARNING - No vector store loaded. Resort search will use local fallback data.
+2026-05-12 12:48:29,422 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 12:48:30,820 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 12:59:24,509 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-12 12:59:24,512 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-12 12:59:24,512 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-12 13:03:36,157 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-12 13:03:36,571 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 13:03:49,935 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-12 13:03:50,838 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 13:03:51,287 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-12 13:03:51,889 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-12 13:03:51,895 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-12 13:03:53,234 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

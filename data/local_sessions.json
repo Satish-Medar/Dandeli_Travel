@@ -770,5 +770,99 @@
   },
   "guest-61b39747-6eb0-4e3a-ac41-4211cf63215a": {
     "sessions": {}
+  },
+  "guest-c354fb58-f84f-4e53-9b28-572b964235ca": {
+    "sessions": {}
+  },
+  "guest-c1001dec-e880-4dbe-9dc1-ac917995921c": {
+    "sessions": {}
+  },
+  "guest-5d24abf3-86b4-4f60-80a6-cc27e7773db0": {
+    "sessions": {
+      "3536d53d-4d55-4384-a258-9bcea9c75a56": {
+        "title": "Hi",
+        "updated_at": "2026-05-12T07:02:37Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-12T07:02:18Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-12T07:02:19Z"
+          },
+          {
+            "role": "user",
+            "content": "Tell me top 3 resorts in dandeli which offers free wifi",
+            "name": "",
+            "created_at": "2026-05-12T07:02:33Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Dandeli has some amazing resorts that offer free WiFi. Based on the options available, here are the top 3 resorts in Dandeli that offer free WiFi:\n\n1. **Kali River Retreat**: This luxury resort is located on the Ganeshgudi Bridge Road, riverside, and offers stunning views of the Kali River. It has a rating of 4.5 and offers free WiFi, along with other amenities like a swimming pool, restaurant, and parking. You can contact them at +91 9632587412, email at reservations@kaliriverretreat.com, or visit their website at https://www.kaliriverretreat.com. The price per person is 4450 INR per day.\n\n2. **Bison River Resort**: Located on the Ganeshgudi Road, 6 km from Dandeli Bus Stand, this adventure resort offers comfortable cottages and exciting activities like river rafting and bird watching. It has a rating of 4.4 and offers free WiFi, along with other amenities like a restaurant, campfire, and parking. You can contact them at +91 9845237126, email at info@bisonriverresort.com, or visit their website at https://www.bisonriverresort.com. The price per person is 3850 INR per day.\n\n3. **Wildwood Nature Resort**: This nature resort is located on the Dandeli\u2013Anshi Forest Road and offers a peaceful stay amidst nature. It has a rating of 4.4 and offers free WiFi, along with other amenities like a restaurant, garden, and parking. You can contact them at +91 9648123574, email at contact@wildwoodnature.com, or visit their website at https://www.wildwoodnature.com. The price per person is 3750 INR per day.\n\nAll of these resorts offer a great experience, and the free WiFi is an added bonus.",
+            "name": "Researcher",
+            "created_at": "2026-05-12T07:02:37Z"
+          }
+        ]
+      }
+    }
+  },
+  "user_3ChYhltCQQKZwbEz0AhImm98mXq": {
+    "sessions": {
+      "81e79d6e-4a6a-4fe7-a2f1-0bce16eeabf8": {
+        "title": "Hi",
+        "updated_at": "2026-05-12T07:03:57Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Hi",
+            "name": "",
+            "created_at": "2026-05-12T07:03:49Z"
+          },
+          {
+            "role": "assistant",
+            "content": "Hi! I can help you find resorts in Dandeli, plan a trip, compare options, or place a booking request. Tell me your budget, group size, dates, or the kind of stay you want.",
+            "name": "SmallTalk",
+            "created_at": "2026-05-12T07:03:50Z"
+          },
+          {
+            "role": "user",
+            "content": "calculate 2+2",
+            "name": "",
+            "created_at": "2026-05-12T07:03:57Z"
+          }
+        ]
+      },
+      "013e5d86-971b-4429-add0-1c1d46d2d0a6": {
+        "title": "calculate 2+2",
+        "updated_at": "2026-05-12T07:06:04Z",
+        "messages": [
+          {
+            "role": "user",
+            "content": "calculate 2+2",
+            "name": "",
+            "created_at": "2026-05-12T07:06:02Z"
+          },
+          {
+            "role": "assistant",
+            "content": "I can help with Dandeli resorts, pricing, trip planning, activities, and booking requests. For questions outside those topics, please ask about resorts, travel options, or booking details.",
+            "name": "OutOfScope",
+            "created_at": "2026-05-12T07:06:04Z"
+          }
+        ]
+      },
+      "85d18564-1847-4fe2-af73-36d40157520d": {
+        "title": "New conversation",
+        "updated_at": "2026-05-12T07:08:39Z",
+        "messages": []
+      }
+    }
+  },
+  "guest-c1852cab-3d91-44d3-a1a5-cdb89b62ad1f": {
+    "sessions": {}
   }
 }
