@@ -2165,3 +2165,6 @@ Example:
 2026-05-12 13:03:51,889 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-05-12 13:03:51,895 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
 2026-05-12 13:03:53,234 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-13 21:48:49,684 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-13 21:48:49,687 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-13 21:48:49,687 - travel_tools.data_validator - INFO - Successfully validated 81 resorts

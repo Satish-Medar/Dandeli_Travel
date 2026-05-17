@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import AmbientBees from "../../components/Wildlife/AmbientBees";
 import TiltCard from "../../components/Wildlife/TiltCard";
 import { ScrollSection, ScrollGrid } from "../../components/ScrollAnimation";
 import {
@@ -18,7 +17,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <AmbientBees />
       <ScrollSection
         className="hero-wrapper"
         skeletonType="hero"
