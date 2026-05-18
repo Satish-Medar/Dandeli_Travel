@@ -29,6 +29,7 @@ def clean_text(value: str) -> str:
 
 class SearchFilters(BaseModel):
     min_rating: Optional[float] = Field(default=None, description="Minimum rating required by the user (1-5)")
+    min_budget: Optional[int] = Field(default=None, description="Minimum budget threshold in INR. E.g. 'above 2000' -> 2000")
     max_budget: Optional[int] = Field(default=None, description="Maximum total budget in INR. E.g. 'under 5000' -> 5000")
     guest_count: Optional[int] = Field(default=None, description="Number of guests traveling")
     family_friendly: Optional[bool] = Field(default=None, description="Whether the user explicitly wants family friendly options")
@@ -75,17 +76,23 @@ def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
     resort_name = str(data.get("name", "")).lower().strip()
 
     # Budget filtering with group calculation
-    if filters.max_budget is not None and filters.guest_count:
-        if filters.budget_type == "total":
+    if filters.min_budget is not None:
+        if filters.guest_count and filters.budget_type == "total":
+            total_cost = price * filters.guest_count
+            if total_cost < filters.min_budget:
+                return False
+        else:
+            if price < filters.min_budget:
+                return False
+
+    if filters.max_budget is not None:
+        if filters.guest_count and filters.budget_type == "total":
             total_cost = price * filters.guest_count
             if total_cost > filters.max_budget:
                 return False
-        else:  # per_person budget
+        else:
             if price > filters.max_budget:
                 return False
-    elif filters.max_budget is not None:
-        if price > filters.max_budget:
-            return False
 
     if filters.min_rating is not None:
         if rating < filters.min_rating:
@@ -148,7 +155,7 @@ async def extract_filters_async(query: str) -> SearchFilters:
     from langchain_core.prompts import ChatPromptTemplate
     
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "Extract search constraints from the user query. If a constraint is not mentioned, set it to null/None."),
+        ("system", "Extract search constraints from the user query. For budget: if user says 'above', 'more than', 'at least', 'starting from', set min_budget. If user says 'under', 'below', 'maximum', 'up to', 'less than', set max_budget. If a constraint is not mentioned, set it to null/None."),
         ("human", "{query}")
     ])
     
@@ -295,10 +302,23 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
             if not is_family and "family-friendly" not in doc["page_content"].lower():
                 continue
                 
-        # Price Filter
+        # Price Filter - Minimum Budget
+        if filters.min_budget is not None:
+            guest_count = filters.guest_count or 1
+            if filters.budget_type == "total":
+                min_price_per_person = filters.min_budget / guest_count
+            else:  # per_person
+                min_price_per_person = filters.min_budget
+            if (meta.get("price") or 0) < min_price_per_person:
+                continue
+
+        # Price Filter - Maximum Budget
         if filters.max_budget is not None:
             guest_count = filters.guest_count or 1
-            max_price_per_person = filters.max_budget / guest_count
+            if filters.budget_type == "total":
+                max_price_per_person = filters.max_budget / guest_count
+            else:  # per_person
+                max_price_per_person = filters.max_budget
             if (meta.get("price") or 100000) > max_price_per_person:
                 continue
         

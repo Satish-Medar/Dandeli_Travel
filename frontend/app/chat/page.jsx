@@ -1,7 +1,6 @@
 /* Main chat page for interacting with the travel assistant bot. */
 /* File: frontend/app/chat/page.jsx */
 
-
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -159,7 +158,7 @@ export default function Page() {
         const configData = await fetchJson("/config");
         setConfig(configData);
       } catch (error) {
-        console.error(error);
+        console.error("fetchConfig failed:", error);
         setStatus("Unavailable");
         setMessages([
           createMetaMessage(

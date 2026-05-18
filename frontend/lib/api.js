@@ -1,7 +1,6 @@
 /* Client-side API helper functions for the frontend. */
 /* File: frontend/lib/api.js */
 
-
 function toApiUrl(path) {
   if (path.startsWith("/api/")) {
     return path;
@@ -29,22 +28,33 @@ async function fetchWithTimeout(url, options = {}, timeoutMs = 20000) {
 }
 
 export async function fetchJson(path, options = {}) {
+  const method = (options.method || "GET").toUpperCase();
+  const headers = {
+    ...(options.headers || {}),
+  };
+
+  if (options.body || (method !== "GET" && method !== "HEAD")) {
+    headers["Content-Type"] = "application/json";
+  }
+
   const response = await fetchWithTimeout(toApiUrl(path), {
     ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(options.headers || {}),
-    },
+    headers,
   });
 
   if (!response.ok) {
-    const fallback = "Request failed.";
+    const fallback = `Request failed with status ${response.status} ${response.statusText}.`;
     let detail = fallback;
     try {
       const payload = await response.json();
-      detail = payload.detail || fallback;
+      detail = payload.detail || payload.message || fallback;
     } catch {
-      detail = fallback;
+      try {
+        const text = await response.text();
+        detail = text ? `${fallback} ${text}` : fallback;
+      } catch {
+        detail = fallback;
+      }
     }
     throw new Error(detail);
   }
