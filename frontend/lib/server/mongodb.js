@@ -1,3 +1,7 @@
+/* Server-side MongoDB helper for persistent session storage. */
+/* File: frontend/lib/server/mongodb.js */
+
+
 import { MongoClient } from "mongodb";
 
 const mongoUri = process.env.MONGODB_URI;

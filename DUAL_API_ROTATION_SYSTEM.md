@@ -1,3 +1,6 @@
+<!-- Documentation for the dual API rotation system design. -->
+<!-- File: DUAL_API_ROTATION_SYSTEM.md -->
+
 # Dual API Key Rotation System - Load Balancing & 24/7 Availability
 
 ## Overview

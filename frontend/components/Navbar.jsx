@@ -1,3 +1,7 @@
+/* Navigation bar component used across frontend pages. */
+/* File: frontend/components/Navbar.jsx */
+
+
 "use client";
 
 import Link from "next/link";

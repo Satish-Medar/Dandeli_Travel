@@ -1,3 +1,7 @@
+/* API route exposing frontend configuration values. */
+/* File: frontend/app/api/config/route.js */
+
+
 import { NextResponse } from "next/server";
 
 export async function GET() {

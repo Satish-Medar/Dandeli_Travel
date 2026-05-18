@@ -1,3 +1,7 @@
+/* Client wrapper for calling the Python backend API from the frontend. */
+/* File: frontend/lib/server/pythonApi.js */
+
+
 function getPythonApiBaseUrl() {
   return (process.env.PYTHON_API_BASE_URL || "http://127.0.0.1:8000").replace(
     /\/$/,

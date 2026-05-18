@@ -1,3 +1,7 @@
+# Loads resort metadata, builds search indexes, and retrieves matching resort records.
+# File: travel_tools/search_engine.py
+
+
 import json
 import logging
 import os
@@ -189,6 +193,11 @@ def _load_local_documents() -> list[dict]:
             "phone": clean_text(resort.get("phone")),
             "email": clean_text(resort.get("email")),
             "website": clean_text(resort.get("website")),
+            "food_options": resort.get("food_options", []),
+            "activities_onsite": resort.get("activities_onsite", []),
+            "activities_nearby": resort.get("activities_nearby", []),
+            "water_activities": resort.get("water_activities", []),
+            "rooms": resort.get("rooms", []),
         }
         
         content = (
@@ -345,4 +354,3 @@ async def retrieve_matching_resorts(query: str, filters: SearchFilters) -> list[
         return final_docs
         
     return filtered_docs
-

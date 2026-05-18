@@ -593,16 +593,18 @@ img {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     flex-direction: column;
     gap: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    z-index: 99;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .navbar-links.open {
-    max-height: 300px;
+    max-height: 420px;
   }
 }
 
@@ -642,6 +644,14 @@ img {
 @media (max-width: 640px) {
   .navbar-actions {
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
   }
 }
 
@@ -1383,16 +1393,76 @@ img {
   }
 
   .hero-wrapper,
+  .page-hero,
   .section-header,
   .cta-container,
-  .footer-container {
+  .footer-container,
+  .navbar-container,
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-wrapper {
+    min-height: auto;
+    padding: 100px 16px 60px;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .glass-card {
     width: 100%;
     max-width: 100%;
   }
 
-  .hero-actions {
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle,
+  .section-header p,
+  .timeline-content p,
+  .cta-container p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions,
+  .navbar-actions {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .hero-actions a,
+  .btn-primary.large,
+  .btn-secondary.large,
+  .navbar-actions .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chat-bubble {
+    max-width: 100%;
+    width: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .composer {
+    position: fixed;
+    bottom: 16px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    transform: none;
   }
 
   .adventure-grid {
@@ -1409,7 +1479,7 @@ img {
   }
 
   .timeline-line {
-    left: 8px;
+    left: 16px;
   }
 
   .timeline-item {

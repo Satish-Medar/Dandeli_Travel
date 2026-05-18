@@ -1,3 +1,6 @@
+<!-- Guide for immediate render fixes and troubleshooting. -->
+<!-- File: RENDER_FIX_NOW.md -->
+
 # ⚠️ RENDER DEPLOYMENT - ACTION REQUIRED!
 
 Your deployment is **currently failing** because **API keys are not set in Render environment variables**.

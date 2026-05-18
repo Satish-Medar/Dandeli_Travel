@@ -1,3 +1,7 @@
+# Tests resort search engine behavior and matching logic.
+# File: tests/test_search_engine.py
+
+
 """Unit tests for search engine filtering logic."""
 import pytest
 from travel_tools.search_engine import SearchFilters, retrieve_matching_resorts

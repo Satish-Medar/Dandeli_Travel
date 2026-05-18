@@ -1,3 +1,7 @@
+# Handles booking request creation and submission to the travel booking API.
+# File: travel_tools/booking_tool.py
+
+
 import os
 import logging
 from datetime import datetime

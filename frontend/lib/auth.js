@@ -1,3 +1,7 @@
+/* Frontend authentication utilities and session helpers. */
+/* File: frontend/lib/auth.js */
+
+
 const CLERK_SCRIPT_ID = "clerk-js-sdk";
 
 export function ensureGuestUserId() {

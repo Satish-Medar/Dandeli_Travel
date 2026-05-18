@@ -1,3 +1,7 @@
+/* Marketing home page for the travel assistant frontend. */
+/* File: frontend/app/(marketing)/page.jsx */
+
+
 import Link from "next/link";
 import Image from "next/image";
 import TiltCard from "../../components/Wildlife/TiltCard";

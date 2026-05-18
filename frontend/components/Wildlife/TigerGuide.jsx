@@ -1,3 +1,7 @@
+/* Wildlife-themed UI component displaying tiger guide content. */
+/* File: frontend/components/Wildlife/TigerGuide.jsx */
+
+
 "use client";
 
 export default function TigerGuide() {

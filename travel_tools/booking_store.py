@@ -1,3 +1,7 @@
+# Stores and retrieves booking records for the reservation workflow.
+# File: travel_tools/booking_store.py
+
+
 import json
 import threading
 import uuid

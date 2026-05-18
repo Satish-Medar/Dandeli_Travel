@@ -1,3 +1,7 @@
+# Tests the resort search tool formatting and result handling.
+# File: tests/test_search_tool.py
+
+
 """Unit tests for resort search tool."""
 import pytest
 from travel_tools.search_tool import find_resort_by_name, search_resorts

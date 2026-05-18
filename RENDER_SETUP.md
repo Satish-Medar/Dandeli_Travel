@@ -1,3 +1,6 @@
+<!-- Documentation for local rendering setup and environment configuration. -->
+<!-- File: RENDER_SETUP.md -->
+
 # Render Deployment - Environment Variables Setup
 
 ## Quick Fix for Current Deployment Error

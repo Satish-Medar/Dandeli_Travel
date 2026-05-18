@@ -1,3 +1,6 @@
+<!-- Final-year project checklist for milestones and deliverables. -->
+<!-- File: FINAL_YEAR_PROJECT_CHECKLIST.md -->
+
 # Final Year Project - Presentation Checklist
 
 ## 📋 PHASE 1: Documentation (Most Critical) ⭐⭐⭐

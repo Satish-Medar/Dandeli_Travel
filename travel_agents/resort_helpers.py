@@ -1,3 +1,7 @@
+# Resolves resort follow-up queries and assists with resort-specific answers.
+# File: travel_agents/resort_helpers.py
+
+
 import re
 from typing import Sequence
 

@@ -1,3 +1,7 @@
+/* Server-side session storage utilities for the frontend application. */
+/* File: frontend/lib/server/sessionStore.js */
+
+
 import { randomUUID } from "crypto";
 import { getMongoDb } from "./mongodb";
 import { loadFileStore, saveFileStore } from "./fileSessionStore";

@@ -1,3 +1,7 @@
+/* Authentication UI panel integrating Clerk sign-in/sign-up flows. */
+/* File: frontend/components/ClerkAuthPanel.jsx */
+
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";

@@ -1,3 +1,6 @@
+<!-- Guide for setting up tests and test automation. -->
+<!-- File: TESTING_SETUP_GUIDE.md -->
+
 # Project Cleanup & Testing Setup Guide
 
 ## 🧹 PHASE 1: CLEANUP

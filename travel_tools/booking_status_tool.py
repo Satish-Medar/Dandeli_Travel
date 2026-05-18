@@ -1,3 +1,7 @@
+# Provides booking status lookup functionality for user inquiries.
+# File: travel_tools/booking_status_tool.py
+
+
 from langchain_core.tools import tool
 
 from .booking_store import load_bookings

@@ -1,3 +1,7 @@
+/* Defines frontend middleware for request handling and routing behavior. */
+/* File: frontend/middleware.js */
+
+
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
 export default clerkMiddleware();

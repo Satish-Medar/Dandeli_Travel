@@ -1,3 +1,7 @@
+# Configures shared pytest fixtures and test setup helpers.
+# File: tests/conftest.py
+
+
 """Pytest configuration and shared fixtures."""
 import sys
 import os

@@ -1,3 +1,6 @@
+<!-- Project overview, setup instructions, and general documentation for the travel assistant. -->
+<!-- File: README.md -->
+
 # WayFind
 
 An intelligent travel assistant for Dandeli resort search, planning, comparison, and booking assistance.

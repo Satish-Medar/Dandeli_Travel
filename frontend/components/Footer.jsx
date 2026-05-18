@@ -1,3 +1,7 @@
+/* Footer component for the frontend site. */
+/* File: frontend/components/Footer.jsx */
+
+
 import Link from "next/link";
 
 export default function Footer() {

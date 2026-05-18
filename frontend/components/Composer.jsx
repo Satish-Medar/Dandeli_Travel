@@ -1,3 +1,7 @@
+/* Chat input component for composing new user messages. */
+/* File: frontend/components/Composer.jsx */
+
+
 "use client";
 
 import { useEffect, useRef } from "react";

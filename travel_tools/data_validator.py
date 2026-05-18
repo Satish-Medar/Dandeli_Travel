@@ -1,3 +1,7 @@
+# Validates travel and booking request inputs before they are processed.
+# File: travel_tools/data_validator.py
+
+
 """
 Data validation module for resort data integrity.
 """

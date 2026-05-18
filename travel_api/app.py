@@ -1,3 +1,7 @@
+# Defines the main travel API application and HTTP routing.
+# File: travel_api/app.py
+
+
 
 import os
 import re

@@ -1,3 +1,7 @@
+# Extracts and sanitizes text content from messages and assistant responses.
+# File: travel_agents/content.py
+
+
 def extract_content(content):
     if isinstance(content, str):
         return content

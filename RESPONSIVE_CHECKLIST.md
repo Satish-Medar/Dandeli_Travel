@@ -1,3 +1,6 @@
+<!-- Responsive design checklist for development and testing. -->
+<!-- File: RESPONSIVE_CHECKLIST.md -->
+
 # ✅ Responsive Design Checklist
 
 Use this checklist to ensure all components and pages are fully responsive.

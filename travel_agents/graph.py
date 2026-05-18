@@ -1,3 +1,7 @@
+# Builds graph structures or flows used by the travel agent.
+# File: travel_agents/graph.py
+
+
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.graph import END, START, StateGraph
 

@@ -1,3 +1,7 @@
+/* Root layout for the Next.js frontend application. */
+/* File: frontend/app/layout.jsx */
+
+
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import "./globals.css";

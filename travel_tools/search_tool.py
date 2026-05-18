@@ -1,3 +1,7 @@
+# Formats resort search results and fallback responses for the LLM-driven travel assistant.
+# File: travel_tools/search_tool.py
+
+
 import json
 import logging
 from typing import Optional
@@ -138,6 +142,12 @@ async def search_resorts_tool(query: str) -> str:
                 "contact_phone": meta.get("phone"),
                 "contact_email": meta.get("email"),
                 "website": meta.get("website"),
+                "food_options": meta.get("food_options", []),
+                "rooms": meta.get("rooms", []),
+                "activities_onsite": meta.get("activities_onsite", []),
+                "activities_nearby": meta.get("activities_nearby", []),
+                "water_activities": meta.get("water_activities", []),
+                "amenities": meta.get("amenities", []),
                 "details": doc["page_content"]
             })
             
@@ -148,5 +158,28 @@ async def search_resorts_tool(query: str) -> str:
         }, indent=2)
         
     except Exception as e:
-        logger.error(f"Search tool error: {e}")
-        return json.dumps({"status": f"Error executing search: {str(e)}"})
+        logger.error(f"Search tool error: {e}", exc_info=True)
+        # Return fallback with local data to avoid empty responses
+        fallback_docs = load_all_documents()
+        fallback_results = []
+        if fallback_docs:
+            for doc in fallback_docs[:5]:
+                meta = doc["metadata"]
+                fallback_results.append({
+                    "name": meta.get("name"),
+                    "category": meta.get("category"),
+                    "location": meta.get("location"),
+                    "price_per_person": meta.get("price"),
+                    "rating": meta.get("rating"),
+                    "family_friendly": meta.get("family_friendly"),
+                    "romantic_couples": meta.get("romantic_couples"),
+                    "contact_phone": meta.get("phone"),
+                    "contact_email": meta.get("email"),
+                    "website": meta.get("website"),
+                    "details": doc["page_content"]
+                })
+        return json.dumps({
+            "status": f"Search encountered an error. Showing available resorts: {str(e)}",
+            "applied_filters": filters.model_dump() if filters else {},
+            "top_results": fallback_results
+        })

@@ -1,3 +1,6 @@
+# Entrypoint script for running the project's Python test suite.
+# File: run_tests.py
+
 #!/usr/bin/env python3
 """
 Test Runner Script for Travel Agent Project

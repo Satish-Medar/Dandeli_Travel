@@ -1,3 +1,7 @@
+/* UI component providing skeleton loading placeholders. */
+/* File: frontend/components/Skeletons.jsx */
+
+
 "use client";
 
 import { useState, useEffect } from "react";

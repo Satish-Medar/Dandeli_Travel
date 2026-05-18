@@ -1,3 +1,7 @@
+/* Chat UI component displaying conversation threads. */
+/* File: frontend/components/MessageThread.jsx */
+
+
 function renderAssistantBlock(text) {
   const lines = text.split("\n");
 

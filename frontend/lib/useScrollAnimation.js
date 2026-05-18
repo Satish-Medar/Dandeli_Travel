@@ -1,3 +1,7 @@
+/* Custom hook for scroll-based animation effects in the frontend. */
+/* File: frontend/lib/useScrollAnimation.js */
+
+
 import { useEffect, useRef, useState } from "react";
 
 /**

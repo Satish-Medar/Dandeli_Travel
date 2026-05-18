@@ -1,3 +1,7 @@
+# Holds configuration values used by travel tools and backend services.
+# File: travel_tools/config.py
+
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent

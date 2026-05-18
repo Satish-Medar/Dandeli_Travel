@@ -1,3 +1,6 @@
+<!-- Action plan for project presentation and next steps. -->
+<!-- File: PRESENTATION_ACTION_PLAN.md -->
+
 # 🎯 ACTION PLAN - START HERE!
 
 ## What You Have Now ✅

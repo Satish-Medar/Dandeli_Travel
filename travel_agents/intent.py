@@ -1,3 +1,7 @@
+# Analyzes user intent and maps phrases to booking and search actions.
+# File: travel_agents/intent.py
+
+
 from typing import Sequence
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder

@@ -1,3 +1,7 @@
+# Tests travel agent routing and booking node behavior.
+# File: tests/test_nodes.py
+
+
 """Unit tests for agent nodes."""
 import pytest
 from travel_agents.nodes import (

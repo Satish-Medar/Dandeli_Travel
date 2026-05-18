@@ -1,3 +1,7 @@
+# Tests booking request creation and booking tool integration.
+# File: tests/test_booking_tool.py
+
+
 """Unit tests for booking functionality."""
 import pytest
 from travel_tools.booking_tool import create_booking, get_booking_status

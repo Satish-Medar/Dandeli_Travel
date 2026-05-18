@@ -1,3 +1,7 @@
+/* Streaming chat API route for conversational messages. */
+/* File: frontend/app/api/chat/stream/route.js */
+
+
 import {
   getOrCreateSession,
   normalizeUserId,

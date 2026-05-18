@@ -1,3 +1,7 @@
+/* Next.js configuration for the frontend application. */
+/* File: frontend/next.config.mjs */
+
+
 const nextConfig = {
   output: "standalone",
   images: {

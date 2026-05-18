@@ -1,3 +1,7 @@
+/* Fallback server-side file-based session store implementation. */
+/* File: frontend/lib/server/fileSessionStore.js */
+
+
 import { mkdir, readFile, writeFile } from "fs/promises";
 import path from "path";
 

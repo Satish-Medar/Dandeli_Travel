@@ -1,3 +1,7 @@
+/* Component for applying scroll-based animations on page sections. */
+/* File: frontend/components/ScrollAnimation.jsx */
+
+
 "use client";
 
 import { useState, useEffect } from "react";

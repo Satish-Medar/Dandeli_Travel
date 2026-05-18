@@ -1,3 +1,7 @@
+# Provides date parsing and normalization utilities for booking workflows.
+# File: travel_agents/date_helpers.py
+
+
 import re
 from datetime import datetime, timedelta
 from typing import Sequence

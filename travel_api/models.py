@@ -1,3 +1,7 @@
+# Defines data models used by the travel API and booking system.
+# File: travel_api/models.py
+
+
 from typing import List, Optional
 import re
 from pydantic import BaseModel, Field, field_validator

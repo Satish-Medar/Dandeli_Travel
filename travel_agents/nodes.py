@@ -1,4 +1,10 @@
+# Routes conversation turns into agent nodes and handles booking, planning, research, and small talk.
+# File: travel_agents/nodes.py
+
+
 import re
+import json
+import logging
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
@@ -27,6 +33,104 @@ class BookingExtraction(BaseModel):
 def summarize_guest_details(messages) -> str:
     # Deprecated: Handled by BookingExtraction
     pass
+
+
+def validate_booking_dates(date_string: str) -> dict:
+    """Validate booking dates to ensure they are in the future and valid."""
+    from datetime import datetime
+    import re
+    
+    try:
+        # Parse date string like "May 15, 2026 to May 17, 2026"
+        date_pattern = r'(\w+ \d{1,2},? \d{4})\s+to\s+(\w+ \d{1,2},? \d{4})'
+        match = re.search(date_pattern, date_string, re.IGNORECASE)
+        
+        if not match:
+            return {"valid": False, "error": "Date format not recognized. Use 'Month DD, YYYY to Month DD, YYYY'"}
+        
+        check_in_str = match.group(1).strip()
+        check_out_str = match.group(2).strip()
+        
+        # Parse dates
+        check_in = datetime.strptime(check_in_str, "%B %d, %Y")
+        check_out = datetime.strptime(check_out_str, "%B %d, %Y")
+        
+        # Get today's date without time
+        today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+        
+        # Validation rules
+        if check_in <= today:
+            return {"valid": False, "error": f"Check-in date ({check_in_str}) cannot be today or in the past."}
+        
+        if check_out <= check_in:
+            return {"valid": False, "error": f"Check-out date ({check_out_str}) must be after check-in date ({check_in_str})."}
+        
+        # All validations passed
+        return {"valid": True, "check_in": check_in, "check_out": check_out}
+        
+    except ValueError as e:
+        return {"valid": False, "error": f"Invalid date format: {str(e)}"}
+    except Exception as e:
+        return {"valid": False, "error": f"Error validating dates: {str(e)}"}
+
+
+def normalize_date_string(date_str: str, reference_year: int | None = None) -> str | None:
+    """Normalize a date phrase into 'Month DD, YYYY'."""
+    from datetime import datetime
+    import re
+
+    date_str = date_str.strip().replace(" ", " ")
+    year_match = re.search(r"\d{4}", date_str)
+    if not year_match and reference_year is not None:
+        date_str = f"{date_str}, {reference_year}"
+
+    formats = ["%B %d, %Y", "%b %d, %Y", "%B %d %Y", "%b %d %Y"]
+    for fmt in formats:
+        try:
+            parsed = datetime.strptime(date_str, fmt)
+            return parsed.strftime("%B %d, %Y")
+        except ValueError:
+            continue
+    return None
+
+
+def parse_booking_dates_from_text(text: str) -> str | None:
+    """Extract booking dates from natural user text when the LLM does not provide them."""
+    import re
+    from datetime import datetime
+
+    months = r"January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+    date_token = fr"(?P<date>{months} \d{{1,2}}(?:,? \d{{4}})?)"
+    check_in_re = fr"check(?:[- ]?in)\s+{date_token}"
+    check_out_re = fr"check(?:[- ]?out)\s+{date_token}"
+
+    in_match = re.search(check_in_re, text, re.IGNORECASE)
+    out_match = re.search(check_out_re, text, re.IGNORECASE)
+
+    if in_match and out_match:
+        check_in_raw = in_match.group("date")
+        check_out_raw = out_match.group("date")
+        year_match = re.search(r"\d{4}", check_out_raw)
+        reference_year = int(year_match.group(0)) if year_match else datetime.now().year
+        check_in_norm = normalize_date_string(check_in_raw, reference_year)
+        check_out_norm = normalize_date_string(check_out_raw, reference_year)
+        if check_in_norm and check_out_norm:
+            return f"{check_in_norm} to {check_out_norm}"
+
+    # Fallback for patterns like "May 15 to May 17, 2026"
+    fallback_pattern = fr"({months} \d{{1,2}}(?:,? \d{{4}})?)\s*(?:to|-)\s*({months} \d{{1,2}}(?:,? \d{{4}})?)"
+    fallback_match = re.search(fallback_pattern, text, re.IGNORECASE)
+    if fallback_match:
+        start_raw = fallback_match.group(1)
+        end_raw = fallback_match.group(2)
+        year_match = re.search(r"\d{4}", end_raw) or re.search(r"\d{4}", start_raw)
+        reference_year = int(year_match.group(0)) if year_match else datetime.now().year
+        start_norm = normalize_date_string(start_raw, reference_year)
+        end_norm = normalize_date_string(end_raw, reference_year)
+        if start_norm and end_norm:
+            return f"{start_norm} to {end_norm}"
+
+    return None
 
 
 def router_node(state):
@@ -79,23 +183,50 @@ async def researcher_node(state):
         
     try:
         research_context = await search_resorts.ainvoke(resolve_resort_followup_query(state["messages"], latest))
-    except Exception:
+    except Exception as e:
+        logger = logging.getLogger(__name__)
+        logger.error(f"Resort search error in researcher_node: {e}", exc_info=True)
         content = "I could not complete the resort research right now. Please try again."
         return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
     
+    # Validate that we got actual resort data
+    if not research_context or not research_context.strip():
+        content = "No resort data was retrieved. Please try a different search or adjust your filters."
+        return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
+    
     from .llms import groq_llm, groq_70b, gemini_llm, prefer_groq_invoke
+    
+    # Parse JSON to check if we have actual results
+    try:
+        research_data = json.loads(research_context)
+        top_results = research_data.get("top_results", [])
+        
+        # If search returned error status with no results, provide helpful feedback
+        if not top_results and "Error" in research_data.get("status", ""):
+            content = f"I encountered an issue searching for resorts: {research_data.get('status')}. Please try a different search or check back shortly."
+            return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
+    except (json.JSONDecodeError, TypeError) as e:
+        content = "I received invalid search results. Please try your search again."
+        return {"response": content, "messages": [AIMessage(content=content, name="Researcher")]}
+    
     synthesizer = prefer_groq_invoke(groq_70b, prefer_groq_invoke(groq_llm, gemini_llm))
     
     system_prompt = (
         "You are WayFind, a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
         "Your job is to read the JSON data and answer the user's latest question in a beautiful, natural, conversational format. "
+        "For SPECIFIC QUESTIONS about a resort's features, answer with CLEAR YES/NO statements: "
+        "  - If user asks 'does this resort have non-veg food?', check 'food_options' field and answer directly: 'Yes, Bison River Resort offers both Veg and Non-Veg food options.' "
+        "  - If user asks 'what activities does this resort have?', list both 'activities_onsite' and 'activities_nearby' clearly. "
+        "  - If user asks 'what amenities' or 'what facilities', list the 'amenities' field clearly. "
+        "  - If user asks about rooms, list the 'rooms' field. "
+        "  - If user asks about water activities, list 'water_activities' field. "
         "If the user asks for a comparison, logically compare the best options from the JSON. "
         "If the user asks for a specific number of resorts (e.g. 'top 1' or 'just 2'), provide EXACTLY that many. "
         "If the user asks for contact information (phone, email, website), include it prominently in your response. "
         "If the JSON says no resorts were found, apologize and ask them to adjust their budget or requirements. "
-        "If the user's question is unrelated to Dandeli resorts, activities, pricing, bookings, or trip planning, say that you can only help with Dandeli travel and resort-related questions and suggest they ask about resorts, prices, bookings, or itineraries. "
+        "If the user's question is unrelated to Dandeli resorts, activities, pricing, bookings, or trip planning, say that you can only help with Dandeli travel and resort-related questions. "
         "Do not say 'The JSON data provided...' or otherwise mention internal data availability. "
-        "Do not invent details not in the search results.\n\n"
+        "Do not invent details not in the search results. Always cite exact data from the JSON.\n\n"
         f"Search Results JSON:\n{research_context}"
     )
     
@@ -146,7 +277,7 @@ async def booker_node(state):
     today_date = datetime.now().strftime("%B %d, %Y")
     
     extraction_prompt = ChatPromptTemplate.from_messages([
-        ("system", f"Today is {today_date}. Extract booking details from the conversation. Convert all relative dates (like 'tomorrow' or 'next Friday') into exact absolute calendar dates. If a value is missing or unclear, set it to None. Intent must be exactly one of: check_status, cancel, book, unknown"),
+        ("system", f"Today is {today_date}. Extract booking details from the conversation. IMPORTANT: Convert all relative dates (like 'tomorrow' or 'next Friday') into exact absolute calendar dates. REJECT and return None for check-in dates that are today or in the past - they must be FUTURE dates only. Do NOT accept bookings for past or today. If a value is missing or unclear, set it to None. Intent must be exactly one of: check_status, cancel, book, unknown"),
         MessagesPlaceholder(variable_name="messages")
     ])
     
@@ -174,8 +305,21 @@ async def booker_node(state):
         return {"response": base_reply, "messages": [AIMessage(content=base_reply, name="Booker")]}
 
     if not data.dates:
-        content = "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`."
+        booking_text = "\n".join(str(msg.content) for msg in booking_messages if isinstance(msg, HumanMessage))
+        parsed_dates = parse_booking_dates_from_text(booking_text)
+        if parsed_dates:
+            data.dates = parsed_dates
+        else:
+            content = "Before I place the booking request, send your exact check-in and check-out dates, for example `March 26, 2026 to March 28, 2026`."
+            return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
+    
+    # Validate booking dates
+    from datetime import datetime
+    date_validation = validate_booking_dates(data.dates)
+    if not date_validation["valid"]:
+        content = f"I cannot accept this booking: {date_validation['error']}\n\nPlease provide future dates. For example, if today is {today_date}, you can book from tomorrow onwards."
         return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
+    
     if not data.resort_name:
         content = "Tell me which resort you want to book, and I will place the request."
         return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}

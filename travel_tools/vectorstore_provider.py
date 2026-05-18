@@ -1,3 +1,7 @@
+# Provides vector store integration for similarity search and embedding lookups.
+# File: travel_tools/vectorstore_provider.py
+
+
 import os
 import threading
 import logging

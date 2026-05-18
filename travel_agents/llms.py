@@ -1,3 +1,7 @@
+# Configures LLM clients and prompt chains used by the travel assistant.
+# File: travel_agents/llms.py
+
+
 from dotenv import load_dotenv
 import logging
 import os

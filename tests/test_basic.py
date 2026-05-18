@@ -1,3 +1,7 @@
+# Provides basic sanity checks for the travel assistant application.
+# File: tests/test_basic.py
+
+
 """Simple test to verify testing setup works."""
 import sys
 from pathlib import Path

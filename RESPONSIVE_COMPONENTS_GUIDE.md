@@ -1,3 +1,6 @@
+<!-- Guide for responsive frontend components and layout patterns. -->
+<!-- File: RESPONSIVE_COMPONENTS_GUIDE.md -->
+
 # 🎨 Responsive Components Implementation Guide
 
 This guide shows how to make individual components responsive in your project.

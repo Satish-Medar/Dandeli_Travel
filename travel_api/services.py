@@ -1,3 +1,7 @@
+# Defines backend service logic for travel booking and resort data operations.
+# File: travel_api/services.py
+
+
 import os
 from pathlib import Path
 

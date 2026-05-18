@@ -1,3 +1,7 @@
+/* Scroll-triggered animation helper component. */
+/* File: frontend/components/ScrollTrigger.jsx */
+
+
 "use client";
 
 import { useEffect } from "react";

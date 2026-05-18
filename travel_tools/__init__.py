@@ -1,3 +1,7 @@
+# Marks travel_tools as a Python package for booking/search utilities.
+# File: travel_tools/__init__.py
+
+
 from .booking_status_tool import get_booking_status
 from .booking_tool import book_resort
 from .search_tool import get_known_resort_names, search_resorts

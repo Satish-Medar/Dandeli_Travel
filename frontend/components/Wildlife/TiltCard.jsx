@@ -1,3 +1,7 @@
+/* UI component for animated wildlife-themed tilt cards. */
+/* File: frontend/components/Wildlife/TiltCard.jsx */
+
+
 "use client";
 
 import { useState, useRef } from "react";

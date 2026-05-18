@@ -1,3 +1,7 @@
+/* Marketing page with information about the travel service. */
+/* File: frontend/app/(marketing)/about/page.jsx */
+
+
 import Link from "next/link";
 import { ScrollSection, ScrollGrid } from "../../../components/ScrollAnimation";
 import {

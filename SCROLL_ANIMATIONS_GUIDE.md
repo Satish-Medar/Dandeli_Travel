@@ -1,3 +1,6 @@
+<!-- Guide for scroll animation implementation and behavior. -->
+<!-- File: SCROLL_ANIMATIONS_GUIDE.md -->
+
 # Scroll Animation System Guide
 
 ## Overview

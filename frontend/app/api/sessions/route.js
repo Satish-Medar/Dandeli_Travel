@@ -1,3 +1,7 @@
+/* API route for storing and retrieving chat session state. */
+/* File: frontend/app/api/sessions/route.js */
+
+
 import { NextResponse } from "next/server";
 import { createSession, listSessions, normalizeUserId } from "../../../lib/server/sessionStore";
 

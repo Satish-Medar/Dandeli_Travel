@@ -1,3 +1,7 @@
+/* Sign-in page for returning users. */
+/* File: frontend/app/sign-in/page.jsx */
+
+
 import { SignIn } from "@clerk/nextjs";
 
 export default function SignInPage() {

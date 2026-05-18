@@ -1,3 +1,7 @@
+/* Marketing page showcasing resort and destination exploration. */
+/* File: frontend/app/(marketing)/explore/page.jsx */
+
+
 import Link from "next/link";
 import Image from "next/image";
 import { ScrollSection, ScrollGrid } from "../../../components/ScrollAnimation";

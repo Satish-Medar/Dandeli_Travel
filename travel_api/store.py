@@ -1,3 +1,7 @@
+# Implements persistent storage access for resorts, sessions, and bookings.
+# File: travel_api/store.py
+
+
 import os
 import logging
 from datetime import datetime

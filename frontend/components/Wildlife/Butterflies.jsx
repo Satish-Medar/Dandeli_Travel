@@ -1,3 +1,7 @@
+/* UI component rendering butterfly-themed animation visuals. */
+/* File: frontend/components/Wildlife/Butterflies.jsx */
+
+
 "use client";
 
 import { useEffect, useState } from "react";

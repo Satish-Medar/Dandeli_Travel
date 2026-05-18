@@ -1,3 +1,7 @@
+# Integration tests for travel API endpoints and request flows.
+# File: tests/integration/test_api_endpoints.py
+
+
 """Integration tests for API endpoints."""
 import pytest
 from fastapi.testclient import TestClient

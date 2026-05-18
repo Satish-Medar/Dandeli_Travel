@@ -1,3 +1,6 @@
+<!-- Documentation for the API rotation system used by the project. -->
+<!-- File: API_ROTATION_SYSTEM.md -->
+
 # API Key Rotation System - Load Balancing & 24/7 Availability
 
 ## Overview

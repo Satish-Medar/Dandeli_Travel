@@ -1,3 +1,6 @@
+<!-- Project summary content prepared for presentation use. -->
+<!-- File: PROJECT_SUMMARY_FOR_PRESENTATION.md -->
+
 # Dandeli Travel Agent - Project Summary (For Presentation)
 
 ## 🎯 In 30 Seconds

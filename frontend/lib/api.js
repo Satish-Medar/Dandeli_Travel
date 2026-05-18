@@ -1,3 +1,7 @@
+/* Client-side API helper functions for the frontend. */
+/* File: frontend/lib/api.js */
+
+
 function toApiUrl(path) {
   if (path.startsWith("/api/")) {
     return path;

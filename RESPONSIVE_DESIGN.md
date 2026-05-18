@@ -1,3 +1,6 @@
+<!-- Guide describing responsive design considerations for the project. -->
+<!-- File: RESPONSIVE_DESIGN.md -->
+
 # 📱 Responsive Design Implementation Guide
 
 This project is now **fully responsive** and optimized for all devices: smartphones, tablets, and desktops.

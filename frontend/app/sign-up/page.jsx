@@ -1,3 +1,7 @@
+/* Sign-up page for new users in the frontend. */
+/* File: frontend/app/sign-up/page.jsx */
+
+
 import { SignUp } from "@clerk/nextjs";
 
 export default function SignUpPage() {

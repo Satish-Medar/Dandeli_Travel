@@ -1,3 +1,7 @@
+/* Layout wrapper for marketing pages in the frontend. */
+/* File: frontend/app/(marketing)/layout.jsx */
+
+
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 

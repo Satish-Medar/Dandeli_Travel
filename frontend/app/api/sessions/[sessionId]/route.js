@@ -1,3 +1,7 @@
+/* API route for session-specific session retrieval and updates. */
+/* File: frontend/app/api/sessions/[sessionId]/route.js */
+
+
 import { NextResponse } from "next/server";
 import { clearSession, getSession, normalizeUserId } from "../../../../lib/server/sessionStore";
 

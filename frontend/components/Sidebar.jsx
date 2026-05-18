@@ -1,3 +1,7 @@
+/* Sidebar navigation component for the frontend UI. */
+/* File: frontend/components/Sidebar.jsx */
+
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";

@@ -1,3 +1,7 @@
+/* UI component rendering ambient bee animation effects. */
+/* File: frontend/components/Wildlife/AmbientBees.jsx */
+
+
 "use client";
 
 import { useEffect, useState } from "react";

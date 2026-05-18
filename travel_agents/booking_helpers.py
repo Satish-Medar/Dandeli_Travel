@@ -1,3 +1,7 @@
+# Extracts booking-specific context and helpers used during booking conversations.
+# File: travel_agents/booking_helpers.py
+
+
 import re
 from typing import Sequence
 

@@ -1,3 +1,7 @@
+/* Marketing page explaining how the travel assistant works. */
+/* File: frontend/app/(marketing)/how-it-works/page.jsx */
+
+
 import Link from "next/link";
 import { ScrollSection, ScrollGrid } from "../../../components/ScrollAnimation";
 
