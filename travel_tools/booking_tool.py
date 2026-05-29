@@ -1,6 +1,11 @@
 # Handles booking request creation and submission to the travel booking API.
 # File: travel_tools/booking_tool.py
 
+# Simple overview:
+# - This module creates booking records, sends WhatsApp requests through Twilio,
+#   and reports booking status.
+# - It keeps booking logic separate from the chat and search flows.
+
 
 import os
 import logging
@@ -15,6 +20,8 @@ from .booking_status_tool import get_booking_status as _get_booking_status
 from .search_engine import clean_text
 
 
+# Create a local booking record and save it to the booking store.
+# This function does not send the WhatsApp message; it only persists data.
 def create_booking(booking_data: dict) -> dict:
     required_fields = ["sessionId", "resort", "dates", "guests", "contactInfo"]
     missing = [field for field in required_fields if field not in booking_data]
@@ -43,6 +50,7 @@ def get_booking_status(booking_id: str) -> str:
     return _get_booking_status(booking_id)
 
 
+# Format a phone number as a WhatsApp endpoint for Twilio.
 def _format_whatsapp_endpoint(number: str) -> str:
     normalized = number.strip()
     return normalized if normalized.lower().startswith("whatsapp:") else f"whatsapp:{normalized}"
@@ -50,6 +58,8 @@ def _format_whatsapp_endpoint(number: str) -> str:
 logger = logging.getLogger(__name__)
 
 
+# Tool wrapper for sending a booking request via WhatsApp and saving the result.
+# The assistant can call this when a user confirms booking details.
 @tool
 def book_resort(resort_name: str, check_in_out_dates: str, guest_details: str, customer_contact: str) -> str:
     """Send a booking request via WhatsApp to the owner. `check_in_out_dates` must be exact calendar dates."""

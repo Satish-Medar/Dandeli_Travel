@@ -1,6 +1,11 @@
-/* Root layout for the Next.js frontend application. */
-/* File: frontend/app/layout.jsx */
+/*
+  Root layout for the frontend application.
 
+  Simple overview:
+  - This file sets the HTML shell for every page.
+  - It includes global CSS, the PWA metadata, and Clerk auth wrapping.
+*/
+/* File: frontend/app/layout.jsx */
 
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
@@ -29,6 +34,7 @@ export const metadata = {
   },
 };
 
+// Root layout component that wraps every page with auth and global styles.
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>

@@ -1,6 +1,12 @@
-/* Sidebar navigation component for the frontend UI. */
-/* File: frontend/components/Sidebar.jsx */
+/*
+  Sidebar navigation component for the frontend UI.
 
+  Simple overview:
+  - Shows recent chat sessions, account actions, and new chat controls.
+  - Supports guest mode and signed-in Clerk users.
+  - Includes an in-place session menu with share/delete actions.
+*/
+/* File: frontend/components/Sidebar.jsx */
 
 import { useState } from "react";
 import Link from "next/link";
@@ -96,14 +102,17 @@ export default function Sidebar({
   onNewChat,
   authState,
   onClose,
+  noBackdrop = false,
 }) {
   return (
     <>
-      <div
-        className={`sidebar-backdrop ${sidebarOpen ? "visible" : ""}`}
-        onClick={onClose}
-        aria-hidden={!sidebarOpen}
-      />
+      {!noBackdrop && (
+        <div
+          className={`sidebar-backdrop ${sidebarOpen ? "visible" : ""}`}
+          onClick={onClose}
+          aria-hidden={!sidebarOpen}
+        />
+      )}
       <aside className={`sidebar ${sidebarOpen ? "" : "closed"}`}>
         <div
           className="sidebar-header"
@@ -114,33 +123,27 @@ export default function Sidebar({
             margin: "4px 0 12px 0",
           }}
         >
-          {/* Logo element representing WayFind brand */}
+          {/* Project logo + brand name */}
           <Link
             href="/"
             style={{
               display: "flex",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-              padding: "6px",
-              color: "var(--text-main)",
               alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "8px",
+              gap: "8px",
+              textDecoration: "none",
+              fontWeight: 700,
+              fontSize: "1.05rem",
+              color: "var(--text-main)",
             }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.backgroundColor = "#efefef")
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "transparent")
-            }
           >
             <Image
               src="/assets/Gemini_Generated_Image.png"
               alt="WayFind Logo"
-              width={56}
-              height={56}
+              width={40}
+              height={40}
+              style={{ objectFit: "contain", borderRadius: "8px" }}
             />
+            <span>WayFind</span>
           </Link>
 
           <button

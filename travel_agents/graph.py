@@ -6,6 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.graph import END, START, StateGraph
 
 from .content import extract_content
+from .booking_helpers import booking_in_progress
 from .intent import classify_user_intent
 from .llms import gemini_llm, groq_llm, prefer_groq_invoke
 from .nodes import booker_node, out_of_scope_node, planner_node, researcher_node, smalltalk_node
@@ -21,6 +22,55 @@ async def supervisor_node(state: AgentState):
         if getattr(last_msg, "name", "") in ["SmallTalk", "Researcher", "Planner", "Booker", "OutOfScope"]:
             return {"next": "FINISH"}
         if hasattr(last_msg, "content"):
+            latest = extract_content(last_msg.content).lower()
+            research_markers = [
+                "compare",
+                " vs ",
+                " versus ",
+                "suggest",
+                "recommend",
+                "better price",
+                "best price",
+                "price",
+                "change the resort",
+                "change resort",
+                "different resort",
+            ]
+            if any(marker in latest for marker in research_markers):
+                return {"next": "Researcher"}
+            if booking_in_progress(state["messages"]):
+                booking_followup_markers = [
+                    "confirm",
+                    "go ahead",
+                    "yes",
+                    "guest",
+                    "people",
+                    "adult",
+                    "child",
+                    "children",
+                    "phone",
+                    "email",
+                    "@",
+                    "+91",
+                    " to ",
+                    "check-in",
+                    "check out",
+                    "check-out",
+                    "may",
+                    "june",
+                    "july",
+                    "august",
+                    "september",
+                    "october",
+                    "november",
+                    "december",
+                    "january",
+                    "february",
+                    "march",
+                    "april",
+                ]
+                if any(marker in latest for marker in booking_followup_markers):
+                    return {"next": "Booker"}
             intent = await classify_user_intent(state["messages"])
             return {"next": intent}
     response = await supervisor_chain.ainvoke({"messages": state["messages"]})

@@ -1,6 +1,11 @@
-/* Footer component for the frontend site. */
-/* File: frontend/components/Footer.jsx */
+/*
+  Footer component for the frontend site.
 
+  Simple overview:
+  - Displays brand information and quick navigation links.
+  - Uses Next.js `Link` for internal page navigation.
+*/
+/* File: frontend/components/Footer.jsx */
 
 import Link from "next/link";
 

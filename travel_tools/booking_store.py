@@ -1,10 +1,16 @@
 # Stores and retrieves booking records for the reservation workflow.
 # File: travel_tools/booking_store.py
 
+# Simple overview:
+# - This module loads and saves booking records.
+# - It uses MongoDB when configured, and falls back to local JSON storage.
+# - This keeps booking persistence separate from the business logic.
+
 
 import json
 import threading
 import uuid
+from datetime import datetime
 from .config import BOOKINGS_PATH
 
 # Fallback local store if Mongo is missing
@@ -12,11 +18,13 @@ _local_bookings = []
 _local_loaded = False
 _lock = threading.Lock()
 
+# Make sure the local bookings JSON file exists.
 def ensure_bookings_store() -> None:
     BOOKINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
     if not BOOKINGS_PATH.exists():
         BOOKINGS_PATH.write_text("[]", encoding="utf-8")
 
+# Load all bookings from MongoDB if available, otherwise use the local JSON fallback.
 def load_bookings() -> list[dict]:
     from travel_api.store import get_db
     db = get_db()
@@ -35,6 +43,7 @@ def load_bookings() -> list[dict]:
                 _local_loaded = True
             return _local_bookings.copy()
 
+# Save booking records to the configured database or the local JSON file.
 def save_bookings(bookings: list[dict]) -> None:
     from travel_api.store import get_db
     db = get_db()
@@ -51,7 +60,7 @@ def save_bookings(bookings: list[dict]) -> None:
                 json.dump(_local_bookings, file, indent=2)
 
 class BookingStore:
-    """Simple in-memory local booking store for tests and local fallback."""
+    """Simple in-memory booking store used for tests and local fallback."""
 
     def __init__(self):
         self._bookings = load_bookings() or []

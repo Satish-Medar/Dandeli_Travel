@@ -101,10 +101,113 @@ img {
   flex-direction: row;
 }
 
+@media (max-width: 1024px) {
+  .shell {
+    overflow-x: hidden;
+  }
+}
+
 @media (max-width: 768px) {
   .shell {
-    height: 100%;
+    flex-direction: column;
+    height: auto;
     min-height: 100vh;
+  }
+}
+
+.workspace {
+  flex-grow: 1;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.chat-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.chat-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+
+/* Global responsive safeguards */
+.marketing-main,
+footer,
+.hero-wrapper,
+.adventure-section,
+.timeline-section,
+.cta-section,
+.container,
+.thread-shell,
+.message-thread {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.message-card,
+.timeline-content,
+.adventure-overlay,
+.glass-card {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .marketing-main,
+  .hero-wrapper,
+  .adventure-section,
+  .timeline-section,
+  .cta-section,
+  .footer-container,
+  .navbar-container,
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .marketing-main,
+  .hero-wrapper,
+  .adventure-section,
+  .timeline-section,
+  .cta-section,
+  .footer-container,
+  .navbar-container,
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-topbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 14px;
+  }
+
+  .chat-topbar-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .chat-topbar-actions .status-pill {
+    width: 100%;
   }
 }
 
@@ -383,17 +486,7 @@ img {
 }
 
 /* ============= Composer ============= */
-.composer {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
-  max-width: 48rem;
-  z-index: 20;
-}
-
+/* ============= Composer ============= */
 @media (max-width: 640px) {
   .composer {
     bottom: 16px;
@@ -402,81 +495,17 @@ img {
     right: 12px;
     transform: none;
   }
-}
 
-.composer-surface {
-  background: var(--bg);
-  border: 1px solid var(--line-light);
-  border-radius: 26px;
-  box-shadow: var(--shadow-heavy);
-  padding: 8px 12px;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 640px) {
   .composer-surface {
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 8px 10px;
   }
-}
 
-.composer-field {
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
-}
-
-.composer-field textarea {
-  flex-grow: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 8px 4px;
-  font-size: var(--fs-base);
-  line-height: 1.5;
-  resize: none;
-  max-height: 200px;
-  color: var(--text-main);
-}
-
-@media (max-width: 640px) {
   .composer-field textarea {
-    font-size: var(--fs-sm);
+    font-size: 0.875rem;
     padding: 6px 2px;
   }
-}
 
-.composer-field textarea::placeholder {
-  color: #a3a3a3;
-}
-
-.composer-actions {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.primary-button {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 50%;
-  background-color: var(--text-main);
-  color: white;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition:
-    opacity 0.2s,
-    transform 0.2s;
-  padding: 0;
-  flex-shrink: 0;
-}
-
-@media (max-width: 640px) {
   .primary-button {
     width: 28px;
     height: 28px;
@@ -484,24 +513,9 @@ img {
   }
 
   .primary-button svg {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
   }
-}
-
-.primary-button:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
-}
-
-.primary-button:active {
-  transform: scale(0.95);
-}
-
-.primary-button:disabled {
-  background-color: #e5e5e5;
-  cursor: not-allowed;
-  opacity: 1;
 }
 
 /* ============= Marketing Pages Responsive ============= */
@@ -676,6 +690,33 @@ img {
 
   .navbar.scrolled .mobile-toggle {
     color: var(--text-main);
+  }
+}
+
+/* Fix: position mobile hamburger (mobile-toggle) correctly inside navbar */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative; /* allow absolute positioning of toggle */
+  }
+
+  .mobile-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: transparent;
+  }
+
+  /* ensure brand remains left-aligned and visible */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 
@@ -1237,6 +1278,17 @@ img {
   }
 }
 
+/* Ensure timeline dots are aligned to the left timeline on small screens
+   so they do not overlap the content */
+@media (max-width: 900px) {
+  .timeline-dot {
+    left: 16px !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.18);
+  }
+}
+
 @media (max-width: 640px) {
   .hero-wrapper {
     padding: 100px 16px 60px;
@@ -1333,6 +1385,41 @@ img {
 .tiger-bubble {
   animation: none !important;
   transition: none !important;
+}
+
+/* Fix: Hide large decorative overlays inside chat workspace (mobile bug) */
+.shell .tiger-bubble,
+.shell .tiger-guide,
+.shell .tiger-guide-shell,
+.shell .cta-overlay-art,
+.shell .hero-bg,
+.shell .hero-overlay,
+.shell .tiger-bubble-arrow,
+.shell .tiger-guide-shell .tiger-bubble {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Extra safeguard: hide any large circular decorative elements inside the shell */
+.shell [class*="tiger"],
+.shell [class*="bubble"],
+.shell [class*="guide"] {
+  max-width: 0 !important;
+  max-height: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Specific fix: hide the sidebar backdrop element that renders the large green oval */
+.shell > .sidebar-backdrop,
+.shell .sidebar-backdrop {
+  display: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
 }
 
 .tiger-guide-shell {

@@ -1,3 +1,6 @@
+# Project file: data/text/dandeli_resorts.txt
+# File: data/text/dandeli_resorts.txt
+
 1. Bison River Resort
 
 Bison River Resort is a Adventure Resort located in Dandeli at

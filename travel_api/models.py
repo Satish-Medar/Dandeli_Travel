@@ -1,10 +1,16 @@
 # Defines data models used by the travel API and booking system.
 # File: travel_api/models.py
 
+# Simple overview (plain words):
+# - Pydantic models used for request validation and typed responses.
+# - Keep validation and simple sanitization here; do not perform side effects.
+# - If you need new fields, update the matching places in the frontend and
+# - the service layer so shapes remain consistent.
 
-from typing import List, Optional
+
+from typing import Any, Dict, List, Optional
 import re
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 from datetime import datetime
 
 
@@ -118,7 +124,7 @@ class AssistantTurn(BaseModel):
 
 class AssistantReplyRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=10000, description="Assistant message content")
-    messages: List[AssistantTurn] = Field(default_factory=list, max_length=50, description="Conversation history")
+    messages: List[AssistantTurn] = Field(default_factory=list, max_length=1000, description="Conversation history")
 
     @field_validator('message')
     @classmethod
@@ -223,3 +229,53 @@ class SessionDetail(BaseModel):
 class AppConfig(BaseModel):
     clerk_publishable_key: Optional[str] = Field(None, min_length=1, max_length=200)
     clerk_enabled: bool
+
+
+class ResortUpdateRequest(BaseModel):
+    resort_id: Optional[str] = Field(None, min_length=1, max_length=100)
+    owner_id: str = Field(..., min_length=1, max_length=100)
+    request_type: str = Field(default="update", max_length=20)
+    changes: Dict[str, Any] = Field(default_factory=dict)
+    submitted_by: Optional[str] = Field(None, min_length=1, max_length=100)
+
+    @field_validator('resort_id', 'owner_id', 'submitted_by', 'request_type')
+    @classmethod
+    def sanitize_identifiers(cls, value):
+        if value is None:
+            return value
+        return str(value).strip()[:100]
+
+    @field_validator('request_type')
+    @classmethod
+    def validate_request_type(cls, value):
+        cleaned = str(value or "update").strip().lower()
+        if cleaned not in {"create", "update"}:
+            raise ValueError("request_type must be create or update")
+        return cleaned
+
+
+class ResortApprovalRequest(BaseModel):
+    reviewer_id: str = Field(..., min_length=1, max_length=100)
+    review_notes: Optional[str] = Field(None, max_length=1000)
+
+    @field_validator('reviewer_id')
+    @classmethod
+    def sanitize_reviewer_id(cls, value):
+        return str(value).strip()[:100]
+
+
+class ResortUpdateResponse(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    id: str
+    resort_id: str
+    owner_id: str
+    request_type: Optional[str] = "update"
+    status: str
+    changes: Dict[str, Any]
+    submitted_by: Optional[str] = None
+    submitted_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    reviewer_id: Optional[str] = None
+    reviewed_at: Optional[str] = None
+    review_notes: Optional[str] = None

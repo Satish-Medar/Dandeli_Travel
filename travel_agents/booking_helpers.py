@@ -29,23 +29,36 @@ def find_booking_id(messages: Sequence) -> str | None:
 
 
 def current_booking_context(messages: Sequence) -> list:
-    start_index, start_markers = 0, ["book it", "book this", "book resort", "i want to book", "booking request"]
+    start_index = 0
+    start_markers = ["book it", "book this", "book resort", "i want to book", "booking request"]
+    terminal_markers = [
+        "your booking request has been sent",
+        "booking request created",
+        "booking id:",
+        "cancelled this booking request draft",
+    ]
     for index, msg in enumerate(messages):
-        if isinstance(msg, AIMessage) and getattr(msg, "name", "") == "Booker" and any(marker in extract_content(msg.content).lower() for marker in ["your booking request has been sent", "booking request created"]):
+        if isinstance(msg, AIMessage) and getattr(msg, "name", "") == "Booker" and any(marker in extract_content(msg.content).lower() for marker in terminal_markers):
             start_index = index + 1
-    for index in range(len(messages) - 1, -1, -1):
+        if isinstance(msg, HumanMessage) and any(marker in extract_content(msg.content).lower() for marker in ["cancel", "cancel it", "stop", "never mind", "nevermind"]):
+            start_index = index + 1
+
+    for index in range(start_index, len(messages)):
         if isinstance(messages[index], HumanMessage) and any(marker in extract_content(messages[index].content).lower() for marker in start_markers):
-            # Include the message prior to the trigger so the LLM can extract the recommended resort name
-            start_index = max(start_index, max(0, index - 1))
+            # Keep the whole active booking draft from the first trigger, so repeated
+            # "book it" messages do not erase the originally selected resort.
+            start_index = max(start_index, max(0, index - 3))
             break
     return list(messages[start_index:])
 
 
 def booking_in_progress(messages: Sequence) -> bool:
     booking_messages = current_booking_context(messages)
+    if not booking_messages:
+        return False
     for msg in reversed(booking_messages):
         if isinstance(msg, AIMessage) and getattr(msg, "name", "") == "Booker":
-            return not any(marker in extract_content(msg.content).lower() for marker in ["your booking request has been sent", "booking id:"])
+            return not any(marker in extract_content(msg.content).lower() for marker in ["your booking request has been sent", "booking request created", "booking id:", "cancelled this booking request draft"])
         if isinstance(msg, HumanMessage) and any(marker in extract_content(msg.content).lower() for marker in ["book it", "book this", "book resort", "i want to book"]):
             return True
     return False

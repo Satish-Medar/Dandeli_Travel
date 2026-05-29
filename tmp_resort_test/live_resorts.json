@@ -1,0 +1,1 @@
+[{"id": 1, "name": "River Valley", "category": "Adventure Resort", "city": "Dandeli", "location": "Dandeli", "price": 5000, "rating": 4.5, "amenities": ["pool", "wifi"], "activities_onsite": ["rafting"], "activities_nearby": ["bird watching"], "family_friendly": true, "available_rooms": 10, "occupied_rooms": 2, "special_offer": "None", "availability_status": "open"}]

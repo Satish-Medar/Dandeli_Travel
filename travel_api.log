@@ -2465,3 +2465,1021 @@ Example:
 2026-05-18 11:19:56,890 - travel_tools.data_validator - INFO - Validating resort data on startup...
 2026-05-18 11:19:56,893 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
 2026-05-18 11:19:56,893 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-18 11:47:56,429 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-18 11:47:56,432 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-18 11:47:56,432 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-18 12:21:48,573 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-18 12:21:48,576 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-18 12:21:48,576 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-18 12:21:56,866 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-18 12:21:56,871 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-18 12:21:56,872 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-18 12:22:56,704 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-18 12:22:57,532 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:09,088 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-18 12:23:09,824 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:09,839 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-18 12:23:10,430 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:10,433 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-18 12:23:10,440 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-18 12:23:10,442 - travel_tools.vectorstore_provider - ERROR - Failed to load Chroma: Could not import chromadb python package. Please install it with `pip install chromadb`.
+2026-05-18 12:23:10,442 - travel_tools.vectorstore_provider - WARNING - No vector store loaded. Resort search will use local fallback data.
+2026-05-18 12:23:10,446 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-18 12:23:12,043 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:23,063 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-18 12:23:23,664 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:23,677 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-18 12:23:24,149 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:24,153 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-18 12:23:25,573 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:37,130 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-18 12:23:37,610 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:37,623 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-18 12:23:37,982 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-18 12:23:37,985 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-18 12:23:39,331 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-22 19:18:39,433 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-22 19:18:39,436 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-22 19:18:39,436 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-22 20:08:52,272 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-22 20:08:52,779 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-22 20:08:58,856 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-22 20:08:59,481 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-22 20:08:59,500 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-22 20:08:59,952 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-22 20:08:59,962 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-22 20:09:00,002 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-22 20:09:06,251 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-22 20:09:07,036 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-22 20:09:07,484 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-22 20:09:07,499 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-22 20:09:08,547 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-27 23:18:45,380 - travel_agents.llms - INFO - ✅ Groq API: 3 key(s) configured
+2026-05-27 23:18:45,381 - travel_agents.llms - INFO - ✅ Gemini API: 3 key(s) configured
+2026-05-27 23:19:04,012 - travel_agents.llms - INFO - ✅ Groq API: 3 key(s) configured
+2026-05-27 23:19:04,012 - travel_agents.llms - INFO - ✅ Gemini API: 3 key(s) configured
+2026-05-27 23:27:08,373 - travel_agents.llms - INFO - ✅ Groq API: 3 key(s) configured
+2026-05-27 23:27:08,373 - travel_agents.llms - INFO - ✅ Gemini API: 3 key(s) configured
+2026-05-28 01:29:00,978 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 01:29:00,980 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 01:29:00,981 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 10:32:11,538 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 10:32:11,559 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 10:32:11,559 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 10:44:58,436 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 10:44:58,990 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 10:45:21,504 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 10:45:21,880 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 10:45:21,898 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 10:45:22,274 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 10:45:22,282 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 10:45:22,295 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 10:45:26,186 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 10:45:26,243 - travel_tools.search_tool - INFO - Searching for resort: 'Elephant resort' -> normalized: 'elephant'
+2026-05-28 10:45:26,243 - travel_tools.search_tool - WARNING - Resort 'Elephant resort' not found. Available resorts: ['Wild Resort', 'Tiger Resort', 'Silent Hideaway', 'Kali River Retreat', 'River Oasis Dandeli']
+2026-05-28 10:45:26,245 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 10:45:26,582 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 10:55:05,037 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 10:55:05,038 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 10:55:05,039 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 11:17:29,584 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 11:17:29,591 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 11:17:29,591 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 11:23:55,140 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 11:23:55,728 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:34:28,390 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 11:34:28,991 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:34:29,012 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 11:34:29,437 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:34:29,444 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 11:34:29,461 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 11:34:33,437 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 11:34:33,842 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:34:34,353 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 11:34:34,369 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 11:34:34,814 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:38:15,761 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 11:38:16,318 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:38:16,335 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 11:38:16,823 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:38:16,825 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 11:38:16,826 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 11:38:19,443 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 11:38:20,037 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:38:20,462 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 11:38:20,478 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 11:38:21,261 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:49:28,449 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 11:49:28,455 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 11:49:28,456 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 11:49:37,073 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 11:49:37,335 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:49:37,343 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 11:49:37,779 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:49:38,104 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 11:49:38,945 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 11:49:38,973 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 11:49:39,659 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:12:00,859 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 12:12:00,861 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 12:12:00,861 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 12:12:35,833 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 12:12:36,324 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:12:36,359 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 12:12:36,711 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:12:36,725 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 12:12:36,733 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 12:12:40,813 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 12:12:40,852 - travel_tools.search_tool - INFO - Searching for resort: 'Elephant Resort' -> normalized: 'elephant'
+2026-05-28 12:12:40,853 - travel_tools.search_tool - INFO - Found exact match: 'Elephant Resort'
+2026-05-28 12:12:40,854 - travel_tools.search_tool - ERROR - Search tool error: 'metadata'
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_tools\search_tool.py", line 147, in search_resorts_tool
+    meta = doc["metadata"]
+           ~~~^^^^^^^^^^^^
+KeyError: 'metadata'
+2026-05-28 12:12:40,857 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 12:12:41,496 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:13:35,618 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 12:13:35,876 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:13:35,884 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 12:13:36,186 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:13:36,188 - travel_tools.search_tool - INFO - Searching for resort: 'Elephant Resort' -> normalized: 'elephant'
+2026-05-28 12:13:36,189 - travel_tools.search_tool - INFO - Found exact match: 'Elephant Resort'
+2026-05-28 12:13:36,189 - travel_tools.search_tool - ERROR - Search tool error: 'metadata'
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_tools\search_tool.py", line 147, in search_resorts_tool
+    meta = doc["metadata"]
+           ~~~^^^^^^^^^^^^
+KeyError: 'metadata'
+2026-05-28 12:13:36,190 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 12:13:36,669 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:14:45,091 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 12:14:45,421 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:14:45,429 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 12:14:45,723 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:14:45,725 - travel_tools.search_tool - INFO - Searching for resort: 'Elephant Resort' -> normalized: 'elephant'
+2026-05-28 12:14:45,725 - travel_tools.search_tool - INFO - Found exact match: 'Elephant Resort'
+2026-05-28 12:14:45,725 - travel_tools.search_tool - ERROR - Search tool error: 'metadata'
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_tools\search_tool.py", line 147, in search_resorts_tool
+    "contact_phone": meta.get("phone"),
+    ^^^^^^^^^^^^^^^
+KeyError: 'metadata'
+2026-05-28 12:14:45,727 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 12:14:46,360 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:15:40,127 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 12:15:40,129 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 12:15:40,129 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 12:15:55,672 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 12:15:56,082 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:15:56,095 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 12:15:56,099 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 12:15:58,537 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 12:15:58,572 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 12:15:59,414 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:20:45,594 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 12:20:45,908 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 12:20:45,914 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 12:20:46,966 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 13:39:32,876 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 13:39:32,878 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 13:39:32,879 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 14:08:26,301 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:08:26,804 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:08:33,648 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:08:34,027 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:08:34,047 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 14:08:34,063 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 14:08:42,530 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 14:08:42,621 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:08:43,194 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:08:43,201 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:08:43,494 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:09,329 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:09:09,710 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:09,731 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 14:09:09,732 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 14:09:15,034 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 14:09:15,091 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:09:15,752 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:27,125 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:09:27,528 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:27,548 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:09:27,891 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:40,928 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:09:41,248 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:09:41,266 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:09:41,762 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:13,151 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:10:13,507 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:21,985 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:10:22,350 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:22,365 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:10:22,722 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:26,883 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:10:27,124 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:30,557 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:10:30,811 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:30,825 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:10:31,179 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:32,404 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:10:32,758 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:39,695 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:10:40,131 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:10:40,148 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:10:40,540 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:25:49,709 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 14:25:49,718 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 14:25:49,719 - travel_tools.vectorstore_provider - ERROR - Failed to load Chroma: Could not import chromadb python package. Please install it with `pip install chromadb`.
+2026-05-28 14:25:49,719 - travel_tools.vectorstore_provider - WARNING - No vector store loaded. Resort search will use local fallback data.
+2026-05-28 14:48:42,043 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 14:48:42,047 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 14:48:42,047 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 14:49:07,714 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:49:08,200 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:08,210 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:49:08,746 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:11,704 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:49:12,024 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:12,038 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:49:12,329 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:25,787 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:49:26,064 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:26,081 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:49:26,565 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:33,959 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:49:34,450 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:34,470 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:49:34,961 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:40,637 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:49:40,943 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:40,960 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:49:41,617 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:45,788 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:49:46,331 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:46,349 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:49:46,781 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:52,077 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:49:52,402 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:49:52,417 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:49:52,779 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:12,413 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:50:12,849 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:12,879 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:50:13,258 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:14,385 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:15,205 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 14:50:15,257 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:50:16,302 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:35,806 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:50:36,241 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:50:36,252 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:50:37,734 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:02,527 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:51:02,994 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:03,008 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:51:03,561 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:13,019 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:51:13,573 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:13,585 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:51:14,801 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:44,402 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:51:44,908 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:51:44,928 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:51:45,521 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:36,099 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:55:36,418 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:36,429 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:55:36,866 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:37,915 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:55:38,154 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:38,173 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:55:38,445 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:45,709 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:55:46,080 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:46,097 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:55:46,470 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:58,413 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:55:58,894 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:55:58,908 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:55:59,372 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:03,573 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:56:03,904 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:03,920 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:56:04,390 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:08,191 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:56:08,591 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:08,608 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:56:08,999 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:14,958 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:56:15,333 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:15,352 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:56:15,961 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:41,508 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:56:41,971 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:42,001 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:56:42,381 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:42,893 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:56:43,610 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 14:56:43,648 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 14:56:45,043 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:57:06,075 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 14:57:06,549 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 14:57:06,564 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 14:57:07,469 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:11,270 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:05:11,662 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:11,672 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:05:12,133 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:15,192 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:05:15,613 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:15,630 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:05:16,006 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:28,450 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:05:28,727 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:28,750 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:05:29,063 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:29,691 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:30,562 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 15:05:30,603 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:05:31,640 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:56,945 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:05:57,357 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:05:57,374 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:05:57,804 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:06:34,000 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:06:34,358 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:06:34,375 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:06:35,178 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:07:39,945 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:07:40,612 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:07:40,628 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:07:41,063 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:07:46,465 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:07:46,858 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:07:46,876 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:07:47,473 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:08:25,449 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:08:25,898 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:08:25,909 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:08:27,179 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:08:51,713 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:08:52,190 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:08:52,201 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:08:53,615 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:05,236 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:14:05,560 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:19,935 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:14:20,295 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:20,318 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:14:20,793 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:20,803 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:14:21,408 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:31,525 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:14:31,970 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:31,997 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:14:32,467 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:33,286 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:14:34,106 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 15:14:34,144 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:14:35,093 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:19:25,265 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:19:25,854 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:19:25,866 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 15:19:26,568 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:19:27,076 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 15:19:27,622 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 15:19:27,660 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 15:19:27,730 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-28 15:19:27,734 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98786, Requested 3403. Please try again in 31m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98786, Requested 3403. Please try again in 31m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-28 15:19:27,815 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 15:19:27,816 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 15:19:29,290 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 17:00:59,490 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 17:00:59,500 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 17:00:59,500 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 17:04:41,936 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 17:04:41,939 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 17:04:41,939 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 17:05:50,402 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 17:05:50,404 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 17:05:50,404 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 18:21:02,431 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 18:21:02,434 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 18:21:02,434 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 18:38:14,328 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:38:14,837 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:38:55,430 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:38:55,796 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:02,178 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:39:02,580 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:02,595 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-28 18:39:02,636 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-28 18:39:06,993 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 18:39:07,056 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:39:07,342 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:08,344 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:08,761 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 18:39:08,777 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:39:09,702 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:27,080 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:39:28,220 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:36,743 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:39:37,064 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:39:37,085 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:39:37,366 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:42,250 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:52:42,733 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:47,957 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:52:48,565 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:48,579 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:52:48,779 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:49,414 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:50,033 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-28 18:52:50,396 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:52:51,597 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:54,630 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:52:54,699 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-28 18:52:54,705 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99321, Requested 802. Please try again in 1m46.271999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99321, Requested 802. Please try again in 1m46.271999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-28 18:52:54,842 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:52:54,842 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:52:55,269 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 18:52:55,275 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:52:55,337 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-28 18:52:55,338 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99320, Requested 980. Please try again in 4m19.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99320, Requested 980. Please try again in 4m19.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-28 18:52:55,340 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:52:55,341 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:52:55,769 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-28 18:52:55,772 - travel_agents.llms - ERROR - Groq LLM async failed: BadRequestError: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=BookingExtraction> {"name": "BookingExtraction", "booking_id": None, "contact": None, "dates": "June 1, 2026 - June 3, 2026", "guests": "2 adults, 1 child", "intent": "book", "is_confirmed": True, "resort_name": "Bison River Resort"} </function>'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=BookingExtraction> {"name": "BookingExtraction", "booking_id": None, "contact": None, "dates": "June 1, 2026 - June 3, 2026", "guests": "2 adults, 1 child", "intent": "book", "is_confirmed": True, "resort_name": "Bison River Resort"} </function>'}}
+2026-05-28 18:52:55,775 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:52:55,790 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-28 18:53:01,676 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:53:01,826 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-28 18:53:01,828 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99313, Requested 1022. Please try again in 4m49.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99313, Requested 1022. Please try again in 4m49.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-28 18:53:01,830 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:53:01,830 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-28 18:53:02,200 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-28 18:53:02,201 - travel_agents.llms - ERROR - Groq LLM async failed: BadRequestError: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=BookingExtraction> {"intent": "book", "booking_id": None, "resort_name": "Bison River Resort", "dates": "May 2026", "contact": None, "guests": None, "is_confirmed": False} </function>'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=BookingExtraction> {"intent": "book", "booking_id": None, "resort_name": "Bison River Resort", "dates": "May 2026", "contact": None, "guests": None, "is_confirmed": False} </function>'}}
+2026-05-28 18:53:02,202 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:53:02,204 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-05-28 18:53:05,895 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 18:53:05,954 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-28 18:53:05,955 - travel_agents.llms - ERROR - Groq LLM async failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99308, Requested 901. Please try again in 3m0.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "D:\RAG\CollegeProject\travel_agents\llms.py", line 133, in ainvoke_wrapper
+    return await groq_runnable.ainvoke(in_val)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 3197, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_core\language_models\chat_models.py", line 1361, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\langchain_groq\chat_models.py", line 642, in _agenerate
+    response = await self.async_client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\resources\chat\completions.py", line 941, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1762, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Satish\AppData\Roaming\Python\Python312\site-packages\groq\_base_client.py", line 1576, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kr3zf8btf3rs9cexbb3d3451` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99308, Requested 901. Please try again in 3m0.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-28 18:53:05,957 - travel_agents.llms - INFO - Attempting async fallback to Gemini LLM
+2026-05-28 18:53:05,957 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-28 18:53:06,448 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 20:01:37,098 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-28 20:01:37,103 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-28 20:01:37,103 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-28 20:03:49,824 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-28 20:03:50,344 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:08:10,107 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-29 12:08:10,124 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-29 12:08:10,125 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-29 12:11:24,336 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-29 12:11:24,339 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-29 12:11:24,339 - travel_tools.data_validator - INFO - Successfully validated 81 resorts
+2026-05-29 12:12:27,857 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-29 12:12:28,298 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:12:28,329 - travel_tools.vectorstore_provider - ERROR - Pinecone init failed: init is no longer a top-level attribute of the pinecone package.
+
+Please create an instance of the Pinecone class instead.
+
+Example:
+
+    import os
+    from pinecone import Pinecone, ServerlessSpec
+
+    pc = Pinecone(
+        api_key=os.environ.get("PINECONE_API_KEY")
+    )
+
+    # Now do stuff
+    if 'my_index' not in pc.list_indexes().names():
+        pc.create_index(
+            name='my_index',
+            dimension=1536,
+            metric='euclidean',
+            spec=ServerlessSpec(
+                cloud='aws',
+                region='us-west-2'
+            )
+        )
+
+
+2026-05-29 12:12:28,352 - travel_tools.vectorstore_provider - INFO - Loading local Chroma VectorStore...
+2026-05-29 12:12:34,529 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-29 12:12:34,589 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-29 12:12:35,130 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:12:35,525 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:12:35,964 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-29 12:12:35,981 - travel_agents.llms - INFO - Attempting async invoke with Groq API #3
+2026-05-29 12:12:37,191 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:12:54,194 - travel_agents.llms - INFO - Attempting async invoke with Groq API #1
+2026-05-29 12:12:54,576 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:12:54,583 - travel_agents.llms - INFO - Attempting async invoke with Groq API #2
+2026-05-29 12:12:55,557 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 12:35:27,464 - travel_tools.data_validator - INFO - Validating resort data on startup...
+2026-05-29 12:35:27,468 - travel_tools.data_validator - INFO - Validated 81 resorts: 81 valid, 0 errors
+2026-05-29 12:35:27,468 - travel_tools.data_validator - INFO - Successfully validated 81 resorts

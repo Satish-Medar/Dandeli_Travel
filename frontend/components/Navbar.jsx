@@ -1,6 +1,12 @@
-/* Navigation bar component used across frontend pages. */
-/* File: frontend/components/Navbar.jsx */
+/*
+  Navigation bar component used across frontend pages.
 
+  Simple overview:
+  - Renders the site logo, links, and mobile menu.
+  - Tracks scroll position to apply a compact style on scroll.
+  - Shows the Launch Assistant CTA and toggles the mobile nav.
+*/
+/* File: frontend/components/Navbar.jsx */
 
 "use client";
 
@@ -12,9 +18,26 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const scrollPos =
+        window.scrollY ||
+        window.pageYOffset ||
+        (document.documentElement && document.documentElement.scrollTop) ||
+        (document.body && document.body.scrollTop) ||
+        0;
+      setScrolled(scrollPos > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("scroll", handleScroll, { passive: true });
+    
+    // Check initial scroll position
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -34,7 +57,7 @@ export default function Navbar() {
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
+      <div className="navbar-container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
         <Link href="/" className="navbar-brand">
           <div className="brand-icon-wrapper">
             <img
@@ -81,14 +104,14 @@ export default function Navbar() {
             >
               {mobileMenuOpen ? (
                 <>
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
                 </>
               ) : (
                 <>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
                 </>
               )}
             </svg>

@@ -1,0 +1,14 @@
+{
+  "owners": [
+    {
+      "username": "satish",
+      "owner_id": "83",
+      "resort_ids": [],
+      "password_salt": "db44a49e6f40d092435e32856d39a4d1",
+      "password_hash": "683436d93457d19be4560381271abe137335f9d5160792e7e268e07df1458228",
+      "active": true,
+      "updated_at": "2026-05-28T13:35:59.295Z",
+      "created_at": "2026-05-28T11:33:24.261Z"
+    }
+  ]
+}

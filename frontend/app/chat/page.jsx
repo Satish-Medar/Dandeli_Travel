@@ -1,4 +1,11 @@
-/* Main chat page for interacting with the travel assistant bot. */
+/*
+  Main chat page for interacting with the WayFind travel assistant.
+
+  Simple overview:
+  - This file renders the chat UI, message thread, composer, and sidebar.
+  - It handles user sessions, guest mode, session history, and streaming replies.
+  - Most network work is done through `fetchJson` and `streamChat` helpers.
+*/
 /* File: frontend/app/chat/page.jsx */
 
 "use client";
@@ -12,6 +19,7 @@ import Sidebar from "../../components/Sidebar";
 import { fetchJson, streamChat } from "../../lib/api";
 import { ensureGuestUserId } from "../../lib/auth";
 
+// Create a non-interactive status message shown inside the chat thread.
 function createMetaMessage(content) {
   return {
     id: crypto.randomUUID(),
@@ -20,6 +28,7 @@ function createMetaMessage(content) {
   };
 }
 
+// Create a normal message with a role of user or assistant.
 function createMessage(role, content, extra = {}) {
   return {
     id: crypto.randomUUID(),
@@ -35,6 +44,7 @@ function createInitialMessage() {
   );
 }
 
+// Extract a simple auth profile object from the Clerk user object.
 function getAuthProfile(user) {
   if (!user) {
     return {
@@ -52,6 +62,8 @@ function getAuthProfile(user) {
   };
 }
 
+// Main chat page component.
+// This component is responsible for session state, message updates, and UI layout.
 export default function Page() {
   const router = useRouter();
   const { isLoaded, isSignedIn, user } = useUser();
@@ -78,7 +90,34 @@ export default function Page() {
   const [sessionCount, setSessionCount] = useState(0);
   const threadRef = useRef(null);
   const isGuest = authState.ready && !authState.user;
+  const [promptCount, setPromptCount] = useState(0);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("wayfind_guest_prompt_count");
+      if (stored) {
+        setPromptCount(parseInt(stored, 10));
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Close sidebar on mobile by default to prioritize chat viewport
+    if (typeof window !== "undefined") {
+      if (window.innerWidth <= 768) {
+        setSidebarOpen(false);
+      }
+    }
+    const handleResizeSidebar = () => {
+      if (window.innerWidth > 768) {
+        setSidebarOpen(true);
+      }
+    };
+    window.addEventListener("resize", handleResizeSidebar);
+    return () => window.removeEventListener("resize", handleResizeSidebar);
+  }, []);
+
+  // Scroll the chat thread to the bottom whenever messages change.
   useEffect(() => {
     threadRef.current?.scrollTo({
       top: threadRef.current.scrollHeight,
@@ -86,6 +125,7 @@ export default function Page() {
     });
   }, [messages]);
 
+  // Load the user's saved chat session list from the backend.
   async function loadHistory(userId) {
     if (isGuest) {
       setSessions([]);
@@ -101,6 +141,7 @@ export default function Page() {
     return data;
   }
 
+  // Open a saved conversation session and load its messages.
   async function openSession(targetSessionId, userId) {
     if (isGuest) {
       setSessionId(null);
@@ -139,6 +180,7 @@ export default function Page() {
     setSessionTitle(data.title || "Untitled trip thread");
   }
 
+  // Initialize chat state when a user or guest session boots.
   async function bootUserState(userId) {
     setCurrentUserId(userId);
     setSessionId(null);
@@ -198,6 +240,7 @@ export default function Page() {
     applyAuth();
   }, [isLoaded, isSignedIn, user, booted, status]);
 
+  // Create a brand new chat session, clearing the current conversation.
   async function handleNewChat() {
     setPending(true);
     try {
@@ -302,10 +345,23 @@ export default function Page() {
     }
   }
 
+  // Send the current user draft to the assistant and stream the reply.
   async function handleSubmit() {
     const content = draft.trim();
     if (!content || pending) {
       return;
+    }
+
+    if (isGuest && promptCount >= 5) {
+      return;
+    }
+
+    if (isGuest) {
+      const nextCount = promptCount + 1;
+      setPromptCount(nextCount);
+      if (typeof window !== "undefined") {
+        localStorage.setItem("wayfind_guest_prompt_count", String(nextCount));
+      }
     }
 
     const userMessage = createMessage("user", content);
@@ -416,126 +472,54 @@ export default function Page() {
         onNewChat={handleNewChat}
         authState={authState}
         onClose={() => setSidebarOpen(false)}
+        noBackdrop={true}
       />
 
       <main className="workspace">
-        {!sidebarOpen && (
-          <button
-            className="open-sidebar-btn"
-            onClick={() => setSidebarOpen(true)}
-            title="Open sidebar"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="9" y1="3" x2="9" y2="21"></line>
-            </svg>
-          </button>
-        )}
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "12px 16px",
-            position: "sticky",
-            top: 0,
-            zIndex: 10,
-            background: "var(--bg)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginLeft: sidebarOpen ? "0" : "40px",
-            }}
-          >
-            <button
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "4px",
-                background: "transparent",
-                border: "none",
-                cursor: "pointer",
-                padding: "6px 10px",
-                borderRadius: "8px",
-                color: "var(--text-main)",
-                fontSize: "1.125rem",
-                fontWeight: 600,
-              }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.backgroundColor = "#efefef")
-              }
-              onMouseOut={(e) =>
-                (e.currentTarget.style.backgroundColor = "transparent")
-              }
-            >
-              WayFind
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ color: "var(--text-muted)" }}
+        <div className="chat-topbar">
+          <div className="chat-topbar-left">
+            {!sidebarOpen && (
+              <button
+                className="sidebar-toggle-btn"
+                onClick={() => setSidebarOpen(true)}
+                title="Expand sidebar"
               >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+              </button>
+            )}
+
+            {!sidebarOpen ? (
+              <a href="/" className="chat-topbar-brand-logo">
+                <img
+                  src="/assets/Gemini_Generated_Image.png"
+                  alt="WayFind Logo"
+                  width={44}
+                  height={44}
+                  style={{ objectFit: "contain", borderRadius: "8px" }}
+                />
+                <span>WayFind</span>
+              </a>
+            ) : (
+              <span className="chat-topbar-session-title">{sessionTitle}</span>
+            )}
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className="chat-topbar-actions">
             <span className={`status-pill ${status.toLowerCase()}`}>
               {status}
             </span>
-            <button
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-                padding: "8px 12px",
-                borderRadius: "9999px",
-                backgroundColor: "#F3F0FF",
-                color: "#6B4CFF",
-                fontWeight: 600,
-                fontSize: "0.875rem",
-                border: "none",
-                cursor: "pointer",
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.opacity = "0.9")}
-              onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
-            >
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 2l2.4 7.4L22 10.6l-6.2 5.5 1.8 7.9L12 19l-5.6 5 1.8-7.9-6.2-5.5 7.6-1.2L12 2z"></path>
-              </svg>
-              Get Plus
-            </button>
-            {/* <button style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '4px', color: 'var(--text-muted)' }}>
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                 <circle cx="12" cy="12" r="10"></circle>
-                 <circle cx="12" cy="10" r="3"></circle>
-                 <path d="M7 20.662V19a2 2 0 012-2h6a2 2 0 012 2v1.662"></path>
-               </svg>
-            </button> */}
           </div>
         </div>
 
@@ -543,6 +527,7 @@ export default function Page() {
           <div ref={threadRef} className="thread-scroll">
             <MessageThread messages={messages} />
           </div>
+          <div className="composer-gradient-mask" />
           <Composer
             value={draft}
             onChange={setDraft}
@@ -551,6 +536,7 @@ export default function Page() {
             pending={pending}
             sessionTitle={sessionTitle}
             clerkEnabled={config.clerk_enabled}
+            isLimitReached={isGuest && promptCount >= 5}
           />
         </section>
       </main>

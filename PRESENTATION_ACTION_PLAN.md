@@ -283,7 +283,6 @@ http://localhost:8000
 - Python 3.10+
 - Node.js 18+
 - MongoDB
-- Docker (optional)
 
 ### Setup Backend
 ```bash

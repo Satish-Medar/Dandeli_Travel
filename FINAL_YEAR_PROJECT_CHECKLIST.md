@@ -76,14 +76,14 @@
 
 **Sections:**
 
-- [ ] Prerequisites (Docker, Python, Node.js)
+- [ ] Prerequisites (Python, Node.js, MongoDB)
 - [ ] Environment setup (.env file)
 - [ ] Installation steps:
   - Backend setup
   - Frontend setup
   - Database setup
 - [ ] Running locally
-- [ ] Docker deployment
+- [ ] Deployment options
 - [ ] Production deployment options
 - [ ] Troubleshooting guide
 - [ ] API key management

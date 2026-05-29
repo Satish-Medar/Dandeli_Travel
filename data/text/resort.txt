@@ -1,3 +1,6 @@
+# Project file: data/text/resort.txt
+# File: data/text/resort.txt
+
 Bison River Resort
 Overview
 Bison River Resort is an Adventure Resort located on Ganeshgudi Road about 6 km from the Dandeli Bus Stand in Karnataka. Bison River Resort is situated near the Kali River at geographic coordinates latitude 15.2412 and longitude 74.6194, making it a convenient location for visitors interested in river and wildlife activities in the Dandeli region.

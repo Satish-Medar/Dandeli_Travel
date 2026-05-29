@@ -19,7 +19,6 @@
     └── (remove entire directory)
 
 ✅ KEEP THESE:
-├── docker-compose.yml          (Deployment)
 ├── requirements.txt            (Dependencies)
 ├── .env                        (Configuration)
 ├── travel_agents/              (Core code)
@@ -39,7 +38,7 @@ d:\RAG\CollegeProject\
 ├── .env                                    # Config (API keys)
 ├── .gitignore                             # Git ignore (create if missing)
 ├── README.md                              # Project overview (UPDATE THIS)
-├── docker-compose.yml                     # Docker setup
+├── requirements.txt                       # Python dependencies
 ├── requirements.txt                       # Python dependencies
 │
 ├── travel_agents/                         # Multi-agent orchestration
@@ -76,8 +75,7 @@ d:\RAG\CollegeProject\
 │   ├── package.json
 │   ├── next.config.mjs
 │   ├── middleware.js
-│   ├── Dockerfile
-│   ├── app/                              # Next.js app directory
+│   │   ├── app/                              # Next.js app directory
 │   │   ├── api/                          # API routes
 │   │   ├── chat/                         # Chat interface
 │   │   ├── sign-in/

@@ -1,6 +1,11 @@
 # Loads resort metadata, builds search indexes, and retrieves matching resort records.
 # File: travel_tools/search_engine.py
 
+# Simple overview:
+# - This module reads resort data and filters it according to user search needs.
+# - It uses local JSON data when vector search is not available.
+# - It also extracts search constraints from user queries using an LLM.
+
 
 import json
 import logging
@@ -10,6 +15,7 @@ from pathlib import Path
 from typing import Optional
 from pydantic import BaseModel, Field
 
+from .resort_update_store import load_live_resorts
 from .vectorstore_provider import get_retriever, get_vectorstore
 
 logger = logging.getLogger(__name__)
@@ -17,7 +23,8 @@ logger = logging.getLogger(__name__)
 BASE_DIR = Path(__file__).resolve().parent.parent
 RESORT_DATA_PATH = BASE_DIR / "data" / "json_files" / "resorts.json"
 
-
+# Clean up text from the resort data.
+# This removes bad character encodings that sometimes appear in the JSON.
 def clean_text(value: str) -> str:
     if value is None: return ""
     replacements = {"Ã¢â‚¬â€œ": "-", "Ã¢â‚¬â€ ": "-", "Ã¢â‚¬â„¢": "'", "Ã¢â‚¬Ëœ": "'", "Ã¢â‚¬Å“": '"', "Ã¢â‚¬Â ": '"'}
@@ -56,6 +63,8 @@ def _extract_amenities_from_content(content: str) -> list[str]:
     return []
 
 
+# Check whether one resort matches the requested filters.
+# This is the main hard-filtering logic used before any semantic ranking.
 def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
     if not filters:
         return True
@@ -143,6 +152,7 @@ def _matches_filters(resort: dict, filters: SearchFilters) -> bool:
     return True
 
 
+# Apply filter rules to a list of resorts and return the ones that match.
 def filter_resorts(resorts: list[dict], filters: SearchFilters) -> list[dict]:
     """Filter a list of resorts or resort docs by SearchFilters."""
     if not filters:
@@ -150,6 +160,7 @@ def filter_resorts(resorts: list[dict], filters: SearchFilters) -> list[dict]:
     return [resort for resort in resorts if _matches_filters(resort, filters)]
 
 
+# Use an LLM to turn a free-form query into structured filter values.
 async def extract_filters_async(query: str) -> SearchFilters:
     from travel_agents.llms import groq_llm, groq_70b, gemini_llm, prefer_groq_invoke
     from langchain_core.prompts import ChatPromptTemplate
@@ -175,13 +186,17 @@ async def extract_filters_async(query: str) -> SearchFilters:
         return SearchFilters()
 
 
+# Load resort data from the published local store when available.
+def invalidate_search_cache() -> None:
+    global _cached_all_docs
+    _cached_all_docs = None
+
+
 def _load_local_documents() -> list[dict]:
     try:
-        if not RESORT_DATA_PATH.exists(): return []
-        with open(RESORT_DATA_PATH, encoding="utf-8-sig") as source:
-            resorts = json.load(source)
+        resorts = load_live_resorts()
     except Exception as error:
-        logger.error(f"Failed to load local resort data: {error}")
+        logger.error(f"Failed to load published resort data: {error}")
         return []
 
     rows = []
@@ -192,46 +207,83 @@ def _load_local_documents() -> list[dict]:
             "category": clean_text(resort.get("category")),
             "city": clean_text(resort.get("city")),
             "location": clean_text(resort.get("location")),
+            "latitude": resort.get("latitude"),
+            "longitude": resort.get("longitude"),
             "price": resort.get("price"),
             "rating": resort.get("rating"),
+            "review_count": resort.get("review_count"),
             "family_friendly": bool(resort.get("family_friendly", False)),
             "romantic_couples": bool(resort.get("romantic_couples", False)),
             "amenities": _normalize_amenities(resort.get("amenities", [])),
             "phone": clean_text(resort.get("phone")),
             "email": clean_text(resort.get("email")),
             "website": clean_text(resort.get("website")),
+            "check_in": clean_text(resort.get("check_in")),
+            "check_out": clean_text(resort.get("check_out")),
+            "description": clean_text(resort.get("description")),
+            "unique_features": clean_text(resort.get("unique_features")),
             "food_options": resort.get("food_options", []),
             "activities_onsite": resort.get("activities_onsite", []),
             "activities_nearby": resort.get("activities_nearby", []),
             "water_activities": resort.get("water_activities", []),
             "rooms": resort.get("rooms", []),
+            "available_rooms": resort.get("available_rooms"),
+            "occupied_rooms": resort.get("occupied_rooms"),
+            "special_offer": clean_text(resort.get("special_offer")),
+            "offer_valid_until": clean_text(resort.get("offer_valid_until")),
+            "availability_status": clean_text(resort.get("availability_status")),
+            "last_updated": resort.get("last_updated"),
         }
-        
+
+        dynamic_notes = []
+        if resort.get("available_rooms") is not None:
+            dynamic_notes.append(f"Available rooms: {resort['available_rooms']}")
+        if resort.get("occupied_rooms") is not None:
+            dynamic_notes.append(f"Occupied rooms: {resort['occupied_rooms']}")
+        if resort.get("special_offer"):
+            dynamic_notes.append(f"Special offer: {resort['special_offer']}")
+        if resort.get("availability_status"):
+            dynamic_notes.append(f"Availability status: {resort['availability_status']}")
+
         content = (
             f"Resort Name: {metadata['name']}\n"
             f"Category: {metadata['category']}\n"
             f"Location: {metadata['location']}, {metadata['city']}\n"
-            f"Description: {clean_text(resort.get('description'))}\n"
-            f"Unique Features: {clean_text(resort.get('unique_features'))}\n"
+            f"Coordinates: {metadata['latitude']}, {metadata['longitude']}\n"
+            f"Contact: {metadata['phone']}; {metadata['email']}; {metadata['website']}\n"
+            f"Check-in: {metadata['check_in']}; Check-out: {metadata['check_out']}\n"
+            f"Description: {metadata['description']}\n"
+            f"Unique Features: {metadata['unique_features']}\n"
+            f"Rooms: {', '.join(map(str, resort.get('rooms', [])))}\n"
             f"Amenities: {', '.join(map(str, resort.get('amenities', [])))}\n"
-            f"Activities: {', '.join(map(str, resort.get('activities_onsite', []) + resort.get('activities_nearby', [])))}\n"
+            f"Onsite Activities: {', '.join(map(str, resort.get('activities_onsite', [])))}\n"
+            f"Nearby Activities: {', '.join(map(str, resort.get('activities_nearby', [])))}\n"
+            f"Water Activities: {', '.join(map(str, resort.get('water_activities', [])))}\n"
+            f"Food Options: {', '.join(map(str, resort.get('food_options', [])))}\n"
+            f"Family Friendly: {metadata['family_friendly']}; Romantic Couples: {metadata['romantic_couples']}\n"
             f"Price: {metadata['price']} INR per day per person\n"
-            f"Rating: {metadata['rating']} based on {resort.get('review_count', 'N/A')} reviews\n"
+            f"Rating: {metadata['rating']} based on {metadata['review_count'] or 'N/A'} reviews\n"
         )
+        if dynamic_notes:
+            content += "Dynamic updates: " + "; ".join(dynamic_notes) + "\n"
+
         rows.append({"page_content": content, "metadata": metadata})
     return rows
 
 
 _cached_all_docs = None
 
+# Load resort documents either from a vector store or fallback local data.
+# The result is cached in memory for performance.
 def load_all_documents() -> list[dict]:
     global _cached_all_docs
     if _cached_all_docs is not None:
         return _cached_all_docs
 
+    local_docs = _load_local_documents()
     vectorstore = get_vectorstore()
     if not vectorstore:
-        _cached_all_docs = _load_local_documents()
+        _cached_all_docs = local_docs
         return _cached_all_docs
 
     try:
@@ -246,12 +298,26 @@ def load_all_documents() -> list[dict]:
                     "page_content": clean_text(doc.page_content),
                     "metadata": {k: clean_text(v) if isinstance(v, str) else v for k, v in doc.metadata.items()},
                 })
-        if not rows: return _load_local_documents()
-        _cached_all_docs = rows
-        return rows
+        if not rows:
+            _cached_all_docs = local_docs
+            return _cached_all_docs
+
+        merged_docs = list(local_docs)
+        seen_keys = {
+            str(doc["metadata"].get("id") or doc["metadata"].get("name", "")).lower()
+            for doc in merged_docs
+        }
+        for doc in rows:
+            key = str(doc["metadata"].get("id") or doc["metadata"].get("name", "")).lower()
+            if key not in seen_keys:
+                merged_docs.append(doc)
+                seen_keys.add(key)
+
+        _cached_all_docs = merged_docs
+        return _cached_all_docs
     except Exception as e:
         logger.error(f"Failed to load documents from vector store: {e}")
-        _cached_all_docs = _load_local_documents()
+        _cached_all_docs = local_docs
         return _cached_all_docs
 
 

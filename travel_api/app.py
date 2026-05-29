@@ -1,6 +1,12 @@
 # Defines the main travel API application and HTTP routing.
 # File: travel_api/app.py
 
+# Simple overview (plain words):
+# - This file starts the FastAPI app and sets up routes used by the frontend.
+# - It performs basic input validation, rate limiting, and connects the
+# - request handlers to service functions in travel_api.services and storage
+# - helpers in travel_api.store.
+# - Keep this file focused on HTTP concerns (validation, auth, routing).
 
 
 import os
@@ -27,7 +33,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
-from .models import AppConfig, AssistantReplyRequest, AssistantReplyResponse, ChatRequest, ChatResponse, MessageRecord, SessionCreateRequest, SessionDetail, SessionResponse, SessionSummary
+from .models import AppConfig, AssistantReplyRequest, AssistantReplyResponse, ChatRequest, ChatResponse, MessageRecord, ResortApprovalRequest, ResortUpdateRequest, ResortUpdateResponse, SessionCreateRequest, SessionDetail, SessionResponse, SessionSummary
+from .resort_content_service import approve_resort_update, fetch_live_resorts, fetch_owner_resorts, fetch_resort_updates, get_resort_update_diff, reject_resort_update, submit_resort_update
 from .services import app_config_payload, invoke_assistant, invoke_assistant_from_turns, list_user_sessions, record_message
 from .store import DEFAULT_USER_ID, clear_session, get_or_create_session, get_session as load_session, normalize_user_id, persist_session, sync_user_profile, utc_now
 
@@ -193,7 +200,74 @@ def app_config():
 
 @app.get("/health")
 def health_check():
-    return {"status": "ok"}
+    return {"status": "healthy"}
+
+
+@app.post("/resorts/updates", response_model=ResortUpdateResponse)
+def create_resort_update(payload: ResortUpdateRequest, auth_user_id: str = Depends(verify_clerk_user)):
+    try:
+        data = payload.model_dump()
+        if auth_user_id:
+            data["owner_id"] = auth_user_id
+            data["submitted_by"] = auth_user_id
+        update = submit_resort_update(data)
+        return ResortUpdateResponse(**update)
+    except PermissionError as exc:
+        raise HTTPException(status_code=403, detail=str(exc))
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@app.get("/resorts/updates")
+def list_resort_updates(status: str | None = None, owner_id: str | None = None, auth_user_id: str = Depends(verify_clerk_user)):
+    final_owner_id = auth_user_id or owner_id
+    return fetch_resort_updates(status=status, owner_id=final_owner_id)
+
+
+@app.get("/resorts/updates/{update_id}/diff")
+def resort_update_diff(update_id: str):
+    try:
+        return get_resort_update_diff(update_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+
+
+@app.post("/resorts/updates/{update_id}/approve", response_model=ResortUpdateResponse)
+def approve_update(update_id: str, payload: ResortApprovalRequest):
+    try:
+        update = approve_resort_update(update_id, payload.reviewer_id, payload.review_notes)
+        return ResortUpdateResponse(**update)
+    except PermissionError as exc:
+        raise HTTPException(status_code=403, detail=str(exc))
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@app.post("/resorts/updates/{update_id}/reject", response_model=ResortUpdateResponse)
+def reject_update(update_id: str, payload: ResortApprovalRequest):
+    try:
+        update = reject_resort_update(update_id, payload.reviewer_id, payload.review_notes)
+        return ResortUpdateResponse(**update)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@app.get("/resorts")
+def list_published_resorts():
+    return fetch_live_resorts()
+
+
+@app.get("/owners/{owner_id}/resorts")
+def list_owner_published_resorts(owner_id: str, auth_user_id: str = Depends(verify_clerk_user)):
+    if auth_user_id and auth_user_id != owner_id:
+        raise HTTPException(status_code=403, detail="You can only view resorts for your owner account")
+    return fetch_owner_resorts(owner_id)
 
 
 @app.get("/")
@@ -281,8 +355,8 @@ async def chat(request: ChatRequest, auth_user_id: str = Depends(verify_clerk_us
 @app.post("/assistant/reply", response_model=AssistantReplyResponse)
 async def assistant_reply(request: AssistantReplyRequest):
     # Additional validation for assistant reply endpoint
-    if len(request.messages) > 50:
-        raise HTTPException(status_code=400, detail="Too many conversation turns (max 50)")
+    if len(request.messages) > 1000:
+        raise HTTPException(status_code=400, detail="Too many conversation turns (max 1000)")
 
     message = request.message.strip()
     if len(message) > 10000:

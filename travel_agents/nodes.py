@@ -41,35 +41,54 @@ def validate_booking_dates(date_string: str) -> dict:
     import re
     
     try:
-        # Parse date string like "May 15, 2026 to May 17, 2026"
-        date_pattern = r'(\w+ \d{1,2},? \d{4})\s+to\s+(\w+ \d{1,2},? \d{4})'
-        match = re.search(date_pattern, date_string, re.IGNORECASE)
-        
+        # Parse date strings like "May 15, 2026 to May 17, 2026",
+        # "may 15,2026 to may 17,2026", or "15-05-2026 to 17-05-2026".
+        month_pattern = (
+            r"((?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|"
+            r"jul(?:y)?|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|"
+            r"dec(?:ember)?)\s+\d{1,2},?\s*\d{4})"
+        )
+        numeric_pattern = r"(\d{1,2}[-/]\d{1,2}[-/]\d{4})"
+        match = re.search(fr"{month_pattern}\s+(?:to|-)\s+{month_pattern}", date_string, re.IGNORECASE)
+        date_format_hint = "Use 'Month DD, YYYY to Month DD, YYYY' or 'DD-MM-YYYY to DD-MM-YYYY'"
+        numeric_match = None
         if not match:
-            return {"valid": False, "error": "Date format not recognized. Use 'Month DD, YYYY to Month DD, YYYY'"}
+            numeric_match = re.search(fr"{numeric_pattern}\s+(?:to|-)\s+{numeric_pattern}", date_string, re.IGNORECASE)
         
-        check_in_str = match.group(1).strip()
-        check_out_str = match.group(2).strip()
+        if not match and not numeric_match:
+            return {"valid": False, "error": f"Date format not recognized. {date_format_hint}"}
         
-        # Parse dates
-        check_in = datetime.strptime(check_in_str, "%B %d, %Y")
-        check_out = datetime.strptime(check_out_str, "%B %d, %Y")
+        check_in_str = (match or numeric_match).group(1).strip()
+        check_out_str = (match or numeric_match).group(2).strip()
+        
+        def parse_date(value: str):
+            cleaned = re.sub(r",\s*", ", ", value.strip())
+            cleaned = re.sub(r"\s+", " ", cleaned)
+            for fmt in ["%B %d, %Y", "%b %d, %Y", "%B %d %Y", "%b %d %Y", "%d-%m-%Y", "%d/%m/%Y"]:
+                try:
+                    return datetime.strptime(cleaned, fmt)
+                except ValueError:
+                    continue
+            raise ValueError(f"time data '{value}' does not match supported booking date formats")
+
+        check_in = parse_date(check_in_str)
+        check_out = parse_date(check_out_str)
         
         # Get today's date without time
         today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         
         # Validation rules
         if check_in <= today:
-            return {"valid": False, "error": f"Check-in date ({check_in_str}) cannot be today or in the past."}
+            return {"valid": False, "error": f"Check-in date ({check_in.strftime('%B %d, %Y')}) cannot be today or in the past."}
         
         if check_out <= check_in:
-            return {"valid": False, "error": f"Check-out date ({check_out_str}) must be after check-in date ({check_in_str})."}
+            return {"valid": False, "error": f"Check-out date ({check_out.strftime('%B %d, %Y')}) must be after check-in date ({check_in.strftime('%B %d, %Y')})."}
         
         # All validations passed
         return {"valid": True, "check_in": check_in, "check_out": check_out}
         
     except ValueError as e:
-        return {"valid": False, "error": f"Invalid date format: {str(e)}"}
+        return {"valid": False, "error": f"Invalid date: {str(e)}"}
     except Exception as e:
         return {"valid": False, "error": f"Error validating dates: {str(e)}"}
 
@@ -79,7 +98,8 @@ def normalize_date_string(date_str: str, reference_year: int | None = None) -> s
     from datetime import datetime
     import re
 
-    date_str = date_str.strip().replace(" ", " ")
+    date_str = re.sub(r",\s*", ", ", date_str.strip())
+    date_str = re.sub(r"\s+", " ", date_str)
     year_match = re.search(r"\d{4}", date_str)
     if not year_match and reference_year is not None:
         date_str = f"{date_str}, {reference_year}"
@@ -99,8 +119,8 @@ def parse_booking_dates_from_text(text: str) -> str | None:
     import re
     from datetime import datetime
 
-    months = r"January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-    date_token = fr"(?P<date>{months} \d{{1,2}}(?:,? \d{{4}})?)"
+    months = r"(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
+    date_token = fr"(?P<date>{months} \d{{1,2}}(?:,?\s*\d{{4}})?)"
     check_in_re = fr"check(?:[- ]?in)\s+{date_token}"
     check_out_re = fr"check(?:[- ]?out)\s+{date_token}"
 
@@ -118,7 +138,7 @@ def parse_booking_dates_from_text(text: str) -> str | None:
             return f"{check_in_norm} to {check_out_norm}"
 
     # Fallback for patterns like "May 15 to May 17, 2026"
-    fallback_pattern = fr"({months} \d{{1,2}}(?:,? \d{{4}})?)\s*(?:to|-)\s*({months} \d{{1,2}}(?:,? \d{{4}})?)"
+    fallback_pattern = fr"({months} \d{{1,2}}(?:,?\s*\d{{4}})?)\s*(?:to|-)\s*({months} \d{{1,2}}(?:,?\s*\d{{4}})?)"
     fallback_match = re.search(fallback_pattern, text, re.IGNORECASE)
     if fallback_match:
         start_raw = fallback_match.group(1)
@@ -129,6 +149,12 @@ def parse_booking_dates_from_text(text: str) -> str | None:
         end_norm = normalize_date_string(end_raw, reference_year)
         if start_norm and end_norm:
             return f"{start_norm} to {end_norm}"
+        if year_match:
+            return f"{start_raw} to {end_raw}"
+
+    numeric_match = re.search(r"(\d{1,2}[-/]\d{1,2}[-/]\d{4})\s*(?:to|-)\s*(\d{1,2}[-/]\d{1,2}[-/]\d{4})", text, re.IGNORECASE)
+    if numeric_match:
+        return f"{numeric_match.group(1)} to {numeric_match.group(2)}"
 
     return None
 
@@ -214,13 +240,34 @@ async def researcher_node(state):
     system_prompt = (
         "You are WayFind, a helpful Dandeli Travel Assistant. You will receive raw JSON search results from our database. "
         "Your job is to read the JSON data and answer the user's latest question in a beautiful, natural, conversational format. "
+        "Make answers easy and enjoyable to scan. Avoid long paragraphs. Use short sections, bullets, and bold labels. "
+        "For comparison questions, use this exact style:\n"
+        "**Quick Verdict:** one punchy sentence naming the best pick for the user's likely need.\n"
+        "**Snapshot:**\n"
+        "- **Price:** Resort A ... | Resort B ...\n"
+        "- **Rating:** Resort A ... | Resort B ...\n"
+        "- **Best for:** Resort A ... | Resort B ...\n"
+        "**Resort A:** 2-4 bullets with strongest facts.\n"
+        "**Resort B:** 2-4 bullets with strongest facts.\n"
+        "**My Pick:** Give a practical recommendation and mention the tradeoff.\n"
+        "For list or recommendation answers, use this exact style:\n"
+        "**Top Picks:** one short sentence explaining the list.\n"
+        "**1. Resort Name**\n"
+        "- **Price:** exact price from data\n"
+        "- **Rating:** exact rating from data\n"
+        "- **Best for:** one short phrase\n"
+        "- **Contact:** phone/email/website if available\n"
+        "- **Why choose it:** one short practical reason\n"
+        "Repeat for each resort requested, then end with **My Pick:** one practical recommendation. "
+        "For non-comparison answers, use a heading, then 3-6 crisp bullets, then a short recommendation when useful. "
+        "Never put an entire resort description into one long bullet. Keep each bullet under 22 words when possible. "
         "For SPECIFIC QUESTIONS about a resort's features, answer with CLEAR YES/NO statements: "
         "  - If user asks 'does this resort have non-veg food?', check 'food_options' field and answer directly: 'Yes, Bison River Resort offers both Veg and Non-Veg food options.' "
         "  - If user asks 'what activities does this resort have?', list both 'activities_onsite' and 'activities_nearby' clearly. "
         "  - If user asks 'what amenities' or 'what facilities', list the 'amenities' field clearly. "
         "  - If user asks about rooms, list the 'rooms' field. "
         "  - If user asks about water activities, list 'water_activities' field. "
-        "If the user asks for a comparison, logically compare the best options from the JSON. "
+        "If the user asks for a comparison, logically compare the best options from the JSON using the structured comparison style above. "
         "If the user asks for a specific number of resorts (e.g. 'top 1' or 'just 2'), provide EXACTLY that many. "
         "If the user asks for contact information (phone, email, website), include it prominently in your response. "
         "If the JSON says no resorts were found, apologize and ask them to adjust their budget or requirements. "
@@ -266,6 +313,10 @@ async def planner_node(state):
 
 async def booker_node(state):
     booking_messages = current_booking_context(state["messages"])
+    latest_user_text = next((extract_content(msg.content).strip().lower() for msg in reversed(state["messages"]) if isinstance(msg, HumanMessage)), "")
+    if any(marker in latest_user_text for marker in ["compare", " vs ", " versus ", "suggest", "recommend", "better price", "best price", "change the resort", "change resort", "different resort"]):
+        content = "I still have your booking draft saved. For comparing or changing resorts, ask the resort question directly and I will keep the draft separate until you confirm a new resort."
+        return {"response": content, "messages": [AIMessage(content=content, name="Booker")]}
     
     from .llms import gemini_llm, groq_llm, groq_70b, prefer_groq_invoke
     
@@ -277,7 +328,7 @@ async def booker_node(state):
     today_date = datetime.now().strftime("%B %d, %Y")
     
     extraction_prompt = ChatPromptTemplate.from_messages([
-        ("system", f"Today is {today_date}. Extract booking details from the conversation. IMPORTANT: Convert all relative dates (like 'tomorrow' or 'next Friday') into exact absolute calendar dates. REJECT and return None for check-in dates that are today or in the past - they must be FUTURE dates only. Do NOT accept bookings for past or today. If a value is missing or unclear, set it to None. Intent must be exactly one of: check_status, cancel, book, unknown"),
+        ("system", f"Today is {today_date}. Extract booking details from the conversation. IMPORTANT: Convert all relative dates (like 'tomorrow' or 'next Friday') into exact absolute calendar dates. REJECT and return None for check-in dates that are today or in the past - they must be FUTURE dates only. Do NOT accept bookings for past or today. If a value is missing or unclear, set it to None. Intent must be exactly one of: check_status, cancel, book, unknown. If the latest user message asks to compare resorts, asks for recommendations, asks for better price, or says to change resort without explicitly naming a new resort to book, intent must be unknown and you must not combine two resort names into one resort_name."),
         MessagesPlaceholder(variable_name="messages")
     ])
     

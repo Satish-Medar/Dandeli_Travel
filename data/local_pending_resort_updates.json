@@ -1,0 +1,123 @@
+[
+  {
+    "id": "6dcf153e-aab2-4245-ba77-decabe74e9ba",
+    "resort_id": "1",
+    "owner_id": "67",
+    "submitted_by": "67",
+    "status": "rejected",
+    "changes": {
+      "available_rooms": 34,
+      "occupied_rooms": 2,
+      "price": 2222,
+      "availability_status": "limited",
+      "special_offer": "dddddddddddd"
+    },
+    "submitted_at": "2026-05-28T05:06:42Z",
+    "updated_at": "2026-05-28T05:06:51Z",
+    "reviewer_id": "admin-001",
+    "reviewed_at": "2026-05-28T05:06:51Z",
+    "review_notes": null
+  },
+  {
+    "id": "95864ec4-df96-4f90-b1c6-04422d3ddce8",
+    "resort_id": "82",
+    "owner_id": "OWN-ELE-2026-01",
+    "submitted_by": "OWN-ELE-2026-01",
+    "request_type": "create",
+    "status": "approved",
+    "changes": {
+      "name": "Elephant Resort",
+      "category": "Eco",
+      "city": "Dandeli",
+      "location": "Dandeli, Uttara Kannada, Karnataka, IND",
+      "description": "xperience a peaceful stay surrounded by lush forest, river views, and adventure activities in the heart of Dandeli. Perfect for families, couples, and nature lovers.",
+      "amenities": [
+        "WiFi",
+        "Swimming Pool",
+        "Restaurant",
+        "Parking",
+        "Bonfire",
+        "River View",
+        "Adventure Activities",
+        "AC Rooms"
+      ],
+      "available_rooms": 12,
+      "occupied_rooms": 4,
+      "price": 2222,
+      "availability_status": "limited",
+      "special_offer": "25% off on weekend bookings + Free breakfast for 2 nights stay.",
+      "owner_id": "OWN-ELE-2026-01"
+    },
+    "submitted_at": "2026-05-28T06:04:49Z",
+    "updated_at": "2026-05-28T06:05:04Z",
+    "reviewer_id": "admin-001",
+    "reviewed_at": "2026-05-28T06:05:04Z",
+    "review_notes": null
+  },
+  {
+    "id": "62d133c7-2195-48c8-8321-b1968c496e0e",
+    "resort_id": "83",
+    "owner_id": "OWN-ELE-2026-02",
+    "submitted_by": "OWN-ELE-2026-02",
+    "request_type": "create",
+    "status": "approved",
+    "changes": {
+      "name": "Sparow resort",
+      "category": "Eco",
+      "city": "Dandeli",
+      "location": "Dandeli, Uttara Kannada, Karnataka, IND",
+      "phone": "+917204113614",
+      "email": "satishmedar5@gmail.com",
+      "website": "http://127.0.0.1:3000/owner",
+      "check_in": "12:00",
+      "check_out": "10:20",
+      "description": "Sparow Resort is a peaceful eco-friendly jungle retreat surrounded by lush greenery, bamboo groves, and wildlife corridors near the Kali River in Dandeli. Perfect for nature lovers, families, and adventure seekers.",
+      "unique_features": "Treehouse accommodation, riverside view, private bonfire area, guided jungle safari, eco-stay experience.",
+      "availability_status": "limited",
+      "special_offer": "25% off on weekend bookings + complimentary breakfast and campfire for 2-night stays.",
+      "latitude": 15.987,
+      "longitude": 45.688,
+      "rating": 4.5,
+      "review_count": 12,
+      "price": 2222,
+      "available_rooms": 12,
+      "occupied_rooms": 2,
+      "rooms": [
+        "Standar Rooms"
+      ],
+      "amenities": [
+        "WiFi",
+        "Swimming Pool",
+        "Restaurant",
+        "Parking",
+        "Bonfire",
+        "River View",
+        "Adventure Activities",
+        "AC Rooms"
+      ],
+      "activities_onsite": [
+        "Bird watching",
+        "jungle safari"
+      ],
+      "activities_nearby": [
+        "Trekking",
+        "raffting"
+      ],
+      "water_activities": [
+        "Rafting"
+      ],
+      "food_options": [
+        "veg",
+        "non veg"
+      ],
+      "family_friendly": true,
+      "romantic_couples": true,
+      "owner_id": "OWN-ELE-2026-02"
+    },
+    "submitted_at": "2026-05-28T08:26:01Z",
+    "updated_at": "2026-05-28T08:38:50Z",
+    "reviewer_id": "admin-001",
+    "reviewed_at": "2026-05-28T08:38:50Z",
+    "review_notes": null
+  }
+]

@@ -1,8 +1,16 @@
 # Defines backend service logic for travel booking and resort data operations.
 # File: travel_api/services.py
 
+# Simple overview (plain words):
+# - This module contains business logic used by the HTTP handlers in
+# - travel_api.app. Keep lightweight helpers here: recording messages,
+# - serializing session summaries, and calling the agent graph to generate
+# - assistant replies.
+# - Important: functions should avoid HTTP details and focus on data logic.
+
 
 import os
+import re
 from pathlib import Path
 
 from fastapi import HTTPException
@@ -13,6 +21,8 @@ from .models import AppConfig, AssistantTurn, SessionSummary
 from .store import list_sessions_for_user, utc_now
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RECENT_CONTEXT_MESSAGES = int(os.getenv("ASSISTANT_RECENT_CONTEXT_MESSAGES", "80"))
+OLDER_MEMORY_CHAR_LIMIT = int(os.getenv("ASSISTANT_OLDER_MEMORY_CHAR_LIMIT", "8000"))
 
 
 def record_message(session: dict, role: str, content: str, name: str = "") -> None:
@@ -56,12 +66,111 @@ async def invoke_assistant_from_turns(messages: list[AssistantTurn], user_messag
     return await invoke_assistant_from_messages(prior_messages, user_message)
 
 
+def _message_text(message) -> str:
+    return " ".join(str(getattr(message, "content", "") or "").split())
+
+
+def _find_known_resorts_in_messages(messages) -> list[str]:
+    text = "\n".join(_message_text(message) for message in messages).lower()
+    if not text:
+        return []
+
+    try:
+        from travel_tools.search_tool import get_known_resort_names
+        known_resorts = get_known_resort_names()
+    except Exception:
+        known_resorts = []
+
+    found = []
+    for resort_name in known_resorts:
+        cleaned = str(resort_name or "").strip()
+        if cleaned and cleaned.lower() in text and cleaned not in found:
+            found.append(cleaned)
+    return found[:12]
+
+
+def _extract_booking_memory(messages) -> list[str]:
+    facts = []
+    combined = "\n".join(_message_text(message) for message in messages)
+
+    date_matches = re.findall(
+        r"\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|"
+        r"sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+\d{1,2},?\s+\d{4}\s+(?:to|-)\s+"
+        r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|"
+        r"sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s+\d{1,2},?\s*\d{4}\b",
+        combined,
+        flags=re.IGNORECASE,
+    )
+    if date_matches:
+        facts.append(f"Dates mentioned: {date_matches[-1]}")
+
+    contact_match = None
+    for message in reversed(messages):
+        if isinstance(message, HumanMessage):
+            text = _message_text(message)
+            contact_match = (
+                re.search(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b", text)
+                or re.search(r"(?<!\w)(?:\+?\d[\d\s-]{7,}\d)", text)
+            )
+            if contact_match:
+                break
+    if contact_match:
+        facts.append(f"Customer contact mentioned: {contact_match.group(0).strip()}")
+
+    return facts
+
+
+def build_long_term_memory(messages) -> SystemMessage | None:
+    if not messages:
+        return None
+
+    user_turns = [_message_text(message) for message in messages if isinstance(message, HumanMessage)]
+    first_user_turn = next((turn for turn in user_turns if turn), "")
+    known_resorts = _find_known_resorts_in_messages(messages)
+    booking_facts = _extract_booking_memory(messages)
+
+    older_turns = []
+    for message in messages:
+        role = "User" if isinstance(message, HumanMessage) else "Assistant" if isinstance(message, AIMessage) else "System"
+        name = getattr(message, "name", "") or ""
+        text = _message_text(message)
+        if text:
+            older_turns.append(f"{role}{f'/{name}' if name else ''}: {text}")
+
+    transcript = "\n".join(older_turns)
+    if len(transcript) > OLDER_MEMORY_CHAR_LIMIT:
+        transcript = transcript[:OLDER_MEMORY_CHAR_LIMIT].rstrip() + "\n[Earlier-memory transcript truncated by character budget.]"
+
+    memory_lines = [
+        "Long-term memory from earlier turns in this same chat.",
+        "Use this memory to answer follow-ups; do not ask again for details that are already present unless they are invalid or ambiguous.",
+    ]
+    if first_user_turn:
+        memory_lines.append(f"First user request: {first_user_turn}")
+    if known_resorts:
+        memory_lines.append(f"Resorts already discussed: {', '.join(known_resorts)}")
+    memory_lines.extend(booking_facts)
+    if transcript:
+        memory_lines.append("Earlier transcript:")
+        memory_lines.append(transcript)
+
+    return SystemMessage(content="\n".join(memory_lines))
+
+
+def build_agent_context(messages):
+    if len(messages) <= RECENT_CONTEXT_MESSAGES:
+        return list(messages)
+
+    older_messages = list(messages)[:-RECENT_CONTEXT_MESSAGES]
+    recent_messages = list(messages)[-RECENT_CONTEXT_MESSAGES:]
+    memory_message = build_long_term_memory(older_messages)
+    if memory_message:
+        return [memory_message] + recent_messages
+    return recent_messages
+
+
 async def invoke_assistant_from_messages(messages, user_message: str) -> tuple[str, str]:
-    # Sliding window: Keep only the most recent 30 messages (15 turns) to prevent context overflow while maintaining deep booking history
-    working_messages = list(messages)[-30:]
-    if len(messages) > 30:
-        while working_messages and not isinstance(working_messages[0], HumanMessage):
-            working_messages.pop(0)
+    working_messages = build_agent_context(messages)
     working_messages.append(HumanMessage(content=user_message))
     assistant_reply = ""
     node_name = ""

@@ -1,6 +1,12 @@
 # Implements persistent storage access for resorts, sessions, and bookings.
 # File: travel_api/store.py
 
+# Simple overview (plain words):
+# - This module reads and writes user sessions and booking info.
+# - In production it uses MongoDB (configured by MONGODB_URI). For local
+# - development it falls back to a JSON file at `data/local_sessions.json`.
+# - Keep storage-specific logic here so the service layer stays storage-agnostic.
+
 
 import os
 import logging

@@ -1,2 +1,5 @@
+# Files and folders ignored by the frontend workspace.
+# File: frontend/.gitignore
+
 node_modules
 dist

@@ -1,6 +1,11 @@
-/* Frontend authentication utilities and session helpers. */
-/* File: frontend/lib/auth.js */
+/*
+  Frontend authentication utilities and session helpers.
 
+  Simple overview:
+  - `ensureGuestUserId` creates a guest identifier when no user is signed in.
+  - `loadClerkInstance` dynamically loads Clerk auth scripts in the browser.
+*/
+/* File: frontend/lib/auth.js */
 
 const CLERK_SCRIPT_ID = "clerk-js-sdk";
 

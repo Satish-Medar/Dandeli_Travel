@@ -12,19 +12,20 @@ An intelligent travel assistant for Dandeli resort search, planning, comparison,
 - AI: LangGraph multi-agent orchestrator
 - Search: Pinecone vector retrieval + local JSON fallback
 - LLMs: Google Gemini Generative AI and Groq Llama instant
+
 ## What was improved
 
 - Lazy vector store initialization to avoid backend startup hang
 - Local JSON resort fallback when Pinecone / Chroma is unavailable
 - Cleaner search routing and filter extraction
 - Robust backend health check and frontend proxy support
-- Better run/test documentation for local and Docker workflows
+- Better run/test documentation for local workflows
 
 ## Prerequisites
 
 - Python 3.11+
 - Node.js 20+ and npm
-- Docker & Docker Compose (optional for containerized setup)
+- MongoDB or MongoDB Atlas
 
 ## Local development
 
@@ -71,14 +72,9 @@ npm run dev
 - Backend health: `http://127.0.0.1:8000/health`
 - Frontend: `http://127.0.0.1:3000`
 
-## Docker setup
+## Local development only
 
-```bash
-docker compose up --build
-```
-
-- Frontend connects to backend through `NEXT_PUBLIC_API_URL=http://api:8000`
-- Backend health is checked automatically by Docker Compose
+The project is designed to run locally using Python and Node.js. Remove any existing Docker files before starting.
 
 ## Testing manually
 

@@ -1,6 +1,11 @@
 # Provides vector store integration for similarity search and embedding lookups.
 # File: travel_tools/vectorstore_provider.py
 
+# Simple overview:
+# - This module loads the vector database used for semantic search.
+# - It supports Pinecone, local Chroma, or a fallback when neither is available.
+# - The retriever is built once and reused for search requests.
+
 
 import os
 import threading
@@ -54,6 +59,8 @@ def _open_error_log(message: str):
         logger.error(f"Failed to write to error log: {e}")
 
 
+# Check if Pinecone credentials are available and valid.
+# If Pinecone is not configured, the code will skip that vector store.
 def _pinecone_env_ready() -> bool:
     if not PINECONE_API_KEY or not PINECONE_ENVIRONMENT:
         logger.warning("Pinecone environment variables are not configured. Skipping Pinecone load.")
@@ -67,6 +74,7 @@ def _pinecone_env_ready() -> bool:
         return False
 
 
+# Try to load Pinecone in a separate thread so startup does not hang forever.
 def _load_pinecone_store(timeout_seconds: int = 12) -> Optional[PineconeVectorStore]:
     if not _pinecone_env_ready():
         return None
@@ -94,6 +102,7 @@ def _load_pinecone_store(timeout_seconds: int = 12) -> Optional[PineconeVectorSt
     return thread_result.get("store")
 
 
+# Try to load a local Chroma vector store when Pinecone is unavailable.
 def _load_chroma_store() -> Optional[object]:
     try:
         if not Path(CHROMA_DB_PATH).exists():
@@ -109,6 +118,8 @@ def _load_chroma_store() -> Optional[object]:
         return None
 
 
+# Build a SelfQueryRetriever from the loaded vector store.
+# This allows search queries to use metadata filters and semantic ranking.
 def _build_retriever(store):
     try:
         query_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.0, max_retries=0).with_fallbacks([
@@ -127,6 +138,7 @@ def _build_retriever(store):
         return None
 
 
+# Initialize the vector store once and reuse it across requests.
 def initialize_vectorstore() -> None:
     global vectorstore, retriever, _store_initialized
     with _store_lock:
@@ -157,3 +169,11 @@ def get_retriever() -> Optional[object]:
     if not _store_initialized:
         initialize_vectorstore()
     return retriever
+
+
+def reset_vectorstore() -> None:
+    global vectorstore, retriever, _store_initialized
+    with _store_lock:
+        vectorstore = None
+        retriever = None
+        _store_initialized = False

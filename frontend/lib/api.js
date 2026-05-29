@@ -1,4 +1,11 @@
-/* Client-side API helper functions for the frontend. */
+/*
+  Client-side API helper functions for the frontend.
+
+  Simple overview:
+  - `fetchJson` performs JSON requests to the backend.
+  - `streamChat` handles server-sent event streaming for chat replies.
+  - `toApiUrl` ensures requests go to the correct local API path.
+*/
 /* File: frontend/lib/api.js */
 
 function toApiUrl(path) {
@@ -66,6 +73,7 @@ export async function fetchJson(path, options = {}) {
   return response.json();
 }
 
+// Send a streamed chat request and invoke callbacks for session and tokens.
 export async function streamChat(body, { onSession, onChunk }) {
   const response = await fetchWithTimeout(toApiUrl("/chat/stream"), {
     method: "POST",
