@@ -153,7 +153,7 @@ export default function Composer({
 
       {/* Footer hint under the composer. Keep short and helpful. */}
       <div className="composer-footer">
-        <p className="composer-hint">WayFind • Developed by Human.</p>
+        <p className="composer-hint">WayFind • Developed by Dandelions</p>
       </div>
     </form>
   );
