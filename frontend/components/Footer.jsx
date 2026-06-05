@@ -48,7 +48,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} WayFind. Built by humans. Powered by
+          &copy; {new Date().getFullYear()} WayFind. Built by Dandelions. Powered by
           AI.
         </p>
       </div>
